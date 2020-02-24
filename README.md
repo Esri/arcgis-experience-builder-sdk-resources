@@ -1,7 +1,6 @@
 # arcgis-experience-builder-sdk-resources
 
-This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about ArcGIS Experience Builder
-SDK. 
+This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about [ArcGIS Experience Builder SDK](https://developers.arcgis.com/experience-builder/guide/core-concepts/). 
 
 ## Features
 - [Samples](Samples)
