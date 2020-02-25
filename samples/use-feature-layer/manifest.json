@@ -1,5 +1,6 @@
 {
   "name": "use-feature-layer",
+  "label": "Feature Layer",
   "type": "widget",
   "version": "1.0.0",
   "exbVersion": "1.0.0",
