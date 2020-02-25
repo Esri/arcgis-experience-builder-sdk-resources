@@ -1,5 +1,6 @@
 {
   "name": "showextent",
+  "label": "Show Extent",
   "type": "widget",
   "dependency": "jimu-arcgis",
   "version": "1.0.0",

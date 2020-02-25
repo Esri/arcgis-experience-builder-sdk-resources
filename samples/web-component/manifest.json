@@ -1,5 +1,6 @@
 {
   "name": "web-component",
+  "label": "Web Component",
   "type": "widget",
   "version": "1.0.0",
   "exbVersion": "1.0.0",

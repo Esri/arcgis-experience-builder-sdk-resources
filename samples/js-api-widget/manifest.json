@@ -1,5 +1,6 @@
 {
   "name": "js-api-widget",
+  "label": "JS API Widget",
   "type": "widget",
   "dependency": "jimu-arcgis",
   "version": "1.0.0",
