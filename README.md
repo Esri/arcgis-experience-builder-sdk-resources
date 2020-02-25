@@ -3,9 +3,9 @@
 This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about [ArcGIS Experience Builder SDK](https://developers.arcgis.com/experience-builder/guide/core-concepts/). 
 
 ## Features
-- [Samples](Samples)
+- [Samples](samples)
 
-## Instruction.s
+## Instructions
 1. Fork and then clone this repo.
 2. Copy the the samples into the the client/your-extensions folder of the widget or theme in Experience Builder.
 
