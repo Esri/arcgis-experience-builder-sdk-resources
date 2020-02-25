@@ -1,9 +1,3 @@
----
-title: Use ArcGIS API for JavaScript Widget
-description: >-
-    This sample demonstrates how to use a widget from the ArcGIS API for JavaScript. 
----
-
 # Load a widget from the ArcGIS API for JavaScript(JSAPI)
 
 This sample demonstrates how to include a JSAPI widget. 

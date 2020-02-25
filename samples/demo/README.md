@@ -1,9 +1,3 @@
----
-title: Demo widget
-description: >-
-    This sample demonstrates how to create a widget using a class component. 
----
-
 # Demo widget
 This sample demonstrates how to create a widget using a class component.
 

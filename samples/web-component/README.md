@@ -1,9 +1,3 @@
----
-title: Web component
-description: >-
-    This sample demonstrates how to write a Web component and include it in a custom Experience Builder widget.
----
-
 # Web component
 
 This sample demonstrates how to write a Web component and include it in a custom Experience Builder widget.

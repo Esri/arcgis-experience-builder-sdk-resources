@@ -1,9 +1,3 @@
----
-title: Show extent
-description: >-
-    This sample demonstrates how to use a map view and show the map view's extent. 
----
-
 # Show extent
 
 This sample demonstrates how to watch for changes on the map view.

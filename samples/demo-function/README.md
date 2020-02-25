@@ -1,9 +1,3 @@
----
-title: Demo function widget
-description: >-
-    This sample demonstrates how to create a widget using a function component. 
----
-
 # Demo function widget
 This sample demonstrates how to create a widget using a function component.
 
