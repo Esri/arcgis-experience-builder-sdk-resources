@@ -19,7 +19,7 @@ In the code snippet below it overrides the theme variables to create a custom th
 		"transparent": "transparent",
 		"primary": "#0a77c6",
 		"secondary": "#ecf1f8",
-  }
+  },
   "typography": {
 		"fontFamilyBase": "Avenir Next",
 		"fontSizeRoot": "100%",
