@@ -1,4 +1,4 @@
-# arcgis-experience-builder-sdk-resources
+# Overview
 
 This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about [ArcGIS Experience Builder SDK](https://developers.arcgis.com/experience-builder/guide/core-concepts/). 
 
@@ -14,10 +14,10 @@ This repository provides samples for widgets and themes built with ArcGIS Experi
 ## Resources
 * [ArcGIS Experience Builder Developer Guide](https://developers.arcgis.com/experience-builder/)
 * [Widget Development](https://developers.arcgis.com/experience-builder/guide/getting-started-widget/)
-* [Theme Development](https://master-dev.developers.arcgis.com/experience-builder/guide/theme-development/)
+* [Theme Development](https://developers.arcgis.com/experience-builder/guide/theme-development/)
 
 ## Issues
-FInd a bug or want to request a new feature? Please let us know by submitting an issue.
+Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
 ## Contributing
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
