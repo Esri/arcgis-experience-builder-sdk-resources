@@ -7,3 +7,4 @@
 * [Show extent with a map view](showextent)
 * [Create a data source using a feature layer](use-feature-layer)
 * [Web component](web-component)
+* [Create a theme](demo-theme)
