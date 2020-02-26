@@ -17,7 +17,7 @@ This repository provides samples for widgets and themes built with ArcGIS Experi
 * [Theme Development](https://developers.arcgis.com/experience-builder/guide/theme-development/)
 
 ## Issues
-FInd a bug or want to request a new feature? Please let us know by submitting an issue.
+Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
 ## Contributing
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).

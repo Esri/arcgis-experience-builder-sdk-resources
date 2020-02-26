@@ -88,7 +88,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
     
     return <div className="widget-use-map-view" style={{width: '100%', height: '100%', overflow: 'hidden'}}>
       <h3>
-        This widget demonstrates how to use a widget(legend) from the ArcGIS JS API.
+        This widget demonstrates how to use a widget (Legend) from the ArcGIS JS API.
       </h3>
 
       <JimuMapViewComponent useMapWidgetIds={this.props.useMapWidgetIds} onActiveViewChange={this.onActiveViewChange}></JimuMapViewComponent>
@@ -100,7 +100,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
       </div>
 
       <hr/>
-      <h4>This shows the legend widget.</h4>
+      <h4>This shows the Legend widget.</h4>
       <div ref={this.apiWidgetContainer}></div>
     </div>;
   }
