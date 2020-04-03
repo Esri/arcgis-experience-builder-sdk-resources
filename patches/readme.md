@@ -1,3 +1,3 @@
 ## Patches
 
-* [Experience Builder 1.0-patch1](1.0)-Survey
+* [Experience Builder-1.0-patch1-Survey](1.0/patch1)
