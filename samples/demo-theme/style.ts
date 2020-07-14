@@ -17,10 +17,11 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
+
 /*
 * Sample code:
 * Uncomment the following sections to add:
-* 1. global style: import the Roboto font from external url. 
+* 1. global style: import the Roboto font from external url.
 * 2. Button component style override: font size change for all Button components.
 */
 
@@ -28,8 +29,8 @@
 
 // const globalStyles = () => {
 //   return css`
-//     /* Change the "fontFamilyBase" property in variables.json to "Roboto" 
-//     *  to use this font. 
+//     /* Change the "fontFamilyBase" property in variables.json to "Roboto"
+//     *  to use this font.
 //     */
 //     @import url("https://fonts.googleapis.com/css?family=Roboto");
 //   `
