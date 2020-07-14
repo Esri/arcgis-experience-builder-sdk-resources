@@ -1,6 +1,6 @@
 # Editor widget
 
-This sample demonstrates how to include the editor widget from the ArcGIS API for JavaScript. 
+This sample demonstrates how to include the Editor widget from the ArcGIS API for JavaScript. 
 
 ## How to use the sample
 Clone the sample repo and paste the folder contents in the client/your-extensions/widgets
