@@ -17,20 +17,18 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable } from 'jimu-core';
+import { React, Immutable, UseDataSource } from 'jimu-core';
 import {BaseWidgetSetting} from 'jimu-for-builder';
-import {ArcGISDataSourceTypes} from 'jimu-arcgis';
-import {DataSourceSelector, SelectedDataSourceJson} from 'jimu-ui/data-source-selector';
+import {DataSourceTypes} from 'jimu-arcgis';
+import {DataSourceSelector} from 'jimu-ui/advanced/data-source-selector';
 
 export default class Setting extends BaseWidgetSetting{
-  supportedTypes = Immutable([ArcGISDataSourceTypes.WebMap]);
+  supportedTypes = Immutable([DataSourceTypes.WebMap]);
 
-  onDataSourceSelected = (allSelectedDss: SelectedDataSourceJson[], currentSelectedDs: SelectedDataSourceJson) => {
+  onDataSourceSelected = (useDataSources: UseDataSource[]) => {
     this.props.onSettingChange({
       id: this.props.id,
-      useDataSources: [{
-        dataSourceId: currentSelectedDs.dataSourceJson.id,
-      }],
+      useDataSources: useDataSources
     });
   }
 
@@ -39,8 +37,9 @@ export default class Setting extends BaseWidgetSetting{
       <DataSourceSelector
         types={this.supportedTypes}
         mustUseDataSource
-        selectedDataSourceIds={this.props.useDataSources && Immutable(this.props.useDataSources.map(ds => ds.dataSourceId))}
-        onSelect={this.onDataSourceSelected}
+        useDataSources={this.props.useDataSources}
+        onChange={this.onDataSourceSelected}
+        widgetId={this.props.id}
       />
     </div>
   }
