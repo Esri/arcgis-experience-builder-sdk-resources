@@ -24,22 +24,6 @@ import { Tabs, Tab, Button} from 'jimu-ui';
 import defaultMessages from './translations/default';
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any>{
-  constructor(props){
-    super(props);
-
-    this.state = {
-      activeTab: 'properties'
-    };
-  }
-
-  toggle = (tab) => {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
-    }
-  };
-
   nls = (id: string) => {
     return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id;
   }

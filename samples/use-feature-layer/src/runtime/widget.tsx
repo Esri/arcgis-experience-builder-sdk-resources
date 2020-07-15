@@ -110,7 +110,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
         This widget shows how to use a feature layer as a data source.
       </h3>
 
-      <DataSourceComponent useDataSource={this.props.useDataSources[0]} query={this.state.query} queryCount>
+      <DataSourceComponent useDataSource={this.props.useDataSources[0]} query={this.state.query} widgetId={this.props.id} queryCount>
         {
           this.dataRender
         }
