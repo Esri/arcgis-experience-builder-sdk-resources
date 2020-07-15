@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { React, AllWidgetProps, BaseWidget, jsx } from "jimu-core";
+import { React, AllWidgetProps, jsx } from "jimu-core";
 import * as d3 from "./lib/d3/d3.min.js";
 
 export default class Widget extends React.PureComponent<AllWidgetProps<any>, any> {
