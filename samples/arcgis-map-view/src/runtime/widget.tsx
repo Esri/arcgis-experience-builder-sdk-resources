@@ -17,16 +17,15 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, jimuHistory, DataSourceComponent } from 'jimu-core';
+import { React, jimuHistory, DataSourceComponent, AllWidgetProps } from 'jimu-core';
 
-import { AllWidgetProps } from 'jimu-core';
 import MapView = require('esri/views/MapView');
 import WebMap = require('esri/WebMap');
 import Extent = require('esri/geometry/Extent');
 import {MapViewManager, WebMapDataSource} from 'jimu-arcgis';
 
 
-export default class Widget extends React.Component<AllWidgetProps<{}>, {}>{
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, {}>{
   mapContainer = React.createRef<HTMLDivElement>();
   mapView: MapView;
   webMap: WebMap;

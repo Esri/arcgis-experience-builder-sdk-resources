@@ -18,30 +18,12 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {BaseWidget, FormattedMessage, defaultMessages as jimuCoreDefaultMessage} from 'jimu-core';
-import {AllWidgetProps, css, jsx, styled} from 'jimu-core';
+import {React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, AllWidgetProps, css, jsx, styled} from 'jimu-core';
 import {IMConfig} from '../config';
-
 import { Tabs, Tab, Button} from 'jimu-ui';
 import defaultMessages from './translations/default';
 
-export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, any>{
-  constructor(props){
-    super(props);
-
-    this.state = {
-      activeTab: 'properties'
-    };
-  }
-
-  toggle = (tab) => {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
-    }
-  };
-
+export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any>{
   nls = (id: string) => {
     return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id;
   }
@@ -88,7 +70,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, any>{
     `;
 
     // console.log(`...Render ${this.props.manifest.name}`);
-    
+
     const propsTr = Object.keys(this.props).map((prop, i) => {
       if(['manifest', 'user', 'intl'].indexOf(prop) > -1
         || typeof this.props[prop] === 'string'){
@@ -106,7 +88,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, any>{
 
     return <div className="widget-demo jimu-widget" style={{overflow: 'auto'}}>
       <Tabs>
-        <Tab title={this.nls('widgetProperties')} active={true}>
+        <Tab id="widgetProperties" title={this.nls('widgetProperties')} defaultActive={true}>
           <div className="title font-weight-bold">NLS messages from jimu-core (OK)</div>
           <div className="content"><FormattedMessage id="ok" defaultMessage={jimuCoreDefaultMessage.ok}></FormattedMessage></div>
           <hr/>
@@ -143,21 +125,10 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, any>{
             </table>
           </div>
         </Tab>
-        <Tab title={this.nls('widgetFunctions')}>
+        <Tab id="widgetFunctions" title={this.nls('widgetFunctions')}>
           <p>TODO</p>
         </Tab>
       </Tabs>
-      {/* <Nav tabs>
-        <NavItem><NavLink
-          className={classNames({active: this.state.activeTab === 'properties'})}
-          onClick={() => this.toggle('properties')}
-        ><FormattedMessage id="widgetProperties" defaultMessage={defaultMessages.widgetProperties}/></NavLink></NavItem>
-        <NavItem><NavLink
-          className={classNames({active: this.state.activeTab === 'fn'})}
-          onClick={() => this.toggle('fn')}
-        ><FormattedMessage id="widgetFunctions" defaultMessage={defaultMessages.widgetFunctions}/></NavLink></NavItem>
-      </Nav> */}
-
     </div>;
   }
 }

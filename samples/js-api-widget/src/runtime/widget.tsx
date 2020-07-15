@@ -17,8 +17,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React} from 'jimu-core';
-import {BaseWidget, AllWidgetProps} from 'jimu-core';
+import {React, AllWidgetProps} from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView } from 'jimu-arcgis';
 import Legend = require('esri/widgets/Legend');
 import LegendVM = require('esri/widgets/Legend/LegendViewModel');
@@ -28,7 +27,7 @@ interface State{
   layerInfo: any
 }
 
-export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
   apiWidgetContainer: React.RefObject<HTMLDivElement>;
   legendWidget: Legend;
 
@@ -83,7 +82,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
         container: this.apiWidgetContainer.current
       })
     }
-    
+
     if(!this.state.legendWidgetVM){
       const vm = new LegendVM({
         view: this.mapView,
@@ -104,14 +103,14 @@ export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
     if(!this.isConfigured()){
       return 'Select a map';
     }
-    
+
     return <div className="widget-use-map-view" style={{width: '100%', height: '100%', overflow: 'hidden'}}>
       <h3>
         This widget demonstrates how to use a widget (Legend) from the ArcGIS JS API.
       </h3>
 
       <JimuMapViewComponent useMapWidgetIds={this.props.useMapWidgetIds} onActiveViewChange={this.onActiveViewChange}></JimuMapViewComponent>
-      
+
       <hr/>
       <h4>This uses the ViewModel.</h4>
       <div>
