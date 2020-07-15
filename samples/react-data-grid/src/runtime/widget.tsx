@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { AllWidgetProps, BaseWidget, jsx } from "jimu-core";
+import { React, AllWidgetProps, jsx } from "jimu-core";
 import * as ReactDataGrid from "react-data-grid";
 
-export default class Widget extends BaseWidget<AllWidgetProps<any>, any> {
+export default class Widget extends React.PureComponent<AllWidgetProps<any>, any> {
   private columns = [
     { key: "id", name: "ID" },
     { key: "title", name: "Title" },

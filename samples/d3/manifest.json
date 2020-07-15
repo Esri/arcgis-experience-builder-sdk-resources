@@ -1,10 +1,10 @@
 {
   "name": "d3",
   "type": "widget",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "exbVersion": "1.1.0",
   "author": "Esri R&D Center Beijing",
-  "description": "Demo widget showing how to use D3.js.",
+  "description": "This widget demonstrates how to use D3.js.",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},

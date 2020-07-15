@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { AllWidgetProps, BaseWidget, jsx } from "jimu-core";
-import * as React from "react";
+import { React, AllWidgetProps, BaseWidget, jsx } from "jimu-core";
 import * as d3 from "./lib/d3/d3.min.js";
 
-export default class Widget extends BaseWidget<AllWidgetProps<any>, any> {
+export default class Widget extends React.PureComponent<AllWidgetProps<any>, any> {
   // Create a React Ref - https://reactjs.org/docs/refs-and-the-dom.html
   private mainRef = React.createRef<HTMLDivElement>();
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { AllWidgetProps, BaseWidget, jsx } from "jimu-core";
+import { React, AllWidgetProps, jsx } from "jimu-core";
 
-export default class Widget extends BaseWidget<AllWidgetProps<{}>, any> {
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, any> {
   componentDidMount() {
     var data = [
       {
