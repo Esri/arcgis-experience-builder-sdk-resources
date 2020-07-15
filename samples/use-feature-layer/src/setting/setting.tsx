@@ -17,26 +17,21 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, Immutable, IMFieldSchema, DataSource, DataSourceTypes, DataSourceComponent} from 'jimu-core';
-import {BaseWidgetSetting} from 'jimu-for-builder';
+import {React, Immutable, IMFieldSchema, UseDataSource} from 'jimu-core';
+import {AllWidgetSettingProps} from 'jimu-for-builder';
 import {ArcGISDataSourceTypes} from 'jimu-arcgis';
-import {FieldSelector} from 'jimu-ui/data-source-selector';
-import {DataSourceSelector, SelectedDataSourceJson, AllDataSourceTypes} from 'jimu-ui/data-source-selector';
+import {DataSourceSelector, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
 
-export default class Setting extends BaseWidgetSetting{
-  supportedTypes = Immutable([ArcGISDataSourceTypes.FeatureLayer, DataSourceTypes.FeatureQuery]);
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}>{
+  supportedTypes = Immutable([ArcGISDataSourceTypes.FeatureLayer]);
 
-  onFieldSelected = (allSelectedFields: IMFieldSchema[], field: IMFieldSchema, ds: DataSource) => {
+  onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     this.props.onSettingChange({
       id: this.props.id,
-      useDataSources: [{
-        dataSourceId: this.props.useDataSources[0].dataSourceId,
-        rootDataSourceId: this.props.useDataSources[0].rootDataSourceId,
-        fields: [field.jimuName]
-      }]
+      useDataSources: [{...this.props.useDataSources[0], ...{fields: allSelectedFields.map(f => f.jimuName)}}]
     })
   }
-  
+
   onToggleUseDataEnabled = (useDataSourcesEnabled: boolean) => {
     this.props.onSettingChange({
       id: this.props.id,
@@ -44,54 +39,33 @@ export default class Setting extends BaseWidgetSetting{
     });
   }
 
-  onDataSourceSelected = (allSelectedDss: SelectedDataSourceJson[], currentSelectedDs: SelectedDataSourceJson) => {
-    console.log(this.props);
+  onDataSourceChange = (useDataSources: UseDataSource[]) => {
     this.props.onSettingChange({
       id: this.props.id,
-      useDataSources: [{
-        dataSourceId: currentSelectedDs.dataSourceJson.id,
-        rootDataSourceId: currentSelectedDs.rootDataSourceId
-      }],
-    }, [{
-      id: `${this.props.id}-output`,
-      label: `${this.props.label} Query Result`,
-      type: AllDataSourceTypes.FeatureSet,
-      originDataSources: [{dataSourceId: currentSelectedDs.dataSourceJson.id, rootDataSourceId: currentSelectedDs.rootDataSourceId}]
-    }]);
-  }
-
-  onDataSourceRemoved = () => {
-    this.props.onSettingChange({
-      id: this.props.id,
-      useDataSources: [],
-    }, []);
+      useDataSources: useDataSources,
+    });
   }
 
   render(){
     return <div className="use-feature-layer-setting p-2">
       <DataSourceSelector
         types={this.supportedTypes}
-        selectedDataSourceIds={this.props.useDataSources && Immutable(this.props.useDataSources.map(ds => ds.dataSourceId))}
+        useDataSources={this.props.useDataSources}
         useDataSourcesEnabled={this.props.useDataSourcesEnabled}
         onToggleUseDataEnabled={this.onToggleUseDataEnabled}
-        onSelect={this.onDataSourceSelected} onRemove={this.onDataSourceRemoved}
+        onChange={this.onDataSourceChange}
+        widgetId={this.props.id}
       />
       {
         this.props.useDataSources && this.props.useDataSources.length > 0 &&
 
-        <DataSourceComponent useDataSource={this.props.useDataSources[0]}>
-          {
-            (ds: DataSource) => <div className="mt-2">Please choose a Field to query:
-              <FieldSelector 
-                dataSources={[ds]}
-                onSelect={this.onFieldSelected}
-                selectedFields={this.props.useDataSources[0].fields || Immutable([])}
-              />
-            </div>
-          }
-        </DataSourceComponent>
+        <FieldSelector
+          useDataSources={this.props.useDataSources}
+          onChange={this.onFieldChange}
+          selectedFields={this.props.useDataSources[0].fields || Immutable([])}
+        />
       }
-      
+
     </div>
   }
 }

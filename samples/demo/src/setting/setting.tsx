@@ -18,11 +18,11 @@
   LICENSE file.
 */
 import {React, FormattedMessage} from 'jimu-core';
-import {BaseWidgetSetting, AllWidgetSettingProps} from 'jimu-for-builder';
+import {AllWidgetSettingProps} from 'jimu-for-builder';
 import {IMConfig} from '../config';
 import defaultI18nMessages from './translations/default'
 
-export default class Setting extends BaseWidgetSetting<AllWidgetSettingProps<IMConfig>, any>{
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, any>{
   onP1Change = (evt: React.FormEvent<HTMLInputElement>) => {
     this.props.onSettingChange({
       id: this.props.id,
