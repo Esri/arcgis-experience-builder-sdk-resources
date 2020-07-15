@@ -19,14 +19,14 @@
 */
 import { React, jimuHistory, DataSourceComponent } from 'jimu-core';
 
-import { BaseWidget, AllWidgetProps } from 'jimu-core';
+import { AllWidgetProps } from 'jimu-core';
 import MapView = require('esri/views/MapView');
 import WebMap = require('esri/WebMap');
 import Extent = require('esri/geometry/Extent');
 import {MapViewManager, WebMapDataSource} from 'jimu-arcgis';
 
 
-export default class Widget extends BaseWidget<AllWidgetProps<{}>, {}>{
+export default class Widget extends React.Component<AllWidgetProps<{}>, {}>{
   mapContainer = React.createRef<HTMLDivElement>();
   mapView: MapView;
   webMap: WebMap;
@@ -85,3 +85,4 @@ export default class Widget extends BaseWidget<AllWidgetProps<{}>, {}>{
     </DataSourceComponent>;
   }
 }
+
