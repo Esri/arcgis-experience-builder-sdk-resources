@@ -11,7 +11,7 @@ Using the `mapContainer` property the `React.createRef<HTMLDivElement>()` method
 to interfaces such as `MapView`, `WebMap`, and `__esri.WatchHandle` coming from the ArcGIS API for JavaScript. In addition, the `MapViewManager` class is used to get the instance of the app's mapview manager. 
 ```javascript
 
-export default class Widget extends BaseWidget<AllWidgetProps<{}>, {}>{
+export default class Widget extends React.Component<AllWidgetProps<{}>, {}>{
   mapContainer = React.createRef<HTMLDivElement>();
   mapView: MapView;
   webMap: WebMap;
