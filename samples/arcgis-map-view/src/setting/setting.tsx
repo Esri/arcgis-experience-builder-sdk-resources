@@ -18,11 +18,11 @@
   LICENSE file.
 */
 import { React, Immutable, UseDataSource } from 'jimu-core';
-import {BaseWidgetSetting} from 'jimu-for-builder';
+import { AllWidgetSettingProps} from 'jimu-for-builder';
 import {DataSourceTypes} from 'jimu-arcgis';
 import {DataSourceSelector} from 'jimu-ui/advanced/data-source-selector';
 
-export default class Setting extends BaseWidgetSetting{
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}>{
   supportedTypes = Immutable([DataSourceTypes.WebMap]);
 
   onDataSourceSelected = (useDataSources: UseDataSource[]) => {
