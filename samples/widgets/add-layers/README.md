@@ -1,4 +1,4 @@
-# Add Layers
+# Add layers
 
 This widget demonstrates how to add a layer to a map programmatically. Step-by-step instructions for building this widget can be found in the [ArcGIS for Developers Tutorials](https://developers.arcgis.com/labs/experiencebuilder/get-map-coordinates/).
 

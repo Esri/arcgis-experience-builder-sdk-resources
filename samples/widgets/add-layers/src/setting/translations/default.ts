@@ -1,5 +1,5 @@
 export default {
   settings: "Settings",
   zoomToLayer: "Zoom to layer",
-  selectMapWidget: "Select Map Widget"
+  selectMapWidget: "Select Map widget"
 };

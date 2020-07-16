@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { React, FormattedMessage, css, jsx } from "jimu-core";
-import { BaseWidgetSetting, AllWidgetSettingProps } from "jimu-for-builder";
+import { AllWidgetSettingProps } from "jimu-for-builder";
 import { Switch } from "jimu-ui";
 import {
   JimuMapViewSelector,
@@ -10,7 +10,7 @@ import {
 import { IMConfig } from "../config";
 import defaultMessages from "./translations/default";
 
-export default class Setting extends BaseWidgetSetting<
+export default class Setting extends React.PureComponent<
   AllWidgetSettingProps<IMConfig>,
   any
 > {
