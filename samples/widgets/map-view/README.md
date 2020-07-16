@@ -1,4 +1,4 @@
-# ArcGIS MapView
+# Create a map view
 This sample demonstrates how to load a webmap and create a map view.
 
 ## How to use the sample

@@ -1,4 +1,4 @@
-# Sharing state between widgets
+# Create Redux store
 
 This widget demonstrates how to provide your own Redux store,action, and reducer to share state between widgets.
 
