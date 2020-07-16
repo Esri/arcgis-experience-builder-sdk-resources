@@ -1,4 +1,4 @@
-# View Layers Toggle
+# View layers toggle
 
 This widget demonstrates how to create a dropdown toggle to allow viewing different layers on the map.
 

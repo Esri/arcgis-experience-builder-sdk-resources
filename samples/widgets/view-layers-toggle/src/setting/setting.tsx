@@ -1,5 +1,5 @@
 import { React } from "jimu-core";
-import { BaseWidgetSetting, AllWidgetSettingProps } from "jimu-for-builder";
+import { AllWidgetSettingProps } from "jimu-for-builder";
 import {
   JimuMapViewSelector,
   SettingRow,
@@ -12,7 +12,7 @@ interface IState {
   layerTextareaValue: string;
 }
 
-export default class Setting extends BaseWidgetSetting<
+export default class Setting extends React.PureComponent<
   AllWidgetSettingProps<IMConfig>,
   IState
 > {
