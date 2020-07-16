@@ -1,4 +1,4 @@
-# Load a widget from the ArcGIS API for JavaScript(JSAPI)
+# Legend widget
 
 This sample demonstrates how to include a JSAPI widget. 
 
