@@ -3,8 +3,7 @@
 This sample demonstrates how to write a Web component and include it in a custom Experience Builder widget.
 
 ## How to use the sample
-Clone the sample repo and paste the folder contents in the client/your-extensions/widgets
-folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 

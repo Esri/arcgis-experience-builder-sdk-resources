@@ -18,14 +18,14 @@
   LICENSE file.
 */
 import { React, FormattedMessage } from "jimu-core";
-import { BaseWidgetSetting, AllWidgetSettingProps } from "jimu-for-builder";
+import { AllWidgetSettingProps } from "jimu-for-builder";
 import defaultMessages from "./translations/default";
 import {
   JimuMapViewSelector,
   SettingSection,
 } from "jimu-ui/advanced/setting-components";
 
-export default class Setting extends BaseWidgetSetting<
+export default class Setting extends React.Component<
   AllWidgetSettingProps<{}>,
   any
 > {

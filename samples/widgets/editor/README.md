@@ -3,8 +3,7 @@
 This sample demonstrates how to include the Editor widget from the ArcGIS API for JavaScript. 
 
 ## How to use the sample
-Clone the sample repo and paste the folder contents in the client/your-extensions/widgets
-folder of your Experience Builder installation. 
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 This sample imports the required modules to leverage the `Editor` widget from the ArcGIS API for JavaScript. The `Editor` widget is dependent on a `Map` widget, which must have an editable feature layer. If it recognizes it is editable, the layer can be used by the widget. 

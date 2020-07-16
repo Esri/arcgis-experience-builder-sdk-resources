@@ -1,0 +1,25 @@
+{
+  "name": "redux",
+  "type": "widget",
+  "version": "1.1.0",
+  "exbVersion": "1.1.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the widget used in developer guide",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "extensions": [
+    {
+      "name": "My store",
+      "point": "REDUX_STORE",
+      "uri": "extensions/my-store"
+    }
+  ],
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}

@@ -1,10 +1,10 @@
-# Use a Third-Party Library: jQuery
+# Use a third-party library: jQuery
 
 The `jimu` libraries that come with Experience Builder can be used to include a variety of functionality into your widget. In addition to this functionality, third-party libraries can be included and used within a custom Experience Builder widget. This sample demonstrates how to configure Experience Builder to load a third-party library (jQuery) via the *manifest.json* `dependency` property and use it within a custom Experience Builder widget.
 
 ## How to use the sample
 
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and paste the folder contents in the client/your-extensions/widgets folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 

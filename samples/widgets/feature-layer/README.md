@@ -1,9 +1,9 @@
-# Use feature layer
+# Create a data source using a feature layer
 
-[Data sources]() are a key concept of the ArcGIS Experience Builder architecture. You may want to utilize a data source within your custom widget. This sample demonstrates how to use a feature layer as a data source.
+Data sources are a key concept of the ArcGIS Experience Builder architecture. You may want to utilize a data source within your custom widget. This sample demonstrates how to use a feature layer as a data source.
 
 ## How to use the sample
-Clone the sample repo and paste the folder contents in the client/your-extensions/widgets folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 
