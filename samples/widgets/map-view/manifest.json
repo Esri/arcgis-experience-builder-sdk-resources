@@ -12,7 +12,9 @@
   "properties": {
     "canCreateMapView": true
   },
-  "translatedLocales": [],
+  "translatedLocales": [
+    "en"
+  ],
   "defaultSize": {
     "width": 400,
     "height": 400
