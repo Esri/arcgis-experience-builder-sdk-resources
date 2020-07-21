@@ -6,7 +6,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-In the code snippet below it overrides the theme variables to create a custom theme. Use this [json](variables.json) as a reference in creating your own theme. All the variables can be overridden in the `variables.json` file in a theme folder. 
+In the code snippet below it overrides the theme variables to create a custom theme. Use this [json](https://github.com/Esri/arcgis-experience-builder-sdk-resources/blob/master/samples/themes/default-theme/variables.json) as a reference in creating your own theme. All the variables can be overridden in the `variables.json` file in a theme folder. 
 
 ```json
 {
