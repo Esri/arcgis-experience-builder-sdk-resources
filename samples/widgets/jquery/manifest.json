@@ -10,7 +10,7 @@
   "properties": {},
   "dependency": [
     "https://unpkg.com/jquery@3.5.1/dist/jquery.js",
-    "https://unpkg.com/jqtree@1.4.12/lib/tree.jquery.js"
+    "https://unpkg.com/jqtree@1.4.12/build/tree.jquery.js"
   ],
   "translatedLocales": [
     "en"
