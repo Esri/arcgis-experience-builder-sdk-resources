@@ -2,6 +2,8 @@
 
 This widget demonstrates how to display the latitude/longitude, scale, and zoom level of the map. Step-by-step instructions for building this widget can be found in the [ArcGIS for Developers Tutorials](https://developers.arcgis.com/labs/experiencebuilder/get-map-coordinates/).
 
+This widget is written as a React function component. The equivalent widget written as a React class component can be found [here](../get-map-coordinates-class/).
+
 ## How to use the sample
 
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
