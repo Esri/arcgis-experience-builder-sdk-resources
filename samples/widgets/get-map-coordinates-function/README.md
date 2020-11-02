@@ -15,16 +15,23 @@ Within `widget.tsx`, a reference to the Map object is acquired using the `JimuMa
 ```js
 // When the extent moves, update the state with all the updated values.
 jmv.view.watch("extent", evt => {
-  this.setState({ /* ... */ });
-});
+        setLatitude(jmv.view.center.latitude.toFixed(3));
+        setLongitude(jmv.view.center.longitude.toFixed(3));
+        setScale(Math.round(jmv.view.scale * 1) / 1);
+        setZoom(jmv.view.zoom);
+          });
 
 // When the pointer moves, take the pointer location and create a Point
 // geometry out of it (`view.toMap(...)`), then update the state.
 jmv.view.on("pointer-move", evt => {
-  const point: Point = this.state.jimuMapView.view.toMap({
-    x: evt.x,
-    y: evt.y
-  });
-  this.setState({ /* ... */ });
-});
+        const point: Point = jmv.view.toMap({
+          x: evt.x,
+          y: evt.y
+        });
+        setLatitude(point.latitude.toFixed(3));
+        setLongitude(point.longitude.toFixed(3));
+        setScale(Math.round(jmv.view.scale * 1) / 1);
+        setZoom(jmv.view.zoom);
+        setMapViewReady(true);
+      });
 ```

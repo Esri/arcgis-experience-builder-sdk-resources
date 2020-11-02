@@ -1,6 +1,6 @@
 {
-  "name": "feature-layer-functional",
-  "label": "Feature Layer Functional",
+  "name": "feature-layer-function",
+  "label": "Feature Layer Function",
   "type": "widget",
   "version": "1.2.0",
   "exbVersion": "1.2.0",
