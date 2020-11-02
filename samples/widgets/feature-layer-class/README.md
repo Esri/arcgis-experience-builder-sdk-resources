@@ -2,6 +2,8 @@
 
 Data sources are a key concept of the ArcGIS Experience Builder architecture. You may want to utilize a data source within your custom widget. This sample demonstrates how to use a feature layer as a data source.
 
+This widget is written as a React class component. The equivalent widget written as a React function component can be found [here](../feature-layer-function/).
+
 ## How to use the sample
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
