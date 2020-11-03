@@ -1,4 +1,4 @@
-# Use a feature layer
+# Use a feature layer (class)
 
 Data sources are a key concept of the ArcGIS Experience Builder architecture. You may want to utilize a data source within your custom widget. This sample demonstrates how to use a feature layer as a data source.
 
