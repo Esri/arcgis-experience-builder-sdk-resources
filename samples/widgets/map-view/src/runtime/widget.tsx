@@ -17,21 +17,31 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, jimuHistory, DataSourceComponent, AllWidgetProps } from 'jimu-core';
+import { React, jimuHistory, DataSourceComponent, AllWidgetProps, IMState, IMUrlParameters } from 'jimu-core';
 
 import MapView = require('esri/views/MapView');
 import WebMap = require('esri/WebMap');
 import Extent = require('esri/geometry/Extent');
 import {MapViewManager, WebMapDataSource} from 'jimu-arcgis';
 
+interface ExtraProps {
+  queryObject: IMUrlParameters;
+}
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, {}>{
+
+export default class Widget extends React.PureComponent<AllWidgetProps<{}> & ExtraProps, {}>{
   mapContainer = React.createRef<HTMLDivElement>();
   mapView: MapView;
   webMap: WebMap;
   extentWatch: __esri.WatchHandle;
 
   mvManager: MapViewManager = MapViewManager.getInstance();
+
+  static mapExtraStateProps = (state: IMState): ExtraProps => {
+    return {
+      queryObject: state.queryObject
+    }
+  };
 
   onDsCreated = (webmapDs: WebMapDataSource) => {
     if(!webmapDs){
@@ -43,7 +53,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, {}>{
         map: webmapDs.map,
         container: this.mapContainer.current
       };
-      if(this.props.queryObject[this.props.id]){
+      if(this.props.queryObject?.[this.props.id]){
         const extentStr = this.props.queryObject[this.props.id].substr('extent='.length);
         let extent;
         try{
