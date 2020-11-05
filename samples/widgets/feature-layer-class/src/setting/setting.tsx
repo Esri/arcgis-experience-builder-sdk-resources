@@ -19,11 +19,10 @@
 */
 import {React, Immutable, IMFieldSchema, UseDataSource} from 'jimu-core';
 import {AllWidgetSettingProps} from 'jimu-for-builder';
-import {ArcGISDataSourceTypes} from 'jimu-arcgis';
-import {DataSourceSelector, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
+import {DataSourceSelector, AllDataSourceTypes, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}>{
-  supportedTypes = Immutable([ArcGISDataSourceTypes.FeatureLayer]);
+  supportedTypes = Immutable([AllDataSourceTypes.FeatureLayer]);
 
   onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     this.props.onSettingChange({

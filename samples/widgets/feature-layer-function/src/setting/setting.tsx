@@ -19,8 +19,7 @@
 */
 import {React, Immutable, IMFieldSchema, UseDataSource} from 'jimu-core';
 import {AllWidgetSettingProps} from 'jimu-for-builder';
-import {ArcGISDataSourceTypes} from 'jimu-arcgis';
-import {DataSourceSelector, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
+import {DataSourceSelector, AllDataSourceTypes, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
 
 export default function Setting(props: AllWidgetSettingProps<{}>){
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
@@ -46,7 +45,7 @@ export default function Setting(props: AllWidgetSettingProps<{}>){
 
   return <div className="use-feature-layer-setting p-2">
     <DataSourceSelector
-      types={Immutable([ArcGISDataSourceTypes.FeatureLayer])}
+      types={Immutable([AllDataSourceTypes.FeatureLayer])}
       useDataSources={props.useDataSources}
       useDataSourcesEnabled={props.useDataSourcesEnabled}
       onToggleUseDataEnabled={onToggleUseDataEnabled}
