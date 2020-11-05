@@ -1,6 +1,8 @@
-# Get map coordinates
+# Get map coordinates (class)
 
 This widget demonstrates how to display the latitude/longitude, scale, and zoom level of the map. Step-by-step instructions for building this widget can be found in the [ArcGIS for Developers Tutorials](https://developers.arcgis.com/labs/experiencebuilder/get-map-coordinates/).
+
+This widget is written as a Class-based component. The equivalent widget written as a React functional Component can be found [here](../get-map-coordinates-function/).
 
 ## How to use the sample
 

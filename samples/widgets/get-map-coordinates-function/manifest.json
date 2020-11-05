@@ -1,11 +1,10 @@
 {
-  "name": "feature-layer",
-  "label": "Feature Layer",
+  "name": "get-map-coordinates-function",
   "type": "widget",
-  "version": "1.1.0",
-  "exbVersion": "1.1.0",
+  "version": "1.2.0",
+  "exbVersion": "1.2.0",
   "author": "Esri R&D Center Beijing",
-  "description": "This is the widget used in developer documentation",
+  "description": "This widget demonstrates how to display the latitude/longitude, scale, and zoom level of the map.",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
@@ -14,6 +13,6 @@
   ],
   "defaultSize": {
     "width": 400,
-    "height": 400
+    "height": 200
   }
 }

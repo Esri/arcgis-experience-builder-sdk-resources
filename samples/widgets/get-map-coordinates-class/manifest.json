@@ -1,21 +1,18 @@
 {
-  "name": "view-layers-toggle",
+  "name": "get-map-coordinates-class",
   "type": "widget",
   "version": "1.2.0",
   "exbVersion": "1.2.0",
   "author": "Esri R&D Center Beijing",
-  "description": "This widget demonstrates how to create a dropdown toggle to allow viewing different layers on the map.",
+  "description": "This widget demonstrates how to display the latitude/longitude, scale, and zoom level of the map.",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
-  "dependency": [
-    "jimu-arcgis"
-  ],
   "translatedLocales": [
     "en"
   ],
   "defaultSize": {
-    "width": 800,
-    "height": 500
+    "width": 400,
+    "height": 200
   }
 }
