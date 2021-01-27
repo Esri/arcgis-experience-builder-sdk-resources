@@ -1,7 +1,7 @@
 /**
   Licensing
 
-  Copyright 2020 Esri
+  Copyright 2021 Esri
 
   Licensed under the Apache License, Version 2.0 (the "License"); You
   may not use this file except in compliance with the License. You may
@@ -29,7 +29,7 @@ interface State {
 }
 
 
-export default class Widget extends React.Component<AllWidgetProps<{}>, State>{
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
 
   private myRef = React.createRef<HTMLDivElement>();
  
