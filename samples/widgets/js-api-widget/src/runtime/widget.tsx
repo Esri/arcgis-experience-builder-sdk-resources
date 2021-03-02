@@ -76,7 +76,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
     if(!this.mapView){
       return;
     }
-    if(!this.legendWidget){
+    if(!this.legendWidget && this.apiWidgetContainer.current){
       this.legendWidget = new Legend({
         view: this.mapView,
         container: this.apiWidgetContainer.current
