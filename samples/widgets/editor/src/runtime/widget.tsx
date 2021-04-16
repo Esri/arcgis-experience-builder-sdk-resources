@@ -32,7 +32,7 @@ interface State {
 export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
 
   private myRef = React.createRef<HTMLDivElement>();
- 
+
   constructor(props) {
     super(props);
     this.state = {
@@ -43,7 +43,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
   activeViewChangeHandler = (jmv: JimuMapView) => {
     if (this.state.jimuMapView) {
-       if (this.state.currentWidget) {
+      if (this.state.currentWidget) {
         this.state.currentWidget.destroy();
       }
     }
@@ -53,15 +53,15 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
         jimuMapView: jmv
       });
 
-      if(this.myRef.current) {
+      if (this.myRef.current) {
         const container = document.createElement("div");
         this.myRef.current.appendChild(container);
 
         const newEditor = new Editor({
           view: jmv.view,
-          container: container 
+          container: container
         });
-    
+
         this.setState({
           currentWidget: newEditor
         });
@@ -74,15 +74,33 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
   componentDidUpdate = evt => {
 
     if (this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 0) {
-         if (this.state.currentWidget) {
-            this.state.currentWidget.destroy();
+      if (this.state.currentWidget) {
+        this.state.currentWidget.destroy();
       }
-     }
+    }
   };
 
   render() {
-   
-      let mvc = <p>Please select a map.</p>;
+
+    const css = `
+    .esri-editor__scroller {
+      overflow-y: auto;
+      padding-top: $cap-spacing--half;
+      padding-bottom: $cap-spacing;
+      max-height: 1em;
+      }
+      .esri-editor__content-group {
+        max-height: 1em;
+      }
+      .esri-editor__content {
+       
+      }
+      .esri-editor__temp-wrapper {
+        
+      }
+      `
+
+    let mvc = <p>Please select a map.</p>;
     if (
       this.props.hasOwnProperty("useMapWidgetIds") &&
       this.props.useMapWidgetIds &&
@@ -97,11 +115,18 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
     }
 
     return (
-      <div 
+      <div
         className="widget-js-api-editor"
-        style={{ overflow: "auto" }}
+      // style={{ overflow: "auto" }} // currently
       >
-        <div className="here" ref={this.myRef}></div>
+        <style>
+          {css}
+        </style>
+        <div className="here" ref={this.myRef}>
+          <style>
+            {css}
+          </style>
+        </div>
         {mvc}
       </div>
     );
