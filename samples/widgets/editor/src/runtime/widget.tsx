@@ -115,7 +115,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
     return (
       <div
         className="widget-js-api-editor"
-        style={{ height: "100%", overflow: "auto" }}
+        style={{ overflow: "auto" }}
       >
         <div className="here" ref={this.myRef}></div>
         <style>
