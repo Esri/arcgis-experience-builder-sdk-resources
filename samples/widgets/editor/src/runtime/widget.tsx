@@ -92,12 +92,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
       .esri-editor__content-group {
         max-height: 1em;
       }
-      .esri-editor__content {
-       
-      }
-      .esri-editor__temp-wrapper {
-        
-      }
       `
     if (
       this.props.hasOwnProperty("useMapWidgetIds") &&
