@@ -18,7 +18,7 @@
   LICENSE file.
 */
 /** @jsx jsx */
-import { AllWidgetProps, jsx, React } from "jimu-core";
+import { AllWidgetProps, jsx, React, css } from "jimu-core";
 import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
 import Editor = require('esri/widgets/Editor');
 
@@ -80,6 +80,19 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
   render() {
 
     let mvc = <p>Please select a map.</p>;
+    
+    
+    const css = `
+    .esri-editor__scroller {
+      overflow-y: auto;
+      padding-top: $cap-spacing--half;
+      padding-bottom: $cap-spacing;
+      max-height: 1em;
+      }
+      .esri-editor__content-group {
+        max-height: 1em;
+      }
+      `
     if (
       this.props.hasOwnProperty("useMapWidgetIds") &&
       this.props.useMapWidgetIds &&
@@ -96,9 +109,9 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
     return (
       <div
         className="widget-js-api-editor"
-        style={{ height: "100%", overflow: "auto" }}
-      >
-        <div ref={this.myRef}></div>
+      css={[`height: "100%"; overflow: "auto";`, css]}
+    >
+     <div ref={this.myRef}></div>
         {mvc}
       </div>
     );
