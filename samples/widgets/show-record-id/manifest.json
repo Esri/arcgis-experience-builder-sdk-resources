@@ -1,5 +1,5 @@
 {
-  "name": "show-record-id-widget",
+  "name": "show-record-id",
   "type": "widget",
   "version": "1.4.0",
   "exbVersion": "1.4.0",
@@ -9,8 +9,12 @@
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "dataActions": [
     {
-      "name": "show-id",
+      "name": "showId",
+      "label": "show id",
       "uri": "data-actions/show-id"
     }
+  ],
+  "translatedLocales": [
+    "en"
   ]
 }
