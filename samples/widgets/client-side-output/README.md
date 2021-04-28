@@ -1,6 +1,6 @@
 # Client-side output data source
 
-Output data source can save data in data source instance, we call it client-side output data source.
+An output data source can save data in a data source instance, this is called a client-side output data source.
 
 ## How to use the sample
 
@@ -13,7 +13,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
 
 ```ts
-// Let framework know which data source current widget is using and which data source current widget is outputing.
+// Let framework know which data source current widget is using and which data source current widget is the output.
 this.props.onSettingChange({
   id: this.props.id,
   useDataSources: useDataSources
@@ -43,4 +43,4 @@ this.props.onSettingChange({
 </Button>
 ```
 
-Please note that the widget only generates output data source. If you want to use the output data source, please add another widget (such as List widget) and select the output data source for it. This sample widget does not listen to the origin data source change, you can use `onDataSourceInfoChange` callback of the `DataSourceComponent` to listen to the origin data source change.
+Please note this widget only generates an output data source. If you want to use the output data source, please add another widget (such as the List widget) and select the output data source for it. This sample widget does not listen to the origin data source change, you can use `onDataSourceInfoChange` callback of the `DataSourceComponent` to listen to the origin data source change.
