@@ -43,5 +43,5 @@ this.props.onSettingChange({
 </Button>
 ```
 
-Please note that the widget only generates output data source. If you want to use the output data source, please add another widget (such as List widget) and select the output data source for it.
+Please note that the widget only generates output data source. If you want to use the output data source, please add another widget (such as List widget) and select the output data source for it. This sample widget does not listen to the origin data source change, you can use `onDataSourceInfoChange` callback of the `DataSourceComponent` to listen to the origin data source change.
 
