@@ -17,24 +17,11 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, AllWidgetProps, IMState} from 'jimu-core';
+import {React, AllWidgetProps} from 'jimu-core';
 
-export interface Props {
-  featureIds?: string
-}
-
-export default class Widget extends React.PureComponent<AllWidgetProps & Props>{
-  static mapExtraStateProps = (
-    state: IMState,
-    props: AllWidgetProps
-  ): Props => {
-    return {
-      featureIds: props?.mutableStateProps?.featureIds
-    }
-  }
-
+export default class Widget extends React.PureComponent<AllWidgetProps>{
   render(){
-    const { featureIds } = this.props
+    const featureIds = this.props?.mutableStateProps?.featureIds
     return <div>
       {featureIds ? featureIds : 'No records to display.'}
     </div>;
