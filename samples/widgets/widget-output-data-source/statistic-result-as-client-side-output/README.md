@@ -51,6 +51,5 @@ this.props.onSettingChange({
   Update output data source
 </Button>
 ```
-
-
+6. The main difference between this widget with the `client-side-output` is this widget's output data source uses a different schema with its origin data source.
 
