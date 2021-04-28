@@ -1,6 +1,6 @@
-# Client-side output data source
+# Using statistics to create a client-side output data source
 
-Output data source can save data in data source instance, we call it client-side output data source.
+An output data source can save data in a data source instance, this is called a client-side output data source.
 
 ## How to use the sample
 
@@ -13,7 +13,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
 
 ```ts
-// Let framework know which data source current widget is using and which data source current widget is outputing.
+// Let framework know which data source current widget is using and which data source current widget is the  output.
 this.props.onSettingChange({
   id: this.props.id,
   useDataSources: useDataSources
@@ -38,7 +38,7 @@ this.props.onSettingChange({
 <MultiSelect fluid
   items={this.getStatFuncItems()}
   values={this.getSelectedStatFuncs()}
-  // use this.props.onSettingChange to save statistic funtions to config inside this callback
+  // use this.props.onSettingChange to save statistic functions to config inside this callback
   onClickItem={this.onStatFuncItemClick}
 />
 ```
@@ -51,4 +51,4 @@ this.props.onSettingChange({
   Update output data source
 </Button>
 ```
-6. The main difference between this widget with the `client-side-output` is this widget's output data source uses a different schema with its origin data source.
+6. The main difference between this widget with the [client-side-output](client-side-output) is this widget's output data source uses a different schema with its origin data source.
