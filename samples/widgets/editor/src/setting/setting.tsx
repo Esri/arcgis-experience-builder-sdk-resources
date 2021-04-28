@@ -25,7 +25,7 @@ import {
   SettingSection,
 } from "jimu-ui/advanced/setting-components";
 
-export default class Setting extends React.Component<
+export default class Setting extends React.PureComponent<
   AllWidgetSettingProps<{}>,
   any
 > {
