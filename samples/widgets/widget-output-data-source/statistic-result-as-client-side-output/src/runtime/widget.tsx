@@ -150,7 +150,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           The widget will use its output data source and will list the records in the output data source.
         </h5>
         <h5>
-          If the widget's origin data source is changed (e.g. add a filter), output data source won't update automotically. Please click the following button.
+          If the widget's origin data source is changed (e.g. add a filter), the output data source won't update automatically. Please click the following button.
         </h5>
 
         <Button onClick={this.setSourceRecordsToOutputDs} className='mb-5'>
