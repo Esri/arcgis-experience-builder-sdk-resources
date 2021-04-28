@@ -8,7 +8,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-1. In `setting.tsx`, use `DataSourceSelector` to allow user to select an original data source.
+1. In `setting.tsx`, use `DataSourceSelector` to allow user to select an origin data source.
 
 2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
 
@@ -34,7 +34,7 @@ this.props.onSettingChange({
 />
 ```
 
-4. In `widget.tsx`, use `DataSourceComponent` to create original data source instance.
+4. In `widget.tsx`, use `DataSourceComponent` to create origin data source instance.
 5. Update output data source's query parameters every time user clicking `update output data source` button.
 
 ```tsx
