@@ -91,13 +91,12 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
       .esri-editor__content-group {
         max-height: 1em;
       }
-   
+
       `
     if (
       this.props.hasOwnProperty("useMapWidgetIds") &&
       this.props.useMapWidgetIds &&
       this.props.useMapWidgetIds[0]
-      
     ) {
       mvc = (
         <JimuMapViewComponent
