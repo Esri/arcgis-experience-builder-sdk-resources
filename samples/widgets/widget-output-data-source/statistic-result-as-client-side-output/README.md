@@ -8,7 +8,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-1. In `setting.tsx`, use `DataSourceSelector` to allow user to select an origin data source.
+1. In `setting.tsx`, use `DataSourceSelector` to allow the user to select an origin data source.
 
 2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
 
