@@ -1,6 +1,6 @@
 # Widget output data source
 
-A widget can use data source and it can generate data source as well, we call the generated data source as widget output data source. Widgets can use output data sources the way same as using other data sources. 
+A widget can use a data source and it can generate a data source as well.  The generated data source is a widget output data source. Widgets can use output data sources the same way as using other data sources. 
 
 ## How to generate output data source
 
@@ -21,4 +21,3 @@ Widgets can use output data source just like using any other data sources.
 
 1. In setting, use `DataSourceSelector` to let user select a data source (`Outputs` tab).
 2. In widget, use `DataSourceComponent` to create data source instance and use the data source instance to do other operations.
-
