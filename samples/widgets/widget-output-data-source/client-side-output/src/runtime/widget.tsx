@@ -69,7 +69,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     if (!this.isDsConfigured()) {
       return (
         <h3>
-          This widget demonstrates how to use attribute query result to generate client-side output data source.
+          This widget demonstrates how to use attribute query results to generate a client-side output data source.
           <br />
           Please config data source.
         </h3>
@@ -85,7 +85,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           If you want to use the client-side output data source, you should add another widget (such as List) and configure the output data source for it.
         </h5>
         <h5>
-          If the widget's origin data source is changed (e.g. add a filter), output data source won't update automatically. Please click the following button.
+          If the widget's origin data source is changed (e.g. add a filter), the output data source won't update automatically. Please click the following button.
         </h5>
 
         <Button onClick={this.setSourceRecordsToOutputDs}>
