@@ -1,4 +1,4 @@
-# Subscribe widget
+# Message subscriber
 
 This sample demonstrates how to use message action in widget.
 
@@ -6,8 +6,8 @@ This sample demonstrates how to use message action in widget.
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
-  Within `query-action-setting.tsx`,create an class extends the React.PureComponent class with the types `ActionSettingProps`,
-  the configuration of the message action can be released through the `onSettingChange` method
+  Within `query-action-setting.tsx`, create a class extends the React.PureComponent class with the types `ActionSettingProps`.
+  The configuration of the message action can be changed through the `onSettingChange` method.
 
   ```javascript
 this.props.onSettingChange({
@@ -23,8 +23,7 @@ this.props.onSettingChange({
 
 ```
 
-Within `query-action.tsx`, create an class extends the `AbstractMessageAction` class, we should set the uri of the action setting component through the `getSettingComponentUri` method, the `filterMessageType` method can filter out actions that do not meet our requirements. We can monitor the trigger of
-the action in the `onExecute` method, and can perform the operation what we want
+Within `query-action.tsx`, create a class extends the `AbstractMessageAction` class. Then set the URI of the action setting component through the `getSettingComponentUri` method. Use the `filterMessageType` method to filter out actions that are not relevant to this widget. The `onExecute` method is called when the action is triggered.
 ```javascript
 export default class QueryAction extends AbstractMessageAction{
   filterMessageType(messageType: MessageType, messageWidgetId?: string): boolean{
@@ -38,14 +37,14 @@ export default class QueryAction extends AbstractMessageAction{
   }
 
   onExecute(message: Message, actionConfig?: any): Promise<boolean> | boolean{
-    let q = `${(actionConfig as ConfigForStringChangeMessage).fieldName} = '${message}'`
+    let q = `${actionConfig.fieldName} = '${message}'`
     switch(message.type){
       case MessageType.StringSelectionChange:
-        q = `${(actionConfig as ConfigForStringChangeMessage).fieldName} = '${(message as StringSelectionChangeMessage).str}'`
+        q = `${actionConfig.fieldName} = '${(message as StringSelectionChangeMessage).str}'`
         break;
       case MessageType.DataRecordsSelectionChange:
         q = `${actionConfig.fieldName} = ` +
-          `'${(message as DataRecordsSelectionChangeMessage).records[0].getData()[actionConfig.fieldName]}'`
+          `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
         break;
     }
 

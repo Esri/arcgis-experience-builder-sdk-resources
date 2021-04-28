@@ -7,7 +7,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown>,
   componentDidUpdate(prevProps: AllWidgetProps<unknown>){
     if(utils.getValue(this.props, 'stateProps.queryString') !== utils.getValue(prevProps, 'stateProps.queryString')){
       const q = new Query({
-        where: this.props.stateProps.queryString,
+        where: this.props.stateProps.queryString, //Get queryString from store
         outFields: ['*']
       })
       this.setState({query: q.toJSON()})

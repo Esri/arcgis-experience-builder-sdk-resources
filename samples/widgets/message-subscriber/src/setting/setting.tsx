@@ -1,9 +1,13 @@
 import {React, Immutable, IMFieldSchema, UseDataSource, DataSource, DataSourceTypes} from 'jimu-core';
-import {BaseWidgetSetting} from 'jimu-for-builder';
+import {AllWidgetSettingProps} from 'jimu-for-builder';
 import {FieldSelector} from 'jimu-ui/advanced/data-source-selector';
 import {DataSourceSelector} from 'jimu-ui/advanced/data-source-selector';
 
-export default class Setting extends BaseWidgetSetting{
+interface Config {}
+
+interface State {}
+
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<Config>, State>{
   supportedTypes = Immutable([DataSourceTypes.FeatureLayer]);
 
   onToggleUseDataEnabled = (useDataSourcesEnabled: boolean) => {
