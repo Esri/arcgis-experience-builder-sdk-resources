@@ -130,7 +130,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
       return (
         <>
           <h3>
-            This widget demostrates how to use statistic query result to generate client-side output data source.
+            This widget demonstrates how to use statistic query results to generate a client-side output data source.
           </h3>
           <h4>
             Firstly, please config data source.
