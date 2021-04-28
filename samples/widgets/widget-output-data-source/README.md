@@ -7,7 +7,7 @@ A widget can use a data source and it can generate a data source as well.  The g
 In general, there are two steps for a widget to generate an output data source.
 
 1. In the setting, declare its output data source by using  `this.props.onSettingChange`.
-2. In widget, update data of output data source.
+2. In the widget, update the data of the output data source.
 
 More specifically, output data source can save data in data source instance, or not. If save data in data source instance, widget needs to update output data source's source records, if not, widget needs to update output data source's query parameter. To finish step 2, there are two options.
 
