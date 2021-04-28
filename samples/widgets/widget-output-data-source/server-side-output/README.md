@@ -35,7 +35,7 @@ this.props.onSettingChange({
 ```
 
 4. In `widget.tsx`, use `DataSourceComponent` to create origin data source instance.
-5. Update output data source's query parameters every time the user clicks `update output data source` button.
+5. Update output data source's query parameters every time the user clicks the `update output data source` button.
 
 ```tsx
 <Button onClick={this.updateOutputDsQueryParams}>
