@@ -23,9 +23,9 @@ interface State{
 
 ```
 
-Extend the `BaseWidget` class and use the `AllWidgetProps` type and implement the `State` interface. The `legendWidget` property is used for the `Legend` widget so it can be referenced throughout the widget. 
+Extend the `React.PureComponent` class and use the `AllWidgetProps` type and implement the `State` interface. The `legendWidget` property is used for the `Legend` widget so it can be referenced throughout the widget. 
 ```javascript
-export default class Widget extends BaseWidget<AllWidgetProps<{}>, State>{
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
   apiWidgetContainer: React.RefObject<HTMLDivElement>;
   legendWidget: Legend;
 
@@ -51,7 +51,7 @@ The `createAPIWidget` method basically creates the `Legend` widget and passes th
     if(!this.mapView){
       return;
     }
-    if(!this.legendWidget){
+    if(!this.legendWidget && this.apiWidgetContainer.current){
       this.legendWidget = new Legend({
         view: this.mapView,
         container: this.apiWidgetContainer.current

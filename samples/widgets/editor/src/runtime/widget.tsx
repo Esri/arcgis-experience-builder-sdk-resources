@@ -97,7 +97,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
       this.props.hasOwnProperty("useMapWidgetIds") &&
       this.props.useMapWidgetIds &&
       this.props.useMapWidgetIds[0]
-
     ) {
       mvc = (
         <JimuMapViewComponent
