@@ -44,7 +44,7 @@ this.props.onSettingChange({
 ```
 
 4. In `widget.tsx`, use `DataSourceComponent` to create origin data source instance.
-5. Update output data source's source records every time user clicking `update output data source` button.
+5. Update output data source's source records every time the user clicks the `update output data source` button.
 
 ```tsx
 <Button onClick={this.setSourceRecordsToOutputDs}>
@@ -52,4 +52,3 @@ this.props.onSettingChange({
 </Button>
 ```
 6. The main difference between this widget with the `client-side-output` is this widget's output data source uses a different schema with its origin data source.
-
