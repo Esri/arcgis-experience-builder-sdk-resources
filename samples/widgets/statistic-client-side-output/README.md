@@ -13,7 +13,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
 
 ```ts
-// Let framework know which data source current widget is using and which data source current widget is the  output.
+// Let framework know which data source current widget is using and which data source current widget is the output.
 this.props.onSettingChange({
   id: this.props.id,
   useDataSources: useDataSources
