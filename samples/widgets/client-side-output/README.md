@@ -8,9 +8,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-1. In `setting.tsx`, use `DataSourceSelector` to allow the user to select an origin data source.
-
-2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
+In `setting.tsx`, use `DataSourceSelector` to allow the user to select an origin data source. Declare the output data source inside `onChange` callback of `DataSourceSelector`.
 
 ```ts
 // Let framework know which data source current widget is using and which data source current widget is the output.
@@ -20,7 +18,7 @@ this.props.onSettingChange({
 }, outputDsJsons)
 ```
 
-3. In `setting.tsx`, select a filter and save it in widget config.
+Select a filter and save it in widget config.
 
 ```tsx
 <SqlExpressionBuilderPopup
@@ -34,8 +32,7 @@ this.props.onSettingChange({
 />
 ```
 
-4. In `widget.tsx`, use `DataSourceComponent` to create origin data source instance.
-5. Update output data source's source records every time the user clicks the `update output data source` button.
+In `widget.tsx`, use `DataSourceComponent` to create origin data source instance. Update the output data source's source records every time the user clicks the `update output data source` button.
 
 ```tsx
 <Button onClick={this.setSourceRecordsToOutputDs}>

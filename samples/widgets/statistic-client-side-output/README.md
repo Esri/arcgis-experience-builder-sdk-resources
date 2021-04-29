@@ -1,4 +1,4 @@
-# Using statistics to create a client-side output data source
+# Statistics with output data source
 
 An output data source can save data in a data source instance, this is called a client-side output data source.
 
@@ -8,9 +8,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-1. In `setting.tsx`, use `DataSourceSelector` to allow the user to select an origin data source.
-
-2. In `setting.tsx`, declare output data source inside `onChange` callback of `DataSourceSelector`.
+In `setting.tsx`, use `DataSourceSelector` to allow the user to select an origin data source. Next declare the output data source inside `onChange` callback of `DataSourceSelector`.
 
 ```ts
 // Let framework know which data source current widget is using and which data source current widget is the output.
@@ -20,7 +18,7 @@ this.props.onSettingChange({
 }, outputDsJsons)
 ```
 
-3. In `setting.tsx`, select a number field and some statistic functions, then save them in widget config.
+Select a number field and some statistic functions, then save them in widget config.
 
 ```tsx
 <div className='my-2'>Please select a field.</div>
@@ -43,12 +41,11 @@ this.props.onSettingChange({
 />
 ```
 
-4. In `widget.tsx`, use `DataSourceComponent` to create origin data source instance.
-5. Update output data source's source records every time the user clicks the `update output data source` button.
+In `widget.tsx`, use `DataSourceComponent` to create origin data source instance. Update the output data source's source records every time the user clicks the `update output data source` button.
 
 ```tsx
 <Button onClick={this.setSourceRecordsToOutputDs}>
   Update output data source
 </Button>
 ```
-6. The main difference between this widget with the [client-side-output](client-side-output) is this widget's output data source uses a different schema with its origin data source.
+The main difference between this widget with the [client-side-output](client-side-output) is this widget's output data source uses a different schema with its origin data source.
