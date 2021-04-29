@@ -19,10 +19,11 @@
 */
 import { React, jimuHistory, DataSourceComponent, AllWidgetProps, IMState, IMUrlParameters } from 'jimu-core';
 
-import MapView = require('esri/views/MapView');
-import WebMap = require('esri/WebMap');
-import Extent = require('esri/geometry/Extent');
-import {MapViewManager, WebMapDataSource} from 'jimu-arcgis';
+import * as MapView from "esri/views/MapView";
+import * as WebMap from "esri/WebMap";
+import * as Extent from "esri/geometry/Extent";
+
+import { MapViewManager, WebMapDataSource } from 'jimu-arcgis';
 
 interface ExtraProps {
   queryObject: IMUrlParameters;
@@ -44,7 +45,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}> & Ext
   };
 
   onDsCreated = (webmapDs: WebMapDataSource) => {
-    if(!webmapDs){
+    if (!webmapDs) {
       return;
     }
 
@@ -53,16 +54,16 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}> & Ext
         map: webmapDs.map,
         container: this.mapContainer.current
       };
-      if(this.props.queryObject?.[this.props.id]){
+      if (this.props.queryObject?.[this.props.id]) {
         const extentStr = this.props.queryObject[this.props.id].substr('extent='.length);
         let extent;
-        try{
+        try {
           extent = new Extent(JSON.parse(extentStr));
-        }catch(err){
+        } catch (err) {
           console.error('Bad extent URL parameter.')
         }
 
-        if(extent){
+        if (extent) {
           options.extent = extent;
         }
       }
@@ -72,7 +73,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}> & Ext
         datasourceId: webmapDs.id,
         isActive: true
       }).then(jimuMapView => {
-        if(!this.extentWatch){
+        if (!this.extentWatch) {
           this.extentWatch = jimuMapView.view.watch('extent', (extent: __esri.Extent) => {
             jimuHistory.changeQueryObject({
               [this.props.id]: `extent=${JSON.stringify(extent.toJSON())}`
@@ -83,7 +84,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}> & Ext
     }
   }
 
-  mapNode = <div className="widget-map" style={{width: '500px', height: '500px'}} ref={this.mapContainer}></div>;
+  mapNode = <div className="widget-map" style={{ width: '100%', height: '100%' }} ref={this.mapContainer}></div>;
 
   render() {
     if (!this.props.useDataSources || this.props.useDataSources.length === 0) {

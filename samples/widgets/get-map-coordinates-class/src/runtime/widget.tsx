@@ -22,7 +22,7 @@ import { React, AllWidgetProps, jsx } from "jimu-core";
 import { IMConfig } from "../config";
 import { JimuMapView, JimuMapViewComponent } from "jimu-arcgis";
 
-import Point = require("esri/geometry/Point");
+import * as Point from "esri/geometry/Point";
 
 import defaultMessages from "./translations/default";
 
@@ -32,7 +32,6 @@ interface IState {
   scale: number;
   zoom: number;
   mapViewReady: boolean;
-  jimuMapView: JimuMapView;
 }
 
 export default class Widget extends React.PureComponent<
@@ -44,23 +43,18 @@ export default class Widget extends React.PureComponent<
     longitude: "",
     zoom: 0,
     scale: 0,
-    mapViewReady: false,
-    jimuMapView: null
+    mapViewReady: false
   };
 
   activeViewChangeHandler = (jmv: JimuMapView) => {
     if (jmv) {
-      this.setState({
-        jimuMapView: jmv
-      });
-
       // When the extent moves, update the state with all the updated values.
       jmv.view.watch("extent", evt => {
         this.setState({
-          latitude: this.state.jimuMapView.view.center.latitude.toFixed(3),
-          longitude: this.state.jimuMapView.view.center.longitude.toFixed(3),
-          scale: Math.round(this.state.jimuMapView.view.scale * 1) / 1,
-          zoom: this.state.jimuMapView.view.zoom,
+          latitude: jmv.view.center.latitude.toFixed(3),
+          longitude: jmv.view.center.longitude.toFixed(3),
+          scale: Math.round(jmv.view.scale * 1) / 1,
+          zoom: jmv.view.zoom,
           // this is set to false initially, then once we have the first set of data (and all subsequent) it's set
           // to true, so that we can hide the text until everything is ready:
           mapViewReady: true
@@ -70,15 +64,15 @@ export default class Widget extends React.PureComponent<
       // When the pointer moves, take the pointer location and create a Point
       // Geometry out of it (`view.toMap(...)`), then update the state.
       jmv.view.on("pointer-move", evt => {
-        const point: Point = this.state.jimuMapView.view.toMap({
+        const point: Point = jmv.view.toMap({
           x: evt.x,
           y: evt.y
         });
         this.setState({
           latitude: point.latitude.toFixed(3),
           longitude: point.longitude.toFixed(3),
-          scale: Math.round(this.state.jimuMapView.view.scale * 1) / 1,
-          zoom: this.state.jimuMapView.view.zoom,
+          scale: Math.round(jmv.view.scale * 1) / 1,
+          zoom: jmv.view.zoom,
           mapViewReady: true
         });
       });
@@ -117,7 +111,7 @@ export default class Widget extends React.PureComponent<
           this.props.useMapWidgetIds &&
           this.props.useMapWidgetIds.length === 1 && (
             <JimuMapViewComponent
-              useMapWidgetIds={this.props.useMapWidgetIds}
+              useMapWidgetId={this.props.useMapWidgetIds?.[0]}
               onActiveViewChange={this.activeViewChangeHandler}
             />
           )}
