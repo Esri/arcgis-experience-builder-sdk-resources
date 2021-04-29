@@ -1,12 +1,12 @@
 # Message subscriber
 
-This sample demonstrates how to use message action in widget.
+This sample demonstrates how to use message action in a widget.
 
 ## How to use the sample
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
-  Within `query-action-setting.tsx`, create a class extends the React.PureComponent class with the types `ActionSettingProps`.
+  Within `query-action-setting.tsx`, create a class to extend the React.PureComponent class with the types `ActionSettingProps`.
   The configuration of the message action can be changed through the `onSettingChange` method.
 
   ```javascript
@@ -23,7 +23,7 @@ this.props.onSettingChange({
 
 ```
 
-Within `query-action.tsx`, create a class extends the `AbstractMessageAction` class. Then set the URI of the action setting component through the `getSettingComponentUri` method. Use the `filterMessageType` method to filter out actions that are not relevant to this widget. The `onExecute` method is called when the action is triggered.
+Within `query-action.tsx`, create a class to extend the `AbstractMessageAction` class. Then set the URI of the action setting component through the `getSettingComponentUri` method. Use the `filterMessageType` method to filter out actions that are not relevant to this widget. The `onExecute` method is called when the action is triggered.
 ```javascript
 export default class QueryAction extends AbstractMessageAction{
   filterMessageType(messageType: MessageType, messageWidgetId?: string): boolean{

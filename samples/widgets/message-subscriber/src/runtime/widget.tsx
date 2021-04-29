@@ -40,7 +40,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown>,
     }
 
     return <div className="widget-subscribe" style={{overflow: 'auto', maxHeight: '700px'}}>
-      <h5>This widget will listen <b>STRING_SELECTION_CHANGE</b> and <b>FEATURE_SELECTION_CHANGE</b> message to do query</h5>
+      <h5>This widget will listen to a <b>STRING_SELECTION_CHANGE</b> and <b>FEATURE_SELECTION_CHANGE</b> message to run a query</h5>
       <DataSourceComponent useDataSource={this.props.useDataSources[0]} query={this.state.query} widgetId={this.props.id} localId="query-result">{
         (ds: DataSource, info: IMDataSourceInfo) => {
           const isLoaded = info.status === DataSourceStatus.Loaded;

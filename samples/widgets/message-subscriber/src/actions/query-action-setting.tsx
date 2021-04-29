@@ -12,9 +12,6 @@ interface Config {
 export type IMConfig = ImmutableObject<Config>;
 
 class QueryActionSetting extends React.PureComponent<ActionSettingProps<IMConfig>, States>{
-  constructor(props){
-    super(props);
-  }
 
   static defaultProps = {
     config: Immutable({
@@ -63,7 +60,7 @@ class QueryActionSetting extends React.PureComponent<ActionSettingProps<IMConfig
   /**
    * Get the selected DataSource from subscribe-widget through widgetId.
    *
-   * @param widgetId The id of the widget that listens for the message.
+   * @param widgetId The id of the widget that listens to for the message.
   */
   getDsSelectorSourceData = (widgetId: string) => {
     const appConfig = getAppStore().getState()?.appStateInBuilder?.appConfig;
