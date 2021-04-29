@@ -6,8 +6,9 @@ This sample demonstrates how to use message action in a widget.
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
-  Within `query-action-setting.tsx`, create a class to extend the React.PureComponent class with the types `ActionSettingProps`.
-  The configuration of the message action can be changed through the `onSettingChange` method.
+This widget requires another widget to publish the message for the data records and string selection change. You can use the FeatureInfo widget with a Record Selection Changes trigger to select this widget to configure the action settings. 
+
+Within `query-action-setting.tsx`, create a class to extend the React.PureComponent class with the types `ActionSettingProps`. The configuration of the message action can be changed through the `onSettingChange` method.
 
   ```javascript
 this.props.onSettingChange({
