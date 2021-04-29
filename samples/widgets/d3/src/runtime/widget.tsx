@@ -18,8 +18,8 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { jsx } from "jimu-core";
-import { useEffect, useRef } from "react";
+import { React, jsx } from "jimu-core";
+const { useEffect, useRef } = React;
 import * as d3 from "./lib/d3/d3.min.js";
 
 export default function Widget() {

@@ -19,14 +19,14 @@
 */
 import { React, IMDataSourceInfo, DataSource, DataSourceManager, DataSourceStatus, FeatureLayerQueryParams, AllWidgetProps, DataSourceComponent } from 'jimu-core';
 
-interface IState {
+interface State {
   query: FeatureLayerQueryParams;
 }
 
 /**
  * This widget will show features from a configured feature layer
  */
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, IState>{
+export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
   state = { query: null };
 
   cityNameRef: React.RefObject<HTMLInputElement> = React.createRef();
