@@ -49,10 +49,21 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
       return;
     }
 
-    if (!this.legendWidget && this.apiWidgetContainer.current) {
+    if (this.apiWidgetContainer.current) {
+      if (this.legendWidget) {
+        // reset the legend widget
+        this.legendWidget.destroy();
+        this.legendWidget = null;
+      }
+
+      // since the widget replaces the container, we must create a new DOM node
+      // so when we destroy we will not remove the "ref" DOM node
+      const container = document.createElement("div");
+      this.apiWidgetContainer.current.appendChild(container);
+
       this.legendWidget = new Legend({
         view: jimuMapView.view,
-        container: this.apiWidgetContainer.current
+        container: container
       });
 
       const vm = new LegendVM({
