@@ -1,28 +1,14 @@
-/** @jsx jsx */
-import {React, AllWidgetProps, jsx } from 'jimu-core';
-import {JimuMapViewComponent, JimuMapView} from "jimu-arcgis";
-import {Label, Checkbox, WidgetPlaceholder} from 'jimu-ui';
+# Clustering
 
-interface State {
- jimuMapView: JimuMapView;
- clusterLayer: string;
- clusterStatus: boolean;
- errorTip: boolean;
-}
+This sample demonstrates how to enable point clustering on a feature layer in a web map. 
 
-export default class Widget extends React.PureComponent<AllWidgetProps<any>, State> {
+## How to use the sample
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
- constructor(props){
-   super(props);
- 
-   this.state = {
-     jimuMapView: undefined, 
-     clusterLayer: undefined,
-     clusterStatus: false,
-     errorTip: true
-     };
- } 
+## How it works
+The property `clusterConfig` defines the cluster properties such as the `clusterRadius`, which determines each cluster's region for including features. 
 
+  ```javascript
  clusterConfig = {
   type: "cluster",
   clusterRadius: "100px",
@@ -49,6 +35,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, Sta
 
 }
 
+```
+
+`onCheckBoxChange` function handles the logic for the `Checkbox` component and sets the state based on the value and passes this to the `clusterSwitch` function.
+```javascript
  onCheckBoxChange = (e) => {
   const valueState = e.target.value
    this.setState({ 
@@ -58,6 +48,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, Sta
       })
 }
 
+```
+
+The `clusterSwitch` function controls the display of the cluster. If `this.state.clusterStatus` is true then enable clustering. Otherwise, turn off the clustering for the layer by setting it to `null`.    
+```javascript
 clusterSwitch = (e) => {
   if (this.state.clusterStatus){ 
        this.state.jimuMapView.jimuLayerViews[this.state.clusterLayer].layer.featureReduction = this.clusterConfig
@@ -68,7 +62,12 @@ clusterSwitch = (e) => {
 
 }
 
-  activeViewChangeHandler = (jmv: JimuMapView) => {
+```
+
+The `activeViewChangeHandler` function handles a couple of things. It checks if there is a `JimuMapView` and if it contains layers. If it does contain layers then it will set the state for map view, the data source and the error tip to display the widget. If there is a `JimuMapView` without layers, then it will display the `WidgetPlaceHolder` component.  
+
+  ```javascript
+     activeViewChangeHandler = (jmv: JimuMapView) => {
     if (jmv) {
     const jimuLayerViews = jmv.jimuLayerViews;
     const jimuLayerViewIds = Object.keys(jimuLayerViews)[0];
@@ -79,7 +78,7 @@ clusterSwitch = (e) => {
         return
       }
 
-     this.setState({
+    this.setState({
        jimuMapView: jmv,
        clusterLayer: jimuLayerViewIds,
        errorTip: false
@@ -95,28 +94,4 @@ clusterSwitch = (e) => {
    }
  } 
 
-renderWidgetPlaceholder() {
-  return <WidgetPlaceholder icon={require('./assets/cluster.svg')} widgetId={this.props.id} message={'Please select a web map with a feature layer to enable point clustering.'} />;
-}
- render() {
-  const mapContent = <JimuMapViewComponent useMapWidgetId={this.props.useMapWidgetIds?.[0]} onActiveViewChange={this.activeViewChangeHandler} />
-  let clusterContent = null;
-  if (this.state.errorTip || !(this.props.useMapWidgetIds && this.props.useMapWidgetIds.length > 0)){
-    clusterContent = this.renderWidgetPlaceholder();
-  } else {
-    clusterContent = 
-    <Label style={{ cursor: "pointer"}} >
-        <Checkbox  checked={this.state.clusterStatus} onChange={(e) => {this.onCheckBoxChange({
-					target: {
-					  	value: e.target.checked,
-						},
-					}); 
-					}}
-				/> Cluster points </Label>
-  }
-  return <div style={{height:'100%'}} className="cluster-map">
-      {clusterContent}
-      <div>{mapContent}</div>
-    </div>
- }
-}
+```
