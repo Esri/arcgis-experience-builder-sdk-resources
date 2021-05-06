@@ -9,6 +9,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 Define the data action in the folder of `src/data-actions`. Then extend the base class `AbstractDataAction` and implement its methods: `isSupported` and `onExecute`.
 
 Register the data action in manifest.
+
 ```json
   "dataActions": [
     {
@@ -20,6 +21,7 @@ Register the data action in manifest.
 
 ```
 Add nls labels in `src/runtime/translations/default.ts` for the data action if necessary. The name of the nls property should follow the pattern `_action_${dataActionName}_label`. In this case, it is `_action_showId_label`.
+
 ```javascript
 export default {
   _widgetLabel: 'ShowId',
