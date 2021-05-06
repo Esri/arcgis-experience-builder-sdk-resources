@@ -1,4 +1,4 @@
-# Demo widget
+# Demo class widget
 This sample demonstrates how to create a widget using a class component.
 
 ## How to use the sample
