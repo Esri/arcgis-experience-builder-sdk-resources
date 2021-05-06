@@ -1,4 +1,4 @@
-# Clustering
+# Point clustering
 
 This sample demonstrates how to enable point clustering on a feature layer in a web map. 
 
