@@ -50,7 +50,7 @@ The property `clusterConfig` defines the cluster properties such as the `cluster
 
 ```
 
-The `clusterSwitch` function controls the display of the cluster. If `this.state.clusterStatus` is true then enable clustering. Otherwise, turn off the clustering for the layer by setting it to `null`.    
+The `clusterSwitch` function controls the display of the cluster. If `this.state.clusterStatus` is true, then enable clustering. Otherwise, turn off the clustering for the layer by setting it to `null`.    
 ```javascript
 clusterSwitch = (e) => {
   if (this.state.clusterStatus){ 
