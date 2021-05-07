@@ -1,5 +1,6 @@
 ## Samples
 
+* [Add layers](add-layers)
 * [Client-side output data source](client-side-output)
 * [Create a data source using a feature layer (class)](feature-layer-class)
 * [Create a data source using a feature layer (function)](feature-layer-function)
@@ -20,5 +21,6 @@
 * [Using a jQuery library](jquery)
 * [Using a react data grid library](react-data-grid)
 * [Using statistics to create an output data source](statistic-client-side-output)
+* [View layers toggle](view-layers-toggle)
 * [Web component](web-component)
 
