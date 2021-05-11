@@ -26,17 +26,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
   outputDataDataRender = (outputDs: DataSource, info: IMDataSourceInfo) => {
     return (
       <div>
-        Count of output data source:
-        {
-          outputDs && outputDs.getRecords().length
-        }
         <div className='mt-2' />
-        Records of output data source:
+        Output data source records:
         {
           outputDs && outputDs.getRecords().map((record, i) =>
             <div key={i}>
               {
-                Object.keys(outputDs.getSchema().fields).map((f, i) => <div key={i}>{`${f}: ${record.getData()[f]}`}</div>)
+                Object.keys(outputDs.getSchema().fields).filter(f => f !== 'objectid').map((f, i) => <div key={i}>{`${f}: ${record.getData()[f]}`}</div>)
               }
             </div>
           )
@@ -147,7 +143,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           The output data source is generated.
         </h3>
         <h5>
-          The widget will use its output data source and will list the records in the output data source.
+          Data of the output data source is statistic query result of the selected field and the selected statistic functions.
+        </h5>
+        <h5>
+          The widget will list the records of the output data source.
         </h5>
         <h5>
           If the widget's origin data source is changed (e.g. add a filter), the output data source won't update automatically. Please click the following button.
