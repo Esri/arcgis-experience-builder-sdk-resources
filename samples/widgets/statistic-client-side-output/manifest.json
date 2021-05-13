@@ -1,0 +1,14 @@
+{
+  "name": "statistic-client-side-output",
+  "type": "widget",
+  "version": "1.4.0",
+  "exbVersion": "1.4.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the widget used in developer guide",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "defaultSize": {
+    "width": 400,
+    "height": 400
+  }
+}

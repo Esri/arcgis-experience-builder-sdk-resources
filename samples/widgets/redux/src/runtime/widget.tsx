@@ -18,10 +18,10 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { AllWidgetProps, BaseWidget, jsx, IMState } from 'jimu-core';
+import { React, AllWidgetProps, jsx, IMState } from 'jimu-core';
 import {Input} from 'jimu-ui';
 
-export default class Widget extends BaseWidget<AllWidgetProps<{}> & {a: string}, {}> {
+export default class Widget extends React.PureComponent<AllWidgetProps<{}> & {a: string}, {}> {
 
   /**
    * Map the state your widget needs

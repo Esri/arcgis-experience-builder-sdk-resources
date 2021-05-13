@@ -9,7 +9,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 This sample imports the required modules to leverage the `Editor` widget from the ArcGIS API for JavaScript. The `Editor` widget is dependent on a `Map` widget, which must have an editable feature layer. If it recognizes it is editable, the layer can be used by the widget. 
 
   ```javascript
- import Editor = require('esri/widgets/Editor');
+ import * as Editor from 'esri/widgets/Editor';
 
 ```
 
