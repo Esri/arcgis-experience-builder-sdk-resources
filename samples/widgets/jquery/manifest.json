@@ -1,8 +1,8 @@
 {
   "name": "jquery",
   "type": "widget",
-  "version": "1.3.0",
-  "exbVersion": "1.3.0",
+  "version": "1.4.0",
+  "exbVersion": "1.4.0",
   "author": "Esri R&D Center Beijing",
   "description": "This widget demonstrates how to load dependencies from CDN, the dependencies are loaded in sequence.",
   "copyright": "",

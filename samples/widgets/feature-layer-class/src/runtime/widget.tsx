@@ -27,7 +27,8 @@ interface State {
  * This widget will show features from a configured feature layer
  */
 export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-  state = { query: null}
+  state = { query: null };
+
   cityNameRef: React.RefObject<HTMLInputElement> = React.createRef();
 
   componentDidMount() {
@@ -61,7 +62,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
   }
 
   dataRender = (ds: DataSource, info: IMDataSourceInfo) => {
-    // this.createOutputDs(ds);
     const fName = this.props.useDataSources[0].fields[0];
     return <>
       <div>
@@ -79,22 +79,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
         }
       </div>
     </>
-  }
-
-  createOutputDs(useDs: DataSource) {
-    if (!this.props.outputDataSources) {
-      return;
-    }
-    const outputDsId = this.props.outputDataSources[0];
-    const dsManager = DataSourceManager.getInstance();
-    if (dsManager.getDataSource(outputDsId)) {
-      if (dsManager.getDataSource(outputDsId).getDataSourceJson().originDataSources[0].dataSourceId !== useDs.id) {
-        dsManager.destroyDataSource(outputDsId);
-      }
-    }
-    dsManager.createDataSource(outputDsId).then(ods => {
-      ods.setRecords(useDs.getRecords());
-    });
   }
 
   render() {

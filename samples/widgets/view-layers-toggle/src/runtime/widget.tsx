@@ -22,7 +22,7 @@ import { React, AllWidgetProps, jsx } from "jimu-core";
 import { IMConfig } from "../config";
 
 import defaultMessages from "./translations/default";
-import FeatureLayer = require("esri/layers/FeatureLayer");
+import * as FeatureLayer from "esri/layers/FeatureLayer";
 import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
 
 interface IState {
@@ -81,7 +81,7 @@ export default class ViewLayersToggle extends React.PureComponent<
             // The JimuMapViewComponent gives us a connection to the
             // ArcGIS JS API MapView object. We store it in the State.
             <JimuMapViewComponent
-              useMapWidgetIds={this.props.useMapWidgetIds}
+              useMapWidgetId={this.props.useMapWidgetIds?.[0]}
               onActiveViewChange={(jmv: JimuMapView) => {
                 this.setState({
                   jimuMapView: jmv,

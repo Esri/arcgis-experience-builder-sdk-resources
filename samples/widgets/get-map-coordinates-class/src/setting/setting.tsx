@@ -19,7 +19,7 @@
   LICENSE file.
 */
 import { React, FormattedMessage, css, jsx } from "jimu-core";
-import { BaseWidgetSetting, AllWidgetSettingProps } from "jimu-for-builder";
+import { AllWidgetSettingProps } from "jimu-for-builder";
 import {
   JimuMapViewSelector,
   SettingSection,
@@ -29,7 +29,7 @@ import { Switch } from "jimu-ui";
 import { IMConfig } from "../config";
 import defaultI18nMessages from "./translations/default";
 
-export default class Setting extends BaseWidgetSetting<
+export default class Setting extends React.PureComponent<
   AllWidgetSettingProps<IMConfig>,
   any
 > {

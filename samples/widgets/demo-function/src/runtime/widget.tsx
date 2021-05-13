@@ -17,16 +17,16 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {AllWidgetProps, React, IMState, FormattedMessage} from 'jimu-core';
-import {IMConfig} from '../config';
+import { AllWidgetProps, React, IMState, FormattedMessage } from 'jimu-core';
+import { IMConfig } from '../config';
 import defaultMessage from './translations/default';
 
-interface ExtraProps{
+interface ExtraProps {
   locale: string;
 }
 
-export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps){
-  return <div className="widget-demo-function jimu-widget" style={{overflow: 'auto'}}>
+export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps) {
+  return <div className="widget-demo-function jimu-widget" style={{ overflow: 'auto' }}>
     This widget demonstrates creating a functional component.
     <div>
       config: {JSON.stringify(props.config)}

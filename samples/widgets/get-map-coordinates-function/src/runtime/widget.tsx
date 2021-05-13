@@ -23,7 +23,7 @@ import { useState } from 'react';
 import { IMConfig } from "../config";
 import { JimuMapView, JimuMapViewComponent } from "jimu-arcgis";
 
-import Point = require("esri/geometry/Point");
+import * as Point from "esri/geometry/Point";
 
 import defaultMessages from "./translations/default";
 
@@ -96,7 +96,7 @@ export default function (props: AllWidgetProps<IMConfig>) {
         props.useMapWidgetIds &&
         props.useMapWidgetIds.length === 1 && (
           <JimuMapViewComponent
-            useMapWidgetIds={props.useMapWidgetIds}
+            useMapWidgetId={props.useMapWidgetIds?.[0]}
             onActiveViewChange={activeViewChangeHandler}
           />
         )}
