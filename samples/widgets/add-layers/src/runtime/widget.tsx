@@ -132,7 +132,7 @@ export default class Widget extends React.PureComponent<
           this.props.useMapWidgetIds &&
           this.props.useMapWidgetIds.length === 1 && (
             <JimuMapViewComponent
-              useMapWidgetIds={this.props.useMapWidgetIds}
+              useMapWidgetId={this.props.useMapWidgetIds?.[0]}
               onActiveViewChange={(jmv: JimuMapView) => {
                 this.setState({
                   jimuMapView: jmv,
