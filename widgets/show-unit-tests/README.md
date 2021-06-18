@@ -1,4 +1,4 @@
-# Show UT widget
+# Show Unit Tests widget
 
 This sample demonstrates how to write unit test for a widget.
 
