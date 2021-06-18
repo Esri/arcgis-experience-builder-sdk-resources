@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {AllWidgetProps, jsx, React, loadArcGISJSAPIModule } from 'jimu-core'
-import {IMConfig} from '../config'
+import { AllWidgetProps, jsx, React, loadArcGISJSAPIModule } from 'jimu-core'
+import { IMConfig } from '../config'
 
 export default function Widget(props: AllWidgetProps<IMConfig>) {
   const [count, setCount] = React.useState(0)
@@ -15,12 +15,12 @@ export default function Widget(props: AllWidgetProps<IMConfig>) {
       const layer: __esri.FeatureLayer = new FeatureLayer({
         url: 'https://abc'
       })
-      layer.queryFeatureCount({where: '1=1'}).then(queryCount => {
+      layer.queryFeatureCount({ where: '1=1' }).then(queryCount => {
         setQueryCount(queryCount)
       })
     })
   }, [])
-  return <div className="widget-show-ut jimu-widget">
+  return <div className="widget-show-unit-tests jimu-widget">
     <p>This widget shows how to unit test a widget.</p>
     {props.config.p1 && <div className="has-p1">p1 is checked.</div>}
     <div>Widget label:{props.label}</div>
