@@ -8,7 +8,7 @@ const Widget = wrapWidget(_Widget, { config: {} });
 
 jest.mock('jimu-core', () => {
   return {
-    ...jest.requireActual('jimu-core'),
+    ...jest.requireActual('jimu-core') as any,
     loadArcGISJSAPIModule: jest.fn().mockImplementation(moduleId => {
       let module
       if (moduleId === 'esri/layers/FeatureLayer') {
