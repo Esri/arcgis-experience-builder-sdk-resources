@@ -18,7 +18,7 @@ export default function(props: AllWidgetProps<Config>){
       </div>
 
       <div className="m-2">
-        <h4>2. Use <b>require</b> to load image, you don't need to put this image in assets folder because this image is inlined while compile.</h4>
+        <h4>2. Use <b><code>require</code></b> to load an image. You don't need to put this image in the <b>assets</b> folder because when you use this approach, the image is inlined on compile.</h4>
         <img style={{width: '200px', height: '200px'}} src={smallImage}/>
       </div>
 
