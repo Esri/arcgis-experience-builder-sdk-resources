@@ -31,7 +31,7 @@ export default function(props: AllWidgetProps<Config>){
           </div>
 
           <div className="m-2">
-            <h5>3.2. Use <b>Icon</b> component to render .svg image from URL, the image must be put in <b>assets</b> folder. The .svg is rendered as SVG DOM</h5>
+            <h5>3.2. Use the <b><code>Icon</code></b> component to render an SV image from a URL. The image must be put in the <b>assets</b> folder. The SVG is rendered as SVG DOM.</h5>
             <Icon icon={`${props.context.folderUrl}dist/runtime/assets/mysvg.svg`} color="red" width="200px" height="200px"/>
           </div>
 
