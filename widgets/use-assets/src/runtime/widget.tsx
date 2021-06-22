@@ -26,7 +26,7 @@ export default function(props: AllWidgetProps<Config>){
         <h4>3. SVG image</h4>
         <div>
           <div className="m-2">
-            <h5>3.1. Use <b>props.context.folderUrl</b> to load .svg image from URL, the image must be put in <b>assets</b> folder. The .svg is rendered as image</h5>
+            <h5>3.1. Use <b><code>props.context.folderUrl</code></b> to load an SVG image from URL. The image must be put in the <b>assets</b> folder. The SVG is rendered as image.</h5>
             <img style={{width: '200px', height: '200px'}} src={`${props.context.folderUrl}dist/runtime/assets/mysvg.svg`}/>
           </div>
 
