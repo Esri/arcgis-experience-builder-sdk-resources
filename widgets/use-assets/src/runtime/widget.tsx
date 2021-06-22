@@ -42,7 +42,7 @@ export default function(props: AllWidgetProps<Config>){
 
           <div className="m-2">
             <h5>
-              3.4. Use <b>require</b> to load .svg file (the file is under <b>assets/icons</b> folder) and use <b>Icon</b> component to render, The .svg file is inlined and is rendered as SVG DOM
+              3.4. Use <b>require</b> to load a SVG file located in the <b>src/assets/icons</b> folder. Then use the <b><code>Icon</code></b> component to render. The SVG file is inlined on compile and is rendered as SVG DOM.
             </h5>
             <Icon icon={svg3} color="red" width="200px" height="200px"/>
           </div>
