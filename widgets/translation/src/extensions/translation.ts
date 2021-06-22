@@ -6,6 +6,10 @@ export default class Translation implements extensionSpec.AppConfigProcessorExte
   widgetId: string
 
   async process (appConfig: AppConfig): Promise<AppConfig> {
+    // Do not replace when run in builder.
+    if(window.jimuConfig.isInBuilder){
+      return Promise.resolve(appConfig)
+    }
     const widgetJson = appConfig.widgets[this.widgetId]
 
     const intl = createIntl({
