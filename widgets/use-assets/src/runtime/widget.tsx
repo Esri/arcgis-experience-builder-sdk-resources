@@ -10,7 +10,7 @@ const svg3 = require('./assets/icons/mysvg3.svg')
 export default function(props: AllWidgetProps<Config>){
   return (
     <div className="widget-use-assets jimu-widget m-2" style={{overflow: 'auto'}}>
-      <h3>Files in <b>assets</b> folder will be copied to dist folder when compile, for both runtime and setting.</h3>
+      <h3>Files in the <b>assets</b> folder will be copied to the <b>dist</b> folder when compiled, for both the <b>runtime</b> and <b>setting</b> folders.</h3>
       <br/>
       <div className="m-2">
         <h4>1. Use <b>props.context.folderUrl</b> to load large image from URL, the image must be put in <b>assets</b> folder because the <b>assets</b> folder will copied to dist while compile.</h4>
