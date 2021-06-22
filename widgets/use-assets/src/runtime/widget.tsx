@@ -9,7 +9,7 @@ const svg3 = require('./assets/icons/mysvg3.svg')
 
 export default function(props: AllWidgetProps<Config>){
   return (
-    <div className="widget-use-assets jimu-widget m-2" style={{overflow: 'auto'}}>
+    <div className="widget-use-assets jimu-widget" style={{overflow: 'auto'}}>
       <h3>Files in the <b>assets</b> folder will be copied to the <b>dist</b> folder when compiled, for both the <b>runtime</b> and <b>setting</b> folders.</h3>
       <br/>
       <div className="m-2">
