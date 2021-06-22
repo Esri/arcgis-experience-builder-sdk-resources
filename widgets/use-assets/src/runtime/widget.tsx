@@ -13,7 +13,7 @@ export default function(props: AllWidgetProps<Config>){
       <h3>Files in the <b>assets</b> folder will be copied to the <b>dist</b> folder when compiled, for both the <b>runtime</b> and <b>setting</b> folders.</h3>
       <br/>
       <div className="m-2">
-        <h4>1. Use <b>props.context.folderUrl</b> to load large image from URL, the image must be put in <b>assets</b> folder because the <b>assets</b> folder will copied to dist while compile.</h4>
+        <h4>1. Use <b><code>props.context.folderUrl</code></b> to load a large image from a URL. The image must be put in the <b>assets</b> folder because the <b>assets</b> folder will be copied to the <b>dist</b> directory on compile.</h4>
         <img style={{width: '200px', height: '200px'}} src={`${props.context.folderUrl}dist/runtime/assets/large-image.jpg`}/>
       </div>
 
