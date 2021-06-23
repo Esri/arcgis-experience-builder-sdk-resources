@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {React, AllWidgetProps,  jsx } from 'jimu-core'
+import {AllWidgetProps,  jsx } from 'jimu-core'
 import {Icon} from 'jimu-ui'
 import {Config} from './config'
 const smallImage = require('./small-image.png')
