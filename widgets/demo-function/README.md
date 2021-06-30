@@ -2,7 +2,7 @@
 This sample demonstrates how to create a widget using a function component.
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 This example creates a simple function widget. The widget is declared as a function with the types `AllWidgetProps` and `IMConfig` and  interface `ExtraProps`. The `AllWidgetProps` uses props of the widget and props injected by the `jimu` framework. The `IMConfig` is used to work with the config.ts. 

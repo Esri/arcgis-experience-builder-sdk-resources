@@ -2,7 +2,7 @@
 This sample demonstrates how to create a widget using a class component.
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 This example creates a simple class widget to highlight some of the props you can use from a theme to return a widgets props. It also demonstrates how to style a button and component. The widget extends the `React.PureComponent` class with the types `AllWidgetProps` and `IMConfig`. The `AllWidgetProps` uses props of the widget and props injected by the `jimu` framework. The `IMConfig` is used to work with the config.ts. 

@@ -5,7 +5,7 @@ Data sources are a key concept of the ArcGIS Experience Builder architecture. Yo
 This widget is written as a React function component. The equivalent widget written as a React class component can be found [here](../feature-layer-class/).
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 
