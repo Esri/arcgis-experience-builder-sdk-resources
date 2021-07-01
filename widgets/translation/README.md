@@ -4,7 +4,7 @@ This sample demonstrates how to utilize the extension for `AppConfigProcessor` e
 
 ## How to use the sample
 
-* Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+* Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 * In your app config, replace the strings that you need to translate with the placeholder: `${key}`, then add the `key` into `src/runtime/translations/default.ts`
 * Translate the strings and put the translations in the `translations` folder, use the locale as the file name, then add the locale into `manifest.json` property `translatedLocales`.
 

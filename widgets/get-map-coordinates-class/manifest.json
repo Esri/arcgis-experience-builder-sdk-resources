@@ -1,8 +1,8 @@
 {
   "name": "get-map-coordinates-class",
   "type": "widget",
-  "version": "1.4.0",
-  "exbVersion": "1.4.0",
+  "version": "1.5.0",
+  "exbVersion": "1.5.0",
   "author": "Esri R&D Center Beijing",
   "description": "This widget demonstrates how to display the latitude/longitude, scale, and zoom level of the map.",
   "copyright": "",

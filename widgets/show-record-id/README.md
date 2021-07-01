@@ -3,7 +3,7 @@
 This sample demonstrates how to provide data action in a widget.
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 Define the data action in the folder of `src/data-actions`. Then extend the base class `AbstractDataAction` and implement its methods: `isSupported` and `onExecute`.

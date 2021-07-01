@@ -3,7 +3,7 @@
 This sample demonstrates how to watch for changes on the map view.
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation. 
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation. 
 
 ## How it works
 A class property `onActiveViewChange` for the widget is assigned to the function `JimuMapView`.  This function uses

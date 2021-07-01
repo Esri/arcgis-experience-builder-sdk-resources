@@ -3,7 +3,7 @@
 This sample demonstrates how to enable point clustering on a feature layer in a web map. 
 
 ## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `samples/widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 The property `clusterConfig` defines the cluster properties such as the `clusterRadius`, which determines each cluster's region for including features. 
