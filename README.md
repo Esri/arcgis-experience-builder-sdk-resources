@@ -7,8 +7,11 @@ This repository provides samples for widgets and themes built with ArcGIS Experi
 - [Widget samples](samples/widgets)
 
 ## Instructions
-1. Fork and then clone this repo.
-2. Copy the the samples into the the client/your-extensions folder of the widget or theme in Experience Builder.
+Clone the repo into the `client/sdk-sample` folder
+```sh
+cd client
+git clone git@github.com:Esri/arcgis-experience-builder-sdk-resources.git sdk-sample
+```
 
 ## Requirements
 
