@@ -1,6 +1,6 @@
 # Show Unit Tests widget
 
-This sample demonstrates how to write unit test for a widget.
+This sample demonstrates how to write unit tests for a widget.
 
 ## How to use the sample
 
