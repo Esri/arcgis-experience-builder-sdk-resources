@@ -48,4 +48,4 @@ In `widget.tsx`, use `DataSourceComponent` to create origin data source instance
   Update output data source
 </Button>
 ```
-The main difference between this widget with the [client-side-output](client-side-output) is this widget's output data source uses a different schema with its origin data source.
+The main difference between this widget with the [client-side-output](../client-side-output) is this widget's output data source uses a different schema with its origin data source.
