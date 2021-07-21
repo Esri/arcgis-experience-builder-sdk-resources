@@ -1,0 +1,21 @@
+{
+  "name": "translation",
+  "type": "widget",
+  "version": "1.5.0",
+  "exbVersion": "1.5.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This widget demos a way to support content translation by using APP_CONFIG_PROCESSOR extension point.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "translatedLocales": [
+    "en",
+    "zh-cn"
+  ],
+  "extensions": [
+    {
+      "point": "APP_CONFIG_PROCESSOR",
+      "uri": "extensions/translation"
+    }
+  ]
+}

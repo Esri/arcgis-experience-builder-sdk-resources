@@ -1,0 +1,77 @@
+{
+  "pages": {
+    "page_0": {
+      "id": "page_0",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_0"
+      },
+      "isDefault": true,
+      "isVisible": true,
+      "label": "Page 1"
+    }
+  },
+  "layouts": {
+    "layout_0": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "bbox": {
+            "left": "50%",
+            "right": "57.4%",
+            "top": "42.7%",
+            "bottom": "48.1%",
+            "width": "28.1%",
+            "height": "9.2%"
+          },
+          "widgetId": "widget_1"
+        }
+      },
+      "order": [
+        "0"
+      ]
+    }
+  },
+  "exbVersion": "1.5.0",
+  "mainSizeMode": "LARGE",
+  "theme": "themes/default/",
+  "forBuilderAttributes": {
+    "lockLayout": false
+  },
+  "template": "blankfullscreen",
+  "attributes": {
+    "portalUrl": "https://www.arcgis.com"
+  },
+  "widgets": {
+    "widget_1": {
+      "uri": "widgets/common/text/",
+      "version": "1.5.0",
+      "label": "Text 1",
+      "config": {
+        "text": "<p>This is key1: ${key1}</p><p>This is key2: ${key2}</p>",
+        "placeholder": "Double click to edit text",
+        "style": {
+          "verticalAlign": "start",
+          "wrap": true
+        }
+      },
+      "id": "widget_1"
+    },
+    "widget_2": {
+      "uri": "widgets/samples/translation/",
+      "version": "1.5.0",
+      "label": "Translation",
+      "config": {
+      },
+      "id": "widget_2"
+    }
+  },
+  "pageStructure": [
+    {
+      "page_0": []
+    }
+  ],
+  "timestamp": 1623093950487
+}
