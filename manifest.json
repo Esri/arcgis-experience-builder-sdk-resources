@@ -1,0 +1,7 @@
+{
+  "name": "esri-sdk-samples-repo",
+  "type": "exb-web-extension-repo",
+  "description": "This is the sample extension repository.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}
