@@ -9,9 +9,7 @@
   "description": "This is the widget used in developer documentation",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
-  "properties": {
-    "hasConfig": false
-  },
+  "properties": {},
   "translatedLocales": [
     "en"
   ],
