@@ -69,8 +69,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
       padding-left: 20px;
     `;
 
-    // console.log(`...Render ${this.props.manifest.name}`);
-
     const propsTr = Object.keys(this.props).map((prop, i) => {
       if(['manifest', 'user', 'intl'].indexOf(prop) > -1
         || typeof this.props[prop] === 'string'){
