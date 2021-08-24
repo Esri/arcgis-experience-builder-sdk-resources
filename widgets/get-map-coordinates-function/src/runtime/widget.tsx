@@ -23,7 +23,7 @@ import { useState } from 'react';
 import { IMConfig } from "../config";
 import { JimuMapView, JimuMapViewComponent } from "jimu-arcgis";
 
-import * as Point from "esri/geometry/Point";
+import Point from "esri/geometry/Point";
 
 import defaultMessages from "./translations/default";
 

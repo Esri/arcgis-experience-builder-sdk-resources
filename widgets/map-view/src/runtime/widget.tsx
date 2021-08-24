@@ -19,9 +19,9 @@
 */
 import { React, jimuHistory, DataSourceComponent, AllWidgetProps, IMState, IMUrlParameters } from 'jimu-core';
 
-import * as MapView from "esri/views/MapView";
-import * as WebMap from "esri/WebMap";
-import * as Extent from "esri/geometry/Extent";
+import MapView from "esri/views/MapView";
+import WebMap from "esri/WebMap";
+import Extent from "esri/geometry/Extent";
 
 import { MapViewManager, WebMapDataSource } from 'jimu-arcgis';
 
@@ -70,7 +70,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}> & Ext
       this.mvManager.createJimuMapView({
         mapWidgetId: this.props.id,
         view: new MapView(options),
-        datasourceId: webmapDs.id,
+        dataSourceId: webmapDs.id,
         isActive: true
       }).then(jimuMapView => {
         if (!this.extentWatch) {
