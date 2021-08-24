@@ -1,5 +1,6 @@
 {
   "name": "show-record-id",
+  "label": "Show Record ID",
   "type": "widget",
   "version": "1.5.0",
   "exbVersion": "1.5.0",
@@ -7,6 +8,7 @@
   "description": "This is the widget used in developer guide",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
   "dataActions": [
     {
       "name": "showId",

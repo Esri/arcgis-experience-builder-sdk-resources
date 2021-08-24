@@ -1,5 +1,6 @@
 {
   "name": "clustering",
+  "label": "Clustering",
   "type": "widget",
   "version": "1.5.0",
   "exbVersion": "1.5.0",

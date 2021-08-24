@@ -18,6 +18,6 @@
   LICENSE file.
 */
 export default {
-  _widgetLabel: 'Demo Function',
+  _widgetLabel: 'Demo (Function)',
   str1: 'String 1',
 }

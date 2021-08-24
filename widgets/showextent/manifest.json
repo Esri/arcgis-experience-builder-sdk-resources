@@ -2,12 +2,12 @@
   "name": "showextent",
   "label": "Show Extent",
   "type": "widget",
-  "dependency": "jimu-arcgis",
   "version": "1.5.0",
   "exbVersion": "1.5.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is the widget used in developer documentation",
   "copyright": "",
+  "dependency": "jimu-arcgis",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
   "translatedLocales": [
