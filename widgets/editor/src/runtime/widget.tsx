@@ -18,9 +18,9 @@
   LICENSE file.
 */
 /** @jsx jsx */
-import { AllWidgetProps, BaseWidget, jsx, React } from "jimu-core";
+import { AllWidgetProps, jsx, React } from "jimu-core";
 import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
-import * as Editor from 'esri/widgets/Editor'
+import Editor from 'esri/widgets/Editor';
 
 
 interface State {
@@ -108,10 +108,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
     return (
       <div
-      className="widget-js-api-editor"
-      style={{ height: "100%" , overflow: "auto" }}
+        className="widget-js-api-editor"
+        style={{ height: "100%", overflow: "auto" }}
       >
-       <div ref={this.myRef}>
+        <div ref={this.myRef}>
           <style>
             {css}
           </style>
