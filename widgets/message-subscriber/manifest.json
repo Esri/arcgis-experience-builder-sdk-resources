@@ -1,5 +1,6 @@
 {
   "name": "message-subscriber",
+  "label": "Message Subscriber",
   "dependency": "jimu-arcgis",
   "type": "widget",
   "version": "1.5.0",

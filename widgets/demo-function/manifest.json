@@ -1,6 +1,6 @@
 {
   "name": "demo-function",
-  "label": "Demo Function",
+  "label": "Demo (Function)",
   "type": "widget",
   "version": "1.5.0",
   "exbVersion": "1.5.0",
@@ -9,7 +9,10 @@
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
-  "translatedLocales": ["en", "zh-cn"],
+  "translatedLocales": [
+    "en",
+    "zh-cn"
+  ],
   "defaultSize": {
     "width": 800,
     "height": 500

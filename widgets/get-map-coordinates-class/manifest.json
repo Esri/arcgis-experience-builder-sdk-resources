@@ -1,5 +1,6 @@
 {
   "name": "get-map-coordinates-class",
+  "label": "Get Map Coordinates (Class)",
   "type": "widget",
   "version": "1.5.0",
   "exbVersion": "1.5.0",
