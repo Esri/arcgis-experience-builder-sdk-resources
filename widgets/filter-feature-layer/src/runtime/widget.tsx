@@ -1,23 +1,27 @@
 /** @jsx jsx */
 /**
   Licensing
+
   Copyright 2021 Esri
+
   Licensed under the Apache License, Version 2.0 (the "License"); You
   may not use this file except in compliance with the License. You may
   obtain a copy of the License at
   http://www.apache.org/licenses/LICENSE-2.0
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
   implied. See the License for the specific language governing
   permissions and limitations under the License.
+
   A copy of the license is available in the repository's
   LICENSE file.
 */
 import { AllWidgetProps, jsx, FeatureLayerDataSource, SqlQueryParams, DataSourceManager } from "jimu-core";
 import { IMConfig } from "../config";
 import { TextInput, WidgetPlaceholder } from 'jimu-ui';
-// import svg from 'jimu-icons/outlined/suggested/info.svg'; // This is not working as expected!
+const alertIcon = require('./assets/alert.svg');
 
 
 import defaultMessages from "./translations/default";
@@ -45,7 +49,7 @@ export default function (props: AllWidgetProps<IMConfig>) {
   }
 
   // By default, if we have no filterField selected, show a placeholder:
-  let mainContent = <WidgetPlaceholder icon="chart" message={defaultMessages.chooseAttribute} />;
+  let mainContent = <WidgetPlaceholder icon={alertIcon} message={defaultMessages.chooseAttribute} />;
 
   if (props.config.filterField) {
     // If fieldField is selected, show the Text Input box to allow filtering.

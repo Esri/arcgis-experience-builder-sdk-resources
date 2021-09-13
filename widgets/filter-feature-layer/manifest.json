@@ -5,7 +5,7 @@
   "version": "1.6.0",
   "exbVersion": "1.6.0",
   "author": "Esri R&D Center Beijing",
-  "description": "",
+  "description": "This widget demonstrates how to filter a feature layer data source programmatically.",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
@@ -13,7 +13,7 @@
     "en"
   ],
   "defaultSize": {
-    "width": 800,
-    "height": 500
+    "width": 300,
+    "height": 60
   }
 }
