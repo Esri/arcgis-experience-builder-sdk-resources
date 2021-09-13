@@ -1,0 +1,19 @@
+{
+  "name": "control-the-widget-state",
+  "label": "Control the Widget State",
+  "type": "widget",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This widgets demonstrates the ability to control the widget state of another widget.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 300,
+    "height": 300
+  }
+}
