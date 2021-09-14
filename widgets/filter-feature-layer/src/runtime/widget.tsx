@@ -35,7 +35,7 @@ export default function (props: AllWidgetProps<IMConfig>) {
 
       // Get the data source using useDataSource.mainDataSourceId
       const useDataSource = props.useDataSources[0];
-      const ds: FeatureLayerDataSource = dsManager.getDataSource(useDataSource.mainDataSourceId) as FeatureLayerDataSource;
+      const ds: FeatureLayerDataSource = dsManager.getDataSource(useDataSource.dataSourceId) as FeatureLayerDataSource;
 
       // Build the queryParams, with the configured filterField and the value
       // that has been typed into the TextInput by the user
