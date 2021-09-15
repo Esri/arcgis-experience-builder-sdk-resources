@@ -33,7 +33,7 @@ export default function (props: AllWidgetProps<IMConfig>) {
       // First get the DataSourceManager instance
       const dsManager = DataSourceManager.getInstance();
 
-      // Get the data source using useDataSource.mainDataSourceId
+      // Get the data source using useDataSource.dataSourceId
       const useDataSource = props.useDataSources[0];
       const ds: FeatureLayerDataSource = dsManager.getDataSource(useDataSource.dataSourceId) as FeatureLayerDataSource;
 
