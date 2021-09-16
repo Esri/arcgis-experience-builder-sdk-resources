@@ -1,6 +1,11 @@
 # Use calcite components widget
 
-This sample demonstrates how to use [Calcite components](https://developers.arcgis.com/calcite-design-system/components/) in custom widget.
+### This sample demonstrates how to use [Calcite components](https://developers.arcgis.com/calcite-design-system/components/) in custom widget.
+
+
+## Reminder before use
+
+Before you use calcite components, we suggest you check components in jimu-ui. Jimu-ui is the primary component library for Experience Builder, and you may want to use that first because it will keep your custom widgets and themes consistent with the rest of the Experience Builder theme. If you do have a requirement to use the calcite components, this example will help you.
 
 ## How to use the sample
 
