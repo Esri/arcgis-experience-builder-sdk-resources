@@ -73,6 +73,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
               mustUseDataSource
               useDataSources={props.useDataSources}
               onChange={onDataSourceChange} widgetId={props.id}
+              hideDataView={true}
             />
 
           </SettingRow>

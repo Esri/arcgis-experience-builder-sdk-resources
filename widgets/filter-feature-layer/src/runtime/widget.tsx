@@ -53,13 +53,14 @@ export default function (props: AllWidgetProps<IMConfig>) {
 
   if (props.config.filterField) {
     // If fieldField is selected, show the Text Input box to allow filtering.
+    const placeholderText = `${defaultMessages.filterLayer} on ${props.config.filterField} attribute`
     mainContent = <p>
-      <TextInput placeholder={defaultMessages.filterLayer} onChange={(e) => { textInputChangeHandler(e); }} />
+      <TextInput placeholder={placeholderText} onChange={(e) => { textInputChangeHandler(e); }} />
     </p>;
   };
 
   return (
-    <div className="widget-get-map-coordinates jimu-widget m-2">
+    <div className="widget-get-map-coordinates jimu-widget p-2">
       {mainContent}
     </div>
   );
