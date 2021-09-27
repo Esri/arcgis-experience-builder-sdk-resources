@@ -38,6 +38,6 @@ After the widget is loaded, call:
 defineCustomElements(window, { resourcesUrl: `${folderUrl}/dist/runtime/` })
 ```
 
-to register the components of `calcite-components` as web component, and specify the resource load directory through the `resourcesUrl`. Now you are free to use the components of `calcite-components` in your widget.
+to register the components of `calcite-components` as web components, and specify the resource load directory through the `resourcesUrl`. Now you are free to use the components of `calcite-components` in your widget.
 
 This widget uses this [calcite components example](https://github.com/Esri/calcite-components-examples/tree/master/react) to demonstrate the usage.
