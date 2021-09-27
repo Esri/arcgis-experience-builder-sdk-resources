@@ -20,7 +20,7 @@ Before you use Calcite components, we suggest you review the components in the j
 
 ## How it works
 
-First, install `@esri/calcite-components` and `@esri/calcite-components-react` to the widget directory.
+First, install `@esri/calcite-components`, `@esri/calcite-components-react`, and `ncp` to the widget directory.
 
 ```json
   "dependencies": {
