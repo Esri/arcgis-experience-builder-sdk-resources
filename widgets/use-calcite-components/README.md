@@ -4,7 +4,7 @@ This sample demonstrates how to use [Calcite components](https://developers.arcg
 
 ## Reminder before use
 
-Before you use calcite components, we suggest you review the components in the jimu-ui package. Jimu-ui is the primary component library for Experience Builder, and you may want to use that first because it will keep your custom widgets and themes consistent with the rest of the Experience Builder theme. If you do have a requirement to use calcite components, this example will help you.
+Before you use Calcite components, we suggest you review the components in the jimu-ui package. Jimu-ui is the primary component library for the developer edition of ArcGIS Experience Builder, and you may want to use that first because it will keep your custom widgets and themes consistent with the rest of the Experience Builder theme. If you do have a requirement to use Calcite components, this example will help you.
 
 ## How to use the sample
 
