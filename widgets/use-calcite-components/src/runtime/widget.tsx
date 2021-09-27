@@ -13,7 +13,8 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
   const [sliderValue, setSliderValue] = React.useState(50)
 
   React.useEffect(() => {
-    //When we run `npm i`, we will copy the calcite-icon to `src/runtime/assets`, so we need to define the resource path here.
+    // When we run `npm i`, the calcite-icon is copied to `src/runtime/assets`, so we need to define the resource path here.
+
     defineCustomElements(window, { resourcesUrl: `${folderUrl}/dist/runtime/` })
   }, [])
 
