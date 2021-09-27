@@ -25,7 +25,8 @@ First, install `@esri/calcite-components`, `@esri/calcite-components-react`, and
 ```json
   "dependencies": {
     "@esri/calcite-components": "^1.0.0-beta.61",
-    "@esri/calcite-components-react": "^0.2.0"
+    "@esri/calcite-components-react": "^0.2.0",
+    "ncp": "^2.0.0"
   },
 ```
 
