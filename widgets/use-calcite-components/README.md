@@ -14,7 +14,7 @@ Before you use Calcite components, we suggest you review the components in the j
 ```json
   "scripts": {
     "postinstall": "npm run copy",
-    "copy": "cp -r node_modules/@esri/calcite-components/dist/calcite/assets/* ./src/runtime/assets/"
+    "copy": "ncp node_modules/@esri/calcite-components/dist/calcite/assets/ ./src/runtime/assets/"
   },
 ```
 
