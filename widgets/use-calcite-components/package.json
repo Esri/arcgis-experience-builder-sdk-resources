@@ -8,12 +8,12 @@
   },
   "scripts": {
     "postinstall": "npm run copy",
-    "precopy": "mkdir -p src/runtime/assets/",
-    "copy": "cp -r node_modules/@esri/calcite-components/dist/calcite/assets/* ./src/runtime/assets/"
+    "copy": "ncp node_modules/@esri/calcite-components/dist/calcite/assets/ ./src/runtime/assets/"
   },
   "dependencies": {
     "@esri/calcite-components": "^1.0.0-beta.61",
-    "@esri/calcite-components-react": "^0.2.0"
+    "@esri/calcite-components-react": "^0.2.0",
+    "ncp": "^2.0.0"
   },
   "author": "",
   "license": "ISC"
