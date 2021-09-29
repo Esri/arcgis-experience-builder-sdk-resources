@@ -20,11 +20,8 @@
 // import { React, IMDataSourceInfo, DataSource, DataSourceManager, DataSourceStatus, FeatureLayerQueryParams, AllWidgetProps, DataSourceComponent } from 'jimu-core';
 const { useState, useEffect, useRef } = React;
 const { useSelector } = ReactRedux;
-import { React, AllWidgetProps, getAppStore, appActions, jsx, Immutable, WidgetState, ImmutableObject, ReactRedux, IMState } from 'jimu-core';
-import { IMConfig } from '../config';
-import { Button, TextInput, Label, Row, Col } from 'jimu-ui';
-import widget from 'esri/widgets/support/widget';
-import { IMWidgetState } from 'dist/widgets/common/text/src/config';
+import { React, AllWidgetProps, getAppStore, appActions, ReactRedux, WidgetProps, WidgetManager, WidgetState } from 'jimu-core';
+import { Button, TextInput, Label, Row, Col, Select, Option } from 'jimu-ui';
 
 /**
  * This widget will show features from a configured feature layer
@@ -35,138 +32,136 @@ export default function Widget(props: AllWidgetProps<{}>) {
     const [openCloseWidgetId, setOpenCloseWidgetId] = useState(null as string);
     const [sidebarVisible, setSideBarVisible] = useState(true as boolean);
 
+    // Set the sidebarWidgetId property's value
     const handleSidebarWidgetIdInput = (value) => {
         setSideBarWidgetId(value);
     };
-
+    // Set the openCloseWidgetId property's value
     const handleOpenCloseWidgetIdInput = (value) => {
         setOpenCloseWidgetId(value);
     };
-
-    const handleToggleSidebar = (e): void => {
-        e.stopPropagation();
+    // Load the widget you are opening from within the widget controller widget
+    const loadWidgetClass = (widgetId: string): Promise<React.ComponentType<WidgetProps>> => {
+        if (!widgetId) return
+        const isClassLoaded = getAppStore().getState().widgetsRuntimeInfo?.[widgetId]?.isClassLoaded
+        if (!isClassLoaded) {
+            return WidgetManager.getInstance().loadWidgetClass(widgetId)
+        } else {
+            return Promise.resolve(WidgetManager.getInstance().getWidgetClass(widgetId))
+        }
+    };
+    // Toggle the sidebar widget
+    const handleToggleSidebar = (): void => {
         // Get the widget state
         const widgetState =
             getAppStore().getState().widgetsState[sidebarWidgetId];
-        console.log(widgetState);
-        // If widget can be collapsed, collapse
+        // If widget state's collapse property is true, collapse
         if (widgetState.collapse === true) {
             getAppStore().dispatch(appActions.widgetStatePropChange(
                 sidebarWidgetId,
                 'collapse',
-                !setSideBarVisible
+                !sidebarVisible
             ));
         }
-        // If widget cannot be collapsed, expand
+        // If widget state's collapse property is false, expand
         if (widgetState.collapse === false) {
             getAppStore().dispatch(appActions.widgetStatePropChange(
                 sidebarWidgetId,
-                'expanded',
-                !setSideBarVisible
+                'collapse',
+                sidebarVisible
             ));
         }
     };
-
-    const handleOpenWidget = (e): void => {
-        e.stopPropagation();
-        const activeAction = appActions.activateWidget("widget_8");
-        const openAction = appActions.openWidget("widget_8");
-        getAppStore().dispatch(activeAction);
-        getAppStore().dispatch(openAction);
+    // Handle opening the widget
+    const handleOpenWidget = (): void => {
+        const activeControllerAction = appActions.activateWidget('widget_5');
+        const activeOpenCloseAction = appActions.activateWidget(openCloseWidgetId);
+        getAppStore().dispatch(activeControllerAction);
+        getAppStore().dispatch(activeOpenCloseAction);
+        const openAction = appActions.openWidget(openCloseWidgetId);
+        const openControllerAction = appActions.openWidget('widget_5');
+        loadWidgetClass('widget_5').then(() => {
+            getAppStore().dispatch(openControllerAction);
+            loadWidgetClass(openCloseWidgetId).then(() => {
+                getAppStore().dispatch(openAction);
+            });
+        });
     };
 
-    const handleCloseWidget = (e): void => {
-        e.stopPropogation();
-        const activeAction = appActions.activateWidget("widget_8");
-        const closeAction = appActions.closeWidget("widget_8");
-        getAppStore().dispatch(activeAction);
-        getAppStore().dispatch(closeAction);
+    // Handle closing the widget
+    const handleCloseWidget = (): void => {
+        const closeAction = appActions.closeWidget(openCloseWidgetId)
+        loadWidgetClass(openCloseWidgetId).then(() => {
+            getAppStore().dispatch(closeAction);
+        });
     };
-
-    const handleToggleOpennessButton = (e) => {
-        e.preventDefault();
+    // Toggle opening and closing the widget
+    const handleToggleOpennessButton = () => {
         // Get the widget state
-        // const widgetsState = useSelector((state: IMState) => state.widgetsState["widget_8"]);
-        // const widgetState = state.widgetsState["widget_8"] || Immutable({});
-        // const widgetState: IMWidgetState = getAppStore().getState().widgetsState["widget_8"] || Immutable({});
-        // const widgetState: WidgetState = getAppStore().getState().widgetsState["widget_8"];
-        const widgetState = getAppStore().getState().widgetsState["widget_8"];
-        console.log('WIDGETSTATE: ', widgetState);
+        // const widgetState: WidgetState = getAppStore().getState().widgetsRuntimeInfo[this.props.id].state;
+        const activeControllerAction = appActions.activateWidget('widget_5');
+        const activeOpenCloseAction = appActions.activateWidget(openCloseWidgetId);
+        getAppStore().dispatch(activeControllerAction && activeOpenCloseAction);
+        const widgetState = getAppStore().getState().widgetsState[openCloseWidgetId];
         // Depending on the widget state, open or close the closeable widget
-        // if (widgetState === 'CLOSED') {handleOpenWidget(e)}
-        // else if (widgetSTate === 'OPEN') {handleCloseWidget(e)}
-        // else {console.error()}
-        handleOpenWidget(e);
-    };
-
-    const handleSideBarButton = (e) => {
-        e.preventDefault();
-        // const widgets = getAppStore().getState().appConfig.widgets;
-        // console.log(widgets);
-        handleToggleSidebar(e);
+        if (widgetState === WidgetState.Closed || widgetState === WidgetState.Active) { handleOpenWidget() }
+        else if (widgetState === WidgetState.Opened) { handleCloseWidget() }
+        else { console.error() }
     };
 
     return (
-        <div className="widget-control-the-widget-state jimu-widget m-2" style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
+        <div className='widget-control-the-widget-state jimu-widget m-2' style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
             <h6>Control the Widget State</h6>
-            <Row>
-                <Label
-                    className='w-25 mb-0'
-                    size="sm"
-                >
-                    Enter a widget id for a sidebar widget:
-                </Label>
-                <TextInput
-                    className='w-25 mb-3'
-                    onAcceptValue={handleSidebarWidgetIdInput}
-                    size="sm"
-                    required
-                    checkValidityOnAccept={(value) => ({ valid: value.includes("widget_") })}
-                />
-            </Row>
-            {sidebarWidgetId &&
-                <Row>
+            <Row className='p-2 justify-content-between'>
+                <Col className='col-sm-6'>
                     <Label
-                        className='w-25 mb-0'
-                        size="sm"
                     >
-                        Enter a widget id for widget within the widget controller widget:
+                        Sidebar widget id:
                     </Label>
                     <TextInput
-                        className='w-25 mb-3'
-                        onAcceptValue={handleOpenCloseWidgetIdInput}
-                        size="sm"
+                        className='w-50 mb-6'
+                        onAcceptValue={handleSidebarWidgetIdInput}
                         required
-                        checkValidityOnAccept={(value) => ({ valid: value.includes("widget_") })}
+                        checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
                     />
-                </Row>
-            }
-            {openCloseWidgetId && sidebarWidgetId &&
-                <Row>
-                    <Col
-                        xs
-                    >
+                </Col>
+                {sidebarWidgetId &&
+                    <Col className='col-sm-6'>
                         <Button
-                            onClick={handleSideBarButton}
-                            htmlType="submit"
-                            type="primary"
-                            className='mr-2'
+                            onClick={handleToggleSidebar}
+                            htmlType='submit'
+                            type='primary'
                         >
-                            Toggle Sidebar Openness
+                            Sidebar
                         </Button>
                     </Col>
-                    <Col
-                        xs
-                    >
-                        <Button
-                            onClick={handleToggleOpennessButton}
-                            htmlType="submit"
-                            type="primary"
-                            className='mr-2'
+                }
+            </Row>
+            {sidebarWidgetId &&
+                <Row className='p-2 justify-content-between'>
+                    <Col className='col-sm-6'>
+                        <Label
                         >
-                            Toggle Oppenness of Widget
-                        </Button>
+                            Widget id within controller:
+                        </Label>
+                        <TextInput
+                            className='w-50 mb-6'
+                            onAcceptValue={handleOpenCloseWidgetIdInput}
+                            required
+                            checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
+                        />
                     </Col>
+                    {openCloseWidgetId &&
+                        <Col className='col-sm-6'>
+                            <Button
+                                onClick={handleOpenWidget}
+                                htmlType='submit'
+                                type='primary'
+                            >
+                                Openness
+                            </Button>
+                        </Col>
+                    }
                 </Row>
             }
         </div>
