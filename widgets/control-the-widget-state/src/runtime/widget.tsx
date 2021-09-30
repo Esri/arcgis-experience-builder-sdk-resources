@@ -33,30 +33,49 @@ export default function Widget(props: AllWidgetProps<{}>) {
     const [sidebarVisible] = useState(true as boolean);
     const [openness, setOpenness] = useState(false as boolean);
     const [appWidgets, setAppWidgets] = useState({} as Object);
-    const [widgetsArray, setWidgetsArray] = useState([] as Array<any>)
+    const [widgetsArray, setWidgetsArray] = useState([] as Array<any>);
 
-
+    // Update the appWidgets property once, on page load
     useEffect(() => {
         const widgets = getAppStore().getState().appConfig.widgets;
         setAppWidgets(widgets);
+        console.log(widgets)
     }, []);
 
+    // Update the widgetsArray property every time appWidgets changes
     useEffect(() => {
         if (appWidgets) {
             const widgetsArray = Object.values(appWidgets);
             setWidgetsArray(widgetsArray);
         }
-    }, []);
+    }, [appWidgets]);
 
-    // Set the sidebarWidgetId
-    const handleSidebarWidgetIdInput = (value) => {
-        console.log(widgetsArray);
-        setSidebarWidgetId(value);
-    };
-
-    // Set the openCloseWidgetId
-    const handleOpenCloseWidgetIdInput = (value) => {
-        setOpenCloseWidgetId(value);
+    // Toggle the sidebar widget
+    const handleToggleSidebar = (): void => {
+        // Get the widget state
+        const widgetState =
+            getAppStore().getState().widgetsState[sidebarWidgetId];
+        // If widget state's collapse property is true, collapse
+        if (widgetState && widgetState.collapse === true) {
+            getAppStore().dispatch(appActions.widgetStatePropChange(
+                sidebarWidgetId,
+                'collapse',
+                !sidebarVisible
+            ));
+        }
+        // If widget state's collapse property is false, expand
+        else if (widgetState && widgetState.collapse === false) {
+            getAppStore().dispatch(appActions.widgetStatePropChange(
+                sidebarWidgetId,
+                'collapse',
+                sidebarVisible
+            ));
+        }
+        else {
+            alert(
+                'You must select a collapsable sidebar widget.'
+            )
+        }
     };
 
     // Load the widget class prior to executing the open/close actions
@@ -70,28 +89,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         }
     };
 
-    const handleToggleSidebar = (): void => {
-        // Get the widget state
-        const widgetState =
-            getAppStore().getState().widgetsState[sidebarWidgetId];
-        // If widget state's collapse property is true, collapse
-        if (widgetState.collapse === true) {
-            getAppStore().dispatch(appActions.widgetStatePropChange(
-                sidebarWidgetId,
-                'collapse',
-                !sidebarVisible
-            ));
-        }
-        // If widget state's collapse property is false, expand
-        if (widgetState.collapse === false) {
-            getAppStore().dispatch(appActions.widgetStatePropChange(
-                sidebarWidgetId,
-                'collapse',
-                sidebarVisible
-            ));
-        }
-    };
-
+    // Open widget method
     const handleOpenWidget = (): void => {
         // Construct the open action, then run the loadWidgetClass method, dipatch the open action
         // and, finally, set the openness to true
@@ -101,7 +99,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         }).then(() => { setOpenness(true) });
     };
 
-
+    // Close widget method
     const handleCloseWidget = (): void => {
         // Construct the close action, then run the loadWidgetClass function, dipatch the close action
         // and, finally, set the openness to false
@@ -111,6 +109,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         }).then(() => { setOpenness(false) });
     };
 
+    // Handler for the openness toggle button
     const handleToggleOpennessButton = (): void => {
         // Check the openness property value and run the appropriate function 
         if (openness === false) { handleOpenWidget() }
@@ -118,22 +117,16 @@ export default function Widget(props: AllWidgetProps<{}>) {
         else { console.error('Something went wrong with toggling widget openness.') }
     };
 
-    // TODO
-    const iterateOnAppWidgets = () => {
-        const widgetsArray = Object.values(appWidgets);
-        setWidgetsArray(widgetsArray);
+    // Handler for the sidebar selection
+    const handleSidebarSelect = evt => {
+        setSidebarWidgetId(evt.currentTarget.value);
+        // return;
     };
 
-    // TODO
-    const handleSidebarSelect = () => {
-        console.log("SELECTED SOMETHING!");
-        // Sidebar button to take in the selected value
-    };
-
-    // TODO
-    const handleOpenCloseSelect = () => {
-        console.log("SELECTED SOMETHING!");
-        // Sidebar button to take in the selected value
+    // Handler for the open/close selection
+    const handleOpenCloseSelect = evt => {
+        setOpenCloseWidgetId(evt.currentTarget.value);
+        // return;
     }
 
     return (
@@ -143,34 +136,25 @@ export default function Widget(props: AllWidgetProps<{}>) {
                 <Col className='col-sm-6'>
                     <Label
                     >
-                        Sidebar widget id:
+                        Collapsable sidebar widget:
                     </Label>
-                    <TextInput
-                        className='w-50 mb-6'
-                        onAcceptValue={handleSidebarWidgetIdInput}
-                        required
-                        checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
-                    />
-                    {/* <Select
+                    <Select
                         defaultValue=''
                         onChange={handleSidebarSelect}
-                        placeholder='Select a Sidebar Widget'
-                    //   style={{
-                    //     width: 300
-                    //   }}
+                        placeholder='Select a sidebar widget'
                     >
+                        {/* Filter the options to only sidebar widgets */}
                         {
-                            iterateOnAppWidgets
-                            // widgetsArray.map((w) => (
-                            //     <Option
-                            //         key={w.id}
-                            //         value={w.label}
-                            //     >
-                            //         {w.label}
-                            //     </Option>
-                            // ))
+                            widgetsArray.map((w) =>
+                                w.uri === 'widgets/layout/sidebar/' ? (
+                                    <Option
+                                        value={w.id}
+                                    >
+                                        {w.label}
+                                    </Option>
+                                ) : '')
                         }
-                    </Select> */}
+                    </Select>
                 </Col>
                 {sidebarWidgetId &&
                     <Col className='col-sm-6'>
@@ -189,35 +173,23 @@ export default function Widget(props: AllWidgetProps<{}>) {
                     <Col className='col-sm-6'>
                         <Label
                         >
-                            Widget id within controller:
+                            Widget within controller widget:
                         </Label>
-                        <TextInput
-                            className='w-50 mb-6'
-                            onAcceptValue={handleOpenCloseWidgetIdInput}
-                            required
-                            checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
-                        />
-                        {/* <Select
+                        <Select
                             defaultValue=''
                             onChange={handleOpenCloseSelect}
                             placeholder='Select a Sidebar Widget'
-                        //   style={{
-                        //     width: 300
-                        //   }}
                         >
                             {
-                                iterateOnAppWidgets
-                                // appWidgets.map((w) => (
-                                //     <Option
-                                //         key={w.id}
-                                //         value={w.label}
-                                //     //   selected={w.label.includes('sidebar')}
-                                //     >
-                                //         {w.label}
-                                //     </Option>
-                                // ))
+                                widgetsArray.map((w) => (
+                                    <Option
+                                        value={w.id}
+                                    >
+                                        {w.label}
+                                    </Option>
+                                ))
                             }
-                        </Select> */}
+                        </Select>
                     </Col>
                     {openCloseWidgetId &&
                         <Col className='col-sm-6'>

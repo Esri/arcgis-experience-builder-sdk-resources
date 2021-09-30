@@ -8,36 +8,96 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-In `widget.tsx`, the end-user supplies the widget IDs of a sidebar and a closeable widget (a widget within the widget controller widget). Once provided, two bottons are presented, allowing the end user to toggle the state of the widgets programatically.
+In `widget.tsx`, the end-user selects a collapsable sidebar widget and a widget within the widget controller widget. As each are selected, a corresponding action button is presented, allowing the end-user to toggle the state of the widgets programatically.
+
+### For the sidebar widget
 
 ```tsx
-// For the sidebar widget
-// Get the widget state
-const widgetState =
-    getAppStore().getState().widgetsState[sidebarWidgetId];
-    onsole.log(widgetState);
-// If widget can be collapsed, collapse
-if (widgetState.collapse === true) {
-    getAppStore().dispatch(appActions.widgetStatePropChange(
+// Toggle the sidebar widget
+const handleToggleSidebar = (): void => {
+  // Get the widget state
+  const widgetState = getAppStore().getState().widgetsState[sidebarWidgetId];
+  // If widget state's collapse property is true, collapse
+  if (widgetState && widgetState.collapse === true) {
+    getAppStore().dispatch(
+      appActions.widgetStatePropChange(
         sidebarWidgetId,
-        'collapse',
-        !setSideBarVisible
-    ));
-}
-// If widget cannot be collapsed, expand
-if (widgetState.collapse === false) {
-    getAppStore().dispatch(appActions.widgetStatePropChange(
+        "collapse",
+        !sidebarVisible
+      )
+    );
+  }
+  // If widget state's collapse property is false, expand
+  else if (widgetState && widgetState.collapse === false) {
+    getAppStore().dispatch(
+      appActions.widgetStatePropChange(
         sidebarWidgetId,
-        'expanded',
-        !setSideBarVisible
-    ));
+        "collapse",
+        sidebarVisible
+      )
+    );
+  } else {
+    alert("You must select a collapsable sidebar widget.");
+  }
+};
+```
 
-// TODO
-// For the closeable widget within the widget controller widget
-// Get the widget state
-const widgetState = getAppStore().getState().widgetsState["widget_8"];
-// Depending on the widget state, open or close the closeable widget
-// if (widgetState === 'CLOSED') {handleOpenWidget(e)}
-// else if (widgetSTate === 'OPEN') {handleCloseWidget(e)}
-// else {console.error()}
+### For the widget within the widget controller
+
+```tsx
+// Load the widget class prior to executing the open/close actions
+const loadWidgetClass = (
+  widgetId: string
+): Promise<React.ComponentType<WidgetProps>> => {
+  if (!widgetId) return;
+  const isClassLoaded =
+    getAppStore().getState().widgetsRuntimeInfo?.[widgetId]?.isClassLoaded;
+  if (!isClassLoaded) {
+    return WidgetManager.getInstance().loadWidgetClass(widgetId);
+  } else {
+    return Promise.resolve(
+      WidgetManager.getInstance().getWidgetClass(widgetId)
+    );
+  }
+};
+
+// Open widget method
+const handleOpenWidget = (): void => {
+  // Construct the open action, then run the loadWidgetClass method, dipatch the open action
+  // and, finally, set the openness to true
+  const openAction = appActions.openWidget(openCloseWidgetId);
+  loadWidgetClass(openCloseWidgetId)
+    .then(() => {
+      getAppStore().dispatch(openAction);
+    })
+    .then(() => {
+      setOpenness(true);
+    });
+};
+
+// Close widget method
+const handleCloseWidget = (): void => {
+  // Construct the close action, then run the loadWidgetClass function, dipatch the close action
+  // and, finally, set the openness to false
+  const closeAction = appActions.closeWidget(openCloseWidgetId);
+  loadWidgetClass(openCloseWidgetId)
+    .then(() => {
+      getAppStore().dispatch(closeAction);
+    })
+    .then(() => {
+      setOpenness(false);
+    });
+};
+
+// Handler for the openness toggle button
+const handleToggleOpennessButton = (): void => {
+  // Check the openness property value and run the appropriate function
+  if (openness === false) {
+    handleOpenWidget();
+  } else if (openness === true) {
+    handleCloseWidget();
+  } else {
+    console.error("Something went wrong with toggling widget openness.");
+  }
+};
 ```
