@@ -28,19 +28,38 @@ import { Button, TextInput, Label, Row, Col, Select, Option } from 'jimu-ui';
  */
 export default function Widget(props: AllWidgetProps<{}>) {
 
-    const [sidebarWidgetId, setSideBarWidgetId] = useState(null as string);
+    const [sidebarWidgetId, setSidebarWidgetId] = useState(null as string);
     const [openCloseWidgetId, setOpenCloseWidgetId] = useState(null as string);
-    const [sidebarVisible, setSideBarVisible] = useState(true as boolean);
+    const [sidebarVisible] = useState(true as boolean);
+    const [openness, setOpenness] = useState(false as boolean);
+    const [appWidgets, setAppWidgets] = useState({} as Object);
+    const [widgetsArray, setWidgetsArray] = useState([] as Array<any>)
 
-    // Set the sidebarWidgetId property's value
+
+    useEffect(() => {
+        const widgets = getAppStore().getState().appConfig.widgets;
+        setAppWidgets(widgets);
+    }, []);
+
+    useEffect(() => {
+        if (appWidgets) {
+            const widgetsArray = Object.values(appWidgets);
+            setWidgetsArray(widgetsArray);
+        }
+    }, []);
+
+    // Set the sidebarWidgetId
     const handleSidebarWidgetIdInput = (value) => {
-        setSideBarWidgetId(value);
+        console.log(widgetsArray);
+        setSidebarWidgetId(value);
     };
-    // Set the openCloseWidgetId property's value
+
+    // Set the openCloseWidgetId
     const handleOpenCloseWidgetIdInput = (value) => {
         setOpenCloseWidgetId(value);
     };
-    // Load the widget you are opening from within the widget controller widget
+
+    // Load the widget class prior to executing the open/close actions
     const loadWidgetClass = (widgetId: string): Promise<React.ComponentType<WidgetProps>> => {
         if (!widgetId) return
         const isClassLoaded = getAppStore().getState().widgetsRuntimeInfo?.[widgetId]?.isClassLoaded
@@ -50,7 +69,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
             return Promise.resolve(WidgetManager.getInstance().getWidgetClass(widgetId))
         }
     };
-    // Toggle the sidebar widget
+
     const handleToggleSidebar = (): void => {
         // Get the widget state
         const widgetState =
@@ -72,42 +91,50 @@ export default function Widget(props: AllWidgetProps<{}>) {
             ));
         }
     };
-    // Handle opening the widget
+
     const handleOpenWidget = (): void => {
-        const activeControllerAction = appActions.activateWidget('widget_5');
-        const activeOpenCloseAction = appActions.activateWidget(openCloseWidgetId);
-        getAppStore().dispatch(activeControllerAction);
-        getAppStore().dispatch(activeOpenCloseAction);
+        // Construct the open action, then run the loadWidgetClass method, dipatch the open action
+        // and, finally, set the openness to true
         const openAction = appActions.openWidget(openCloseWidgetId);
-        const openControllerAction = appActions.openWidget('widget_5');
-        loadWidgetClass('widget_5').then(() => {
-            getAppStore().dispatch(openControllerAction);
-            loadWidgetClass(openCloseWidgetId).then(() => {
-                getAppStore().dispatch(openAction);
-            });
-        });
+        loadWidgetClass(openCloseWidgetId).then(() => {
+            getAppStore().dispatch(openAction);
+        }).then(() => { setOpenness(true) });
     };
 
-    // Handle closing the widget
+
     const handleCloseWidget = (): void => {
-        const closeAction = appActions.closeWidget(openCloseWidgetId)
+        // Construct the close action, then run the loadWidgetClass function, dipatch the close action
+        // and, finally, set the openness to false
+        const closeAction = appActions.closeWidget(openCloseWidgetId);
         loadWidgetClass(openCloseWidgetId).then(() => {
             getAppStore().dispatch(closeAction);
-        });
+        }).then(() => { setOpenness(false) });
     };
-    // Toggle opening and closing the widget
-    const handleToggleOpennessButton = () => {
-        // Get the widget state
-        // const widgetState: WidgetState = getAppStore().getState().widgetsRuntimeInfo[this.props.id].state;
-        const activeControllerAction = appActions.activateWidget('widget_5');
-        const activeOpenCloseAction = appActions.activateWidget(openCloseWidgetId);
-        getAppStore().dispatch(activeControllerAction && activeOpenCloseAction);
-        const widgetState = getAppStore().getState().widgetsState[openCloseWidgetId];
-        // Depending on the widget state, open or close the closeable widget
-        if (widgetState === WidgetState.Closed || widgetState === WidgetState.Active) { handleOpenWidget() }
-        else if (widgetState === WidgetState.Opened) { handleCloseWidget() }
-        else { console.error() }
+
+    const handleToggleOpennessButton = (): void => {
+        // Check the openness property value and run the appropriate function 
+        if (openness === false) { handleOpenWidget() }
+        else if (openness === true) { handleCloseWidget() }
+        else { console.error('Something went wrong with toggling widget openness.') }
     };
+
+    // TODO
+    const iterateOnAppWidgets = () => {
+        const widgetsArray = Object.values(appWidgets);
+        setWidgetsArray(widgetsArray);
+    };
+
+    // TODO
+    const handleSidebarSelect = () => {
+        console.log("SELECTED SOMETHING!");
+        // Sidebar button to take in the selected value
+    };
+
+    // TODO
+    const handleOpenCloseSelect = () => {
+        console.log("SELECTED SOMETHING!");
+        // Sidebar button to take in the selected value
+    }
 
     return (
         <div className='widget-control-the-widget-state jimu-widget m-2' style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
@@ -124,6 +151,26 @@ export default function Widget(props: AllWidgetProps<{}>) {
                         required
                         checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
                     />
+                    {/* <Select
+                        defaultValue=''
+                        onChange={handleSidebarSelect}
+                        placeholder='Select a Sidebar Widget'
+                    //   style={{
+                    //     width: 300
+                    //   }}
+                    >
+                        {
+                            iterateOnAppWidgets
+                            // widgetsArray.map((w) => (
+                            //     <Option
+                            //         key={w.id}
+                            //         value={w.label}
+                            //     >
+                            //         {w.label}
+                            //     </Option>
+                            // ))
+                        }
+                    </Select> */}
                 </Col>
                 {sidebarWidgetId &&
                     <Col className='col-sm-6'>
@@ -150,11 +197,32 @@ export default function Widget(props: AllWidgetProps<{}>) {
                             required
                             checkValidityOnAccept={(value) => ({ valid: value.includes('widget_') })}
                         />
+                        {/* <Select
+                            defaultValue=''
+                            onChange={handleOpenCloseSelect}
+                            placeholder='Select a Sidebar Widget'
+                        //   style={{
+                        //     width: 300
+                        //   }}
+                        >
+                            {
+                                iterateOnAppWidgets
+                                // appWidgets.map((w) => (
+                                //     <Option
+                                //         key={w.id}
+                                //         value={w.label}
+                                //     //   selected={w.label.includes('sidebar')}
+                                //     >
+                                //         {w.label}
+                                //     </Option>
+                                // ))
+                            }
+                        </Select> */}
                     </Col>
                     {openCloseWidgetId &&
                         <Col className='col-sm-6'>
                             <Button
-                                onClick={handleOpenWidget}
+                                onClick={handleToggleOpennessButton}
                                 htmlType='submit'
                                 type='primary'
                             >
