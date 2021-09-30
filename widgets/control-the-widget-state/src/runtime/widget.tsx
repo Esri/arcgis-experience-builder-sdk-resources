@@ -17,7 +17,6 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-// import { React, IMDataSourceInfo, DataSource, DataSourceManager, DataSourceStatus, FeatureLayerQueryParams, AllWidgetProps, DataSourceComponent } from 'jimu-core';
 const { useState, useEffect, useRef } = React;
 const { useSelector } = ReactRedux;
 import { React, AllWidgetProps, getAppStore, appActions, ReactRedux, WidgetProps, WidgetManager, WidgetState } from 'jimu-core';
