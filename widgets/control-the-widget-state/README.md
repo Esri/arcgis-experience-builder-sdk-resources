@@ -2,13 +2,21 @@
 
 This widget demonstrates how to control another widget's state programatically.
 
+---
+
+**NOTE**
+
+Controlling the opening and closing of a widget within the widget controller widget will only work with developer edition 1.6+.
+
+---
+
 ## How to use the sample
 
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
 
-In `widget.tsx`, the end-user selects a collapsable sidebar widget and a widget within the widget controller widget. As each are selected, a corresponding action button is presented, allowing the end-user to toggle the state of the widgets programatically.
+In `widget.tsx`, the end-user selects a collapsable sidebar widget and a widget within the widget controller widget. As each are selected, a corresponding action button is presented, allowing the end-user to toggle the state of the widget programatically.
 
 ### For the sidebar widget
 
