@@ -83,12 +83,12 @@ export default function Widget(props: AllWidgetProps<{}>) {
 
     // Load the widget class prior to executing the open/close actions
     const loadWidgetClass = (widgetId: string): Promise<React.ComponentType<WidgetProps>> => {
-        if (!widgetId) return
-        const isClassLoaded = getAppStore().getState().widgetsRuntimeInfo?.[widgetId]?.isClassLoaded
+        if (!widgetId) return;
+        const isClassLoaded = getAppStore().getState().widgetsRuntimeInfo?.[widgetId]?.isClassLoaded;
         if (!isClassLoaded) {
-            return WidgetManager.getInstance().loadWidgetClass(widgetId)
+            return WidgetManager.getInstance().loadWidgetClass(widgetId);
         } else {
-            return Promise.resolve(WidgetManager.getInstance().getWidgetClass(widgetId))
+            return Promise.resolve(WidgetManager.getInstance().getWidgetClass(widgetId));
         }
     };
 
@@ -115,8 +115,8 @@ export default function Widget(props: AllWidgetProps<{}>) {
     // Handler for the openness toggle button
     const handleToggleOpennessButton = (): void => {
         // Check the openness property value and run the appropriate function 
-        if (openness === false) { handleOpenWidget() }
-        else if (openness === true) { handleCloseWidget() }
+        if (openness === false) { handleOpenWidget(); }
+        else if (openness === true) { handleCloseWidget(); }
         else { console.error(defaultMessages.opennessError) }
     };
 
@@ -128,7 +128,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
     // Handler for the open/close selection
     const handleOpenCloseSelect = evt => {
         setOpenCloseWidgetId(evt.currentTarget.value);
-    }
+    };
 
     return (
         <div className='widget-control-the-widget-state jimu-widget m-2' style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
@@ -138,7 +138,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
                 {defaultMessages.title}
             </h6>
             {sidebarWidgetsArray && sidebarWidgetsArray.length > 0 &&
-                <Row className='p-2 justify-content-between'>
+                <Row className='p-2 justify-content-between align-items-center'>
                     <Col className='col-sm-6'>
                         <Label
                             title={defaultMessages.sidebarLabel}
@@ -179,7 +179,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
             }
 
             {widgetsArray && widgetsArray.length > 0 &&
-                <Row className='p-2 justify-content-between'>
+                <Row className='p-2 justify-content-between align-items-center'>
                     <Col className='col-sm-6'>
                         <Label
                             title={defaultMessages.widgetControllerWidgetLabel}
@@ -220,4 +220,4 @@ export default function Widget(props: AllWidgetProps<{}>) {
             }
         </div>
     );
-}
+};
