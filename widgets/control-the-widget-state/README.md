@@ -1,6 +1,6 @@
 # Control the widget state
 
-This widget demonstrates how to control another widget's state programmatically.
+This widget demonstrates how to control another widget's state programmatically. This sample needs to be used in an Experience that, at minimum, has a sidebar widget or a controller widget with at least one widget within it.
 
 ---
 

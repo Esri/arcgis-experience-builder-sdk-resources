@@ -21,12 +21,14 @@ const { useState, useEffect, useRef } = React;
 const { useSelector } = ReactRedux;
 import { React, AllWidgetProps, getAppStore, appActions, ReactRedux, WidgetProps, WidgetManager, WidgetState } from 'jimu-core';
 import { Button, TextInput, Label, Row, Col, Select, Option } from 'jimu-ui';
+import defaultMessages from './translations/default';
 
 /**
- * This widget will show features from a configured feature layer
+ * This widget will show how to control widget state for a collapsible sidebar widget and a widget within the widget conroller widget.
  */
 export default function Widget(props: AllWidgetProps<{}>) {
 
+    // Establish state properties, initial values and their corresponding set state actions
     const [sidebarWidgetId, setSidebarWidgetId] = useState(null as string);
     const [openCloseWidgetId, setOpenCloseWidgetId] = useState(null as string);
     const [sidebarVisible] = useState(true as boolean);
@@ -42,7 +44,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         setAppWidgets(widgets);
     }, []);
 
-    // Update the widgetsArray property every time appWidgets changes
+    // Update the widgetsArray and sidebarWidgetsArray properties every time appWidgets changes
     useEffect(() => {
         if (appWidgets) {
             const widgetsArray = Object.values(appWidgets);
@@ -74,7 +76,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         }
         else {
             alert(
-                'You must select a collapsable sidebar widget.'
+                defaultMessages.sidebarAlert
             )
         }
     };
@@ -115,37 +117,42 @@ export default function Widget(props: AllWidgetProps<{}>) {
         // Check the openness property value and run the appropriate function 
         if (openness === false) { handleOpenWidget() }
         else if (openness === true) { handleCloseWidget() }
-        else { console.error('Something went wrong with toggling widget openness.') }
+        else { console.error(defaultMessages.opennessError) }
     };
 
     // Handler for the sidebar selection
     const handleSidebarSelect = evt => {
         setSidebarWidgetId(evt.currentTarget.value);
-        // return;
     };
 
     // Handler for the open/close selection
     const handleOpenCloseSelect = evt => {
         setOpenCloseWidgetId(evt.currentTarget.value);
-        // return;
     }
 
     return (
         <div className='widget-control-the-widget-state jimu-widget m-2' style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
-            <h6>Control the Widget State</h6>
+            <h6
+                title={defaultMessages.title}
+            >
+                {defaultMessages.title}
+            </h6>
             {sidebarWidgetsArray && sidebarWidgetsArray.length > 0 &&
                 <Row className='p-2 justify-content-between'>
                     <Col className='col-sm-6'>
-                        <Label>
-                            Collapsible sidebar widget:
+                        <Label
+                            title={defaultMessages.sidebarLabel}
+                        >
+                            {defaultMessages.sidebarLabel}
                         </Label>
 
                         <Select
                             defaultValue=''
                             onChange={handleSidebarSelect}
-                            placeholder='Select a sidebar widget'
+                            placeholder={defaultMessages.sidebarPlaceholder}
+                            title={defaultMessages.sidebarPlaceholder}
                         >
-                            {/* Filter the options to only sidebar widgets */}
+                            {/* Use the sidebarWidgetsArray to populate the select's options */}
                             {
                                 sidebarWidgetsArray.map((w) => <Option
                                     value={w.id}
@@ -162,8 +169,9 @@ export default function Widget(props: AllWidgetProps<{}>) {
                                 onClick={handleToggleSidebar}
                                 htmlType='submit'
                                 type='primary'
+                                title={defaultMessages.sidebarButtonLabel}
                             >
-                                Sidebar
+                                {defaultMessages.sidebarButtonLabel}
                             </Button>
                         </Col>
                     }
@@ -174,14 +182,17 @@ export default function Widget(props: AllWidgetProps<{}>) {
                 <Row className='p-2 justify-content-between'>
                     <Col className='col-sm-6'>
                         <Label
+                            title={defaultMessages.widgetControllerWidgetLabel}
                         >
-                            Widget within controller widget:
+                            {defaultMessages.widgetControllerWidgetLabel}
                         </Label>
                         <Select
                             defaultValue=''
                             onChange={handleOpenCloseSelect}
-                            placeholder='Select a Sidebar Widget'
+                            placeholder={defaultMessages.widgetControllerWidgetPlaceholder}
+                            title={defaultMessages.widgetControllerWidgetPlaceholder}
                         >
+                            {/* Use the widgetsArray to populate the select's options */}
                             {
                                 widgetsArray.map((w) => (
                                     <Option
@@ -199,8 +210,9 @@ export default function Widget(props: AllWidgetProps<{}>) {
                                 onClick={handleToggleOpennessButton}
                                 htmlType='submit'
                                 type='primary'
+                                title={defaultMessages.widgetControllerWidgetButton}
                             >
-                                Toggle Open
+                                {defaultMessages.widgetControllerWidgetButton}
                             </Button>
                         </Col>
                     }
