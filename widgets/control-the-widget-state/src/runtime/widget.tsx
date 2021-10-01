@@ -33,12 +33,13 @@ export default function Widget(props: AllWidgetProps<{}>) {
     const [openness, setOpenness] = useState(false as boolean);
     const [appWidgets, setAppWidgets] = useState({} as Object);
     const [widgetsArray, setWidgetsArray] = useState([] as Array<any>);
+    const [sidebarWidgetsArray, setSidebarWidgetsArray] = useState([] as Array<any>);
+
 
     // Update the appWidgets property once, on page load
     useEffect(() => {
         const widgets = getAppStore().getState().appConfig.widgets;
         setAppWidgets(widgets);
-        console.log(widgets)
     }, []);
 
     // Update the widgetsArray property every time appWidgets changes
@@ -46,6 +47,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
         if (appWidgets) {
             const widgetsArray = Object.values(appWidgets);
             setWidgetsArray(widgetsArray);
+            setSidebarWidgetsArray(widgetsArray.filter(w => w.uri === 'widgets/layout/sidebar/'));
         }
     }, [appWidgets]);
 
@@ -131,43 +133,44 @@ export default function Widget(props: AllWidgetProps<{}>) {
     return (
         <div className='widget-control-the-widget-state jimu-widget m-2' style={{ width: '100%', height: '100%', maxHeight: '800px', padding: '0.5em' }}>
             <h6>Control the Widget State</h6>
-            <Row className='p-2 justify-content-between'>
-                <Col className='col-sm-6'>
-                    <Label
-                    >
-                        Collapsable sidebar widget:
-                    </Label>
-                    <Select
-                        defaultValue=''
-                        onChange={handleSidebarSelect}
-                        placeholder='Select a sidebar widget'
-                    >
-                        {/* Filter the options to only sidebar widgets */}
-                        {
-                            widgetsArray.map((w) =>
-                                w.uri === 'widgets/layout/sidebar/' ? (
-                                    <Option
-                                        value={w.id}
-                                    >
-                                        {w.label}
-                                    </Option>
-                                ) : '')
-                        }
-                    </Select>
-                </Col>
-                {sidebarWidgetId &&
+            {sidebarWidgetsArray && sidebarWidgetsArray.length > 0 &&
+                <Row className='p-2 justify-content-between'>
                     <Col className='col-sm-6'>
-                        <Button
-                            onClick={handleToggleSidebar}
-                            htmlType='submit'
-                            type='primary'
+                        <Label>
+                            Collapsible sidebar widget:
+                        </Label>
+
+                        <Select
+                            defaultValue=''
+                            onChange={handleSidebarSelect}
+                            placeholder='Select a sidebar widget'
                         >
-                            Sidebar
-                        </Button>
+                            {/* Filter the options to only sidebar widgets */}
+                            {
+                                sidebarWidgetsArray.map((w) => <Option
+                                    value={w.id}
+                                >
+                                    {w.label}
+                                </Option>)
+                            }
+                        </Select>
+
                     </Col>
-                }
-            </Row>
-            {sidebarWidgetId &&
+                    {sidebarWidgetId &&
+                        <Col className='col-sm-6'>
+                            <Button
+                                onClick={handleToggleSidebar}
+                                htmlType='submit'
+                                type='primary'
+                            >
+                                Sidebar
+                            </Button>
+                        </Col>
+                    }
+                </Row>
+            }
+
+            {widgetsArray && widgetsArray.length > 0 &&
                 <Row className='p-2 justify-content-between'>
                     <Col className='col-sm-6'>
                         <Label
@@ -197,7 +200,7 @@ export default function Widget(props: AllWidgetProps<{}>) {
                                 htmlType='submit'
                                 type='primary'
                             >
-                                Openness
+                                Toggle Open
                             </Button>
                         </Col>
                     }

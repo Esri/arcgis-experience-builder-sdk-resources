@@ -1,6 +1,6 @@
 # Control the widget state
 
-This widget demonstrates how to control another widget's state programatically.
+This widget demonstrates how to control another widget's state programmatically.
 
 ---
 
@@ -16,7 +16,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 ## How it works
 
-In `widget.tsx`, the end-user selects a collapsable sidebar widget and a widget within the widget controller widget. As each are selected, a corresponding action button is presented, allowing the end-user to toggle the state of the widget programatically.
+In `widget.tsx`, the end-user selects a collapsible sidebar widget and a widget within the widget controller widget. As each are selected, a corresponding action button is presented, allowing the end-user to toggle the state of the widget programmatically.
 
 ### For the sidebar widget
 
@@ -45,7 +45,7 @@ const handleToggleSidebar = (): void => {
       )
     );
   } else {
-    alert("You must select a collapsable sidebar widget.");
+    alert("You must select a collapsible sidebar widget.");
   }
 };
 ```
