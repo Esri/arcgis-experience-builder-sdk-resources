@@ -17,14 +17,14 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-const { useState, useEffect, useRef } = React;
+const { useState, useEffect, } = React;
 const { useSelector } = ReactRedux;
-import { React, AllWidgetProps, getAppStore, appActions, ReactRedux, WidgetProps, WidgetManager, WidgetState } from 'jimu-core';
-import { Button, TextInput, Label, Row, Col, Select, Option } from 'jimu-ui';
+import { React, AllWidgetProps, getAppStore, appActions, ReactRedux, WidgetProps, WidgetManager, IMState } from 'jimu-core';
+import { Button, Label, Row, Col, Select, Option } from 'jimu-ui';
 import defaultMessages from './translations/default';
 
 /**
- * This widget will show how to control widget state for a collapsible sidebar widget and a widget within the widget conroller widget.
+ * This widget will show how to control widget state for a collapsible sidebar widget and a widget within the widget controller widget.
  */
 export default function Widget(props: AllWidgetProps<{}>) {
 
@@ -36,7 +36,11 @@ export default function Widget(props: AllWidgetProps<{}>) {
     const [appWidgets, setAppWidgets] = useState({} as Object);
     const [widgetsArray, setWidgetsArray] = useState([] as Array<any>);
     const [sidebarWidgetsArray, setSidebarWidgetsArray] = useState([] as Array<any>);
-
+    // Get the widget state - because the sidebar state may change in the runtime, via Redux's useSelector hook
+    const widgetState = useSelector((state: IMState) => {
+        const widgetState = state.widgetsState[sidebarWidgetId];
+        return widgetState;
+    });
 
     // Update the appWidgets property once, on page load
     useEffect(() => {
@@ -55,9 +59,6 @@ export default function Widget(props: AllWidgetProps<{}>) {
 
     // Toggle the sidebar widget
     const handleToggleSidebar = (): void => {
-        // Get the widget state
-        const widgetState =
-            getAppStore().getState().widgetsState[sidebarWidgetId];
         // If widget state's collapse property is true, collapse
         if (widgetState && widgetState.collapse === true) {
             getAppStore().dispatch(appActions.widgetStatePropChange(
