@@ -20,7 +20,7 @@
 import { React } from "jimu-core";
 import { AllWidgetSettingProps } from "jimu-for-builder";
 import {
-  JimuMapViewSelector,
+  MapWidgetSelector,
   SettingRow,
   SettingSection,
 } from "jimu-ui/advanced/setting-components";
@@ -80,7 +80,7 @@ export default class Setting extends React.PureComponent<
           })}
         >
           <SettingRow>
-            <JimuMapViewSelector
+            <MapWidgetSelector
               onSelect={this.onMapSelected}
               useMapWidgetIds={this.props.useMapWidgetIds}
             />
