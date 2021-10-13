@@ -21,10 +21,14 @@ In `widget.tsx`, the end-user selects a collapsible sidebar widget and a widget 
 ### For the sidebar widget
 
 ```tsx
+// Get the widget state - because the sidebar state may change in the runtime, via Redux's useSelector hook
+const widgetState = useSelector((state: IMState) => {
+  const widgetState = state.widgetsState[sidebarWidgetId];
+  return widgetState;
+});
+
 // Toggle the sidebar widget
 const handleToggleSidebar = (): void => {
-  // Get the widget state
-  const widgetState = getAppStore().getState().widgetsState[sidebarWidgetId];
   // If widget state's collapse property is true, collapse
   if (widgetState && widgetState.collapse === true) {
     getAppStore().dispatch(
@@ -45,7 +49,7 @@ const handleToggleSidebar = (): void => {
       )
     );
   } else {
-    alert("You must select a collapsible sidebar widget.");
+    alert(defaultMessages.sidebarAlert);
   }
 };
 ```
