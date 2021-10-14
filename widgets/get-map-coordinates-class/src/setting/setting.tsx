@@ -21,7 +21,7 @@
 import { React, FormattedMessage, css, jsx } from "jimu-core";
 import { AllWidgetSettingProps } from "jimu-for-builder";
 import {
-  JimuMapViewSelector,
+  MapWidgetSelector,
   SettingSection,
   SettingRow
 } from "jimu-ui/advanced/setting-components";
@@ -75,7 +75,7 @@ export default class Setting extends React.PureComponent<
             })}
           >
             <SettingRow>
-              <JimuMapViewSelector
+              <MapWidgetSelector
                 onSelect={this.onMapWidgetSelected}
                 useMapWidgetIds={this.props.useMapWidgetIds}
               />

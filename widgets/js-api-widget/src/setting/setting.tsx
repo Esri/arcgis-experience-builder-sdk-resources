@@ -18,7 +18,7 @@
   LICENSE file.
 */
 import {React, Immutable, DataSourceManager} from 'jimu-core';
-import {JimuMapViewSelector} from 'jimu-ui/advanced/setting-components';
+import {MapWidgetSelector} from 'jimu-ui/advanced/setting-components';
 import {ArcGISDataSourceTypes} from 'jimu-arcgis';
 import { AllWidgetSettingProps } from 'jimu-for-builder';
 
@@ -35,7 +35,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<{
 
   render(){
     return <div className="sample-use-map-view-setting p-2">
-      <JimuMapViewSelector onSelect={this.onMapSelected} useMapWidgetIds={this.props.useMapWidgetIds}/>
+      <MapWidgetSelector onSelect={this.onMapSelected} useMapWidgetIds={this.props.useMapWidgetIds}/>
     </div>
   }
 }
