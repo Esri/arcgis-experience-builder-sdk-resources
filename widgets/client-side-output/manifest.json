@@ -1,12 +1,17 @@
 {
   "name": "client-side-output",
+  "label": "Client-side Output",
   "type": "widget",
-  "version": "1.5.0",
-  "exbVersion": "1.5.0",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is the widget used in developer guide",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "translatedLocales": [
+    "en"
+  ],
   "defaultSize": {
     "width": 400,
     "height": 400

@@ -18,7 +18,7 @@
   LICENSE file.
 */
 export default {
-  _widgetLabel: 'demo',
+  _widgetLabel: 'Demo (Class)',
   widgetProperties: 'Widget Properties',
   widgetFunctions: 'Widget Functions',
   widgetName: 'widget name:',

@@ -1,8 +1,9 @@
 {
   "name": "add-layers",
+  "label": "Add Layers",
   "type": "widget",
-  "version": "1.5.0",
-  "exbVersion": "1.5.0",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
   "author": "Esri R&D Center Beijing",
   "description": "This widget demonstrates how to add a layer to a map programmatically.",
   "copyright": "",

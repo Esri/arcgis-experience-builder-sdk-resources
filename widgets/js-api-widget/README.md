@@ -16,8 +16,8 @@ In `manifest.json`, the dependencies are loaded using the `dependency` property.
 Then in `widget.tsx`, it imports the required modules to leverage the `Legend` widget and `LegendViewModel` from the ArcGIS API for JavaScript.  
 
 ```javascript
-import * as Legend from "esri/widgets/Legend";
-import * as LegendVM from "esri/widgets/Legend/LegendViewModel";
+import Legend from "esri/widgets/Legend";
+import LegendVM from "esri/widgets/Legend/LegendViewModel";
 ```
 
 Create an interface `State` to define the specifications for the `layerInfo` property.

@@ -1,8 +1,9 @@
 {
   "name": "translation",
+  "label": "Translation",
   "type": "widget",
-  "version": "1.5.0",
-  "exbVersion": "1.5.0",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
   "author": "Esri R&D Center Beijing",
   "description": "This widget demos a way to support content translation by using APP_CONFIG_PROCESSOR extension point.",
   "copyright": "",

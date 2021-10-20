@@ -1,15 +1,17 @@
 {
   "name": "demo",
-  "label": "Demo",
+  "label": "Demo (Class)",
   "type": "widget",
-  "version": "1.5.0",
-  "exbVersion": "1.5.0",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is the widget used in developer documentation",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
-  "translatedLocales": ["en"],
+  "translatedLocales": [
+    "en"
+  ],
   "defaultSize": {
     "width": 800,
     "height": 500

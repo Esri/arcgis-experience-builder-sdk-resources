@@ -22,7 +22,7 @@ import { React, AllWidgetProps, jsx } from "jimu-core";
 import { IMConfig } from "../config";
 
 import defaultMessages from "./translations/default";
-import * as FeatureLayer from "esri/layers/FeatureLayer";
+import FeatureLayer from "esri/layers/FeatureLayer";
 import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
 
 interface IState {

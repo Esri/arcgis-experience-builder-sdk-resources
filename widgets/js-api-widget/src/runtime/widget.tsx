@@ -20,8 +20,8 @@
 import { React, AllWidgetProps } from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView } from 'jimu-arcgis';
 
-import * as Legend from "esri/widgets/Legend";
-import * as LegendVM from "esri/widgets/Legend/LegendViewModel";
+import Legend from "esri/widgets/Legend";
+import LegendVM from "esri/widgets/Legend/LegendViewModel";
 
 interface State {
   layerInfo: any

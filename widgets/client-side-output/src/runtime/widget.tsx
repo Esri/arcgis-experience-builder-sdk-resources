@@ -65,7 +65,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     })
   }
 
-  render () {
+  render() {
     if (!this.isDsConfigured()) {
       return (
         <h3>
