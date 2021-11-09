@@ -5,4 +5,5 @@ This patch fixes these bugs:
 
 Steps:
   * Please replace the files in the `client` folder
+  * Restart the node server in both `client` and `server` folders
 
