@@ -1,6 +1,6 @@
 This patch fixes these bugs:
   * "jimu-icons" is missing error.
-  * Unit test does not work.
+  * Unit tests do not work.
   * Download does not work on Node.js 16 if an app contains custom widgets.
 
 Steps:
