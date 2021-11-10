@@ -4,6 +4,7 @@ This patch fixes these bugs:
   * Download does not work on Node.js 16 if an app contains custom widgets.
 
 Steps:
-  * Please replace the files in the `client` folder
+  * Replace the files in the `client` folder
+  * Run `npm ci` in the `client` folder
   * Restart the node server in both `client` and `server` folders
 
