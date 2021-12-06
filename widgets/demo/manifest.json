@@ -10,7 +10,8 @@
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
   "translatedLocales": [
-    "en"
+    "en",
+    "zh-cn"
   ],
   "defaultSize": {
     "width": 800,
