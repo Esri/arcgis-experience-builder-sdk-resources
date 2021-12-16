@@ -17,13 +17,14 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps } from 'jimu-core';
+import { React, AllWidgetProps, FormattedMessage } from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView } from 'jimu-arcgis';
 
 import Legend from "esri/widgets/Legend";
 import LegendVM from "esri/widgets/Legend/LegendViewModel";
 import ActiveLayerInfo from "esri/widgets/Legend/support/ActiveLayerInfo";
 
+import defaultMessages from "./translations/default";
 
 const { useState, useRef, useEffect } = React;
 
@@ -84,9 +85,9 @@ export default function ({
   const isConfigured = useMapWidgetIds && useMapWidgetIds.length === 1;
 
   return <div className="widget-use-map-view" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-    {!isConfigured && <h3>Please select a map.</h3>}
+    {!isConfigured && <h3><FormattedMessage id="pleaseSelectMap" defaultMessage={defaultMessages.pleaseSelectAMap} /></h3>}
     <h3>
-      This widget demonstrates how to use a widget (Legend) from the ArcGIS JS API.
+      <FormattedMessage id="widgetDemonstrates" defaultMessage={defaultMessages.widgetDemonstrates} />
     </h3>
 
     <JimuMapViewComponent
@@ -95,13 +96,14 @@ export default function ({
     />
 
     <hr />
-    <h4>This uses the ViewModel.</h4>
+    <h4><FormattedMessage id="thisUsesViewModel" defaultMessage={defaultMessages.thisUsesViewModel} /></h4>
     <div>
-      Layer title: {layerInfo && layerInfo.title}
+      <FormattedMessage id="layerTitle" defaultMessage={defaultMessages.layerTitle} />: {layerInfo && layerInfo.title}
     </div>
 
     <hr />
-    <h4>This shows the Legend widget.</h4>
+
+    <h4><FormattedMessage id="thisShowsLegendWidget" defaultMessage={defaultMessages.thisShowsLegendWidget} /></h4>
     <div ref={apiWidgetContainer} />
   </div>;
 }
