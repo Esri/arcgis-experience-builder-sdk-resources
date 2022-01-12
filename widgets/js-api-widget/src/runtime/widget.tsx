@@ -17,87 +17,93 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps } from 'jimu-core';
+import { React, AllWidgetProps, FormattedMessage } from 'jimu-core';
 import { JimuMapViewComponent, JimuMapView } from 'jimu-arcgis';
 
 import Legend from "esri/widgets/Legend";
 import LegendVM from "esri/widgets/Legend/LegendViewModel";
+import ActiveLayerInfo from "esri/widgets/Legend/support/ActiveLayerInfo";
 
-interface State {
-  layerInfo: any
-}
+import defaultMessages from "./translations/default";
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-  apiWidgetContainer: React.RefObject<HTMLDivElement>;
-  legendWidget: Legend;
+const { useState, useRef, useEffect } = React;
 
-  constructor(props) {
-    super(props);
-    this.state = { layerInfo: null }
-    this.apiWidgetContainer = React.createRef();
-  }
+export default function ({
+  useMapWidgetIds
+}: AllWidgetProps<{}>) {
+  const apiWidgetContainer = useRef<HTMLDivElement>();
 
-  componentWillUnmount() {
-    if (this.legendWidget) {
-      this.legendWidget.destroy();
-      this.legendWidget = null;
-    }
-  }
+  const [layerInfo, setLayerInfo] = useState<ActiveLayerInfo>(null);
+  const [jimuMapView, setJimuMapView] = useState<JimuMapView>(null);
+  const [legendWidget, setLegendWidget] = useState<Legend>(null)
 
-  onActiveViewChange = (jimuMapView: JimuMapView) => {
-    if (!(jimuMapView && jimuMapView.view)) {
-      return;
-    }
+  useEffect(() => {
+    if (jimuMapView && apiWidgetContainer.current) {
+      if (!legendWidget) {
 
-    if (this.apiWidgetContainer.current) {
-      if (this.legendWidget) {
-        // reset the legend widget
-        this.legendWidget.destroy();
-        this.legendWidget = null;
+        // since the widget replaces the container, we must create a new DOM node
+        // so when we destroy we will not remove the "ref" DOM node
+        const container = document.createElement("div");
+        apiWidgetContainer.current.appendChild(container);
+
+        const legend = new Legend({
+          view: jimuMapView.view,
+          container: container
+        });
+        setLegendWidget(legend);
       }
-
-      // since the widget replaces the container, we must create a new DOM node
-      // so when we destroy we will not remove the "ref" DOM node
-      const container = document.createElement("div");
-      this.apiWidgetContainer.current.appendChild(container);
-
-      this.legendWidget = new Legend({
-        view: jimuMapView.view,
-        container: container
-      });
 
       const vm = new LegendVM({
         view: jimuMapView.view,
       });
 
-      this.setState({
-        layerInfo: vm.activeLayerInfos.getItemAt(0)
-      });
+      setLayerInfo(vm.activeLayerInfos.getItemAt(0));
+    }
+
+    return () => {
+      if (legendWidget) {
+        legendWidget.destroy();
+        setLegendWidget(null);
+      }
+    }
+  }, [apiWidgetContainer, jimuMapView])
+
+  const onActiveViewChange = (jmv: JimuMapView) => {
+    if (jimuMapView && legendWidget) {
+      // we have a "previous" map where we added the widget
+      // (ex: case where two Maps in single Experience page and user is switching
+      // between them in the Settings) - we must destroy the old widget in this case.
+      legendWidget.destroy();
+      setLegendWidget(null);
+    }
+
+    if (jmv) {
+      setJimuMapView(jmv);
     }
   }
 
-  render() {
-    return <div className="widget-use-map-view" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-      {!this.isConfigured() && <h3>Please select a map.</h3>}
-      <h3>
-        This widget demonstrates how to use a widget (Legend) from the ArcGIS JS API.
-      </h3>
+  const isConfigured = useMapWidgetIds && useMapWidgetIds.length === 1;
 
-      <JimuMapViewComponent useMapWidgetId={this.props.useMapWidgetIds?.[0]} onActiveViewChange={this.onActiveViewChange}></JimuMapViewComponent>
+  return <div className="widget-use-map-view" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+    {!isConfigured && <h3><FormattedMessage id="pleaseSelectMap" defaultMessage={defaultMessages.pleaseSelectAMap} /></h3>}
+    <h3>
+      <FormattedMessage id="widgetDemonstrates" defaultMessage={defaultMessages.widgetDemonstrates} />
+    </h3>
 
-      <hr />
-      <h4>This uses the ViewModel.</h4>
-      <div>
-        Layer title: {this.state.layerInfo && this.state.layerInfo.title}
-      </div>
+    <JimuMapViewComponent
+      useMapWidgetId={useMapWidgetIds?.[0]}
+      onActiveViewChange={onActiveViewChange}
+    />
 
-      <hr />
-      <h4>This shows the Legend widget.</h4>
-      <div ref={this.apiWidgetContainer}></div>
-    </div>;
-  }
+    <hr />
+    <h4><FormattedMessage id="thisUsesViewModel" defaultMessage={defaultMessages.thisUsesViewModel} /></h4>
+    <div>
+      <FormattedMessage id="layerTitle" defaultMessage={defaultMessages.layerTitle} />: {layerInfo && layerInfo.title}
+    </div>
 
-  isConfigured = () => {
-    return this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 1;
-  }
+    <hr />
+
+    <h4><FormattedMessage id="thisShowsLegendWidget" defaultMessage={defaultMessages.thisShowsLegendWidget} /></h4>
+    <div ref={apiWidgetContainer} />
+  </div>;
 }
