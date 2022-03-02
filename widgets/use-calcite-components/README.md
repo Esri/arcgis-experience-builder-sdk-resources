@@ -12,9 +12,9 @@ Before you use Calcite components, we suggest you review the components in the j
 
 ## How it works
 
-Starting at version 1.8, developer edition of Experience Builder includes a Calcite components entry (`calcite-components`) from which you can import Calcite components in your custom widget. Importing components from this instance of `calcite-components` can avoid conflicts and reduce widget size.
+Starting at version 1.8, developer edition of Experience Builder includes a Calcite components entry (`calcite-components`) from which you can import Calcite components into your custom widget. Importing components from this instance of `calcite-components` can avoid conflicts and reduce widget size.
 
-Here is the code snippet:
+Here is an example:
 
 ```js
 import { CalciteButton } from 'calcite-components'
