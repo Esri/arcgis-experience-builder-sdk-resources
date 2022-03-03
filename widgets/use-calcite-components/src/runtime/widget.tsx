@@ -1,22 +1,16 @@
 import { React, AllWidgetProps } from 'jimu-core'
 import { IMConfig } from '../config'
-import { applyPolyfills, defineCustomElements } from '@esri/calcite-components/dist/loader'
-import { CalciteButton, CalciteIcon, CalciteSlider } from '@esri/calcite-components-react'
-import '@esri/calcite-components/dist/calcite/calcite.css'
-
-applyPolyfills()
+/**
+ * Use this way, the @esri/calcite-components-react code will be compiled into widget entry, which makes widget size large.
+ *    `import { CalciteButton, CalciteIcon, CalciteSlider } from '@esri/calcite-components-react'`
+ * So, we should use the below way.
+ */
+import { CalciteButton, CalciteIcon, CalciteSlider } from 'calcite-components'
 
 const Widget = (props: AllWidgetProps<IMConfig>) => {
   const text = props.config.text
-  const folderUrl = props.context.folderUrl
 
   const [sliderValue, setSliderValue] = React.useState(50)
-
-  React.useEffect(() => {
-    // When we run `npm i`, the calcite-icon is copied to `src/runtime/assets`, so we need to define the resource path here.
-
-    defineCustomElements(window, { resourcesUrl: `${folderUrl}/dist/runtime/` })
-  }, [])
 
   return (
     <div className="widget-calcite jimu-widget m-2">
