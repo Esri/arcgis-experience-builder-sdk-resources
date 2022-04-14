@@ -83,10 +83,9 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
     const css = `
     .esri-editor__scroller {
-      overflow-y: auto;
-      padding-top: $cap-spacing--half;
-      padding-bottom: $cap-spacing;
-      max-height: 1em;
+        overflow-y: auto;
+        padding-top: $cap-spacing--half;
+        padding-bottom: $cap-spacing;
       }
       .esri-editor__content-group {
         max-height: 1em;
