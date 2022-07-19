@@ -27,7 +27,8 @@ In this sample, the ArcGIS API for JavaScript modules are loaded asynchronously 
 // that we need - only once the "Add Layer" button is pressed.
 loadArcGISJSAPIModules([
   "esri/layers/FeatureLayer",
+  "esri/tasks/support/Query",
   "esri/geometry/SpatialReference",
 ]).then((modules) => {
-  [this.FeatureLayer, this.SpatialReference] = modules;
+  [this.FeatureLayer, this.Query, this.SpatialReference] = modules;
 ```

@@ -1,5 +1,5 @@
 import { React, utils, DataSource, DataSourceComponent, AllWidgetProps, DataSourceStatus, IMDataSourceInfo } from 'jimu-core';
-import Query from 'esri/rest/support/Query';
+import Query from 'esri/tasks/support/Query';
 
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, { query: any }>{
   state = { query: null }
