@@ -76,10 +76,9 @@ export default class Widget extends React.PureComponent<
     // that we need - only once the "Add Layer" button is pressed.
     loadArcGISJSAPIModules([
       "esri/layers/FeatureLayer",
-      "esri/tasks/support/Query",
       "esri/geometry/SpatialReference",
     ]).then((modules) => {
-      [this.FeatureLayer, this.Query, this.SpatialReference] = modules;
+      [this.FeatureLayer, this.SpatialReference] = modules;
 
       // First create the Feature Layer from the URL that is in the box.
       const layer = new this.FeatureLayer({
@@ -95,7 +94,7 @@ export default class Widget extends React.PureComponent<
           this.props.config.hasOwnProperty("zoomToLayer") &&
           this.props.config.zoomToLayer === true
         ) {
-          const query = new this.Query();
+          const query = layer.createQuery();
           query.where = "1=1";
           query.outSpatialReference = new this.SpatialReference({
             wkid: 102100,
