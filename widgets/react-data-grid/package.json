@@ -8,6 +8,6 @@
   },
   "author": "Gavin Rehkemper",
   "dependencies": {
-    "react-data-grid": "^6.1.0"
+    "react-data-grid": "7.0.0-beta.14"
   }
 }
