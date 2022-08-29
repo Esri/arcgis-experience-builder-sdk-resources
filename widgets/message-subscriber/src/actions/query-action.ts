@@ -1,8 +1,14 @@
-import { AbstractMessageAction, MessageType, Message, getAppStore, appActions, StringSelectionChangeMessage, DataRecordsSelectionChangeMessage } from 'jimu-core'
+import { AbstractMessageAction, MessageType, Message, MessageDescription, getAppStore, appActions, StringSelectionChangeMessage, DataRecordsSelectionChangeMessage } from 'jimu-core'
 
 export default class QueryAction extends AbstractMessageAction {
   filterMessageType (messageType: MessageType, messageWidgetId?: string): boolean {
     return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].includes(messageType)
+  }
+
+  // Needed to indicate whether or not the type of message can trigger the filter
+  // message action. Used in the builder to filter the available actions.
+  filterMessageDescription (messageDescription: MessageDescription): boolean {
+    return messageDescription.messageType === MessageType.DataRecordsSelectionChange
   }
 
   filterMessage (message: Message): boolean { return true }
