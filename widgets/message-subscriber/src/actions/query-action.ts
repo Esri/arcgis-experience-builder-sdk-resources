@@ -1,8 +1,8 @@
-import { AbstractMessageAction, MessageType, Message, MessageDescription, getAppStore, appActions, StringSelectionChangeMessage, DataRecordsSelectionChangeMessage } from 'jimu-core'
+import { AbstractMessageAction, MessageType, Message, MessageDescription, getAppStore, appActions, DataRecordsSelectionChangeMessage } from 'jimu-core'
 
 export default class QueryAction extends AbstractMessageAction {
   filterMessageType (messageType: MessageType, messageWidgetId?: string): boolean {
-    return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].includes(messageType)
+    return [MessageType.DataRecordsSelectionChange].includes(messageType)
   }
 
   // Needed to indicate whether or not the type of message can trigger the filter
@@ -20,15 +20,9 @@ export default class QueryAction extends AbstractMessageAction {
 
   onExecute (message: Message, actionConfig?: any): Promise<boolean> | boolean {
     let q = `${actionConfig.fieldName} = '${message}'`
-    switch (message.type) {
-      case MessageType.StringSelectionChange:
-        q = `${actionConfig.fieldName} = '${(message as StringSelectionChangeMessage).str}'`
-        break
-      case MessageType.DataRecordsSelectionChange:
-        q = `${actionConfig.fieldName} = ` +
+
+    q = `${actionConfig.fieldName} = ` +
           `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
-        break
-    }
 
     //Save queryString to store
     getAppStore().dispatch(appActions.widgetStatePropChange(this.widgetId, 'queryString', q))
