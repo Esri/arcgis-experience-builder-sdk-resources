@@ -31,6 +31,12 @@ export default class QueryAction extends AbstractMessageAction{
     return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].indexOf(messageType) > -1;
   }
 
+  // Needed to indicate whether or not the type of message can trigger the filter
+  // message action. Used in the builder to filter the available actions.
+  filterMessageDescription (messageDescription: MessageDescription): boolean {
+    return messageDescription.messageType === MessageType.DataRecordsSelectionChange
+  }
+
   filterMessage(message: Message): boolean{return true; }
 
   getSettingComponentUri(messageType: MessageType, messageWidgetId?: string): string {
@@ -39,15 +45,8 @@ export default class QueryAction extends AbstractMessageAction{
 
   onExecute(message: Message, actionConfig?: any): Promise<boolean> | boolean{
     let q = `${actionConfig.fieldName} = '${message}'`
-    switch(message.type){
-      case MessageType.StringSelectionChange:
-        q = `${actionConfig.fieldName} = '${(message as StringSelectionChangeMessage).str}'`
-        break;
-      case MessageType.DataRecordsSelectionChange:
         q = `${actionConfig.fieldName} = ` +
           `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
-        break;
-    }
 
     getAppStore().dispatch(appActions.widgetStatePropChange(this.widgetId, 'queryString', q));
     return true;
