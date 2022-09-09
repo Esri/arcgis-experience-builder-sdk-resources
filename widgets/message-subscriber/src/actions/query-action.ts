@@ -21,8 +21,10 @@ export default class QueryAction extends AbstractMessageAction {
   onExecute (message: Message, actionConfig?: any): Promise<boolean> | boolean {
     let q = `${actionConfig.fieldName} = '${message}'`
 
-    q = `${actionConfig.fieldName} = ` +
-          `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
+    if ((message as DataRecordsSelectionChangeMessage).records?.length) {
+      q = `${actionConfig.fieldName} = ` +
+      `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
+    }
 
     //Save queryString to store
     getAppStore().dispatch(appActions.widgetStatePropChange(this.widgetId, 'queryString', q))
