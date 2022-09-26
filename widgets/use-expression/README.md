@@ -39,7 +39,7 @@ In `renderData` of `DataSourceComponent`, create `ExpressionResolverComponent` f
 ```tsx
 <div className='record-list'>
   {
-    dsUsedInExpression.getRecords().map((r, i) => <ExpressionResolverComponent key={i} records={{ [dsIdUsedInExpression]: [r] }} expression={expression} widgetId={id}>{renderExpressionResult}</ExpressionResolverComponent>)
+    dataSource.getRecords().map((r, i) => <ExpressionResolverComponent key={i} records={getRecordsForExpression(r, dataSource.id, dssUsedInExpression)} expression={expression} widgetId={id}>{renderExpressionResult}</ExpressionResolverComponent>)
   }
 </div>
 ```

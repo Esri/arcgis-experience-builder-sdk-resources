@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { React, jsx, css, AllWidgetProps, DataSourceComponent, FeatureLayerQueryParams, ExpressionResolverComponent, SingleExpressionResolveResult, DataSourceManager } from 'jimu-core'
+import { React, jsx, css, AllWidgetProps, DataSourceComponent, FeatureLayerQueryParams, ExpressionResolverComponent, SingleExpressionResolveResult, DataSourceManager, DataSource, expressionUtils, DataRecord } from 'jimu-core'
 import { IMConfig } from '../config'
 
 const DEFAULT_QUERY: FeatureLayerQueryParams = { where: '1=1', outFields: ['*'] }
@@ -15,20 +15,30 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
     return <div className='record-item'>{resolvedResults.value}</div>
   }
 
-  const renderData = () => {
-    const dsIdUsedInExpression = expression.parts?.find(p => p.dataSourceId)?.dataSourceId
-    const dsUsedInExpression = DataSourceManager.getInstance().getDataSource(dsIdUsedInExpression) // the used ds of the widget or selection view of the used ds of the widget
-    if (!dsUsedInExpression) {
+  const getRecordsForExpression = (populatedRecord: DataRecord, populatedDataSourceId: string, dssUsedInExpression: DataSource[]): { [dataSourceId: string]: DataRecord[] } => {
+    const records: { [dataSourceId: string]: DataRecord[] } = {}
+    dssUsedInExpression.forEach(ds => {
+      if (!records[ds.id]) {
+        records[ds.id] = ds.id === populatedDataSourceId ? [populatedRecord] : ds.getRecords()
+      }
+    })
+    return records
+  }
+
+  const renderData = (dataSource: DataSource) => {
+    const dsIdsUsedInExpression = expressionUtils.getDataSourceIdsFromExpression(expression)
+    const dssUsedInExpression = dsIdsUsedInExpression.map(dsId => DataSourceManager.getInstance().getDataSource(dsId)) // the used ds of the widget or selection view of the used ds of the widget
+    if (dssUsedInExpression.filter(ds => !!ds).length === 0) {
       return <div>No data source.</div>
     }
 
-    if (dsUsedInExpression.getRecords().length === 0) {
+    if (dssUsedInExpression.some(ds => ds.getRecords().length === 0)) {
       return <div>No records.</div>
     }
 
     return <div className='record-list'>
       {
-        dsUsedInExpression.getRecords().map((r, i) => <ExpressionResolverComponent key={i} records={{ [dsIdUsedInExpression]: [r] }} expression={expression} widgetId={id}>{renderExpressionResult}</ExpressionResolverComponent>)
+        dataSource.getRecords().map((r, i) => <ExpressionResolverComponent key={i} records={getRecordsForExpression(r, dataSource.id, dssUsedInExpression)} expression={expression} widgetId={id}>{renderExpressionResult}</ExpressionResolverComponent>)
       }
     </div>
   }
