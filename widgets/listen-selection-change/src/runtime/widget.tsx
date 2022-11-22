@@ -22,7 +22,7 @@ import { React, jsx, css, IMDataSourceInfo, DataSource, DataSourceStatus, Featur
 import { Button } from 'jimu-ui'
 
 /**
- * This widget shows how to listen selection change of a data source.
+ * This widget shows how to listen to the selection change of a data source.
  */
 export default function Widget (props: AllWidgetProps<{}>) {
   const isDsConfigured = () => {
@@ -48,14 +48,14 @@ export default function Widget (props: AllWidgetProps<{}>) {
 
   if (!isDsConfigured()) {
     return <h3>
-      This widget shows how to listen selection change of a data source.
+      This widget shows how to listen to the selection change of a data source.
       <br />
-      Configure the data source.
+      Please configure the data source.
     </h3>
   }
   return <div className='widget-listen-selection-change' css={style}>
     <h3>
-      This widget shows how to listen selection change of a data source.
+      This widget shows how to listen to the selection change of a data source.
     </h3>
 
     <DataSourceComponent useDataSource={props.useDataSources[0]} query={{ where: '1=1' } as FeatureLayerQueryParams} widgetId={props.id}>
