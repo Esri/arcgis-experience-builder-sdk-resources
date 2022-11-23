@@ -63,6 +63,6 @@ const style = css`
   height: 100%;
   overflow: auto;
   .record-item {
-    border: 1px solid blue;
+    border: 1px solid gray;
   }
 `
