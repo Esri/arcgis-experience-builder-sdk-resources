@@ -1,8 +1,8 @@
-import {AbstractMessageAction, MessageType, Message, getAppStore, appActions, StringSelectionChangeMessage, DataRecordsSelectionChangeMessage} from 'jimu-core';
+import {AbstractMessageAction, MessageType, Message, getAppStore, appActions, StringSelectionChangeMessage, DataRecordsSelectionChangeMessage, MessageDescription} from 'jimu-core';
 
 export default class QueryAction extends AbstractMessageAction{
-  filterMessageType(messageType: MessageType, messageWidgetId?: string): boolean{
-    return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].indexOf(messageType) > -1;
+  filterMessageDescription(messageDescription: MessageDescription): boolean{
+    return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].indexOf(messageDescription.messageType) > -1;
   }
 
   filterMessage(message: Message): boolean{return true; }

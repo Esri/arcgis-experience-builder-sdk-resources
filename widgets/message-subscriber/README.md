@@ -24,11 +24,11 @@ this.props.onSettingChange({
 
 ```
 
-Within `query-action.tsx`, create a class to extend the `AbstractMessageAction` class. Then set the URI of the action setting component through the `getSettingComponentUri` method. Use the `filterMessageType` method to filter out actions that are not relevant to this widget. The `onExecute` method is called when the action is triggered.
+Within `query-action.tsx`, create a class to extend the `AbstractMessageAction` class. Then set the URI of the action setting component through the `getSettingComponentUri` method. Use the ` filterMessageDescription` method to filter out actions that are not relevant to this widget. The `onExecute` method is called when the action is triggered.
 ```javascript
 export default class QueryAction extends AbstractMessageAction{
-  filterMessageType(messageType: MessageType, messageWidgetId?: string): boolean{
-    return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].indexOf(messageType) > -1;
+  filterMessageDescription(messageDescription: MessageDescription): boolean{
+    return [MessageType.StringSelectionChange, MessageType.DataRecordsSelectionChange].indexOf(messageDescription.messageType) > -1;
   }
 
   filterMessage(message: Message): boolean{return true; }
