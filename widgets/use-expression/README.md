@@ -2,6 +2,8 @@
 
 This sample demonstrates how to resolve expression for multiple records in a custom widget.
 
+In setting panel, select a data source and add an expression. In widget, you will see the expression is resolved to value. Please note the sample will only load the first page (100 records by default).
+
 ## How to use the sample
 
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
