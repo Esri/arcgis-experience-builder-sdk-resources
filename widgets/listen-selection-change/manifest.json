@@ -1,26 +1,19 @@
 {
-  "name": "redux",
-  "label": "Redux",
+  "name": "listen-selection-change",
+  "label": "Listen Selection Change",
   "type": "widget",
   "version": "1.10.0",
   "exbVersion": "1.10.0",
   "author": "Esri R&D Center Beijing",
-  "description": "This is the widget used in developer guide",
+  "description": "This is the widget used in developer documentation",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {},
-  "extensions": [
-    {
-      "name": "My store",
-      "point": "REDUX_STORE",
-      "uri": "extensions/my-store"
-    }
-  ],
   "translatedLocales": [
     "en"
   ],
   "defaultSize": {
-    "width": 800,
-    "height": 500
+    "width": 400,
+    "height": 400
   }
 }

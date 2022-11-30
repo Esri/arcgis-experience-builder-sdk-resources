@@ -1,6 +1,6 @@
 {
-  "name": "statistic-client-side-output",
-  "label": "Statistic Client-side Output",
+  "name": "use-expression",
+  "label": "Use Expression",
   "type": "widget",
   "version": "1.10.0",
   "exbVersion": "1.10.0",
@@ -8,9 +8,7 @@
   "description": "This is the widget used in developer guide",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
-  "properties": {},
-  "defaultSize": {
-    "width": 400,
-    "height": 400
+  "properties": {
+    "hasSettingPage": true
   }
 }
