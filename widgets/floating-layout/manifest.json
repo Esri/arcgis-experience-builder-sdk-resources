@@ -1,0 +1,68 @@
+{
+  "name": "floating-layout",
+  "label": "Floating Panel",
+  "type": "widget",
+  "widgetType": "LAYOUT",
+  "version": "1.6.0",
+  "exbVersion": "1.6.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the widget used in developer guide",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false,
+    "supportAutoSize": false
+  },
+  "layouts": [
+    {
+      "name": "DEFAULT",
+      "label": "Default",
+      "type": "FLOATING"
+    }
+  ],
+  "defaultSize": {
+    "width": 400,
+    "height": 400
+  },
+  "translatedLocales": [
+    "en",
+    "ar",
+    "bs",
+    "ca",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "es",
+    "et",
+    "fi",
+    "fr",
+    "he",
+    "hr",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "lt",
+    "lv",
+    "nb",
+    "nl",
+    "pl",
+    "pt-br",
+    "pt-pt",
+    "ro",
+    "ru",
+    "sk",
+    "sl",
+    "sr",
+    "sv",
+    "th",
+    "tr",
+    "zh-cn",
+    "uk",
+    "vi",
+    "zh-hk",
+    "zh-tw"
+  ]
+}
