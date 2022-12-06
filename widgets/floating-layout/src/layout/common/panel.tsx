@@ -158,6 +158,7 @@ export function Panel (props: LayoutItemProps & OwnProps) {
           onDragging: window.jimuConfig.isInBuilder ? null : handleDragging,
           onDragEnd: handleDragEnd,
           useDragHandler: true,
+          draggableAtRuntime: true,
           itemType: null,
           rootLayoutId: () => '',
           restrict: () => true
