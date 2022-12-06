@@ -15,7 +15,7 @@ There are two folders in `src/layout`:
 Every layout type must have a `layout-item` component and a `layout` component. The `layout-item` is the container of other widgets and the `layout` is the container of `layout-item`.
 
 ### builder/layout
-A layout in builder must implement the `DropHandlers` interface. It makes the layout a drop target when you are dragging to add or move a widget.
+A layout in the builder must implement the `DropHandlers` interface. It makes the layout a drop target when you are dragging to add or move a widget.
 
 You should add a DropArea component in your layout. It will give you some callback functions to work with the `DropHandlers` interface.
 ```
@@ -32,7 +32,7 @@ You should add a DropArea component in your layout. It will give you some callba
 />
 ```
 
-If necessary, you can add a `canvas` component in your layout so that you can draw some highlight areas when user drags a widget on your layout. `handleDragEnter`, `handleDragOver` and `handleDragLeave` gives you the opportunity to draw or clean the canvas. We also prove a wrapper class named `CanvasPane` to help you draw graphics on canvas.
+If necessary, you can add a `canvas` component in your layout so that you can draw some highlight areas when a user drags a widget on your layout. `handleDragEnter`, `handleDragOver`, and `handleDragLeave` gives you the opportunity to draw or clean the canvas. We also prove a wrapper class named `CanvasPane` to help you draw graphics on canvas.
 
 In the `handleDrop` method, you need to update the layout configuration in the app config. The framework provides the method `addItemToLayout` which does most of the work.
 
@@ -62,7 +62,7 @@ addWidgetToLayout = async (
 ```
 
 ### builder/layout-item
-Besides render a widget, a layout item in builder must make itself draggable and resizable. The framework provides two utilities `bindDragHandler` and `bindResizeHandler`.
+Besides rendering a widget, a layout item in the builder must make itself draggable and resizable. The framework provides two utilities `bindDragHandler` and `bindResizeHandler`.
 
 1. Import the interact module.
 ```
@@ -72,7 +72,7 @@ import { interact } from 'jimu-core/dnd'
 ```
 interactable = interact(elementRef.current).origin('parent')
 ```
-3. Make your element draggable. Most of the time you need not to provide handlers for dragging unless you have special requirements.
+3. Make your element draggable. Most of the time you need not provide handlers for dragging unless you have special requirements.
 ```
 bindDragHandler(interactable, {
   layoutId,
@@ -86,7 +86,7 @@ bindDragHandler(interactable, {
   restrict: () => true
 })
 ```
-4. Make your element resizable. You must deal with resize handlers by yourself. The framework only gives you the changes of the size but do nothing to your html element. It's your duty to change the size of the layout item.
+4. Make your element resizable. You must deal with resize handlers by yourself. The framework only gives you changes of size but does nothing to your HTML element. It's your duty to change the size of the layout item.
 ```
 bindResizeHandler(interactable, {
   layoutItemId,
@@ -98,6 +98,6 @@ bindResizeHandler(interactable, {
 ```
 
 ### layout and layout-item at runtime
-The easiest way to generate layout and layout-item at runtime is to remove the dragging, dropping and resizing parts from the builder layout and layout-item. The only purpose of them is to render their content.
+The easiest way to generate layout and layout-item at runtime is to remove the dragging, dropping, and resizing parts from the builder layout and layout-item. Their only purpose is to render their content.
 
-But in this sample, the floating panel need to be draggable and resizable at runtime. So these capabilities are kept at runtime. But the floating panel has boundary at runtime, the layout items cannot be dragged out of it.
+But in this sample, the floating panel needs to be draggable and resizable at runtime. So these capabilities are kept at runtime. But the floating panel has a boundary at runtime, the layout items cannot be dragged out of it.
