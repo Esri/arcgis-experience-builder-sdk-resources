@@ -1,5 +1,5 @@
 This patch fixes two bugs:
-* Coordinate widget Datum transformation ID does not work
+* Coordinates widget Datum transformation ID does not work
 * Page elements in a Card within a Widget Controller cannot be edited if it is contained in certain layout elements
 
 Steps:
