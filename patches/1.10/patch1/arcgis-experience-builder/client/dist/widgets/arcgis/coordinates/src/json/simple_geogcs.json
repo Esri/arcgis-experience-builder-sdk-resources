@@ -1,0 +1,6137 @@
+[
+    {
+        "wkid": 3819,
+        "name": "GCS_HD1909",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3821,
+        "name": "GCS_TWD_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3823,
+        "name": "TWD_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3824,
+        "name": "GCS_TWD_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3888,
+        "name": "IGRS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3889,
+        "name": "GCS_IGRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 3906,
+        "name": "GCS_MGI_1901",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4001,
+        "name": "GCS_Airy_1830",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4002,
+        "name": "GCS_Airy_Modified",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4003,
+        "name": "GCS_Australian",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4004,
+        "name": "GCS_Bessel_1841",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4005,
+        "name": "GCS_Bessel_Modified",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4006,
+        "name": "GCS_Bessel_Namibia",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4007,
+        "name": "GCS_Clarke_1858",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4008,
+        "name": "GCS_Clarke_1866",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4009,
+        "name": "GCS_Clarke_1866_Michigan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4010,
+        "name": "GCS_Clarke_1880_Benoit",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4011,
+        "name": "GCS_Clarke_1880_IGN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4012,
+        "name": "GCS_Clarke_1880_RGS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4013,
+        "name": "GCS_Clarke_1880_Arc",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4014,
+        "name": "GCS_Clarke_1880_SGA",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4015,
+        "name": "GCS_Everest_Adj_1937",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4016,
+        "name": "GCS_Everest_def_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4017,
+        "name": "MOLDREF99_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4018,
+        "name": "GCS_Everest_Modified",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4019,
+        "name": "GCS_GRS_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4020,
+        "name": "GCS_Helmert_1906",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4021,
+        "name": "GCS_Indonesian",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4022,
+        "name": "GCS_International_1924",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4023,
+        "name": "GCS_MOLDREF99",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4024,
+        "name": "GCS_Krasovsky_1940",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4025,
+        "name": "GCS_NWL_9D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4027,
+        "name": "GCS_Plessis_1817",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4028,
+        "name": "GCS_Struve_1860",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4029,
+        "name": "GCS_War_Office",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4031,
+        "name": "GCS_GEM_10C",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4032,
+        "name": "GCS_OSU_86F",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4033,
+        "name": "GCS_OSU_91A",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4034,
+        "name": "GCS_Clarke_1880",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4035,
+        "name": "GCS_Sphere",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4036,
+        "name": "GCS_GRS_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4040,
+        "name": "RGRDC_2005_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4042,
+        "name": "GCS_Everest_1830",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4044,
+        "name": "GCS_Everest_def_1962",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4045,
+        "name": "GCS_Everest_def_1975",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4046,
+        "name": "GCS_RGRDC_2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4047,
+        "name": "GCS_Sphere_GRS_1980_Authalic",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4052,
+        "name": "GCS_Sphere_Clarke_1866_Authalic",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4053,
+        "name": "GCS_Sphere_International_1924_Authalic",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4054,
+        "name": "GCS_Hughes_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4055,
+        "name": "GCS_WGS_1984_Major_Auxiliary_Sphere",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4074,
+        "name": "SREF98_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4075,
+        "name": "GCS_SREF98",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4080,
+        "name": "REGCAN95_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4081,
+        "name": "GCS_REGCAN95",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4120,
+        "name": "GCS_Greek",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4121,
+        "name": "GCS_GGRS_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4122,
+        "name": "GCS_ATS_1977",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4123,
+        "name": "GCS_KKJ",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4124,
+        "name": "GCS_RT_1990",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4125,
+        "name": "GCS_Samboja",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4126,
+        "name": "GCS_LKS_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4127,
+        "name": "GCS_Tete",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4128,
+        "name": "GCS_Madzansua",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4129,
+        "name": "GCS_Observatario",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4130,
+        "name": "GCS_Moznet",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4131,
+        "name": "GCS_Indian_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4132,
+        "name": "GCS_FD_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4133,
+        "name": "GCS_Estonia_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4134,
+        "name": "GCS_PDO_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4135,
+        "name": "GCS_Old_Hawaiian",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4136,
+        "name": "GCS_St_Lawrence_Island",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4137,
+        "name": "GCS_St_Paul_Island",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4138,
+        "name": "GCS_St_George_Island",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4139,
+        "name": "GCS_Puerto_Rico",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4140,
+        "name": "GCS_North_American_1983_CSRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4141,
+        "name": "GCS_Israel",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4142,
+        "name": "GCS_Locodjo_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4143,
+        "name": "GCS_Abidjan_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4144,
+        "name": "GCS_Kalianpur_1937",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4145,
+        "name": "GCS_Kalianpur_1962",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4146,
+        "name": "GCS_Kalianpur_1975",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4147,
+        "name": "GCS_Hanoi_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4148,
+        "name": "GCS_Hartebeesthoek_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4149,
+        "name": "GCS_CH1903",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4150,
+        "name": "GCS_CH1903+",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4151,
+        "name": "GCS_Swiss_TRF_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4152,
+        "name": "GCS_North_American_1983_HARN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4153,
+        "name": "GCS_Rassadiran",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4154,
+        "name": "GCS_European_1950_ED77",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4155,
+        "name": "GCS_Dabola_1981",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4156,
+        "name": "GCS_S_JTSK",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4157,
+        "name": "GCS_Mount_Dillon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4158,
+        "name": "GCS_Naparima_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4159,
+        "name": "GCS_European_Libyan_Datum_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4160,
+        "name": "GCS_Chos_Malal_1914",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4161,
+        "name": "GCS_Pampa_del_Castillo",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4162,
+        "name": "GCS_Korean_Datum_1985",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4163,
+        "name": "GCS_Yemen_NGN_1996",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4164,
+        "name": "GCS_South_Yemen",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4165,
+        "name": "GCS_Bissau",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4166,
+        "name": "GCS_Korean_Datum_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4167,
+        "name": "GCS_NZGD_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4168,
+        "name": "GCS_Accra",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4169,
+        "name": "GCS_American_Samoa_1962",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4170,
+        "name": "GCS_SIRGAS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4171,
+        "name": "GCS_RGF_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4172,
+        "name": "GCS_POSGAR",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4173,
+        "name": "GCS_IRENET95",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4174,
+        "name": "GCS_Sierra_Leone_1924",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4175,
+        "name": "GCS_Sierra_Leone_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4176,
+        "name": "GCS_Australian_Antarctic_1998",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4178,
+        "name": "GCS_Pulkovo_1942_Adj_1983",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4179,
+        "name": "GCS_Pulkovo_1942_Adj_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4180,
+        "name": "GCS_Estonia_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4181,
+        "name": "GCS_LUREF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4182,
+        "name": "GCS_Azores_Occidental_1939",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4183,
+        "name": "GCS_Azores_Central_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4184,
+        "name": "GCS_Azores_Oriental_1940",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4185,
+        "name": "GCS_Madeira_1936",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4188,
+        "name": "GCS_OSNI_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4189,
+        "name": "GCS_REGVEN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4190,
+        "name": "GCS_POSGAR_1998",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4191,
+        "name": "GCS_Albanian_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4192,
+        "name": "GCS_Douala_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4193,
+        "name": "GCS_Manoca_1962",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4194,
+        "name": "GCS_Qornoq_1927",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4195,
+        "name": "GCS_Scoresbysund_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4196,
+        "name": "GCS_Ammassalik_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4197,
+        "name": "GCS_Garoua",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4198,
+        "name": "GCS_Kousseri",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4199,
+        "name": "GCS_Egypt_1930",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4200,
+        "name": "GCS_Pulkovo_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4201,
+        "name": "GCS_Adindan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4202,
+        "name": "GCS_Australian_1966",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4203,
+        "name": "GCS_Australian_1984",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4204,
+        "name": "GCS_Ain_el_Abd_1970",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4205,
+        "name": "GCS_Afgooye",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4206,
+        "name": "GCS_Agadez",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4207,
+        "name": "GCS_Lisbon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4208,
+        "name": "GCS_Aratu",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4209,
+        "name": "GCS_Arc_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4210,
+        "name": "GCS_Arc_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4211,
+        "name": "GCS_Batavia",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4212,
+        "name": "GCS_Barbados_1938",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4213,
+        "name": "GCS_Beduaram",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4214,
+        "name": "GCS_Beijing_1954",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4215,
+        "name": "GCS_Belge_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4216,
+        "name": "GCS_Bermuda_1957",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4218,
+        "name": "GCS_Bogota",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4219,
+        "name": "GCS_Bukit_Rimpah",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4220,
+        "name": "GCS_Camacupa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4221,
+        "name": "GCS_Campo_Inchauspe",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4222,
+        "name": "GCS_Cape",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4223,
+        "name": "GCS_Carthage",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4224,
+        "name": "GCS_Chua",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4225,
+        "name": "GCS_Corrego_Alegre",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4226,
+        "name": "GCS_Cote_d_Ivoire",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4227,
+        "name": "GCS_Deir_ez_Zor",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4228,
+        "name": "GCS_Douala",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4229,
+        "name": "GCS_Egypt_1907",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4230,
+        "name": "GCS_European_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4231,
+        "name": "GCS_European_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4232,
+        "name": "GCS_Fahud",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4233,
+        "name": "GCS_Gandajika_1970",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4234,
+        "name": "GCS_Garoua",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4235,
+        "name": "GCS_Guyane_Francaise",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4236,
+        "name": "GCS_Hu_Tzu_Shan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4237,
+        "name": "GCS_Hungarian_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4238,
+        "name": "GCS_Indonesian_1974",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4239,
+        "name": "GCS_Indian_1954",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4240,
+        "name": "GCS_Indian_1975",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4241,
+        "name": "GCS_Jamaica_1875",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4242,
+        "name": "GCS_Jamaica_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4243,
+        "name": "GCS_Kalianpur_1880",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4244,
+        "name": "GCS_Kandawala",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4245,
+        "name": "GCS_Kertau",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4246,
+        "name": "GCS_Kuwait_Oil_Company",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4247,
+        "name": "GCS_La_Canoa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4248,
+        "name": "GCS_Provisional_S_American_1956",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4249,
+        "name": "GCS_Lake",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4250,
+        "name": "GCS_Leigon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4251,
+        "name": "GCS_Liberia_1964",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4252,
+        "name": "GCS_Lome",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4253,
+        "name": "GCS_Luzon_1911",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4254,
+        "name": "GCS_Hito_XVIII_1963",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4255,
+        "name": "GCS_Herat_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4256,
+        "name": "GCS_Mahe_1971",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4257,
+        "name": "GCS_Makassar",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4258,
+        "name": "GCS_ETRS_1989",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4259,
+        "name": "GCS_Malongo_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4260,
+        "name": "GCS_Manoca",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4261,
+        "name": "GCS_Merchich",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4262,
+        "name": "GCS_Massawa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4263,
+        "name": "GCS_Minna",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4264,
+        "name": "GCS_Mhast",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4265,
+        "name": "GCS_Monte_Mario",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4266,
+        "name": "GCS_Mporaloko",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4267,
+        "name": "GCS_North_American_1927",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4268,
+        "name": "GCS_North_American_Michigan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4269,
+        "name": "GCS_North_American_1983",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4270,
+        "name": "GCS_Nahrwan_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4271,
+        "name": "GCS_Naparima_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4272,
+        "name": "GCS_New_Zealand_1949",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4273,
+        "name": "GCS_NGO_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4274,
+        "name": "GCS_Datum_73",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4275,
+        "name": "GCS_NTF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4276,
+        "name": "GCS_NSWC_9Z_2",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4277,
+        "name": "GCS_OSGB_1936",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4278,
+        "name": "GCS_OSGB_1970_SN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4279,
+        "name": "GCS_OS_SN_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4280,
+        "name": "GCS_Padang_1884",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4281,
+        "name": "GCS_Palestine_1923",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4282,
+        "name": "GCS_Pointe_Noire",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4283,
+        "name": "GCS_GDA_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4284,
+        "name": "GCS_Pulkovo_1942",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4285,
+        "name": "GCS_Qatar_1974",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4286,
+        "name": "GCS_Qatar_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4287,
+        "name": "GCS_Qornoq",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4288,
+        "name": "GCS_Loma_Quintana",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4289,
+        "name": "GCS_Amersfoort",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4291,
+        "name": "GCS_South_American_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4292,
+        "name": "GCS_Sapper_Hill_1943",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4293,
+        "name": "GCS_Schwarzeck",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4294,
+        "name": "GCS_Segora",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4295,
+        "name": "GCS_Serindung",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4296,
+        "name": "GCS_Sudan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4297,
+        "name": "GCS_Tananarive_1925",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4298,
+        "name": "GCS_Timbalai_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4299,
+        "name": "GCS_TM65",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4300,
+        "name": "GCS_TM75",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4301,
+        "name": "GCS_Tokyo",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4302,
+        "name": "GCS_Trinidad_1903",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4303,
+        "name": "GCS_Trucial_Coast_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4304,
+        "name": "GCS_Voirol_1875",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4305,
+        "name": "GCS_Voirol_Unifie_1960",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4306,
+        "name": "GCS_Bern_1938",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4307,
+        "name": "GCS_Nord_Sahara_1959",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4308,
+        "name": "GCS_RT38",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4309,
+        "name": "GCS_Yacare",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4310,
+        "name": "GCS_Yoff",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4311,
+        "name": "GCS_Zanderij",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4312,
+        "name": "GCS_MGI",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4313,
+        "name": "GCS_Belge_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4314,
+        "name": "GCS_Deutsches_Hauptdreiecksnetz",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4315,
+        "name": "GCS_Conakry_1905",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4316,
+        "name": "GCS_Dealul_Piscului_1933",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4317,
+        "name": "GCS_Dealul_Piscului_1970",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4318,
+        "name": "GCS_NGN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4319,
+        "name": "GCS_KUDAMS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4322,
+        "name": "GCS_WGS_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4324,
+        "name": "GCS_WGS_1972_BE",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4326,
+        "name": "GCS_WGS_1984",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4463,
+        "name": "GCS_RGSPM_2006",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4466,
+        "name": "RGSPM_2006_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4469,
+        "name": "RGM_2004_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4470,
+        "name": "GCS_RGM_2004",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4472,
+        "name": "Cadastre_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4475,
+        "name": "GCS_Cadastre_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4480,
+        "name": "China_Geodetic_Coordinate_System_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4482,
+        "name": "Mexican_Datum_of_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4483,
+        "name": "GCS_Mexican_Datum_of_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4490,
+        "name": "GCS_China_Geodetic_Coordinate_System_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4555,
+        "name": "GCS_New_Beijing",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4557,
+        "name": "RRAF_1991_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4558,
+        "name": "GCS_RRAF_1991",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4600,
+        "name": "GCS_Anguilla_1957",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4601,
+        "name": "GCS_Antigua_1943",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4602,
+        "name": "GCS_Dominica_1945",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4603,
+        "name": "GCS_Grenada_1953",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4604,
+        "name": "GCS_Montserrat_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4605,
+        "name": "GCS_St_Kitts_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4606,
+        "name": "GCS_St_Lucia_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4607,
+        "name": "GCS_St_Vincent_1945",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4608,
+        "name": "GCS_NAD_1927_Definition_1976",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4609,
+        "name": "GCS_NAD_1927_CGQ77",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4610,
+        "name": "GCS_Xian_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4611,
+        "name": "GCS_Hong_Kong_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4612,
+        "name": "GCS_JGD_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4613,
+        "name": "GCS_Gunung_Segara",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4614,
+        "name": "GCS_QND_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4615,
+        "name": "GCS_Porto_Santo_1936",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4616,
+        "name": "GCS_Selvagem_Grande_1938",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4617,
+        "name": "GCS_North_American_1983_CSRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4618,
+        "name": "GCS_South_American_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4619,
+        "name": "GCS_SWEREF99",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4620,
+        "name": "GCS_Point_58",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4621,
+        "name": "GCS_Fort_Marigot",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4622,
+        "name": "GCS_Sainte_Anne",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4623,
+        "name": "GCS_CSG_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4624,
+        "name": "GCS_RGFG_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4625,
+        "name": "GCS_Fort_Desaix",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4626,
+        "name": "GCS_Reunion_1947",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4627,
+        "name": "GCS_RGR_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4628,
+        "name": "GCS_Tahiti_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4629,
+        "name": "GCS_Tahaa_1954",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4630,
+        "name": "GCS_IGN72_Nuku_Hiva",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4631,
+        "name": "GCS_Kerguelen_Island_1949",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4632,
+        "name": "GCS_Combani_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4633,
+        "name": "GCS_IGN56_Lifou",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4636,
+        "name": "GCS_Petrels_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4637,
+        "name": "GCS_Pointe_Geologie_Perroud_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4638,
+        "name": "GCS_Saint_Pierre_et_Miquelon_1950",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4639,
+        "name": "GCS_MOP78",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4641,
+        "name": "GCS_IGN53_Mare",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4642,
+        "name": "GCS_ST84_Ile_des_Pins",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4643,
+        "name": "GCS_ST71_Belep",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4644,
+        "name": "GCS_NEA74_Noumea",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4645,
+        "name": "GCS_RGNC_1991",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4646,
+        "name": "GCS_Grand_Comoros",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4657,
+        "name": "GCS_Reykjavik_1900",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4658,
+        "name": "GCS_Hjorsey_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4659,
+        "name": "GCS_ISN_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4660,
+        "name": "GCS_Helle_1954",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4661,
+        "name": "GCS_LKS_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4662,
+        "name": "GCS_IGN72_Grande_Terre",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4663,
+        "name": "GCS_Porto_Santo_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4664,
+        "name": "GCS_Azores_Oriental_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4665,
+        "name": "GCS_Azores_Central_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4666,
+        "name": "GCS_Lisbon_1890",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4667,
+        "name": "GCS_IKBD_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4668,
+        "name": "GCS_European_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4669,
+        "name": "GCS_LKS_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4670,
+        "name": "GCS_IGM_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4671,
+        "name": "GCS_Voirol_1879",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4672,
+        "name": "GCS_Chatham_Island_1971",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4673,
+        "name": "GCS_Chatham_Islands_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4674,
+        "name": "GCS_SIRGAS_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4675,
+        "name": "GCS_Guam_1963",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4676,
+        "name": "GCS_Vientiane_1982",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4677,
+        "name": "GCS_Lao_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4678,
+        "name": "GCS_Lao_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4679,
+        "name": "GCS_Jouik_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4680,
+        "name": "GCS_Nouakchott_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4682,
+        "name": "GCS_Gulshan_303",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4683,
+        "name": "GCS_PRS_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4684,
+        "name": "GCS_Gan_1970",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4686,
+        "name": "GCS_MAGNA",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4687,
+        "name": "GCS_RGPF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4688,
+        "name": "GCS_Fatu_Iva_1972",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4689,
+        "name": "GCS_IGN63_Hiva_Oa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4690,
+        "name": "GCS_Tahiti_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4691,
+        "name": "GCS_Moorea_1987",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4692,
+        "name": "GCS_Maupiti_1983",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4693,
+        "name": "GCS_Nakhl-e_Ghanem",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4694,
+        "name": "GCS_POSGAR_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4695,
+        "name": "GCS_Katanga_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4696,
+        "name": "GCS_Kasai_1953",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4697,
+        "name": "GCS_IGC_1962_6th_Parallel_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4698,
+        "name": "GCS_Kerguelen_Island_1949",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4699,
+        "name": "GCS_Le_Pouce_1934",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4700,
+        "name": "GCS_IGN_Astro_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4701,
+        "name": "GCS_IGCB_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4702,
+        "name": "GCS_Mauritania_1999",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4703,
+        "name": "GCS_Mhast_1951",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4704,
+        "name": "GCS_Mhast_Onshore",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4705,
+        "name": "GCS_Mhast_Offshore",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4706,
+        "name": "GCS_Egypt_Gulf_of_Suez_S-650_TL",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4707,
+        "name": "GCS_Tern_Island_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4708,
+        "name": "GCS_Anna_1_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4709,
+        "name": "GCS_Beacon_E_1945",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4710,
+        "name": "GCS_DOS_71_4",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4711,
+        "name": "GCS_Astro_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4712,
+        "name": "GCS_Ascension_Island_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4713,
+        "name": "GCS_Ayabelle",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4714,
+        "name": "GCS_Bellevue_IGN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4715,
+        "name": "GCS_Camp_Area",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4716,
+        "name": "GCS_Canton_1966",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4717,
+        "name": "GCS_Cape_Canaveral",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4718,
+        "name": "GCS_Solomon_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4719,
+        "name": "GCS_Easter_Island_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4720,
+        "name": "GCS_Fiji_1986",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4721,
+        "name": "GCS_Fiji_1956",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4722,
+        "name": "GCS_ISTS_061_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4723,
+        "name": "GCS_Grand_Cayman_1959",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4724,
+        "name": "GCS_ISTS_073_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4725,
+        "name": "GCS_Johnston_Island_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4726,
+        "name": "GCS_Little_Cayman_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4727,
+        "name": "GCS_Midway_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4728,
+        "name": "GCS_Pico_de_Las_Nieves",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4729,
+        "name": "GCS_Pitcairn_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4730,
+        "name": "GCS_Santo_DOS_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4731,
+        "name": "GCS_Viti_Levu_1916",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4732,
+        "name": "GCS_Wake_Eniwetok_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4733,
+        "name": "GCS_Wake_Island_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4734,
+        "name": "GCS_Tristan_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4735,
+        "name": "GCS_Kusaie_1951",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4736,
+        "name": "GCS_Deception_Island",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4737,
+        "name": "GCS_Korea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4738,
+        "name": "GCS_Hong_Kong_1963",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4739,
+        "name": "GCS_Hong_Kong_1963_67",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4740,
+        "name": "GCS_PZ_1990",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4741,
+        "name": "GCS_FD_1954",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4742,
+        "name": "GCS_GDM_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4743,
+        "name": "GCS_Karbala_1979_Polservice",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4744,
+        "name": "GCS_Nahrwan_1934",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4745,
+        "name": "GCS_RD/83",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4746,
+        "name": "GCS_PD/83",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4747,
+        "name": "GCS_Greenland_1996",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4748,
+        "name": "GCS_Vanua_Levu_1915",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4749,
+        "name": "GCS_RGNC_1991-93",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4750,
+        "name": "GCS_ST87_Ouvea",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4751,
+        "name": "GCS_Kertau_RSO",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4752,
+        "name": "GCS_Viti_Levu_1912",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4753,
+        "name": "GCS_fk89",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4754,
+        "name": "GCS_LGD2006",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4755,
+        "name": "GCS_DGN_1995",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4756,
+        "name": "GCS_VN_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4757,
+        "name": "GCS_SVY21",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4758,
+        "name": "GCS_JAD_2001",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4759,
+        "name": "GCS_NAD_1983_NSRS2007",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4760,
+        "name": "GCS_WGS_1966",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4761,
+        "name": "GCS_HTRS96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4762,
+        "name": "GCS_Bermuda_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4763,
+        "name": "GCS_Pitcairn_2006",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4764,
+        "name": "GCS_RSRGD2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4765,
+        "name": "GCS_Slovenia_1996",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4801,
+        "name": "GCS_Bern_1898_Bern",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4802,
+        "name": "GCS_Bogota_Bogota",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4803,
+        "name": "GCS_Lisbon_Lisbon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4804,
+        "name": "GCS_Makassar_Jakarta",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4805,
+        "name": "GCS_MGI_Ferro",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4806,
+        "name": "GCS_Monte_Mario_Rome",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4807,
+        "name": "GCS_NTF_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4808,
+        "name": "GCS_Padang_1884_Jakarta",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4809,
+        "name": "GCS_Belge_1950_Brussels",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4810,
+        "name": "GCS_Tananarive_1925_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4811,
+        "name": "GCS_Voirol_1875_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4812,
+        "name": "GCS_Voirol_Unifie_1960_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4813,
+        "name": "GCS_Batavia_Jakarta",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4814,
+        "name": "GCS_RT38_Stockholm",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4815,
+        "name": "GCS_Greek_Athens",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4816,
+        "name": "GCS_Carthage_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4817,
+        "name": "GCS_NGO_1948_Oslo",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4818,
+        "name": "GCS_S_JTSK_Ferro",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4819,
+        "name": "GCS_Nord_Sahara_1959_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4820,
+        "name": "GCS_Gunung_Segara_Jakarta",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4821,
+        "name": "GCS_Voirol_1879_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4823,
+        "name": "GCS_Sao_Tome",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4824,
+        "name": "GCS_Principe",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4883,
+        "name": "Slovenia_1996_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4885,
+        "name": "RSRGD2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4887,
+        "name": "Bermuda_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4889,
+        "name": "HTRS96_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4891,
+        "name": "WGS_1966_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4893,
+        "name": "NAD_1983_NSRS2007_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4895,
+        "name": "JAD_2001_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4898,
+        "name": "DGN_1995_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4900,
+        "name": "LGD2006_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4901,
+        "name": "GCS_ATF_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4902,
+        "name": "GCS_Nord_de_Guerre_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 4903,
+        "name": "GCS_Madrid_1870_Madrid",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4904,
+        "name": "GCS_Lisbon_1890_Lisbon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4907,
+        "name": "RGNC_1991-93_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4909,
+        "name": "Greenland_1996_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4921,
+        "name": "GDM_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4923,
+        "name": "PZ_1990_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4925,
+        "name": "Mauritania_1999_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4927,
+        "name": "Korea_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4929,
+        "name": "POSGAR_1994_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4931,
+        "name": "Australian_Antarctic_1998_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4933,
+        "name": "Swiss_TRF_1995_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4935,
+        "name": "Estonia_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4937,
+        "name": "ETRS_1989_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4939,
+        "name": "GDA_1994_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4941,
+        "name": "Hartebeesthoek_1994_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4943,
+        "name": "IRENET95_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4945,
+        "name": "ISN_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4947,
+        "name": "JGD_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4949,
+        "name": "LKS_1992_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4951,
+        "name": "LKS_1994_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4953,
+        "name": "Moznet_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4955,
+        "name": "North_American_1983_CSRS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4957,
+        "name": "North_American_1983_HARN_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4959,
+        "name": "NZGD_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4961,
+        "name": "POSGAR_1998_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4963,
+        "name": "REGVEN_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4965,
+        "name": "RGF_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4967,
+        "name": "RGFG_1995_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4971,
+        "name": "RGR_1992_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4975,
+        "name": "SIRGAS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4977,
+        "name": "SWEREF99_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4979,
+        "name": "WGS_1984_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4981,
+        "name": "Yemen_NGN_1996_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4983,
+        "name": "IGM_1995_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4985,
+        "name": "WGS_1972_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4987,
+        "name": "WGS_1972_BE_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4989,
+        "name": "SIRGAS_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4991,
+        "name": "Lao_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4993,
+        "name": "Lao_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4995,
+        "name": "PRS_1992_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4997,
+        "name": "MAGNA_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 4999,
+        "name": "RGPF_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5012,
+        "name": "PTRA08_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5013,
+        "name": "GCS_PTRA08",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5228,
+        "name": "GCS_S_JTSK/05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5229,
+        "name": "GCS_S_JTSK/05_Ferro",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5233,
+        "name": "GCS_SLD99",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5245,
+        "name": "GDBD2009_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5246,
+        "name": "GCS_GDBD2009",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5251,
+        "name": "TUREF_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5252,
+        "name": "GCS_TUREF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5263,
+        "name": "DRUKREF_03_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5264,
+        "name": "GCS_DRUKREF_03",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5323,
+        "name": "ISN_2004_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5324,
+        "name": "GCS_ISN_2004",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5340,
+        "name": "GCS_POSGAR_2007",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5342,
+        "name": "POSGAR_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5353,
+        "name": "MARGEN_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5354,
+        "name": "GCS_MARGEN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5360,
+        "name": "GCS_SIRGAS-Chile",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5364,
+        "name": "CR05_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5365,
+        "name": "GCS_CR05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5370,
+        "name": "MARCARIO_SOLIS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5371,
+        "name": "GCS_MARCARIO_SOLIS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5372,
+        "name": "Peru96_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5373,
+        "name": "GCS_Peru96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5380,
+        "name": "SIRGAS-ROU98_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5381,
+        "name": "GCS_SIRGAS-ROU98",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5392,
+        "name": "SIRGAS_ES2007.8_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5393,
+        "name": "GCS_SIRGAS_ES2007.8",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5451,
+        "name": "GCS_Ocotepeque_1935",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5464,
+        "name": "GCS_Sibun_Gorge_1922",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5467,
+        "name": "GCS_Panama-Colon_1911",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5488,
+        "name": "RGAF09_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5489,
+        "name": "GCS_RGAF09",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5524,
+        "name": "GCS_Corrego_Alegre_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5527,
+        "name": "GCS_SAD_1969_96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5545,
+        "name": "PNG94_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5546,
+        "name": "GCS_PNG94",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5560,
+        "name": "Ukraine_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5561,
+        "name": "GCS_Ukraine_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5592,
+        "name": "FEH2010_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5593,
+        "name": "GCS_FEH2010",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5681,
+        "name": "GCS_DB_REF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5830,
+        "name": "DB_REF_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5885,
+        "name": "TGD2005_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 5886,
+        "name": "GCS_TGD2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6134,
+        "name": "CIGD11_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6135,
+        "name": "GCS_CIGD11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6207,
+        "name": "GCS_Nepal_Nagarkot",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6310,
+        "name": "CGRS_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6311,
+        "name": "GCS_CGRS_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6318,
+        "name": "GCS_NAD_1983_2011",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6319,
+        "name": "NAD_1983_2011_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6321,
+        "name": "NAD_1983_PA11_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6322,
+        "name": "GCS_NAD_1983_PA11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6324,
+        "name": "NAD_1983_MA11_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6325,
+        "name": "GCS_NAD_1983_MA11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6364,
+        "name": "Mexico_ITRF2008_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6365,
+        "name": "GCS_Mexico_ITRF2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6667,
+        "name": "JGD_2011_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6668,
+        "name": "GCS_JGD_2011",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6705,
+        "name": "RDN2008_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6706,
+        "name": "GCS_RDN2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6782,
+        "name": "NAD_1983_CORS96_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6783,
+        "name": "GCS_NAD_1983_CORS96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6881,
+        "name": "GCS_Aden_1925",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6882,
+        "name": "GCS_Bekaa_Valley_1920",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6883,
+        "name": "GCS_Bioko",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6892,
+        "name": "GCS_South_East_Island_1943",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6894,
+        "name": "GCS_Gambia",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6980,
+        "name": "IGD05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6982,
+        "name": "IG05_Intermediate_CRS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6983,
+        "name": "IG05_Intermediate_CRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6987,
+        "name": "IGD05(2012)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6989,
+        "name": "IG05(2012)_Intermediate_CRS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 6990,
+        "name": "IG05(2012)_Intermediate_CRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7034,
+        "name": "RGSPM06_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7035,
+        "name": "RGSPM06_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7036,
+        "name": "RGR92_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7037,
+        "name": "RGR92_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7038,
+        "name": "RGM04_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7039,
+        "name": "RGM04_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7040,
+        "name": "RGFG95_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7041,
+        "name": "RGFG95_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7042,
+        "name": "RGF93_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7072,
+        "name": "RGTAAF07_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7073,
+        "name": "GCS_RGTAAF07",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7084,
+        "name": "RGF93_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7085,
+        "name": "RGAF09_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7086,
+        "name": "RGAF09_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7087,
+        "name": "RGTAAF07_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7133,
+        "name": "RGTAAF07_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7135,
+        "name": "IGD05_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7136,
+        "name": "IGD05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7138,
+        "name": "IGD05(2012)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7139,
+        "name": "IGD05(2012)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7372,
+        "name": "ONGD14_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7373,
+        "name": "ONGD14",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7657,
+        "name": "WGS_1984_(G730)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7659,
+        "name": "WGS_1984_(G873)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7661,
+        "name": "WGS_1984_(G1150)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7663,
+        "name": "WGS_1984_(G1674)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7665,
+        "name": "WGS_1984_(G1762)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7678,
+        "name": "PZ-90.02_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7680,
+        "name": "PZ-90.11_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7682,
+        "name": "GSK-2011_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7683,
+        "name": "GSK-2011",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7685,
+        "name": "Kyrg-06_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7797,
+        "name": "BGS2005_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7798,
+        "name": "BGS2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7816,
+        "name": "WGS_1984_(Transit)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7843,
+        "name": "GDA2020_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7844,
+        "name": "GDA2020",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7880,
+        "name": "St_Helena_Tritan_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7881,
+        "name": "St_Helena_Tritan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7885,
+        "name": "SHGD2015_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7886,
+        "name": "SHGD2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7900,
+        "name": "ITRF_1988_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7901,
+        "name": "ITRF_1989_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7902,
+        "name": "ITRF_1990_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7903,
+        "name": "ITRF_1991_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7904,
+        "name": "ITRF_1992_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7905,
+        "name": "ITRF_1993_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7906,
+        "name": "ITRF_1994_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7907,
+        "name": "ITRF_1996_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7908,
+        "name": "ITRF_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7909,
+        "name": "ITRF_2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7910,
+        "name": "ITRF_2005_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7911,
+        "name": "ITRF_2008_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7912,
+        "name": "ITRF2014_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7915,
+        "name": "ETRF_1989_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7917,
+        "name": "ETRF90_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7919,
+        "name": "ETRF91_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7921,
+        "name": "ETRF92_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7923,
+        "name": "ETRF93_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7925,
+        "name": "ETRF94_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7927,
+        "name": "ETRF96_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7929,
+        "name": "ETRF97_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 7931,
+        "name": "ETRF2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8042,
+        "name": "Gusterberg(Ferro)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8043,
+        "name": "St._Stephen(Ferro)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8085,
+        "name": "ISN2016_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8086,
+        "name": "ISN2016",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8231,
+        "name": "NAD83(CSRS96)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8232,
+        "name": "NAD83(CSRS96)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8235,
+        "name": "NAD83(CSRS)v2_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8237,
+        "name": "NAD83(CSRS)v2",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8239,
+        "name": "NAD83(CSRS)v3_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8240,
+        "name": "NAD83(CSRS)v3",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8244,
+        "name": "NAD83(CSRS)v4_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8246,
+        "name": "NAD83(CSRS)v4",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8248,
+        "name": "NAD83(CSRS)v5_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8249,
+        "name": "NAD83(CSRS)v5",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8251,
+        "name": "NAD83(CSRS)v6_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8252,
+        "name": "NAD83(CSRS)v6",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8254,
+        "name": "NAD83(CSRS)v7_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8255,
+        "name": "NAD83(CSRS)v7",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8351,
+        "name": "S-JTSK_[JTSK03]",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8399,
+        "name": "ETRF2005_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8403,
+        "name": "ETRF2014_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8426,
+        "name": "Hong_Kong_Geodetic_CS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8427,
+        "name": "Hong_Kong_Geodetic_CS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8428,
+        "name": "Macao_1920",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8430,
+        "name": "MACAO_2008_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8431,
+        "name": "GCS_MACAO_2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8449,
+        "name": "NAD_1983_(FBN)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8542,
+        "name": "NAD_1983_(FBN)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8544,
+        "name": "NAD_1983_(HARN_Corrected)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8545,
+        "name": "NAD_1983_(HARN_Corrected)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8684,
+        "name": "SRB_ETRS89_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8685,
+        "name": "SRB_ETRS89",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8694,
+        "name": "Camacupa_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8698,
+        "name": "RSAO13_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8699,
+        "name": "RSAO13",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8817,
+        "name": "MTRF-2000_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8818,
+        "name": "MTRF-2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8860,
+        "name": "NAD_1983_(FBN)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8888,
+        "name": "WGS_1984_(Transit)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8899,
+        "name": "RGWF96_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8900,
+        "name": "RGWF96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8901,
+        "name": "RGWF96_(lon-lat)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8902,
+        "name": "RGWF96_(lon-lat)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8906,
+        "name": "CR-SIRGAS_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8907,
+        "name": "CR-SIRGAS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8916,
+        "name": "SIRGAS-CON_DGF00P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8918,
+        "name": "SIRGAS-CON_DGF01P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8920,
+        "name": "SIRGAS-CON_DGF01P02_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8922,
+        "name": "SIRGAS-CON_DGF02P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8924,
+        "name": "SIRGAS-CON_DGF04P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8926,
+        "name": "SIRGAS-CON_DGF05P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8928,
+        "name": "SIRGAS-CON_DGF06P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8930,
+        "name": "SIRGAS-CON_DGF07P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8932,
+        "name": "SIRGAS-CON_DGF08P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8934,
+        "name": "SIRGAS-CON_SIR09P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8936,
+        "name": "SIRGAS-CON_SIR10P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8938,
+        "name": "SIRGAS-CON_SIR11P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8940,
+        "name": "SIRGAS-CON_SIR13P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8942,
+        "name": "SIRGAS-CON_SIR14P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8944,
+        "name": "SIRGAS-CON_SIR15P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8946,
+        "name": "SIRGAS-CON_SIR17P01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8948,
+        "name": "SIRGAS-Chile_2010_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8949,
+        "name": "SIRGAS-Chile_2010",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8972,
+        "name": "SIRGAS-CON_DGF00P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8973,
+        "name": "SIRGAS-CON_DGF01P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8974,
+        "name": "SIRGAS-CON_DGF01P02",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8975,
+        "name": "SIRGAS-CON_DGF02P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8976,
+        "name": "SIRGAS-CON_DGF04P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8977,
+        "name": "SIRGAS-CON_DGF05P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8978,
+        "name": "SIRGAS-CON_DGF06P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8979,
+        "name": "SIRGAS-CON_DGF07P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8980,
+        "name": "SIRGAS-CON_DGF08P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8981,
+        "name": "SIRGAS-CON_SIR09P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8982,
+        "name": "SIRGAS-CON_SIR10P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8983,
+        "name": "SIRGAS-CON_SIR11P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8984,
+        "name": "SIRGAS-CON_SIR13P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8985,
+        "name": "SIRGAS-CON_SIR14P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8986,
+        "name": "SIRGAS-CON_SIR15P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8987,
+        "name": "SIRGAS-CON_SIR17P01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8988,
+        "name": "GCS_ITRF_1988",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8989,
+        "name": "GCS_ITRF_1989",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8990,
+        "name": "GCS_ITRF_1990",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8991,
+        "name": "GCS_ITRF_1991",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8992,
+        "name": "GCS_ITRF_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8993,
+        "name": "GCS_ITRF_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8994,
+        "name": "GCS_ITRF_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8995,
+        "name": "GCS_ITRF_1996",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8996,
+        "name": "GCS_ITRF_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8997,
+        "name": "GCS_ITRF_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8998,
+        "name": "GCS_ITRF_2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 8999,
+        "name": "GCS_ITRF_2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9000,
+        "name": "ITRF2014",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9002,
+        "name": "IGS97_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9003,
+        "name": "IGS97",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9005,
+        "name": "IGS00_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9006,
+        "name": "IGS00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9008,
+        "name": "IGb00_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9009,
+        "name": "IGb00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9011,
+        "name": "IGS05_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9012,
+        "name": "IGS05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9013,
+        "name": "IGS08_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9014,
+        "name": "GCS_IGS08",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9016,
+        "name": "IGb08_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9017,
+        "name": "IGb08",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9018,
+        "name": "IGS14_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9019,
+        "name": "IGS14",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9053,
+        "name": "WGS_1984_(G730)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9054,
+        "name": "WGS_1984_(G873)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9055,
+        "name": "WGS_1984_(G1150)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9056,
+        "name": "WGS_1984_(G1674)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9057,
+        "name": "WGS_1984_(G1762)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9059,
+        "name": "GCS_ETRF_1989",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9060,
+        "name": "ETRF90",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9061,
+        "name": "ETRF91",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9062,
+        "name": "ETRF92",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9063,
+        "name": "ETRF93",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9064,
+        "name": "ETRF94",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9065,
+        "name": "ETRF96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9066,
+        "name": "ETRF97",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9067,
+        "name": "ETRF2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9068,
+        "name": "ETRF2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9069,
+        "name": "ETRF2014",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9071,
+        "name": "NAD_1983_MARP00_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9072,
+        "name": "GCS_NAD_1983_MARP00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9074,
+        "name": "NAD_1983_PACP00_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9075,
+        "name": "GCS_NAD_1983_PACP00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9139,
+        "name": "KOSOVAREF01_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9140,
+        "name": "KOSOVAREF01",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9147,
+        "name": "SIRGAS-Chile_2013_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9148,
+        "name": "SIRGAS-Chile_2013",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9152,
+        "name": "SIRGAS-Chile_2016_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9153,
+        "name": "SIRGAS-Chile_2016",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9183,
+        "name": "SIRGAS-Chile_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9184,
+        "name": "GCS_SIRGAS-Chile",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9248,
+        "name": "Tapi_Aike",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9251,
+        "name": "MMN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9253,
+        "name": "MMS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9267,
+        "name": "MGI_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9293,
+        "name": "ONGD17_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9294,
+        "name": "ONGD17",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9299,
+        "name": "HS2-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9308,
+        "name": "ATRF2014_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9309,
+        "name": "ATRF2014",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9332,
+        "name": "KSA-GRF17_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9333,
+        "name": "KSA-GRF17",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9364,
+        "name": "TPEN11-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9372,
+        "name": "MML07-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9379,
+        "name": "IGb14_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9380,
+        "name": "IGb14",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9384,
+        "name": "AbInvA96_2020-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9403,
+        "name": "PN68",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9453,
+        "name": "GBK19-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9469,
+        "name": "SRGI2013_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9470,
+        "name": "SRGI2013",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9546,
+        "name": "LTF2004(G)_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9547,
+        "name": "LTF2004(G)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9695,
+        "name": "REDGEOMIN_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9696,
+        "name": "REDGEOMIN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9701,
+        "name": "ETRF2000-PL_(3D)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9702,
+        "name": "ETRF2000-PL",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9739,
+        "name": "EOS21-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9758,
+        "name": "ECML14_NB-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 9763,
+        "name": "EWR2-IRF",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37001,
+        "name": "GCS_WGS_1966",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37002,
+        "name": "GCS_Fischer_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37003,
+        "name": "GCS_Fischer_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37004,
+        "name": "GCS_Fischer_Modified",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37005,
+        "name": "GCS_Hough_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37006,
+        "name": "GCS_Everest_Modified_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37007,
+        "name": "GCS_Walbeck",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37008,
+        "name": "GCS_Sphere_ARC_INFO",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37201,
+        "name": "GCS_European_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37202,
+        "name": "GCS_Everest_Bangladesh",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37203,
+        "name": "GCS_Everest_India_Nepal",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37204,
+        "name": "GCS_Hjorsey_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37205,
+        "name": "GCS_Hong_Kong_1963_67",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37206,
+        "name": "GCS_Oman",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37207,
+        "name": "GCS_South_Asia_Singapore",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37208,
+        "name": "GCS_Ayabelle",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37211,
+        "name": "GCS_Point_58",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37212,
+        "name": "GCS_Beacon_E_1945",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37213,
+        "name": "GCS_Tern_Island_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37214,
+        "name": "GCS_Astro_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37215,
+        "name": "GCS_Bellevue_IGN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37216,
+        "name": "GCS_Canton_1966",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37217,
+        "name": "GCS_Chatham_Island_1971",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37218,
+        "name": "GCS_DOS_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37219,
+        "name": "GCS_Easter_Island_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37220,
+        "name": "GCS_Guam_1963",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37221,
+        "name": "GCS_GUX_1",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37222,
+        "name": "GCS_Johnston_Island_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37223,
+        "name": "GCS_Carthage",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37224,
+        "name": "GCS_Midway_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37225,
+        "name": "GCS_Carthage_Grad",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 37226,
+        "name": "GCS_Pitcairn_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37227,
+        "name": "GCS_Santo_DOS_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37228,
+        "name": "GCS_Viti_Levu_1916",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37229,
+        "name": "GCS_Wake_Eniwetok_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37230,
+        "name": "GCS_Wake_Island_1952",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37231,
+        "name": "GCS_Anna_1_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37232,
+        "name": "GCS_Gan_1970",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37233,
+        "name": "GCS_ISTS_073_1969",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37234,
+        "name": "GCS_Kerguelen_Island_1949",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37235,
+        "name": "GCS_Reunion_1947",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37237,
+        "name": "GCS_Ascension_Island_1958",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37238,
+        "name": "GCS_DOS_71_4",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37239,
+        "name": "GCS_Cape_Canaveral",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37240,
+        "name": "GCS_Fort_Thomas_1955",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37241,
+        "name": "GCS_Graciosa_Base_SW_1948",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37242,
+        "name": "GCS_ISTS_061_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37243,
+        "name": "GCS_LC5_1961",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37245,
+        "name": "GCS_Observatorio_Meteorologico_1939",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37246,
+        "name": "GCS_Pico_de_Las_Nieves",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37247,
+        "name": "GCS_Porto_Santo_1936",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37249,
+        "name": "GCS_Sao_Braz",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37250,
+        "name": "GCS_Selvagem_Grande_1938",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37251,
+        "name": "GCS_Tristan_1968",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37252,
+        "name": "GCS_American_Samoa_1962",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37253,
+        "name": "GCS_Camp_Area",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37254,
+        "name": "GCS_Deception_Island",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37255,
+        "name": "GCS_Gunung_Segara",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37257,
+        "name": "GCS_S42_Hungary",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37259,
+        "name": "GCS_Kusaie_1951",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 37260,
+        "name": "GCS_Alaskan_Islands",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104000,
+        "name": "GCS_Assumed_Geographic_1",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104009,
+        "name": "GCS_Kyrg-06",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104010,
+        "name": "GCS_IGS08",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104011,
+        "name": "WGS_1984_(G730)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104012,
+        "name": "WGS_1984_(G873)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104013,
+        "name": "WGS_1984_(G1150)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104014,
+        "name": "WGS_1984_(G1674)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104015,
+        "name": "WGS_1984_(G1762)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104016,
+        "name": "WGS_1984_(Transit)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104017,
+        "name": "PZ-90.02",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104018,
+        "name": "PZ-90.11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104019,
+        "name": "ITRF2014",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104020,
+        "name": "GCS_JGD_2011",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104021,
+        "name": "IGS14",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104022,
+        "name": "GGD",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104023,
+        "name": "GCS_International_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104024,
+        "name": "California_SRS_Epoch_2017.50_(NAD83)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104025,
+        "name": "GCS_Voirol_Unifie_1960_Paris",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 104026,
+        "name": "GCS_Voirol_Unifie_1960",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 104027,
+        "name": "ONGD17",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104028,
+        "name": "GDM2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104047,
+        "name": "GCS_Sphere_GRS_1980_Mean_Radius",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104050,
+        "name": "GCS_Xrail84",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104100,
+        "name": "GCS_GDBD2009",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104101,
+        "name": "GCS_Estonia_1937",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104102,
+        "name": "GCS_Hermannskogel",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104103,
+        "name": "GCS_Sierra_Leone_1960",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104104,
+        "name": "GCS_Hong_Kong_1980",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104105,
+        "name": "GCS_Datum_Lisboa_Bessel",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104106,
+        "name": "GCS_Datum_Lisboa_Hayford",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104107,
+        "name": "GCS_RGF_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104108,
+        "name": "GCS_NZGD_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104109,
+        "name": "GCS_Pohnpei",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104110,
+        "name": "GCS_REGVEN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104111,
+        "name": "GCS_JGD_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104112,
+        "name": "GCS_Bab_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104113,
+        "name": "GCS_Majuro",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104114,
+        "name": "GCS_Bermuda_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104115,
+        "name": "GCS_ITRF_1988",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104116,
+        "name": "GCS_ITRF_1989",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104117,
+        "name": "GCS_ITRF_1990",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104118,
+        "name": "GCS_ITRF_1991",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104119,
+        "name": "GCS_ITRF_1992",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104120,
+        "name": "GCS_ITRF_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104121,
+        "name": "GCS_ITRF_1994",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104122,
+        "name": "GCS_ITRF_1996",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104123,
+        "name": "GCS_ITRF_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104124,
+        "name": "GCS_ITRF_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104125,
+        "name": "GCS_Chatham_Islands_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104126,
+        "name": "GCS_Observatorio_Meteorologico_1965",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104127,
+        "name": "GCS_Roma_1940",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104128,
+        "name": "GCS_Sphere_EMEP",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104129,
+        "name": "GCS_EUREF_FIN",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104130,
+        "name": "GCS_Jordan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104131,
+        "name": "GCS_D48",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104132,
+        "name": "GCS_Ocotepeque_1935",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104133,
+        "name": "GCS_JAD_2001",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104134,
+        "name": "GCS_MONREF_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104135,
+        "name": "GCS_MSK_1942",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104136,
+        "name": "GCS_TWD_1967",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104137,
+        "name": "GCS_TWD_1997",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104138,
+        "name": "GCS_Old_Hawaiian_Intl_1924",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104139,
+        "name": "GCS_Voirol_1875_Grad",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 104140,
+        "name": "GCS_Voirol_1879_Grad",
+        "unit": "Grad"
+    },
+    {
+        "wkid": 104141,
+        "name": "GCS_CGRS_1993",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104142,
+        "name": "GCS_PTRA08",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104143,
+        "name": "GCS_CR05",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104144,
+        "name": "GCS_ISN_2004",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104145,
+        "name": "GCS_NAD_1983_2011",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104179,
+        "name": "ETRF90",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104180,
+        "name": "ETRF91",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104181,
+        "name": "ETRF92",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104182,
+        "name": "ETRF93",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104183,
+        "name": "ETRF94",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104184,
+        "name": "ETRF96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104185,
+        "name": "ETRF97",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104186,
+        "name": "ETRF2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104199,
+        "name": "GCS_WGS_1984_Major_Auxiliary_Sphere",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104223,
+        "name": "GCS_NAD_1983_CORS96",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104248,
+        "name": "GCS_MACAO_2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104256,
+        "name": "GCS_Nepal_Nagarkot",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104257,
+        "name": "GCS_ITRF_2008",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104258,
+        "name": "GCS_ETRF_1989",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104259,
+        "name": "GCS_NAD_1983_PACP00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104260,
+        "name": "GCS_NAD_1983_MARP00",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104261,
+        "name": "GCS_Merchich_Degree",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104286,
+        "name": "GCS_NAD_1983_MA11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104287,
+        "name": "GCS_NAD_1983_PA11",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104304,
+        "name": "GCS_Voirol_1875",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104305,
+        "name": "GCS_Voirol_Unifie_1960_Degree",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104602,
+        "name": "North_American_1983_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104613,
+        "name": "EUREF_FIN_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104644,
+        "name": "California_SRS_Epoch_2017.50_(NAD83)_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104645,
+        "name": "GGD_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104647,
+        "name": "ONGD17_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104648,
+        "name": "S-JTSK_[JTSK03]_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104653,
+        "name": "MONREF_1997_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104664,
+        "name": "Nepal_Nagarkot_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104693,
+        "name": "SLD99_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104696,
+        "name": "S_JTSK/05_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104697,
+        "name": "S_JTSK/05_Ferro_3D",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104700,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Anoka",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104701,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Becker",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104702,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Beltrami_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104703,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Beltrami_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104704,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Benton",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104705,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Big_Stone",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104706,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Blue_Earth",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104707,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Brown",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104708,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Carlton",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104709,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Carver",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104710,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Cass_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104711,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Cass_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104712,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Chippewa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104713,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Chisago",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104714,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Cook_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104715,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Cook_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104716,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Cottonwood",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104717,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Crow_Wing",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104718,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Dakota",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104719,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Dodge",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104720,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Douglas",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104721,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Faribault",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104722,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Fillmore",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104723,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Freeborn",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104724,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Goodhue",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104725,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Grant",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104726,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Hennepin",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104727,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Houston",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104728,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Isanti",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104729,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Itasca_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104730,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Itasca_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104731,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Jackson",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104732,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Kanabec",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104733,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Kandiyohi",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104734,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Kittson",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104735,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Koochiching",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104736,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Lac_Qui_Parle",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104737,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Lake_of_the_Woods_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104738,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Lake_of_the_Woods_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104739,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Le_Sueur",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104740,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Lincoln",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104741,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Lyon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104742,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_McLeod",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104743,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Mahnomen",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104744,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Marshall",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104745,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Martin",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104746,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Meeker",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104747,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Morrison",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104748,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Mower",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104749,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Murray",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104750,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Nicollet",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104751,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Nobles",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104752,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Norman",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104753,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Olmsted",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104754,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Ottertail",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104755,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Pennington",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104756,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Pine",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104757,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Pipestone",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104758,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Polk",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104759,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Pope",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104760,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Ramsey",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104761,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Red_Lake",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104762,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Redwood",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104763,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Renville",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104764,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Rice",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104765,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Rock",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104766,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Roseau",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104767,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_St_Louis_North",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104768,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_St_Louis_Central",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104769,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_St_Louis_South",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104770,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Scott",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104771,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Sherburne",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104772,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Sibley",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104773,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Stearns",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104774,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Steele",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104775,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Stevens",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104776,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Swift",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104777,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Todd",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104778,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Traverse",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104779,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Wabasha",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104780,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Wadena",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104781,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Waseca",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104782,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Watonwan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104783,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Winona",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104784,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Wright",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104785,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_Yellow_Medicine",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104786,
+        "name": "GCS_NAD_1983_HARN_Adj_MN_St_Louis",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104800,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Adams",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104801,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Ashland",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104802,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Barron",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104803,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Bayfield",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104804,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Brown",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104805,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Buffalo",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104806,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Burnett",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104807,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Calumet",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104808,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Chippewa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104809,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Clark",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104810,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Columbia",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104811,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Crawford",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104812,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Dane",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104813,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Dodge",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104814,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Door",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104815,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Douglas",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104816,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Dunn",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104817,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_EauClaire",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104818,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Florence",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104819,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_FondduLac",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104820,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Forest",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104821,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Grant",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104822,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Green",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104823,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_GreenLake",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104824,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Iowa",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104825,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Iron",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104826,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Jackson",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104827,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Jefferson",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104828,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Juneau",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104829,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Kenosha",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104830,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Kewaunee",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104831,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_LaCrosse",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104832,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Lafayette",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104833,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Langlade",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104834,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Lincoln",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104835,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Manitowoc",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104836,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Marathon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104837,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Marinette",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104838,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Marquette",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104839,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Menominee",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104840,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Milwaukee",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104841,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Monroe",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104842,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Oconto",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104843,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Oneida",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104844,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Outagamie",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104845,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Ozaukee",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104846,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Pepin",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104847,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Pierce",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104848,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Polk",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104849,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Portage",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104850,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Price",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104851,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Racine",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104852,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Richland",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104853,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Rock",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104854,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Rusk",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104855,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_StCroix",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104856,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Sauk",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104857,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Sawyer",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104858,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Shawano",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104859,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Sheboygan",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104860,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Taylor",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104861,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Trempealeau",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104862,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Vernon",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104863,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Vilas",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104864,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Walworth",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104865,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Washburn",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104866,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Washington",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104867,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Waukesha",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104868,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Waupaca",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104869,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Waushara",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104870,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Winnebago",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104871,
+        "name": "GCS_NAD_1983_HARN_Adj_WI_Wood",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104872,
+        "name": "Phobos_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104873,
+        "name": "Callisto_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104874,
+        "name": "Europa_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104875,
+        "name": "Ganymede_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104876,
+        "name": "Io_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104877,
+        "name": "Metis_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104878,
+        "name": "Aegaeon_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104879,
+        "name": "Anthe_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104896,
+        "name": "GCS_ITRF_2005",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104897,
+        "name": "Pandora_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104898,
+        "name": "Phoebe_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104899,
+        "name": "Polydeuces_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104900,
+        "name": "GCS_Mercury_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104901,
+        "name": "GCS_Venus_1985",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104902,
+        "name": "GCS_Venus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104903,
+        "name": "GCS_Moon_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104904,
+        "name": "GCS_Mars_1979",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104905,
+        "name": "GCS_Mars_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104906,
+        "name": "GCS_Deimos_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104907,
+        "name": "GCS_Phobos_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104908,
+        "name": "GCS_Jupiter_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104909,
+        "name": "GCS_Adrastea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104910,
+        "name": "GCS_Amalthea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104911,
+        "name": "GCS_Ananke_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104912,
+        "name": "GCS_Callisto_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104913,
+        "name": "GCS_Carme_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104914,
+        "name": "GCS_Elara_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104915,
+        "name": "GCS_Europa_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104916,
+        "name": "GCS_Ganymede_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104917,
+        "name": "GCS_Himalia_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104918,
+        "name": "GCS_Io_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104919,
+        "name": "GCS_Leda_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104920,
+        "name": "GCS_Lysithea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104921,
+        "name": "GCS_Metis_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104922,
+        "name": "GCS_Pasiphae_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104923,
+        "name": "GCS_Sinope_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104924,
+        "name": "GCS_Thebe_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104925,
+        "name": "GCS_Saturn_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104926,
+        "name": "GCS_Atlas_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104927,
+        "name": "GCS_Calypso_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104928,
+        "name": "GCS_Dione_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104929,
+        "name": "GCS_Enceladus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104930,
+        "name": "GCS_Epimetheus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104931,
+        "name": "GCS_Helene_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104932,
+        "name": "GCS_Hyperion_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104933,
+        "name": "GCS_Iapetus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104934,
+        "name": "GCS_Janus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104935,
+        "name": "GCS_Mimas_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104936,
+        "name": "GCS_Pan_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104937,
+        "name": "GCS_Pandora_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104938,
+        "name": "GCS_Phoebe_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104939,
+        "name": "GCS_Prometheus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104940,
+        "name": "GCS_Rhea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104941,
+        "name": "GCS_Telesto_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104942,
+        "name": "GCS_Tethys_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104943,
+        "name": "GCS_Titan_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104944,
+        "name": "GCS_Uranus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104945,
+        "name": "GCS_Ariel_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104946,
+        "name": "GCS_Belinda_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104947,
+        "name": "GCS_Bianca_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104948,
+        "name": "GCS_Cordelia_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104949,
+        "name": "GCS_Cressida_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104950,
+        "name": "GCS_Desdemona_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104951,
+        "name": "GCS_Juliet_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104952,
+        "name": "GCS_Miranda_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104953,
+        "name": "GCS_Oberon_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104954,
+        "name": "GCS_Ophelia_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104955,
+        "name": "GCS_Portia_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104956,
+        "name": "GCS_Puck_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104957,
+        "name": "GCS_Rosalind_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104958,
+        "name": "GCS_Titania_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104959,
+        "name": "GCS_Umbriel_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104960,
+        "name": "GCS_Neptune_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104961,
+        "name": "GCS_Despina_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104962,
+        "name": "GCS_Galatea_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104963,
+        "name": "GCS_Larissa_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104964,
+        "name": "GCS_Naiad_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104965,
+        "name": "GCS_Nereid_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104966,
+        "name": "GCS_Proteus_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104967,
+        "name": "GCS_Thalassa_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104968,
+        "name": "GCS_Triton_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104969,
+        "name": "GCS_Pluto_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104970,
+        "name": "GCS_Charon_2000",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104971,
+        "name": "Mars_2000_(Sphere)",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104972,
+        "name": "1_Ceres_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104973,
+        "name": "4_Vesta_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104974,
+        "name": "Mercury_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104975,
+        "name": "Sun_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104976,
+        "name": "Atlas_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104977,
+        "name": "Calypso_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104978,
+        "name": "Daphnis_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104979,
+        "name": "Dione_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104980,
+        "name": "Enceladus_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104981,
+        "name": "Epimetheus_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104982,
+        "name": "Helene_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104983,
+        "name": "Hyperion_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104984,
+        "name": "Iapetus_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104985,
+        "name": "Janus_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104986,
+        "name": "Methone_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104987,
+        "name": "Mimas_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104988,
+        "name": "Pallene_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104989,
+        "name": "Pan_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104990,
+        "name": "GCS_HD1909",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104991,
+        "name": "GCS_IGRS",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104992,
+        "name": "GCS_MGI_1901",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104993,
+        "name": "Prometheus_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104994,
+        "name": "Rhea_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104995,
+        "name": "Telesto_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104996,
+        "name": "Tethys_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104997,
+        "name": "Larissa_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104998,
+        "name": "Pluto_2015",
+        "unit": "Degree"
+    },
+    {
+        "wkid": 104999,
+        "name": "Charon_2015",
+        "unit": "Degree"
+    }
+]
