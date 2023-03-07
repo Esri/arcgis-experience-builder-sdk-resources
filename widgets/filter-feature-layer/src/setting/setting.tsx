@@ -18,9 +18,9 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { jsx, Immutable, UseDataSource, JimuFieldType } from "jimu-core";
+import { jsx, Immutable, UseDataSource, JimuFieldType, AllDataSourceTypes } from "jimu-core";
 import { AllWidgetSettingProps } from "jimu-for-builder";
-import { DataSourceSelector, AllDataSourceTypes, FieldSelector } from "jimu-ui/advanced/data-source-selector";
+import { DataSourceSelector, FieldSelector } from "jimu-ui/advanced/data-source-selector";
 import {
   SettingSection,
   SettingRow
