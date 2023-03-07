@@ -5,7 +5,7 @@ export default class ExportJson extends AbstractDataAction {
     return records?.length > 0
   }
 
-  async onExecute (dataSource: DataSource, records: DataRecord[]): Promise<boolean> {
+  async onExecute (records: DataRecord[], actionConfig: any): Promise<boolean> {
     const ids = records.map(r => r.getId())
     MutableStoreManager.getInstance().updateStateValue(this.widgetId, 'featureIds', JSON.stringify(ids))
     return true
