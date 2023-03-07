@@ -17,9 +17,9 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, Immutable, IMFieldSchema, UseDataSource} from 'jimu-core';
+import {React, Immutable, IMFieldSchema, UseDataSource, AllDataSourceTypes} from 'jimu-core';
 import {AllWidgetSettingProps} from 'jimu-for-builder';
-import {DataSourceSelector, AllDataSourceTypes, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
+import {DataSourceSelector, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
 
 export default function Setting(props: AllWidgetSettingProps<{}>){
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
