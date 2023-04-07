@@ -1,4 +1,4 @@
-import { extensionSpec, AppConfig, utils, createIntl, getAppStore } from 'jimu-core'
+import { type extensionSpec, type AppConfig, utils, createIntl, getAppStore } from 'jimu-core'
 import defaultMessage from '../runtime/translations/default'
 
 export default class Translation implements extensionSpec.AppConfigProcessorExtension {
@@ -7,7 +7,7 @@ export default class Translation implements extensionSpec.AppConfigProcessorExte
 
   async process (appConfig: AppConfig): Promise<AppConfig> {
     // Do not replace when run in builder.
-    if(window.jimuConfig.isInBuilder){
+    if (window.jimuConfig.isInBuilder) {
       return Promise.resolve(appConfig)
     }
     const widgetJson = appConfig.widgets[this.widgetId]

@@ -18,6 +18,6 @@
   LICENSE file.
 */
 export default {
-  selectDataSource: "Select Feature Layer Data Source",
-  chooseAttribute: "Choose attribute to filter on (string)"
-};
+  selectDataSource: 'Select Feature Layer Data Source',
+  chooseAttribute: 'Choose attribute to filter on (string)'
+}

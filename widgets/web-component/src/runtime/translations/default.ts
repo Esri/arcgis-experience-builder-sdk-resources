@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Web Component',
+  _widgetLabel: 'Web Component'
 }

@@ -18,6 +18,6 @@
   LICENSE file.
 */
 export default {
-  _widgetLabel: "Editor",
+  _widgetLabel: 'Editor',
   _widgetDescription: 'A widget from the ArcGIS JavaScript API.'
-};
+}

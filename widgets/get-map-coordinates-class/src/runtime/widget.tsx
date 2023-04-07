@@ -18,38 +18,38 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps, jsx } from "jimu-core";
-import { IMConfig } from "../config";
-import { JimuMapView, JimuMapViewComponent } from "jimu-arcgis";
+import { React, type AllWidgetProps, jsx } from 'jimu-core'
+import { type IMConfig } from '../config'
+import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 
-import Point from "esri/geometry/Point";
+import type Point from 'esri/geometry/Point'
 
-import defaultMessages from "./translations/default";
+import defaultMessages from './translations/default'
 
 interface IState {
-  latitude: string;
-  longitude: string;
-  scale: number;
-  zoom: number;
-  mapViewReady: boolean;
+  latitude: string
+  longitude: string
+  scale: number
+  zoom: number
+  mapViewReady: boolean
 }
 
 export default class Widget extends React.PureComponent<
-  AllWidgetProps<IMConfig>,
-  IState
+AllWidgetProps<IMConfig>,
+IState
 > {
   state = {
-    latitude: "",
-    longitude: "",
+    latitude: '',
+    longitude: '',
     zoom: 0,
     scale: 0,
     mapViewReady: false
-  };
+  }
 
   activeViewChangeHandler = (jmv: JimuMapView) => {
     if (jmv) {
       // When the extent moves, update the state with all the updated values.
-      jmv.view.watch("extent", evt => {
+      jmv.view.watch('extent', evt => {
         this.setState({
           latitude: jmv.view.center.latitude.toFixed(3),
           longitude: jmv.view.center.longitude.toFixed(3),
@@ -58,42 +58,42 @@ export default class Widget extends React.PureComponent<
           // this is set to false initially, then once we have the first set of data (and all subsequent) it's set
           // to true, so that we can hide the text until everything is ready:
           mapViewReady: true
-        });
-      });
+        })
+      })
 
       // When the pointer moves, take the pointer location and create a Point
       // Geometry out of it (`view.toMap(...)`), then update the state.
-      jmv.view.on("pointer-move", evt => {
+      jmv.view.on('pointer-move', evt => {
         const point: Point = jmv.view.toMap({
           x: evt.x,
           y: evt.y
-        });
+        })
         this.setState({
           latitude: point.latitude.toFixed(3),
           longitude: point.longitude.toFixed(3),
           scale: Math.round(jmv.view.scale * 1) / 1,
           zoom: jmv.view.zoom,
           mapViewReady: true
-        });
-      });
+        })
+      })
     }
-  };
+  }
 
-  render() {
-    let sections = [];
+  render () {
+    const sections = []
 
     sections.push(
       <span>
         {defaultMessages.latLon} {this.state.latitude} {this.state.longitude}
       </span>
-    );
+    )
 
-    if (this.props.config.showZoom === true) {
-      sections.push(<span>Zoom {this.state.zoom.toFixed(0)}</span>);
+    if (this.props.config.showZoom) {
+      sections.push(<span>Zoom {this.state.zoom.toFixed(0)}</span>)
     }
 
-    if (this.props.config.showScale === true) {
-      sections.push(<span>Scale 1:{this.state.scale}</span>);
+    if (this.props.config.showScale) {
+      sections.push(<span>Scale 1:{this.state.scale}</span>)
     }
 
     // We have 1, 2, or 3 JSX Elements in our array, we want to join them
@@ -102,23 +102,23 @@ export default class Widget extends React.PureComponent<
     const allSections = sections.reduce((previousValue, currentValue) => {
       return previousValue === null
         ? [currentValue]
-        : [...previousValue, " | ", currentValue];
-    }, null);
+        : [...previousValue, ' | ', currentValue]
+    }, null)
 
     return (
       <div className="widget-get-map-coordinates jimu-widget m-2">
-        {this.props.hasOwnProperty("useMapWidgetIds") &&
+        {this.props.hasOwnProperty('useMapWidgetIds') &&
           this.props.useMapWidgetIds &&
           this.props.useMapWidgetIds.length === 1 && (
             <JimuMapViewComponent
               useMapWidgetId={this.props.useMapWidgetIds?.[0]}
               onActiveViewChange={this.activeViewChangeHandler}
             />
-          )}
+        )}
 
         {/* Only show the data once the MapView is ready */}
-        <p>{this.state.mapViewReady === true ? allSections : defaultMessages.latLonWillBeHere}</p>
+        <p>{this.state.mapViewReady ? allSections : defaultMessages.latLonWillBeHere}</p>
       </div>
-    );
+    )
   }
 }

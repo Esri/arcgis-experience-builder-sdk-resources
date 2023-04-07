@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Feature Layer (Class)',
+  _widgetLabel: 'Feature Layer (Class)'
 }

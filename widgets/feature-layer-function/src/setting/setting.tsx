@@ -17,15 +17,15 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, Immutable, IMFieldSchema, UseDataSource, AllDataSourceTypes} from 'jimu-core';
-import {AllWidgetSettingProps} from 'jimu-for-builder';
-import {DataSourceSelector, FieldSelector} from 'jimu-ui/advanced/data-source-selector';
+import { React, Immutable, type IMFieldSchema, type UseDataSource, AllDataSourceTypes } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default function Setting(props: AllWidgetSettingProps<{}>){
+export default function Setting (props: AllWidgetSettingProps<{}>) {
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     props.onSettingChange({
       id: props.id,
-      useDataSources: [{...props.useDataSources[0], ...{fields: allSelectedFields.map(f => f.jimuName)}}]
+      useDataSources: [{ ...props.useDataSources[0], ...{ fields: allSelectedFields.map(f => f.jimuName) } }]
     })
   }
 
@@ -33,14 +33,14 @@ export default function Setting(props: AllWidgetSettingProps<{}>){
     props.onSettingChange({
       id: props.id,
       useDataSourcesEnabled
-    });
+    })
   }
 
   const onDataSourceChange = (useDataSources: UseDataSource[]) => {
     props.onSettingChange({
       id: props.id,
-      useDataSources: useDataSources,
-    });
+      useDataSources: useDataSources
+    })
   }
 
   return <div className="use-feature-layer-setting p-2">

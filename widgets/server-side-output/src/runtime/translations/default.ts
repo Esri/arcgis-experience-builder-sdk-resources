@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Server-side Output',
+  _widgetLabel: 'Server-side Output'
 }

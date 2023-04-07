@@ -1,4 +1,4 @@
-import { AbstractDataAction, DataRecordSet, MutableStoreManager } from 'jimu-core'
+import { AbstractDataAction, type DataRecordSet, MutableStoreManager } from 'jimu-core'
 
 export default class ExportJson extends AbstractDataAction {
   async isSupported (dataSet: DataRecordSet): Promise<boolean> {
@@ -12,5 +12,4 @@ export default class ExportJson extends AbstractDataAction {
     MutableStoreManager.getInstance().updateStateValue(this.widgetId, 'featureIds', JSON.stringify(ids))
     return true
   }
-
 }

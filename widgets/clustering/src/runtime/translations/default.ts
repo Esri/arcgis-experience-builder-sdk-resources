@@ -18,5 +18,5 @@
   LICENSE file.
 */
 export default {
-	_widgetLabel: "Clustering"
-};
+  _widgetLabel: 'Clustering'
+}

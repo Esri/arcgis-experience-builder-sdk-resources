@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Message Subscriber',
+  _widgetLabel: 'Message Subscriber'
 }

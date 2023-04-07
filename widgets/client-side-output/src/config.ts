@@ -1,4 +1,4 @@
-import { ImmutableObject, IMSqlExpression } from 'jimu-core'
+import { type ImmutableObject, type IMSqlExpression } from 'jimu-core'
 
 export interface Config {
   sqlExpression?: IMSqlExpression
