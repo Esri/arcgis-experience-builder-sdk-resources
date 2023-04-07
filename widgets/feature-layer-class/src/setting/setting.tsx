@@ -21,7 +21,7 @@ import { React, Immutable, type IMFieldSchema, type UseDataSource, AllDataSource
 import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}> {
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
   supportedTypes = Immutable([AllDataSourceTypes.FeatureLayer])
 
   onFieldChange = (allSelectedFields: IMFieldSchema[]) => {

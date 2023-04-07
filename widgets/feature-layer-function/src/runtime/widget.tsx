@@ -23,7 +23,7 @@ const { useState, useEffect, useRef } = React
 /**
  * This widget will show features from a configured feature layer
  */
-export default function Widget (props: AllWidgetProps<{}>) {
+export default function Widget (props: AllWidgetProps<unknown>) {
   const [query, setQuery] = useState<FeatureLayerQueryParams>(null)
   const cityNameRef = useRef<HTMLInputElement>(null)
 

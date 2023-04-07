@@ -22,7 +22,7 @@ import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { MapWidgetSelector } from 'jimu-ui/advanced/setting-components'
 import { ArcGISDataSourceTypes } from 'jimu-arcgis'
 
-export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}> {
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
   supportedTypes = Immutable([ArcGISDataSourceTypes.WebMap])
   dsManager = DataSourceManager.getInstance()
 

@@ -26,7 +26,7 @@ interface State {
 /**
  * This widget will show features from a configured feature layer
  */
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State> {
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
   state = { query: null }
 
   cityNameRef: React.RefObject<HTMLInputElement> = React.createRef()

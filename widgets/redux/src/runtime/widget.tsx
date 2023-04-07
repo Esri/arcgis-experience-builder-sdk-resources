@@ -21,7 +21,7 @@
 import { React, type AllWidgetProps, jsx, type IMState } from 'jimu-core'
 import { Input } from 'jimu-ui'
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}> & { a: string }, {}> {
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown> & { a: string }, unknown> {
   /**
    * Map the state your widget needs
    * @param state

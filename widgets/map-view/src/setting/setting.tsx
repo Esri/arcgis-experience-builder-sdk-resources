@@ -22,7 +22,7 @@ import { type AllWidgetSettingProps } from 'jimu-for-builder'
 
 import { DataSourceSelector, AllDataSourceTypes } from 'jimu-ui/advanced/data-source-selector'
 
-export default class Setting extends React.PureComponent<AllWidgetSettingProps<{}>, {}> {
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
   supportedTypes = Immutable([AllDataSourceTypes.WebMap])
 
   onDataSourceSelected = (useDataSources: UseDataSource[]) => {

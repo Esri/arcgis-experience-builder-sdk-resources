@@ -29,7 +29,7 @@ interface ExtraProps {
   queryObject: IMUrlParameters
 }
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}> & ExtraProps, {}> {
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown> & ExtraProps, unknown> {
   mapContainer = React.createRef<HTMLDivElement>()
   mapView: MapView
   webMap: WebMap

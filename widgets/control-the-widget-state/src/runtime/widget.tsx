@@ -26,13 +26,13 @@ const { useSelector } = ReactRedux
 /**
  * This widget will show how to control widget state for a collapsible sidebar widget and a widget within the widget controller widget.
  */
-export default function Widget (props: AllWidgetProps<{}>) {
+export default function Widget (props: AllWidgetProps<unknown>) {
   // Establish state properties, initial values and their corresponding set state actions
   const [sidebarWidgetId, setSidebarWidgetId] = useState(null as string)
   const [openCloseWidgetId, setOpenCloseWidgetId] = useState(null as string)
   const [sidebarVisible] = useState(true as boolean)
   const [openness, setOpenness] = useState(false as boolean)
-  const [appWidgets, setAppWidgets] = useState({} as Object)
+  const [appWidgets, setAppWidgets] = useState({} as unknown)
   const [widgetsArray, setWidgetsArray] = useState([] as any[])
   const [sidebarWidgetsArray, setSidebarWidgetsArray] = useState([] as any[])
   // Get the widget state - because the sidebar state may change in the runtime, via Redux's useSelector hook
@@ -65,9 +65,8 @@ export default function Widget (props: AllWidgetProps<{}>) {
         'collapse',
         !sidebarVisible
       ))
-    }
     // If widget state's collapse property is false, expand
-    else if (widgetState && widgetState.collapse === false) {
+    } else if (widgetState && widgetState.collapse === false) {
       getAppStore().dispatch(appActions.widgetStatePropChange(
         sidebarWidgetId,
         'collapse',

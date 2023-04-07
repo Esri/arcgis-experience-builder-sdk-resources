@@ -24,7 +24,7 @@ interface State {
   extent: __esri.Extent
 }
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State> {
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
   extentWatch: __esri.WatchHandle
   state: State = { extent: null }
 

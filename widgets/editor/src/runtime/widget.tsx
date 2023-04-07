@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /**
   Licensing
 
@@ -27,7 +28,7 @@ interface State {
   currentWidget: Editor
 }
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State> {
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
   private readonly myRef = React.createRef<HTMLDivElement>()
 
   constructor (props) {

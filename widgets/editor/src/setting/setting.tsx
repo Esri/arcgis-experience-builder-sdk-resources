@@ -26,7 +26,7 @@ import {
 } from 'jimu-ui/advanced/setting-components'
 
 export default class Setting extends React.PureComponent<
-AllWidgetSettingProps<{}>,
+AllWidgetSettingProps<unknown>,
 any
 > {
   onMapWidgetSelected = (useMapWidgetIds: string[]) => {

@@ -21,7 +21,7 @@ import { React, Immutable, type IMFieldSchema, type UseDataSource, AllDataSource
 import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default function Setting (props: AllWidgetSettingProps<{}>) {
+export default function Setting (props: AllWidgetSettingProps<unknown>) {
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     props.onSettingChange({
       id: props.id,

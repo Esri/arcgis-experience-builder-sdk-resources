@@ -24,7 +24,7 @@ import { Button } from 'jimu-ui'
 /**
  * This widget shows how to listen to the selection change of a data source.
  */
-export default function Widget (props: AllWidgetProps<{}>) {
+export default function Widget (props: AllWidgetProps<unknown>) {
   const isDsConfigured = () => {
     if (props.useDataSources && props.useDataSources.length === 1) {
       return true

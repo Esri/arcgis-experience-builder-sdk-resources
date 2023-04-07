@@ -30,7 +30,7 @@ const { useState, useRef, useEffect } = React
 
 export default function ({
   useMapWidgetIds
-}: AllWidgetProps<{}>) {
+}: AllWidgetProps<unknown>) {
   const apiWidgetContainer = useRef<HTMLDivElement>()
 
   const [layerInfo, setLayerInfo] = useState<ActiveLayerInfo>(null)
