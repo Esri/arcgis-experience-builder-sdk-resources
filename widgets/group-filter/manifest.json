@@ -1,0 +1,17 @@
+{
+  "name": "group-filter",
+  "label": "Group Filter",
+  "type": "widget",
+  "version": "1.11.0",
+  "exbVersion": "1.11.0",
+  "author": "Federico Gervasoni",
+  "description": "This widget demonstrates how to filter a group of feature layer data source programmatically.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "translatedLocales": ["en"],
+  "defaultSize": {
+    "width": 300,
+    "height": 120
+  }
+}
