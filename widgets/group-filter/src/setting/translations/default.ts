@@ -19,5 +19,7 @@
 */
 export default {
   selectDataSource: "Select Feature Layer Data Source",
-  selectFieldsSource: "Select fields to filter",
+  selectFieldsSource: "Select Fields to Filter",
+  enableZoom: "Enable Zoom after Filter",
+  widgetName: "Widget Name",
 };

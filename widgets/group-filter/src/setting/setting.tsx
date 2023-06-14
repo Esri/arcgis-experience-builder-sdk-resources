@@ -26,16 +26,25 @@ import {
   SettingRow,
 } from "jimu-ui/advanced/setting-components";
 import { DataSourceSelector, FieldSelector } from "jimu-ui/advanced/data-source-selector";
-import { jsx, Immutable, UseDataSource, AllDataSourceTypes, JimuFieldType, ImmutableObject, DataSource, IMFieldSchema } from "jimu-core";
+import { jsx, Immutable, UseDataSource, AllDataSourceTypes, ImmutableObject, DataSource, IMFieldSchema } from "jimu-core";
 
 import { IMConfig } from "../config";
 
 import defaultI18nMessages from "./translations/default";
+import { Label, Switch, TextInput } from "jimu-ui";
 
 export default function (props: AllWidgetSettingProps<IMConfig>) {
 
   const supportedDsTypes = Immutable([AllDataSourceTypes.FeatureLayer]);
   const [fields, setFields] = useState<ImmutableObject<{ [dataSourceId: string]: string[] }>>(null)
+  const [checked, setChecked] = useState<boolean>(props.config.zoomEnabled)
+
+  const onInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    props.onSettingChange({
+      id: props.id,
+      config: props.config.set('widgetTitle', evt.target.value),
+    });
+  }
 
   // When the dataSource is chosen, save it to the settings.
   const onDataSourceChange = (useDataSources: UseDataSource[]) => {
@@ -63,14 +72,42 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
         id: props.id,
         config: props.config.set('fields', selectedFields),
       });
+
+      props.onSettingChange({
+        id: props.id,
+        config: props.config.set('fieldsConfig', newFields),
+      });
     }
+  }
+
+  const onSwitchChange = (
+    evt: React.ChangeEvent<HTMLInputElement>,
+    checked: boolean
+  ) => {
+    setChecked(checked)
+    props.onSettingChange({
+      id: props.id,
+      config: props.config.set('zoomEnabled', checked),
+    });
   }
 
 
   return (
     <div>
-      <div className="widget-setting-get-map-coordinates">
-
+      <div className="widget-setting">
+        <SettingSection
+          className="widget-name-section"
+          title={props.intl.formatMessage({
+            id: "widgetNameLabel",
+            defaultMessage: defaultI18nMessages.widgetName
+          })}
+        >
+          <SettingRow>
+            <TextInput
+              defaultValue={props.config.widgetTitle || "Group Filter"} onChange={onInputChange}
+            />
+          </SettingRow>
+        </SettingSection>
         <SettingSection
           className="data-source-selector-section"
           title={props.intl.formatMessage({
@@ -103,7 +140,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
               <FieldSelector
                 useDataSources={props.useDataSources}
                 onChange={onFieldChange}
-                selectedFields={fields}
+                selectedFields={fields || props.config.fieldsConfig}
                 isMultiple={true}
                 isSearchInputHidden={false}
                 isDataSourceDropDownHidden
@@ -112,6 +149,14 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
             </SettingRow>
           </SettingSection>
         }
+        <SettingSection
+          className="zoom-selector-section"
+        >
+          <SettingRow>
+            <Label>{defaultI18nMessages.enableZoom}<Switch checked={checked} onChange={onSwitchChange} className="ml-2" /></Label>
+          </SettingRow>
+        </SettingSection>
+
 
       </div>
     </div>

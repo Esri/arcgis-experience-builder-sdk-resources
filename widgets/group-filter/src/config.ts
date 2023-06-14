@@ -22,6 +22,9 @@ import { ImmutableObject } from "seamless-immutable";
 
 export interface Config {
   fields: [ConfigObject];
+  zoomEnabled: boolean;
+  widgetTitle: string;
+  fieldsConfig: ImmutableObject<{ [dataSourceId: string]: string[] }>;
 }
 
 export interface ObjectType {

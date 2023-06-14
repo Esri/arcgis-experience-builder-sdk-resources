@@ -21,12 +21,13 @@
 import { useEffect, useState } from "react";
 
 import { FilterOutlined } from 'jimu-icons/outlined/editor/filter';
-import { AdvancedSelect, Option, Select } from 'jimu-ui';
+import { AdvancedSelect, Button, Option, Select } from 'jimu-ui';
 import { AllWidgetProps, jsx, FeatureLayerDataSource, SqlQueryParams, DataSourceManager } from "jimu-core";
 
 import { IMConfig, ObjectType } from "../config";
 
 import defaultMessages from "./translations/default";
+import { MapViewManager } from "jimu-arcgis";
 
 export default function (props: AllWidgetProps<IMConfig>) {
 
@@ -49,14 +50,14 @@ export default function (props: AllWidgetProps<IMConfig>) {
             outFields: [fieldValue],
             returnDistinctValues: true,
             where: '1=1',
-            returnGeometry: false
           }).then((result) => {
             setValuesData(
               result.features.map(el => ({
-                label: el.attributes[fieldValue],
-                value: el.attributes[fieldValue]
+                label: el.attributes[fieldValue].toString(),
+                value: el.attributes[fieldValue].toString()
               }))
             )
+            // clean values after change on first select
             setValues([])
           });
       })
@@ -86,26 +87,49 @@ export default function (props: AllWidgetProps<IMConfig>) {
           }
         }
 
-        if (dsManager.getDataSourcesAsArray().length > 0)
+        if (dsManager.getDataSourcesAsArray().length > 0) {
           // Filter the data source using updateQueryParams function.
           ds.updateQueryParams(queryParams, props.id);
+
+          const mvManager: MapViewManager = MapViewManager.getInstance();
+          const map = mvManager.getJimuMapViewById(mvManager.getAllJimuMapViewIds()[0])
+
+          // zoomEnabled in config = true
+          if (props.config.zoomEnabled)
+            ds.layer.queryExtent(queryParams).then((results) => {
+              map.view.extent = results.extent;
+            });
+        }
       })
     }
   }, [values])
 
+  const reset = () => {
+    setValues(null)
+    setValuesData(null)
+    // Workaround to clear query before reset fieldValue
+    setTimeout(() => {
+      setFieldValue(null)
+    }, 100)
+  }
+
   return (
     <div className="jimu-widget p-2">
-      <h1 style={{ fontSize: '14px' }}><FilterOutlined className="mr-1" />{defaultMessages.widgetTitle}</h1>
-      <Select className="mb-1" placeholder={defaultMessages.select} onChange={(e) => setFieldValue(e.target.value)}>
+      <h1 style={{ fontSize: '14px' }}><FilterOutlined className="mr-1" />{props.config.widgetTitle}</h1>
+      <Select id="dataSource" value={fieldValue} className="mb-1" placeholder={defaultMessages.select} onChange={(e) => setFieldValue(e.target.value)}>
         {props.config.fields && props.config.fields.map((el) => (<Option value={el.name}>{el.alias}</Option>))}
       </Select>
       {valuesData && <AdvancedSelect
+        className="mb-1"
         onChange={(values) => setValues(values as ObjectType[])}
         selectedValues={values}
         staticValues={valuesData}
         isMultiple
       />}
-
+      <Button
+        onClick={reset}
+        size="default"
+      >{defaultMessages.reset}</Button>
     </div>
   );
 }

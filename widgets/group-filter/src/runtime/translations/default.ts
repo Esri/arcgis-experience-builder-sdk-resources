@@ -18,8 +18,8 @@
   LICENSE file.
 */
 export default {
-  _widgetLabel: "Filter Feature Layer",
+  _widgetLabel: "Group Filter",
   filterLayer: "Filter layer",
   select: "Select...",
-  widgetTitle: "Group Filter",
+  reset: "Reset",
 };
