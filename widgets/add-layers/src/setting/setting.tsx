@@ -18,36 +18,36 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage, css, jsx } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
-import { Switch } from "jimu-ui";
+import { React, FormattedMessage, css, jsx } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { Switch } from 'jimu-ui'
 import {
   MapWidgetSelector,
   SettingSection,
   SettingRow
-} from "jimu-ui/advanced/setting-components";
-import { IMConfig } from "../config";
-import defaultMessages from "./translations/default";
+} from 'jimu-ui/advanced/setting-components'
+import { type IMConfig } from '../config'
+import defaultMessages from './translations/default'
 
 export default class Setting extends React.PureComponent<
-  AllWidgetSettingProps<IMConfig>,
-  any
+AllWidgetSettingProps<IMConfig>,
+any
 > {
   onZoomToLayerPropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     this.props.onSettingChange({
       id: this.props.id,
-      config: this.props.config.set("zoomToLayer", evt.currentTarget.checked)
-    });
-  };
+      config: this.props.config.set('zoomToLayer', evt.currentTarget.checked)
+    })
+  }
 
   onMapWidgetSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,
       useMapWidgetIds: useMapWidgetIds
-    });
-  };
+    })
+  }
 
-  render() {
+  render () {
     const style = css`
       .widget-setting-addLayers {
         .checkbox-row {
@@ -56,14 +56,14 @@ export default class Setting extends React.PureComponent<
           margin-bottom: 8px;
         }
       }
-    `;
+    `
     return (
       <div css={style}>
         <div className="widget-setting-addLayers">
           <SettingSection
             className="map-selector-section"
             title={this.props.intl.formatMessage({
-              id: "mapWidgetLabel",
+              id: 'mapWidgetLabel',
               defaultMessage: defaultMessages.selectMapWidget
             })}
           >
@@ -82,7 +82,7 @@ export default class Setting extends React.PureComponent<
 
           <SettingSection
             title={this.props.intl.formatMessage({
-              id: "settingsLabel",
+              id: 'settingsLabel',
               defaultMessage: defaultMessages.settings
             })}
           >
@@ -108,6 +108,6 @@ export default class Setting extends React.PureComponent<
           </SettingSection>
         </div>
       </div>
-    );
+    )
   }
 }

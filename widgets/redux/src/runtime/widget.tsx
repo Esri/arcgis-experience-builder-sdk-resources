@@ -18,32 +18,31 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps, jsx, IMState } from 'jimu-core';
-import {Input} from 'jimu-ui';
+import { React, type AllWidgetProps, jsx, type IMState } from 'jimu-core'
+import { Input } from 'jimu-ui'
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}> & {a: string}, {}> {
-
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown> & { a: string }, unknown> {
   /**
    * Map the state your widget needs
    * @param state
    */
-  static mapExtraStateProps(state: IMState){
-    return {a: state.myState.a};
+  static mapExtraStateProps (state: IMState) {
+    return { a: state.myState.a }
   }
 
   onChange = (evt) => {
     this.props.dispatch({
       type: 'MY_ACTION_1',
       val: evt.target.value
-    });
+    })
   }
 
-  render() {
+  render () {
     return (
       <div className="widget-use-redux jimu-widget m-2">
         <Input onChange={this.onChange}/>
         <div>{this.props.a}</div>
       </div>
-    );
+    )
   }
 }

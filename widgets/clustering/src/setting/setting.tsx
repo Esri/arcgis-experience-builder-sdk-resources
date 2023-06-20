@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /**
   Licensing
 
@@ -17,28 +18,27 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React} from 'jimu-core';
-import {AllWidgetSettingProps} from 'jimu-for-builder';
-import { MapWidgetSelector, SettingRow, SettingSection} from "jimu-ui/advanced/setting-components";
+import { React } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { MapWidgetSelector, SettingRow, SettingSection } from 'jimu-ui/advanced/setting-components'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<any>, {}> {
-
   onMapSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,
-      useMapWidgetIds: useMapWidgetIds,
-    });
-   };
+      useMapWidgetIds: useMapWidgetIds
+    })
+  }
 
-  render(){
-    return <div className="widget-setting p-2">  
+  render () {
+    return <div className="widget-setting p-2">
     <SettingSection
       title={this.props.intl.formatMessage({
-        id: "Map-Layer",
-        defaultMessage: "Select Map widget" 
+        id: 'Map-Layer',
+        defaultMessage: 'Select Map widget'
       })}
     >
-      <SettingRow>      
+      <SettingRow>
         <MapWidgetSelector
           onSelect={this.onMapSelected}
           useMapWidgetIds={this.props.useMapWidgetIds}

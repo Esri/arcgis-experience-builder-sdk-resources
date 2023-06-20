@@ -17,13 +17,13 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import {React, AllWidgetProps} from 'jimu-core';
+import { React, type AllWidgetProps } from 'jimu-core'
 
-export default class Widget extends React.PureComponent<AllWidgetProps>{
-  render(){
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>> {
+  render () {
     const featureIds = this.props?.mutableStateProps?.featureIds
     return <div>
-      {featureIds ? featureIds : 'No records to display.'}
-    </div>;
+      {featureIds || 'No records to display.'}
+    </div>
   }
 }

@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'React Data Grid',
+  _widgetLabel: 'React Data Grid'
 }

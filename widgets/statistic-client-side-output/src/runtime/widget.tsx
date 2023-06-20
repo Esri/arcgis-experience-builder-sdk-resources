@@ -1,9 +1,11 @@
-import { React, IMDataSourceInfo, DataSource, DataSourceManager, FeatureLayerDataSource, FeatureDataRecord, Immutable, QueryParams,
-  AllWidgetProps, DataSourceComponent, DataSourceStatus } from 'jimu-core'
+import {
+  React, type IMDataSourceInfo, type DataSource, DataSourceManager, type FeatureLayerDataSource, type FeatureDataRecord, Immutable, type QueryParams,
+  type AllWidgetProps, DataSourceComponent, DataSourceStatus
+} from 'jimu-core'
 import { Button, Loading, LoadingType } from 'jimu-ui'
-import { IMConfig } from '../config'
+import { type IMConfig } from '../config'
 
-interface State{
+interface State {
   isLoading: boolean
 }
 
@@ -51,10 +53,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
   }
 
   onOutputDataSourceInfoChange = (outputDsInfo: IMDataSourceInfo) => {
-    if(outputDsInfo.status === DataSourceStatus.Loading){
-      this.setState({isLoading: true})
-    }else{
-      this.setState({isLoading: false})
+    if (outputDsInfo.status === DataSourceStatus.Loading) {
+      this.setState({ isLoading: true })
+    } else {
+      this.setState({ isLoading: false })
     }
   }
 

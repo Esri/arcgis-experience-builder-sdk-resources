@@ -18,43 +18,43 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage, css, jsx } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
+import { React, FormattedMessage, css, jsx } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import {
   MapWidgetSelector,
   SettingSection,
   SettingRow
-} from "jimu-ui/advanced/setting-components";
-import { Switch } from "jimu-ui";
-import { IMConfig } from "../config";
-import defaultI18nMessages from "./translations/default";
+} from 'jimu-ui/advanced/setting-components'
+import { Switch } from 'jimu-ui'
+import { type IMConfig } from '../config'
+import defaultI18nMessages from './translations/default'
 
 export default class Setting extends React.PureComponent<
-  AllWidgetSettingProps<IMConfig>,
-  any
+AllWidgetSettingProps<IMConfig>,
+any
 > {
   onShowScalePropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     this.props.onSettingChange({
       id: this.props.id,
-      config: this.props.config.set("showScale", evt.currentTarget.checked)
-    });
-  };
+      config: this.props.config.set('showScale', evt.currentTarget.checked)
+    })
+  }
 
   onShowZoomPropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     this.props.onSettingChange({
       id: this.props.id,
-      config: this.props.config.set("showZoom", evt.currentTarget.checked)
-    });
-  };
+      config: this.props.config.set('showZoom', evt.currentTarget.checked)
+    })
+  }
 
   onMapWidgetSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,
       useMapWidgetIds: useMapWidgetIds
-    });
-  };
+    })
+  }
 
-  render() {
+  render () {
     const style = css`
       .widget-setting-get-map-coordinates {
         .checkbox-row {
@@ -63,14 +63,14 @@ export default class Setting extends React.PureComponent<
           margin-bottom: 8px;
         }
       }
-    `;
+    `
     return (
       <div css={style}>
         <div className="widget-setting-get-map-coordinates">
           <SettingSection
             className="map-selector-section"
             title={this.props.intl.formatMessage({
-              id: "mapWidgetLabel",
+              id: 'mapWidgetLabel',
               defaultMessage: defaultI18nMessages.selectMapWidget
             })}
           >
@@ -84,7 +84,7 @@ export default class Setting extends React.PureComponent<
 
           <SettingSection
             title={this.props.intl.formatMessage({
-              id: "settingsLabel",
+              id: 'settingsLabel',
               defaultMessage: defaultI18nMessages.settings
             })}
           >
@@ -129,6 +129,6 @@ export default class Setting extends React.PureComponent<
           </SettingSection>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,7 +1,7 @@
-import { ImmutableObject } from "seamless-immutable";
+import { type ImmutableObject } from 'seamless-immutable'
 
 export interface Config {
-  zoomToLayer: boolean;
+  zoomToLayer: boolean
 }
 
-export type IMConfig = ImmutableObject<Config>;
+export type IMConfig = ImmutableObject<Config>

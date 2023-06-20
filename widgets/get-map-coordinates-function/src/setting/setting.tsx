@@ -18,39 +18,38 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage, css, jsx } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
+import { React, FormattedMessage, css, jsx } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import {
   MapWidgetSelector,
   SettingSection,
   SettingRow
-} from "jimu-ui/advanced/setting-components";
-import { Switch } from "jimu-ui";
-import { IMConfig } from "../config";
-import defaultI18nMessages from "./translations/default";
+} from 'jimu-ui/advanced/setting-components'
+import { Switch } from 'jimu-ui'
+import { type IMConfig } from '../config'
+import defaultI18nMessages from './translations/default'
 
 export default function (props: AllWidgetSettingProps<IMConfig>) {
-
   const onShowScalePropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     props.onSettingChange({
       id: props.id,
-      config: props.config.set("showScale", evt.currentTarget.checked)
-    });
-  };
+      config: props.config.set('showScale', evt.currentTarget.checked)
+    })
+  }
 
   const onShowZoomPropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     props.onSettingChange({
       id: props.id,
-      config: props.config.set("showZoom", evt.currentTarget.checked)
-    });
-  };
+      config: props.config.set('showZoom', evt.currentTarget.checked)
+    })
+  }
 
   const onMapWidgetSelected = (useMapWidgetIds: string[]) => {
     props.onSettingChange({
       id: props.id,
       useMapWidgetIds: useMapWidgetIds
-    });
-  };
+    })
+  }
 
   const style = css`
       .widget-setting-get-map-coordinates {
@@ -60,14 +59,14 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
           margin-bottom: 8px;
         }
       }
-    `;
+    `
   return (
     <div css={style}>
       <div className="widget-setting-get-map-coordinates">
         <SettingSection
           className="map-selector-section"
           title={props.intl.formatMessage({
-            id: "mapWidgetLabel",
+            id: 'mapWidgetLabel',
             defaultMessage: defaultI18nMessages.selectMapWidget
           })}
         >
@@ -81,7 +80,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
 
         <SettingSection
           title={props.intl.formatMessage({
-            id: "settingsLabel",
+            id: 'settingsLabel',
             defaultMessage: defaultI18nMessages.settings
           })}
         >
@@ -126,5 +125,5 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
         </SettingSection>
       </div>
     </div>
-  );
+  )
 };

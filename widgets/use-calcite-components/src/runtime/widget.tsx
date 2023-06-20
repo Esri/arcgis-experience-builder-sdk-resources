@@ -1,5 +1,5 @@
-import { React, AllWidgetProps } from 'jimu-core'
-import { IMConfig } from '../config'
+import { React, type AllWidgetProps } from 'jimu-core'
+import { type IMConfig } from '../config'
 /**
  * Use this way, the @esri/calcite-components-react code will be compiled into widget entry, which makes widget size large.
  *    `import { CalciteButton, CalciteIcon, CalciteSlider } from '@esri/calcite-components-react'`
@@ -23,7 +23,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
           max={100}
           value={sliderValue}
           step={1}
-          onCalciteSliderUpdate={(e) => setSliderValue((e.target as any).value)} />
+          onCalciteSliderInput={(e) => { setSliderValue(((e.target).value) as any) }} />
         <p>The slider currently has a value of {sliderValue}</p>
       </div>
     </div>

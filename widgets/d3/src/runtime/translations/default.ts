@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'd3',
+  _widgetLabel: 'd3'
 }

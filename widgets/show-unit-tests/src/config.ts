@@ -1,8 +1,7 @@
-import { ImmutableObject } from "jimu-core";
+import { type ImmutableObject } from 'jimu-core'
 
-export interface Config{
-  p1: boolean,
+export interface Config {
+  p1: boolean
 }
 
-export type IMConfig = ImmutableObject<Config>;
-
+export type IMConfig = ImmutableObject<Config>

@@ -17,38 +17,39 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, IMDataSourceInfo, DataSource, DataSourceManager, DataSourceStatus, FeatureLayerQueryParams, AllWidgetProps, DataSourceComponent } from 'jimu-core';
+import { React, type IMDataSourceInfo, type DataSource, DataSourceStatus, type FeatureLayerQueryParams, type AllWidgetProps, DataSourceComponent } from 'jimu-core'
 
 interface State {
-  query: FeatureLayerQueryParams;
+  query: FeatureLayerQueryParams
 }
 
 /**
  * This widget will show features from a configured feature layer
  */
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-  state = { query: null };
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
+  state = { query: null }
 
-  cityNameRef: React.RefObject<HTMLInputElement> = React.createRef();
+  cityNameRef: React.RefObject<HTMLInputElement> = React.createRef()
 
-  componentDidMount() {
-    this.query();
+  componentDidMount () {
+    this.query()
   }
 
   query = () => {
     if (!this.isDsConfigured()) {
-      return;
+      return
     }
-    const fieldName = this.props.useDataSources[0].fields[0];
-    const w = this.cityNameRef.current && this.cityNameRef.current.value ?
-      `${fieldName} like '%${this.cityNameRef.current.value}%'` : '1=1'
+    const fieldName = this.props.useDataSources[0].fields[0]
+    const w = this.cityNameRef.current && this.cityNameRef.current.value
+      ? `${fieldName} like '%${this.cityNameRef.current.value}%'`
+      : '1=1'
     this.setState({
       query: {
         where: w,
         outFields: ['*'],
         pageSize: 10
       }
-    });
+    })
   }
 
   isDsConfigured = () => {
@@ -56,13 +57,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
       this.props.useDataSources.length === 1 &&
       this.props.useDataSources[0].fields &&
       this.props.useDataSources[0].fields.length === 1) {
-      return true;
+      return true
     }
-    return false;
+    return false
   }
 
   dataRender = (ds: DataSource, info: IMDataSourceInfo) => {
-    const fName = this.props.useDataSources[0].fields[0];
+    const fName = this.props.useDataSources[0].fields[0]
     return <>
       <div>
         <input placeholder="Query value" ref={this.cityNameRef} />
@@ -73,21 +74,23 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
       <div className="record-list" style={{ width: '100%', marginTop: '20px', height: 'calc(100% - 80px)', overflow: 'auto' }}>
         {
-          ds && ds.getStatus() === DataSourceStatus.Loaded ? ds.getRecords().map((r, i) => {
-            return <div key={i}>{r.getData()[fName]}</div>
-          }) : null
+          ds && ds.getStatus() === DataSourceStatus.Loaded
+            ? ds.getRecords().map((r, i) => {
+              return <div key={i}>{r.getData()[fName]}</div>
+            })
+            : null
         }
       </div>
     </>
   }
 
-  render() {
+  render () {
     if (!this.isDsConfigured()) {
       return <h3>
         This widget demonstrates how to use a feature layer as a data source.
         <br />
         Configure the data source.
-      </h3>;
+      </h3>
     }
     return <div className="widget-use-feature-layer" style={{ width: '100%', height: '100%', maxHeight: '800px', overflow: 'auto' }}>
       <h3>
@@ -99,6 +102,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
           this.dataRender
         }
       </DataSourceComponent>
-    </div>;
+    </div>
   }
 }

@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { React, jsx, css, AllWidgetProps, DataSourceComponent, FeatureLayerQueryParams, ExpressionResolverComponent, SingleExpressionResolveResult, DataSourceManager, DataSource, expressionUtils, DataRecord } from 'jimu-core'
-import { IMConfig } from '../config'
+import { React, jsx, css, type AllWidgetProps, DataSourceComponent, type FeatureLayerQueryParams, ExpressionResolverComponent, type SingleExpressionResolveResult, DataSourceManager, type DataSource, expressionUtils, type DataRecord } from 'jimu-core'
+import { type IMConfig } from '../config'
 
 const DEFAULT_QUERY: FeatureLayerQueryParams = { where: '1=1', outFields: ['*'] }
 

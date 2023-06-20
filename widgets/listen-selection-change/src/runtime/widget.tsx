@@ -18,13 +18,13 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, jsx, css, IMDataSourceInfo, DataSource, DataSourceStatus, FeatureLayerQueryParams, AllWidgetProps, DataSourceComponent, classNames } from 'jimu-core'
+import { React, jsx, css, type IMDataSourceInfo, type DataSource, DataSourceStatus, type FeatureLayerQueryParams, type AllWidgetProps, DataSourceComponent, classNames } from 'jimu-core'
 import { Button } from 'jimu-ui'
 
 /**
  * This widget shows how to listen to the selection change of a data source.
  */
-export default function Widget (props: AllWidgetProps<{}>) {
+export default function Widget (props: AllWidgetProps<unknown>) {
   const isDsConfigured = () => {
     if (props.useDataSources && props.useDataSources.length === 1) {
       return true
@@ -37,7 +37,7 @@ export default function Widget (props: AllWidgetProps<{}>) {
         {
           ds && ds.getStatus() === DataSourceStatus.Loaded
             ? ds.getRecords().map((r, i) => {
-              return <Button type='tertiary' key={i} onClick={() => ds.selectRecordById(r.getId())} className={classNames({ 'blue-border': ds.getSelectedRecordIds()?.includes(r.getId()) })}>
+              return <Button type='tertiary' key={i} onClick={() => { ds.selectRecordById(r.getId()) }} className={classNames({ 'blue-border': ds.getSelectedRecordIds()?.includes(r.getId()) })}>
                 {r.getId()}
               </Button>
             })

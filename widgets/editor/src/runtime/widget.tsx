@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /**
   Licensing
 
@@ -18,68 +19,63 @@
   LICENSE file.
 */
 /** @jsx jsx */
-import { AllWidgetProps, jsx, React } from "jimu-core";
-import { JimuMapViewComponent, JimuMapView } from "jimu-arcgis";
-import Editor from 'esri/widgets/Editor';
-
+import { type AllWidgetProps, jsx, React } from 'jimu-core'
+import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
+import Editor from 'esri/widgets/Editor'
 
 interface State {
-  jimuMapView: JimuMapView;
-  currentWidget: Editor;
+  jimuMapView: JimuMapView
+  currentWidget: Editor
 }
 
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
+  private readonly myRef = React.createRef<HTMLDivElement>()
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-
-  private myRef = React.createRef<HTMLDivElement>();
-
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       jimuMapView: null,
       currentWidget: null
-    };
+    }
   }
 
   activeViewChangeHandler = (jmv: JimuMapView) => {
     if (this.state.jimuMapView) {
       if (this.state.currentWidget) {
-        this.state.currentWidget.destroy();
+        this.state.currentWidget.destroy()
       }
     }
 
     if (jmv) {
       this.setState({
         jimuMapView: jmv
-      });
+      })
 
       if (this.myRef.current) {
         const newEditor = new Editor({
           view: jmv.view,
           container: this.myRef.current
-        });
+        })
 
         this.setState({
           currentWidget: newEditor
-        });
+        })
       } else {
-        console.error('could not find this.myRef.current');
+        console.error('could not find this.myRef.current')
       }
     }
-  };
+  }
 
   componentDidUpdate = evt => {
-
     if (this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 0) {
       if (this.state.currentWidget) {
-        this.state.currentWidget.destroy();
+        this.state.currentWidget.destroy()
       }
     }
-  };
+  }
 
-  render() {
-
-    let mvc = <p>Please select a map.</p>;
+  render () {
+    let mvc = <p>Please select a map.</p>
 
     const css = `
     .esri-editor__scroller {
@@ -93,7 +89,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
       `
     if (
-      this.props.hasOwnProperty("useMapWidgetIds") &&
+      this.props.hasOwnProperty('useMapWidgetIds') &&
       this.props.useMapWidgetIds &&
       this.props.useMapWidgetIds[0]
     ) {
@@ -102,13 +98,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
           useMapWidgetId={this.props.useMapWidgetIds?.[0]}
           onActiveViewChange={this.activeViewChangeHandler}
         />
-      );
+      )
     }
 
     return (
       <div
         className="widget-js-api-editor"
-        style={{ height: "100%", overflow: "auto" }}
+        style={{ height: '100%', overflow: 'auto' }}
       >
         <div ref={this.myRef}>
           <style>
@@ -117,6 +113,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
         </div>
         {mvc}
       </div>
-    );
+    )
   }
 }

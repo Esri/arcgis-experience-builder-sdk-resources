@@ -17,66 +17,67 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
+import { React } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import {
   MapWidgetSelector,
   SettingRow,
-  SettingSection,
-} from "jimu-ui/advanced/setting-components";
-import defaultI18nMessages from "./translations/default";
-import { IMConfig } from "../config";
+  SettingSection
+} from 'jimu-ui/advanced/setting-components'
+import defaultI18nMessages from './translations/default'
+import { type IMConfig } from '../config'
 
 interface IState {
-  layerTextareaValue: string;
+  layerTextareaValue: string
 }
 
 export default class Setting extends React.PureComponent<
-  AllWidgetSettingProps<IMConfig>,
-  IState
+AllWidgetSettingProps<IMConfig>,
+IState
 > {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     console.log(
-      "TYPEOF undefined",
+      'TYPEOF undefined',
+      // eslint-disable-next-line valid-typeof
       typeof this.props.config?.layerUrls === undefined
-    );
+    )
 
     this.state = {
       layerTextareaValue:
         this.props.config?.layerUrls === undefined
-          ? ""
-          : this.props.config?.layerUrls.join("\n"),
-    };
+          ? ''
+          : this.props.config?.layerUrls.join('\n')
+    }
   }
 
   onMapSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,
-      useMapWidgetIds: useMapWidgetIds,
-    });
-  };
+      useMapWidgetIds: useMapWidgetIds
+    })
+  }
 
   onTextChange = (event) => {
-    this.setState({ layerTextareaValue: event.target.value });
+    this.setState({ layerTextareaValue: event.target.value })
 
     this.props.onSettingChange({
       id: this.props.id,
       config: this.props.config.set(
-        "layerUrls",
-        event.target.value.split("\n")
-      ),
-    });
-  };
+        'layerUrls',
+        event.target.value.split('\n')
+      )
+    })
+  }
 
-  render() {
+  render () {
     return (
       <div className="view-layers-toggle-setting">
         <SettingSection
           title={this.props.intl.formatMessage({
-            id: "selectedMapLabel",
-            defaultMessage: defaultI18nMessages.selectedMap,
+            id: 'selectedMapLabel',
+            defaultMessage: defaultI18nMessages.selectedMap
           })}
         >
           <SettingRow>
@@ -89,20 +90,20 @@ export default class Setting extends React.PureComponent<
 
         <SettingSection
           title={this.props.intl.formatMessage({
-            id: "layers",
-            defaultMessage: defaultI18nMessages.layers,
+            id: 'layers',
+            defaultMessage: defaultI18nMessages.layers
           })}
         >
           <SettingRow>
             <textarea
               className="w-100 p-1"
-              style={{ whiteSpace: "nowrap", minHeight: "100px" }}
+              style={{ whiteSpace: 'nowrap', minHeight: '100px' }}
               value={this.state.layerTextareaValue}
               onChange={this.onTextChange}
             ></textarea>
           </SettingRow>
         </SettingSection>
       </div>
-    );
+    )
   }
 }
