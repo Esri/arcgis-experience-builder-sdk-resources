@@ -71,7 +71,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown> 
         view: new MapView(options),
         dataSourceId: webmapDs.id,
         isActive: true,
-        mapViewManager: new MapViewManager()
+        mapViewManager: this.mvManager
       }).then(jimuMapView => {
         if (!this.extentWatch) {
           this.extentWatch = jimuMapView.view.watch('extent', (extent: __esri.Extent) => {
