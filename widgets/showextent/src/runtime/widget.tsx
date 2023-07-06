@@ -17,25 +17,25 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps } from 'jimu-core';
-import { JimuMapViewComponent, JimuMapView } from 'jimu-arcgis';
+import { React, type AllWidgetProps } from 'jimu-core'
+import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
 
 interface State {
   extent: __esri.Extent
 }
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-  extentWatch: __esri.WatchHandle;
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
+  extentWatch: __esri.WatchHandle
   state: State = { extent: null }
 
   isConfigured = () => {
-    return this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 1;
+    return this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 1
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     if (this.extentWatch) {
-      this.extentWatch.remove();
-      this.extentWatch = null;
+      this.extentWatch.remove()
+      this.extentWatch = null
     }
   }
 
@@ -45,14 +45,13 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
         this.setState({
           extent
         })
-      });
+      })
     }
   }
 
-
-  render() {
+  render () {
     if (!this.isConfigured()) {
-      return 'Select a map';
+      return 'Select a map'
     }
 
     return <div className="widget-use-map-view" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
@@ -64,6 +63,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, Stat
 
       <div>Extent:</div>
       <div>{this.state.extent && JSON.stringify(this.state.extent.toJSON())}</div>
-    </div>;
+    </div>
   }
 }

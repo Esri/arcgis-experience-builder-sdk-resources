@@ -1,11 +1,11 @@
 import {
-  React, Immutable, IMFieldSchema, DataSource, DataSourceTypes, DataSourceManager, UseDataSource, JimuFieldType, DataSourceJson, DataSourceSchema,
-  ImmutableArray
+  React, Immutable, type IMFieldSchema, type DataSource, DataSourceTypes, DataSourceManager, type UseDataSource, JimuFieldType, type DataSourceJson, type DataSourceSchema,
+  type ImmutableArray
 } from 'jimu-core'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
-import { MultiSelect, MultiSelectItem } from 'jimu-ui'
-import { AllWidgetSettingProps } from 'jimu-for-builder'
-import { StatFunctions, IMConfig} from '../config'
+import { MultiSelect, type MultiSelectItem } from 'jimu-ui'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { StatFunctions, type IMConfig } from '../config'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, unknown> {
   supportedTypes = Immutable([DataSourceTypes.FeatureLayer])

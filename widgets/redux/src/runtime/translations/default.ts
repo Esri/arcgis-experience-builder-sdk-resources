@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Redux',
+  _widgetLabel: 'Redux'
 }

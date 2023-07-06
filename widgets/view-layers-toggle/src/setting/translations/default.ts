@@ -1,4 +1,4 @@
 export default {
-  selectedMap: "Map",
-  layers: "Layers"
-};
+  selectedMap: 'Map',
+  layers: 'Layers'
+}

@@ -18,20 +18,19 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { jsx, Immutable, UseDataSource, JimuFieldType, AllDataSourceTypes } from "jimu-core";
-import { AllWidgetSettingProps } from "jimu-for-builder";
-import { DataSourceSelector, FieldSelector } from "jimu-ui/advanced/data-source-selector";
+import { jsx, Immutable, type UseDataSource, JimuFieldType, AllDataSourceTypes } from 'jimu-core'
+import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 import {
   SettingSection,
   SettingRow
-} from "jimu-ui/advanced/setting-components";
-import { IMConfig } from "../config";
-import defaultI18nMessages from "./translations/default";
+} from 'jimu-ui/advanced/setting-components'
+import { type IMConfig } from '../config'
+import defaultI18nMessages from './translations/default'
 
 export default function (props: AllWidgetSettingProps<IMConfig>) {
-
-  const supportedDsTypes = Immutable([AllDataSourceTypes.FeatureLayer]);
-  const supportedFieldTypes = Immutable([JimuFieldType.String]);
+  const supportedDsTypes = Immutable([AllDataSourceTypes.FeatureLayer])
+  const supportedFieldTypes = Immutable([JimuFieldType.String])
 
   // When the dataSource is chosen, save it to the settings.
   const onDataSourceChange = (useDataSources: UseDataSource[]) => {
@@ -42,7 +41,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
     props.onSettingChange({
       id: props.id,
       useDataSources: useDataSources
-    });
+    })
   }
 
   // When a field is chosen from the dropdown, save it to the settings.
@@ -51,7 +50,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
       props.onSettingChange({
         id: props.id,
         config: props.config.set('filterField', evt[0].name)
-      });
+      })
     }
   }
 
@@ -62,7 +61,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
         <SettingSection
           className="data-source-selector-section"
           title={props.intl.formatMessage({
-            id: "dataSourceSelectorLabel",
+            id: 'dataSourceSelectorLabel',
             defaultMessage: defaultI18nMessages.selectDataSource
           })}
         >
@@ -83,7 +82,7 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
           <SettingSection
             className="attribute-selector-section"
             title={props.intl.formatMessage({
-              id: "chooseAttributeSelectorLabel",
+              id: 'chooseAttributeSelectorLabel',
               defaultMessage: defaultI18nMessages.chooseAttribute
             })}
           >
@@ -104,5 +103,5 @@ export default function (props: AllWidgetSettingProps<IMConfig>) {
 
       </div>
     </div>
-  );
+  )
 };

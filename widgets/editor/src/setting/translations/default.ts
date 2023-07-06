@@ -18,5 +18,5 @@
   LICENSE file.
 */
 export default {
-  selectMapWidget: "Select Map widget:"
-};
+  selectMapWidget: 'Select Map widget:'
+}

@@ -18,27 +18,28 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, AllWidgetProps, jsx } from "jimu-core";
-import * as ReactDataGrid from "react-data-grid";
+import { React, type AllWidgetProps, jsx } from 'jimu-core'
+import * as ReactDataGrid from 'react-data-grid'
 
 export default class Widget extends React.PureComponent<AllWidgetProps<any>, any> {
-  private columns = [
-    { key: "id", name: "ID" },
-    { key: "title", name: "Title" },
-    { key: "count", name: "Count" },
-  ];
+  private readonly columns = [
+    { key: 'id', name: 'ID' },
+    { key: 'title', name: 'Title' },
+    { key: 'count', name: 'Count' }
+  ]
 
-  private rows = [
-    { id: 0, title: "row1", count: 20 },
-    { id: 1, title: "row1", count: 40 },
-    { id: 2, title: "row1", count: 60 },
-  ];
-  constructor(props) {
-    super(props);
-    this.state = {};
+  private readonly rows = [
+    { id: 0, title: 'row1', count: 20 },
+    { id: 1, title: 'row1', count: 40 },
+    { id: 2, title: 'row1', count: 60 }
+  ]
+
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
 
-  render() {
+  render () {
     return (
       <div className="widget-d3 jimu-widget p-2">
         <p>React Data Grid sample</p>
@@ -51,6 +52,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
           />
         </p>
       </div>
-    );
+    )
   }
 }

@@ -17,82 +17,81 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, jimuHistory, DataSourceComponent, AllWidgetProps, IMState, IMUrlParameters } from 'jimu-core';
+import { React, jimuHistory, DataSourceComponent, type AllWidgetProps, type IMState, type IMUrlParameters } from 'jimu-core'
 
-import MapView from "esri/views/MapView";
-import WebMap from "esri/WebMap";
-import Extent from "esri/geometry/Extent";
+import MapView from 'esri/views/MapView'
+import type WebMap from 'esri/WebMap'
+import Extent from 'esri/geometry/Extent'
 
-import { MapViewManager, WebMapDataSource } from 'jimu-arcgis';
+import { MapViewManager, type WebMapDataSource } from 'jimu-arcgis'
 
 interface ExtraProps {
-  queryObject: IMUrlParameters;
+  queryObject: IMUrlParameters
 }
 
+export default class Widget extends React.PureComponent<AllWidgetProps<unknown> & ExtraProps, unknown> {
+  mapContainer = React.createRef<HTMLDivElement>()
+  mapView: MapView
+  webMap: WebMap
+  extentWatch: __esri.WatchHandle
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}> & ExtraProps, {}>{
-  mapContainer = React.createRef<HTMLDivElement>();
-  mapView: MapView;
-  webMap: WebMap;
-  extentWatch: __esri.WatchHandle;
-
-  mvManager: MapViewManager = MapViewManager.getInstance();
+  mvManager: MapViewManager = MapViewManager.getInstance()
 
   static mapExtraStateProps = (state: IMState): ExtraProps => {
     return {
       queryObject: state.queryObject
     }
-  };
+  }
 
   onDsCreated = (webmapDs: WebMapDataSource) => {
     if (!webmapDs) {
-      return;
+      return
     }
 
     if (!this.mvManager.getJimuMapViewById(this.props.id)) {
       const options: __esri.MapViewProperties = {
         map: webmapDs.map,
         container: this.mapContainer.current
-      };
+      }
       if (this.props.queryObject?.[this.props.id]) {
-        const extentStr = this.props.queryObject[this.props.id].substr('extent='.length);
-        let extent;
+        const extentStr = this.props.queryObject[this.props.id].substr('extent='.length)
+        let extent
         try {
-          extent = new Extent(JSON.parse(extentStr));
+          extent = new Extent(JSON.parse(extentStr))
         } catch (err) {
           console.error('Bad extent URL parameter.')
         }
 
         if (extent) {
-          options.extent = extent;
+          options.extent = extent
         }
       }
       this.mvManager.createJimuMapView({
         mapWidgetId: this.props.id,
         view: new MapView(options),
         dataSourceId: webmapDs.id,
-        isActive: true
+        isActive: true,
+        mapViewManager: this.mvManager
       }).then(jimuMapView => {
         if (!this.extentWatch) {
           this.extentWatch = jimuMapView.view.watch('extent', (extent: __esri.Extent) => {
             jimuHistory.changeQueryObject({
               [this.props.id]: `extent=${JSON.stringify(extent.toJSON())}`
-            });
-          });
+            })
+          })
         }
       })
     }
   }
 
-  mapNode = <div className="widget-map" style={{ width: '100%', height: '100%' }} ref={this.mapContainer}></div>;
+  mapNode = <div className="widget-map" style={{ width: '100%', height: '100%' }} ref={this.mapContainer}></div>
 
-  render() {
+  render () {
     if (!this.props.useDataSources || this.props.useDataSources.length === 0) {
-      return 'Select a webmap in the settings panel';
+      return 'Select a webmap in the settings panel'
     }
     return <DataSourceComponent useDataSource={this.props.useDataSources[0]} onDataSourceCreated={this.onDsCreated}>
       {this.mapNode}
-    </DataSourceComponent>;
+    </DataSourceComponent>
   }
 }
-

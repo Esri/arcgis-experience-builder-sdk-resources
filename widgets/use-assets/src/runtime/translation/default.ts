@@ -1,3 +1,3 @@
 export default {
-  _widgetLabel: 'Use Assets',
+  _widgetLabel: 'Use Assets'
 }
