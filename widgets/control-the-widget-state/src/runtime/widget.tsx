@@ -50,8 +50,15 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   useEffect(() => {
     if (appWidgets) {
       const widgetsArray = Object.values(appWidgets)
-      setWidgetsArray(widgetsArray)
       setSidebarWidgetsArray(widgetsArray.filter(w => w.uri === 'widgets/layout/sidebar/'))
+      // if we have a controller widget, find the widgets within via layouts
+      const controllerWidgets = widgetsArray.filter(w => w.uri === 'widgets/common/controller/')
+      if (controllerWidgets.length === 0) return
+      const controllerWidget = controllerWidgets[0]
+      const controllerWidgetLayout = controllerWidget?.layouts?.controller?.LARGE
+      if (!controllerWidgetLayout || controllerWidgetLayout.length === 0) return
+      const widgetsInControllerWidget = widgetsArray.filter(w => w.parent?.LARGE && w.parent?.LARGE.length > 0 && w.parent?.LARGE[0].layoutId === controllerWidgetLayout)
+      setWidgetsArray(widgetsInControllerWidget)
     }
   }, [appWidgets])
 
