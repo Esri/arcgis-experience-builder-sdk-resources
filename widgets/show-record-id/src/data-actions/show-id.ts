@@ -1,13 +1,16 @@
-import { AbstractDataAction, type DataRecordSet, MutableStoreManager } from 'jimu-core'
+import { AbstractDataAction, type DataRecordSet, MutableStoreManager, type DataLevel } from 'jimu-core'
 
 export default class ExportJson extends AbstractDataAction {
-  async isSupported (dataSet: DataRecordSet): Promise<boolean> {
-    const { records } = dataSet
+  async isSupported (dataSets: DataRecordSet[], dataLevel: DataLevel): Promise<boolean> {
+    if (dataSets.length > 1) {
+      return false
+    }
+    const { records } = dataSets[0]
     return records?.length > 0
   }
 
-  async onExecute (dataSet: DataRecordSet, actionConfig?: any): Promise<boolean> {
-    const { records } = dataSet
+  async onExecute (dataSets: DataRecordSet[], dataLevel: DataLevel, actionConfig?: any): Promise<boolean> {
+    const { records } = dataSets[0]
     const ids = records.map(r => r.getId())
     MutableStoreManager.getInstance().updateStateValue(this.widgetId, 'featureIds', JSON.stringify(ids))
     return true
