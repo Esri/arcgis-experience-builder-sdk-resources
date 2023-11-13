@@ -17,7 +17,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, type AllWidgetProps, getAppStore, appActions, ReactRedux, type WidgetProps, WidgetManager, type IMState } from 'jimu-core'
+import { React, type AllWidgetProps, getAppStore, appActions, ReactRedux, type WidgetProps, WidgetManager, type IMState, WidgetState } from 'jimu-core'
 import { Button, Label, Row, Col, Select, Option } from 'jimu-ui'
 import defaultMessages from './translations/default'
 const { useState, useEffect } = React
@@ -31,7 +31,6 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   const [sidebarWidgetId, setSidebarWidgetId] = useState(null as string)
   const [openCloseWidgetId, setOpenCloseWidgetId] = useState(null as string)
   const [sidebarVisible] = useState(true as boolean)
-  const [openness, setOpenness] = useState(false as boolean)
   const [appWidgets, setAppWidgets] = useState({} as unknown)
   const [widgetsArray, setWidgetsArray] = useState([] as any[])
   const [sidebarWidgetsArray, setSidebarWidgetsArray] = useState([] as any[])
@@ -51,8 +50,15 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   useEffect(() => {
     if (appWidgets) {
       const widgetsArray = Object.values(appWidgets)
-      setWidgetsArray(widgetsArray)
       setSidebarWidgetsArray(widgetsArray.filter(w => w.uri === 'widgets/layout/sidebar/'))
+      // if we have a controller widget, find the widgets within via layouts
+      const controllerWidgets = widgetsArray.filter(w => w.uri === 'widgets/common/controller/')
+      if (controllerWidgets.length === 0) return
+      const controllerWidget = controllerWidgets[0]
+      const controllerWidgetLayout = controllerWidget?.layouts?.controller?.LARGE
+      if (!controllerWidgetLayout || controllerWidgetLayout.length === 0) return
+      const widgetsInControllerWidget = widgetsArray.filter(w => w.parent?.LARGE && w.parent?.LARGE.length > 0 && w.parent?.LARGE[0].layoutId === controllerWidgetLayout)
+      setWidgetsArray(widgetsInControllerWidget)
     }
   }, [appWidgets])
 
@@ -97,7 +103,7 @@ export default function Widget (props: AllWidgetProps<unknown>) {
     const openAction = appActions.openWidget(openCloseWidgetId)
     loadWidgetClass(openCloseWidgetId).then(() => {
       getAppStore().dispatch(openAction)
-    }).then(() => { setOpenness(true) })
+    })
   }
 
   // Close widget method
@@ -107,13 +113,16 @@ export default function Widget (props: AllWidgetProps<unknown>) {
     const closeAction = appActions.closeWidget(openCloseWidgetId)
     loadWidgetClass(openCloseWidgetId).then(() => {
       getAppStore().dispatch(closeAction)
-    }).then(() => { setOpenness(false) })
+    })
   }
 
   // Handler for the openness toggle button
   const handleToggleOpennessButton = (): void => {
+    const widgetState = getAppStore().getState().widgetsRuntimeInfo?.[openCloseWidgetId]
+    const opened = !!(widgetState !== undefined && widgetState.state === WidgetState.Opened)
+
     // Check the openness property value and run the appropriate function
-    if (!openness) { handleOpenWidget() } else if (openness) { handleCloseWidget() } else { console.error(defaultMessages.opennessError) }
+    if (!opened) { handleOpenWidget() } else if (opened) { handleCloseWidget() } else { console.error(defaultMessages.opennessError) }
   }
 
   // Handler for the sidebar selection
