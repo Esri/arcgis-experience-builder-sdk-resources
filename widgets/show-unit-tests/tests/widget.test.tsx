@@ -2,6 +2,7 @@ import { React, getAppStore, appActions } from 'jimu-core'
 import _Widget from '../src/runtime/widget'
 import { widgetRender, wrapWidget, getInitState, getDefaultAppConfig } from 'jimu-for-test'
 import { fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
 
 const render = widgetRender()
 const Widget = wrapWidget(_Widget, { config: {} })
