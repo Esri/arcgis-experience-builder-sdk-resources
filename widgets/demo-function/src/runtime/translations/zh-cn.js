@@ -17,7 +17,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-define({
+System.register([], function (_export) {return {execute: function () {_export({
   _widgetLabel: '演示 函数式',
   str1: '字符串 1',
-});
+})}}});
