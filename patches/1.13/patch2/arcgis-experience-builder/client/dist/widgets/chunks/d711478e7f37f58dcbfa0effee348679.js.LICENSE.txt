@@ -1,0 +1,1 @@
+//!has("worker") && loadGEMessages(); // kick off the load right away if not in the worker (there may be issues loading JSON files in workers, so we need to initialize this utility using the loadedModulesToJSON() => loadedModulesFromJSON() methods)
