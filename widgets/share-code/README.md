@@ -8,5 +8,5 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 ## How it works
 When you need to share code between widgets, the best practice is to create a folder. Place the widgets that need to share code in the folder, and then create a common folder to store the shared code.
 
-In this example, `widget1` and `widget2` need to share code, the shared code is stored in the `common` folder.
+In this example, `widget1` and `widget2` need to share code. That code is stored in the `common` folder.
 In each widget, you need to use `import('../../../common/my-module')` to import the shared code. After compilation, the shared code is placed into the `widgets/chunks` folder.
