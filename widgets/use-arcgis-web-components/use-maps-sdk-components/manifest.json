@@ -1,0 +1,20 @@
+{
+  "name": "use-maps-sdk-components",
+  "label": "Use Maps SDK Components",
+  "type": "widget",
+  "version": "1.14.0",
+  "exbVersion": "1.14.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This demos how to use a Maps SDK component.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "dependency": "jimu-arcgis",
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}
