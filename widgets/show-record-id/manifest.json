@@ -14,7 +14,7 @@
       "name": "showId",
       "label": "show id",
       "uri": "data-actions/show-id",
-      "icon": "icon.svg"
+      "icon": "runtime/assets/icons/show-record-id.svg"
     }
   ],
   "translatedLocales": [
