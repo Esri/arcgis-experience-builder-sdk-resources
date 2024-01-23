@@ -15,6 +15,7 @@
       "label": "show id",
       "uri": "data-actions/show-id",
       "icon": "icon.svg"
+    }
   ],
   "translatedLocales": [
     "en"
