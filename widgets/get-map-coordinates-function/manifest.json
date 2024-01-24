@@ -2,6 +2,7 @@
   "name": "get-map-coordinates-function",
   "label": "Get Map Coordinates (Function)",
   "type": "widget",
+  "dependency": "jimu-arcgis",
   "version": "1.13.0",
   "exbVersion": "1.13.0",
   "author": "Esri R&D Center Beijing",
