@@ -37,10 +37,10 @@ export default function (props: AllWidgetProps<IMConfig>) {
   const [mapViewReady, setMapViewReady] = useState<boolean>(false)
 
   const projectToWgs84 = async (point: Point): Promise<Point> => {
-    if (point.spatialReference.isWGS84 || point.spatialReference.isWebMercator) {
+    if (point.spatialReference.isWGS84 || point.spatialReference.isWebMercator)) {
       return point
     }
-    if (!projection.isLoaded) {
+    if (!projection.isLoaded()) {
       await projection.load()
     }
     return (projection.project(point, { wkid: 4326 }) as Point)

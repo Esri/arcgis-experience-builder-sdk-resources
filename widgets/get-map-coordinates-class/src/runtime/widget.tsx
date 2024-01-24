@@ -52,7 +52,7 @@ IState
     if (point.spatialReference.isWGS84 || point.spatialReference.isWebMercator) {
       return point
     }
-    if (!projection.isLoaded) {
+    if (!projection.isLoaded()) {
       await projection.load()
     }
     return (projection.project(point, { wkid: 4326 }) as Point)
