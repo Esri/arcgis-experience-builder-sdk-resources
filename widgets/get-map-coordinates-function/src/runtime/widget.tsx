@@ -25,6 +25,7 @@ import { type IMConfig } from '../config'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 
 import type Point from 'esri/geometry/Point'
+// import * as projection from 'esri/geometry/projection'
 
 import defaultMessages from './translations/default'
 
@@ -35,12 +36,20 @@ export default function (props: AllWidgetProps<IMConfig>) {
   const [scale, setScale] = useState<number>(0)
   const [mapViewReady, setMapViewReady] = useState<boolean>(false)
 
+  const projectToWgs84 = (point: Point): Point => {
+    // if (point.spatialReference.isWGS84) {
+    //   return point
+    // }
+    // return (projection.project(point, { wkid: 4326 }) as Point)
+    return point
+  }
+
   const activeViewChangeHandler = (jmv: JimuMapView) => {
     if (jmv) {
       // When the extent moves, update the state with all the updated values.
       jmv.view.watch('extent', evt => {
-        setLatitude(jmv.view.center.latitude.toFixed(3))
-        setLongitude(jmv.view.center.longitude.toFixed(3))
+        setLatitude(projectToWgs84(jmv.view.center).latitude?.toFixed(3))
+        setLongitude(projectToWgs84(jmv.view.center).longitude?.toFixed(3))
         setScale(Math.round(jmv.view.scale * 1) / 1)
         setZoom(jmv.view.zoom)
 
@@ -56,8 +65,8 @@ export default function (props: AllWidgetProps<IMConfig>) {
           x: evt.x,
           y: evt.y
         })
-        setLatitude(point.latitude.toFixed(3))
-        setLongitude(point.longitude.toFixed(3))
+        setLatitude(projectToWgs84(point).latitude?.toFixed(3))
+        setLongitude(projectToWgs84(point).longitude?.toFixed(3))
         setScale(Math.round(jmv.view.scale * 1) / 1)
         setZoom(jmv.view.zoom)
         setMapViewReady(true)
