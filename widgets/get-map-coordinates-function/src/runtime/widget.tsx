@@ -25,7 +25,7 @@ import { type IMConfig } from '../config'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 
 import type Point from 'esri/geometry/Point'
-// import * as projection from 'esri/geometry/projection'
+import * as projection from 'esri/geometry/projection'
 
 import defaultMessages from './translations/default'
 
@@ -36,20 +36,22 @@ export default function (props: AllWidgetProps<IMConfig>) {
   const [scale, setScale] = useState<number>(0)
   const [mapViewReady, setMapViewReady] = useState<boolean>(false)
 
-  const projectToWgs84 = (point: Point): Point => {
-    // if (point.spatialReference.isWGS84) {
-    //   return point
-    // }
-    // return (projection.project(point, { wkid: 4326 }) as Point)
-    return point
+  const projectToWgs84 = async (point: Point): Promise<Point> => {
+    if (point.spatialReference.isWGS84 || point.spatialReference.isWebMercator) {
+      return point
+    }
+    if (!projection.isLoaded) {
+      await projection.load()
+    }
+    return (projection.project(point, { wkid: 4326 }) as Point)
   }
 
   const activeViewChangeHandler = (jmv: JimuMapView) => {
     if (jmv) {
       // When the extent moves, update the state with all the updated values.
-      jmv.view.watch('extent', evt => {
-        setLatitude(projectToWgs84(jmv.view.center).latitude?.toFixed(3))
-        setLongitude(projectToWgs84(jmv.view.center).longitude?.toFixed(3))
+      jmv.view.watch('extent', async evt => {
+        setLatitude((await projectToWgs84(jmv.view.center)).latitude?.toFixed(3))
+        setLongitude((await projectToWgs84(jmv.view.center)).longitude?.toFixed(3))
         setScale(Math.round(jmv.view.scale * 1) / 1)
         setZoom(jmv.view.zoom)
 
@@ -60,13 +62,13 @@ export default function (props: AllWidgetProps<IMConfig>) {
 
       // When the pointer moves, take the pointer location and create a Point
       // Geometry out of it (`view.toMap(...)`), then update the state.
-      jmv.view.on('pointer-move', evt => {
+      jmv.view.on('pointer-move', async evt => {
         const point: Point = jmv.view.toMap({
           x: evt.x,
           y: evt.y
         })
-        setLatitude(projectToWgs84(point).latitude?.toFixed(3))
-        setLongitude(projectToWgs84(point).longitude?.toFixed(3))
+        setLatitude((await projectToWgs84(point)).latitude?.toFixed(3))
+        setLongitude((await projectToWgs84(point)).longitude?.toFixed(3))
         setScale(Math.round(jmv.view.scale * 1) / 1)
         setZoom(jmv.view.zoom)
         setMapViewReady(true)
