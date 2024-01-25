@@ -1,5 +1,4 @@
 import { React, type AllWidgetProps } from 'jimu-core'
-import { type IMConfig } from '../config'
 import { sampleFunction1 } from 'widgets/shared-code/entry1'
 
 const Widget = (props: AllWidgetProps<IMConfig>) => {
