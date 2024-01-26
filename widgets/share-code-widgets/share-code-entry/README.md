@@ -8,7 +8,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 ## How it works
 To use this method, you need to follow the following steps:
 * Create a `shared-code` folder under the `widgets` folder. Please note that the folder name must be the `shared-code`.
-* Put your shared code into the `shared-code` folder. In some cases, you may need to create multiple shared entries, so the best practice folder structure in the `shared-code` folder is:
+* Put your shared code into the `shared-code` folder, all `.ts` and `.tsx` files in the `shared-code` folder will be compiled as shared entries. The best practice folder structure in the `shared-code` folder is:
 ```
 shared-code
   |-entry1.ts
@@ -21,16 +21,7 @@ shared-code
       |-module1.ts
       |-module2.ts
 ```
-* Add the entries into webpack to compile the entries. Open the `webpack/widget-webpack-override.js`, add the entry like this:
-```javascript
-module.exports = function (webpackConfig) {
-
-  webpackConfig.entry['widgets/shared-code/entry1'] = [publicPathFile, path.join(basePath, 'extensions/widgets/shared-code/entry1.ts')]
-  webpackConfig.entry['widgets/shared-code/entry2'] = [publicPathFile, path.join(basePath, 'extensions/widgets/shared-code/entry2.ts')]
-
-  return webpackConfig
-}
-```
+In the above folder structure, `entry1` and `entry2` will be created.
 * At last, you can import the shared code like using the standard ES6 imports, like this:
 ```typescript
 import { sampleFunction } from 'widgets/shared-code/entry1'
