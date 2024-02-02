@@ -23,7 +23,7 @@ shared-code
 ```
 In the above folder structure, `entry1` and `entry2` will be created.
 
-To support i18n, create a `translation` folder within the `shared-code` folder, or within each entry folder, for example, `shared-code/lib/entry1/translation`. The `translation` folder structure is the same as the widget translation folder.
+To support i18n, create a `translations` folder within the `shared-code` folder, or within each entry folder, for example, `shared-code/lib/entry1/translations`. The `translations` folder structure is the same as the widget translations folder.
 * At last, you can import the shared code like using the standard ES6 imports, like this:
 ```typescript
 import { sampleFunction } from 'widgets/shared-code/entry1'
