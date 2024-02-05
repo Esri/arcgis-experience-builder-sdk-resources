@@ -9,18 +9,19 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 To use this method, you need to follow the following steps:
 * Create a `shared-code` folder under the `widgets` folder. Please note that the folder name must be the `shared-code`.
 * Put your shared code into the `shared-code` folder, all `.ts` and `.tsx` files in the `shared-code` folder will be compiled as shared entries. The best practice folder structure in the `shared-code` folder is:
+```sh
+shared-code/
+  entry1.ts
+  entry2.tsx
+  lib/
+    entry1/
+      module1.ts
+      module2.ts
+    entry2/
+      module1.ts
+      module2.ts
 ```
-shared-code
-  |-entry1.ts
-  |-entry2.tsx
-  |-lib
-    |-entry1
-      |-module1.ts
-      |-module2.ts
-    |-entry2
-      |-module1.ts
-      |-module2.ts
-```
+
 In the above folder structure, `entry1` and `entry2` will be created.
 
 To support i18n, create a `translations` folder within the `shared-code` folder, or within each entry folder, for example, `shared-code/lib/entry1/translations`. The `translations` folder structure is the same as the widget translations folder.
