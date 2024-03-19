@@ -3,6 +3,10 @@
   "label": "Demo Theme",
   "type": "theme",
   "thumbnails ": [],
+  "font": {
+    "fontFamily": "Avenir Next",
+    "color": "#484848"
+  },
   "version": "1.14.0",
   "exbVersion": "1.14.0",
   "author": "Esri R&D Center Beijing",

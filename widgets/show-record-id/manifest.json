@@ -13,7 +13,8 @@
     {
       "name": "showId",
       "label": "show id",
-      "uri": "data-actions/show-id"
+      "uri": "data-actions/show-id",
+      "icon": "runtime/assets/icons/show-record-id.svg"
     }
   ],
   "translatedLocales": [
