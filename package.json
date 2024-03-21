@@ -1,0 +1,10 @@
+{
+  "name": "exb-workshop",
+  "version": "1.1.0",
+  "description": "themes + widgets in root, own package.json",
+  "main": "",
+  "scripts": {
+    "install-subfolders": "node npm-install-subfolders.js"
+  },
+  "author": ""
+}
