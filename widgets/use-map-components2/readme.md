@@ -1,0 +1,1 @@
+This widget works since 1.15
