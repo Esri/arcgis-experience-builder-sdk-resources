@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlignment:"การจัดวางแนวตั้ง"})}}}));

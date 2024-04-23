@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"Tento typ vrstvy nie je podporovaný."})}}}));

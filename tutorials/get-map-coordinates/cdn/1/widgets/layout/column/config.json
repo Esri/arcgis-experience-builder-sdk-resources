@@ -1,0 +1,11 @@
+{
+  "space": 10,
+  "style": {
+    "padding": {
+      "space": [10],
+      "unit": "px"
+    },
+    "justifyContent": "flex-start",
+    "alignItems": "stretch"
+  }
+}

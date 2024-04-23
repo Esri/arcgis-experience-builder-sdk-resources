@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Text",defaultPlaceholder:"Faceți dublu clic pentru a edita textul"})}}}));

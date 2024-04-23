@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Lodret justering",spaceAround:"Afstand omkring",spaceBetween:"Afstand mellem",spaceEvenly:"Lige stor afstand",horizontalAlign:"Vandret justering",scrollable:"Kan rulle"})}}}));

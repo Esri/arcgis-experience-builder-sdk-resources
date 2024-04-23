@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Oszlopdiagram",widgetProperties:"Widget tulajdonságai",widgetFunctions:"Widget függvényei",widgetName:"widget neve:",widgetProps:"widget tulajdonságai:",tips:"Oszlopdiagram"})}}}));

@@ -1,0 +1,178 @@
+{
+  "name": "arcgis-map",
+  "label": "Map",
+  "type": "widget",
+  "version": "1.14.0",
+  "exbVersion": "1.14.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the widget used in developer guide",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "publishMessages": [
+    "EXTENT_CHANGE",
+    "DATA_RECORDS_SELECTION_CHANGE"
+  ],
+  "messageActions": [
+    {
+      "name": "panTo",
+      "label": "Pan to",
+      "uri": "message-actions/pan-to-action",
+      "settingUri": "message-actions/pan-to-action-setting"
+    },
+    {
+      "name": "zoomToFeature",
+      "label": "Zoom to",
+      "uri": "message-actions/zoom-to-feature-action",
+      "settingUri": "message-actions/zoom-to-feature-action-setting"
+    },
+    {
+      "name": "flash",
+      "label": "Flash",
+      "uri": "message-actions/flash-action",
+      "settingUri": "message-actions/flash-action-setting"
+    },
+    {
+      "name": "filter",
+      "label": "Filter",
+      "uri": "message-actions/filter-action",
+      "settingUri": "message-actions/filter-action-setting"
+    },
+    {
+      "name": "showOnMap",
+      "label": "Show on map",
+      "uri": "message-actions/show-on-map-action",
+      "settingUri": "message-actions/show-on-map-action-setting"
+    },
+    {
+      "name": "addToMap",
+      "label": "Add to map",
+      "uri": "message-actions/add-to-map-action"
+    }
+  ],
+  "defaultSize": {
+    "width": 400,
+    "height": 400
+  },
+  "properties": {
+    "canCreateMapView": true,
+    "hasEmbeddedLayout": true,
+    "passDataSourceToChildren": false,
+    "coverLayoutBackground": true,
+    "watchViewportVisibility": true,
+    "supportAutoSize": false,
+    "canConsumeDataAction": true,
+    "needActiveState": true
+  },
+  "excludeDataActions": [
+    "setFilter",
+    "arcgis-map.addToMap",
+    "dataStatistics",
+    "table.addToTable"
+  ],
+  "dataActions": [
+    {
+      "name": "zoomToFeature",
+      "label": "Zoom to",
+      "uri": "data-actions/zoom-to",
+      "icon": "runtime/assets/icons/select-tool/select-zoomto.svg"
+    },
+    {
+      "name": "panTo",
+      "label": "Pan to",
+      "uri": "data-actions/pan-to",
+      "icon": "runtime/assets/icons/pan-to.svg"
+    },
+    {
+      "name": "showOnMap",
+      "label": "Show on map",
+      "uri": "data-actions/show-on-map",
+      "settingUri": "data-actions/show-on-map-setting",
+      "icon": "runtime/assets/icons/show-on-map.svg"
+    },
+    {
+      "name": "addToMap",
+      "label": "Add to map",
+      "uri": "data-actions/add-to-map",
+      "icon": "runtime/assets/icons/add-to-map.svg"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "MapFixedLayout",
+      "label": "Map FixedLayout",
+      "type": "FIXED"
+    }
+  ],
+  "urlParameters": [
+    {
+      "name": "viewpoint",
+      "label": "Viewpoint",
+      "tooltip": "Viewpoint describes the point of view for a web map or web scene."
+    },
+    {
+      "name": "center",
+      "label": "Center"
+    },
+    {
+      "name": "scale",
+      "label": "Scale"
+    },
+    {
+      "name": "rotation",
+      "label": "Rotation"
+    },
+    {
+      "name": "layer_visibility",
+      "label": "Layer visibility"
+    }
+  ],
+  "extensions": [
+    {
+      "name": "appConfigOperations",
+      "point": "APP_CONFIG_OPERATIONS",
+      "uri": "tools/app-config-operations"
+    }
+  ],
+  "translatedLocales": [
+    "en",
+    "ar",
+    "bg",
+    "bs",
+    "ca",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "es",
+    "et",
+    "fi",
+    "fr",
+    "he",
+    "hr",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "lt",
+    "lv",
+    "nb",
+    "nl",
+    "pl",
+    "pt-br",
+    "pt-pt",
+    "ro",
+    "ru",
+    "sk",
+    "sl",
+    "sr",
+    "sv",
+    "th",
+    "tr",
+    "zh-cn",
+    "uk",
+    "vi",
+    "zh-hk",
+    "zh-tw"
+  ]
+}

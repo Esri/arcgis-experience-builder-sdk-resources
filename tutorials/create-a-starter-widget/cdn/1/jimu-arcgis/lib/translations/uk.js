@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"Цей тип шару не підтримується."})}}}));

@@ -1,0 +1,9 @@
+{
+  "space": 10,
+  "style": {
+    "padding": {
+      "number": [10],
+      "unit": "px"
+    }
+  }
+}

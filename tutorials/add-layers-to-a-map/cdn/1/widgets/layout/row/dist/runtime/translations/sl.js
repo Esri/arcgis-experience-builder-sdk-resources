@@ -1,0 +1,1 @@
+System.register([],(function(i){return{execute:function(){i({_widgetLabel:"Vrstica",widgetProperties:"Lastnosti pripomočka",widgetFunctions:"Funkcije pripomočka",widgetName:"ime pripomočka:",widgetProps:"lastnosti pripomočka:",tips:"Vrstica"})}}}));

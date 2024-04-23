@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ArcGIS Rest JS OAuth redirect</title>
+  </head>
+  <body>
+    <script src="./request.umd.min.js"></script>
+    <script src="./auth.umd.min.js"></script>
+    <script src="./js.cookie.js"></script>
+    <script>
+      function processAuthentication() {
+        const {query, hash} = getQueryAndHashObject();
+        const popup = query.popup === 'true';
+        window.onbeforeunload = () => {
+          console.log('onbeforeunload');
+        }
+        if(hash.error){
+          if (hash.error !== 'access_denied') {
+            // alert error message except for clicking cancel
+            alert(hash.error_description || hash.error);
+          }
+          const {portal, clientId, isDevEdition, mountPath} = query;
+          if(popup) {
+            // SessionManager.signIn listens for popup window closing.
+            window.close();
+            return;
+          } else {
+            if (isDevEdition === 'true') {
+              // Redirect to set-portalUrl page
+              const mountPathFinal = mountPath ? mountPath : '/'
+              window.location.href = `${location.protocol}//${location.host}${mountPathFinal}page/set-portalurl`;
+            } else {
+              // Redirect to landing page
+              window.location.href = `${location.protocol}//${location.host}/page/landing`;
+            }
+          }
+        }
+
+        let openerHref = '';
+        let openerOrigin = '';
+        const rootPath = window.location.href.split('/jimu-core')[0];
+        try {
+          openerHref = window.opener && window.opener.location ? window.opener.location.href : '';
+          openerOrigin = window.opener && window.opener.location ? window.opener.location.origin: '';
+        } catch (error) {
+          // access exb from arcgis online and popup is false
+          openerHref = '';
+        }
+        let usePopupWindow;
+        // Normall we only need to check 'opener' to know whether use popup window for sign-in, except for one situation:
+        //   Launch Exb from appLauncher (or create button) of online/portal.
+        //   1, Normal popup sign-in:
+        //        'window.location.origin': 'experience_or_portal.arcgis.com'
+        //        'openerOrigin'          : 'experience_or_portal.arcgis.com'
+        //   2, Online appLauncher sign-in:
+        //        'window.location.origin': 'experience.arcgis.com'
+        //        'openerOrigin'          : 'org.arcgis.com'
+        //      for this situation: only if 'window.location.origin === openerOrigin', means is popup window.
+        //   3, Portal appLauncher sign-in:
+        //        'window.location.origin': 'portal.arcgis.com'
+        //        'openerOrigin'          : 'portal.arcgis.com'
+        //        'rootPath'              : 'portal.arcgis.com/arcgis/apps/experiencebuilder'
+        //        'openerHref'            : 'portal.arcgis.com/arcgis/home/...'
+        //      for this situation: has to further check 'openerHref.indexOf(rootPath) > -1', means is popup window.
+        if(query.isInPortal === 'true') {
+          usePopupWindow = opener && opener.parent && window.location.origin === openerOrigin && openerHref.indexOf(rootPath) > -1;
+        } else {
+          usePopupWindow = opener && opener.parent && window.location.origin === openerOrigin;
+        }
+
+        if(usePopupWindow){//popup window
+          //There is a bug when popup is true of arcgis-rest-js that will occur the error:
+          //o.opener.parent[("__ESRI_REST_AUTH_HANDLER_" + z)] is not a function
+          //see https://github.com/Esri/arcgis-rest-js/issues/580
+
+          try {
+            if(window.opener && window.opener.parent && !window.opener.parent[`__ESRI_REST_AUTH_HANDLER_${query.clientId}`]){
+              window.opener.parent[`__ESRI_REST_AUTH_HANDLER_${query.clientId}`] = window.opener[`__ESRI_REST_AUTH_HANDLER_${query.clientId}`]
+            }
+          } catch (error) {
+            // error is thrown by accessing window.opener.parent[].
+            // means it is in the IFrame
+            // bug fixes for accessing window.opener.parent[] from completeOAuth2()
+            window.opener.parent = null;
+          }
+          arcgisRest.UserSession.completeOAuth2({
+            portal: query.portal,
+            clientId: query.clientId,
+            popup: popup,
+          });
+          // completeOAuth2ForPopupWindow(query, hash);
+          // close();
+
+          // For popup login, we dont writeAuthInfo here, it's written in SessionManager(for main portal only)
+        }else {
+          const session = arcgisRest.UserSession.completeOAuth2({
+            portal: query.portal,
+            clientId: query.clientId,
+            popup: popup,
+          });
+          writeAuthInfo(session, query, hash);
+          window.location.href = decodeURIComponent(query.fromUrl);
+        }
+      }
+
+      function getQueryAndHashObject(){
+        var query = window.location.search;
+        var queryObject = Object.create(null);
+        if (query.indexOf('?') > -1) {
+          query = query.substr(1);
+        }
+        //Appoint fromUrl is located in the last of the query
+        const fromUrlIndex = query.indexOf('fromUrl');
+        if(fromUrlIndex > -1){
+          const fromUrlQuery = query.substr(fromUrlIndex);
+          const equalIndex = fromUrlQuery.indexOf('=');
+          queryObject[fromUrlQuery.substring(0, equalIndex)] = fromUrlQuery.substr(equalIndex + 1);
+
+          query = query.substring(0, fromUrlIndex - 1);
+        }
+        if(!!query){
+          var pairs = query.split('&');
+          for(var i = 0; i < pairs.length; i++){
+            var splits = decodeURIComponent(pairs[i]).split('=');
+            var v = splits[1];
+            queryObject[splits[0]] = splits[1];
+          }
+        }
+        queryObject.clientId = queryObject.clientId || queryObject.clientID
+
+        // get error message
+        var hash = window.location.hash;
+        var hashObject = {};
+        hash = hash.substr(1);
+        pairs = hash.split('&');
+        for(i = 0; i < pairs.length; i++){
+          var splits = decodeURIComponent(pairs[i]).split('=');
+          var v = splits[1];
+          hashObject[splits[0]] = splits[1];
+        }
+
+        return {hash: hashObject, query: queryObject};
+      }
+
+      function _getHostname(url) {
+        if(!url)return null;
+        const urlLower = url.toLowerCase();
+        let schema = '';
+        let iStart = urlLower.indexOf('https://');
+        if(iStart === 0){
+          schema = 'https://';
+        }else {
+          iStart = urlLower.indexOf('http://');
+          if(iStart === 0){
+            schema = 'http://';
+          }
+        }
+        iStart = schema.length;
+        let iEnd = urlLower.indexOf(':', iStart);
+        if(iEnd === -1){
+          iEnd = urlLower.indexOf('/', iStart);
+        }
+        if(iEnd === -1){
+          iEnd = urlLower.length;
+        }
+        return urlLower.substring(iStart, iEnd);
+      }
+
+      function _getPortalUrlInfo(portalUrl){
+        if(!portalUrl)return null;
+        let portalUrlLower = portalUrl.toLowerCase();
+        let schema = '';
+        let iStart = portalUrlLower.indexOf('https://');
+        if(iStart === 0){
+          schema = 'https://';
+        }else {
+          iStart = portalUrlLower.indexOf('http://');
+          if(iStart === 0){
+            schema = 'http://';
+          }
+        }
+        iStart = schema.length;
+        let iEnd = portalUrlLower.indexOf('/sharing/rest', iStart);
+        iEnd = iEnd < 0 ? portalUrlLower.length : iEnd;
+        portalUrlLower = portalUrlLower.substring(iStart, iEnd);
+        let urlKey, customBaseUrl;
+        let parts = portalUrlLower.split('.');
+        urlKey = parts[0];
+        parts.splice(0, 1);
+        customBaseUrl = parts.join('.');
+
+        return {
+          urlKey,
+          customBaseUrl,
+          schema
+        }
+      }
+
+      function _isArcgisUrl(url, isHostname){
+        if(!url)return false;
+        let hostname = url;
+        if(!isHostname){
+          hostname = _getHostname(url);
+          if(!hostname)return false;
+        }
+        hostname = hostname.toLowerCase();
+        return (hostname.indexOf('.arcgis.com') > -1 || hostname === 'arcgis.com');
+      }
+
+      function _canWriteCookie(clientId){
+        return !_isArcgisUrl(window.location.hostname, true) || clientId !== 'experienceBuilder'
+      }
+
+      function writeAuthInfo(session, query, hash) {
+        // write Auth info to local storage.
+        const {urlKey, customBaseUrl, schema} = _getPortalUrlInfo(session.portal);
+        let esriAuthJson = {
+          portalApp: false,
+          email: session.username,
+          token: session.token,
+          expires: session.tokenExpires,
+          urlKey: urlKey,
+          customBaseUrl: customBaseUrl,
+          schema: schema
+        }
+        try{
+          // remove exb_auth info first
+          sessionStorage.removeItem('exb_auth')
+          localStorage.removeItem('exb_auth')
+          if(hash.persist || query.isDevEdition === 'true' || query.isOutOfExb) {
+            localStorage.setItem('exb_auth', JSON.stringify(esriAuthJson));
+          } else {
+            sessionStorage.setItem('exb_auth', JSON.stringify(esriAuthJson));
+          }
+        }catch(e){
+          console.error('Read/Write sessionStorage/localStorage error.', e)
+        }
+      }
+      processAuthentication();
+    </script>
+  </body>
+</html>

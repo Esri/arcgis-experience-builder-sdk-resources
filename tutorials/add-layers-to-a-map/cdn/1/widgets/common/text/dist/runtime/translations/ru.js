@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Текст",defaultPlaceholder:"Дважды щелкните, чтобы изменить текст"})}}}));

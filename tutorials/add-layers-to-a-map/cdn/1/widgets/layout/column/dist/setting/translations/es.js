@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Alineación vertical",spaceAround:"Espacio alrededor",spaceBetween:"Espacio entre",spaceEvenly:"Espacio uniforme",horizontalAlign:"Alineación horizontal",scrollable:"Desplazable"})}}}));

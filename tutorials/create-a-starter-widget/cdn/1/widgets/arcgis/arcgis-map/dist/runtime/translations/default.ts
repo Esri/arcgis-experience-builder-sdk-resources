@@ -1,0 +1,22 @@
+export default {
+  _widgetLabel: 'Map',
+  _action_displayFeatureSet_label: 'Display feature set',
+  _action_panTo_label: 'Pan to',
+  _action_zoomToFeature_label: 'Zoom to',
+  _action_selectFeature_label: 'Select feature',
+  _action_flash_label: 'Flash',
+  _action_filter_label: 'Filter',
+  _action_showOnMap_label: 'Show on map',
+  _action_addToMap_label: 'Add to map',
+  showOnMapData: 'Show on map data',
+  addedData: 'added data',
+  failToAddTheDataOnMap: 'Fail to add the data.',
+  addToMapData: 'Add to map data',
+  mapCurrentRecord: '{layerName} map current record',
+  _url_params_viewpoint_label: 'Viewpoint',
+  _url_params_viewpoint_tooltip: "Viewpoint describes the point of view for a web map or web scene.",
+  _url_params_center_label: 'Center',
+  _url_params_scale_label: 'Scale',
+  _url_params_rotation_label: 'Rotation',
+  _url_params_layer_visibility_label: 'Layer visibility'
+}

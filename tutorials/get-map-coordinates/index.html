@@ -1,0 +1,115 @@
+<!doctype html><html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/><meta http-equiv="X-UA-Compatible" content="IE=EDGE"/><meta name="google-site-verification" content="Gl928UcZRBt8t7njrpXivrsVrbVcc7sLybtCMZ6Dzlg"/><title>Get Map Coordinates</title><link rel="shortcut icon" href="assets/exb.ico"><base href="./cdn/1/"/><style>* {
+				scrollbar-color: var(--light-600) transparent;
+			}
+			html, body{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+			html.scrollable {
+				overflow: auto;
+			}
+			html.scrollable body {
+				overflow: unset;
+			}
+			html.scrollable body, html.scrollable #app {
+				height: auto;
+			}
+			#loading{
+				width: 100vw;
+				height: 100vh;
+			}
+			#app{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 0;
+				display: none;
+			}</style><script type="empty">/**
+			Add this empty script tag can help API module load find the correct "insertPointSibling"
+			*/</script></head><body><div id="loading"><style>.loading-content{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        .jimu-primary-loading-app:before, .jimu-primary-loading-app:after {
+          position: absolute;
+          top: 0;
+          content: '';
+        }
+
+        .jimu-primary-loading-app:before {
+          left: -19.992px;
+        }
+
+        .jimu-primary-loading-app:after {
+          left: 19.992px;
+          -webkit-animation-delay: 0.32s !important;
+          animation-delay: 0.32s !important;
+        }
+
+        .jimu-primary-loading-app:before, .jimu-primary-loading-app:after, .jimu-primary-loading-app {
+          background: #076fe5;
+          -webkit-animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+          animation: loading-keys-app-loading 0.8s infinite ease-in-out;
+          width: 13.6px;
+          height: 32px;
+        }
+
+        .jimu-primary-loading-app {
+          text-indent: -9999em;
+          margin: auto;
+          position: absolute;
+          right: calc(50% - 6.8px);
+          top: calc(50% - 16px);
+          -webkit-animation-delay: 0.16s !important;
+          animation-delay: 0.16s !important;
+        }
+
+        @-webkit-keyframes loading-keys-app-loading{0%,80%,100%{opacity:.75;box-shadow:0 0 #076fe5;height:32px;}40%{opacity:1;box-shadow:0 -8px #076fe5;height:40px;}}
+        @keyframes loading-keys-app-loading{0%,80%,100%{opacity:.75;box-shadow:0 0 #076fe5;height:32px;}40%{opacity:1;box-shadow:0 -8px #076fe5;height:40px;}}</style><div class="loading-content"><div class="justify-content-center jimu-primary-loading-app"></div></div></div><div id="app"></div><script type="webpack-options" id="webpack-options">{
+				"mountPath": "/",
+				"isOutOfExb": true,
+				"hostEnv": "prod",
+				"appFolderName": ".",
+				"useStructuralUrl": false,
+				"arcgisJsApiUrl": "https://js.arcgis.com/4.29/",
+				"isDevEdition": true,
+				"buildNumber": "1",
+				"isBuilder": false,
+				"isSite": false,
+				"isInPortal": false
+			}</script><script type="systemjs-importmap">{
+	"imports": {
+		"jimu-core": "https://BASE_URL/jimu-core/index.js",
+		"jimu-core/": "https://BASE_URL/jimu-core/",
+		"jimu-theme": "https://BASE_URL/jimu-theme/index.js",
+		"jimu-theme/": "https://BASE_URL/jimu-theme/",
+		"jimu-ui": "https://BASE_URL/jimu-ui/index.js",
+		"jimu-ui/": "https://BASE_URL/jimu-ui/",
+		"jimu-icons/": "https://BASE_URL/jimu-icons/",
+		"jimu-arcgis": "https://BASE_URL/jimu-arcgis/index.js",
+		"jimu-arcgis/": "https://BASE_URL/jimu-arcgis/",
+		"jimu-layouts": "https://BASE_URL/jimu-layouts/index.js",
+		"jimu-layouts/": "https://BASE_URL/jimu-layouts/",
+		"jimu-for-builder": "https://BASE_URL/jimu-for-builder/index.js",
+		"jimu-for-builder/": "https://BASE_URL/jimu-for-builder/",
+		"widgets/": "https://BASE_URL/widgets/",
+		"themes/": "https://BASE_URL/themes/",
+		"builder/": "https://BASE_URL/builder/",
+		"site/": "https://BASE_URL/site/",
+		"experience/": "https://BASE_URL/experience/",
+		"template/": "https://BASE_URL/template/",
+		"templates/": "https://BASE_URL/templates/",
+		"calcite-components": "https://BASE_URL/calcite-components/index.js",
+		"calcite-components/": "https://BASE_URL/calcite-components/",
+		"arcgis-charts": "https://BASE_URL/arcgis-charts/arcgis-charts.js",
+
+		"arcgis-amd-packages/": "https://amd-packages/",
+		"esri/": "https://API_URL/esri/"
+	}
+}</script><script src="./jimu-core/init.js"></script></body></html>

@@ -1,0 +1,10 @@
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-design-system/blob/main/LICENSE.md for details.
+ * v2.5.1
+ */
+
+/*!
+* focus-trap 7.5.4
+* @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
+*/

@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Coluna",widgetProperties:"Propriedades de widget",widgetFunctions:"Funções dos widgets",widgetName:"nome do widget:",widgetProps:"propriedades do widget:",tips:"Coluna"})}}}));

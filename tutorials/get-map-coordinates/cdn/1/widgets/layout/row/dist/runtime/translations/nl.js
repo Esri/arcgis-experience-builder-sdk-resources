@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Rij",widgetProperties:"Widget Eigenschappen",widgetFunctions:"Widgetfuncties",widgetName:"widgetnaam:",widgetProps:"widgeteigenschappen:",tips:"Rij"})}}}));

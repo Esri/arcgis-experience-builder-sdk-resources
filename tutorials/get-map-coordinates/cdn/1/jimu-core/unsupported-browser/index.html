@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+	<title>Experience Builder</title>
+	<link rel="shortcut icon" href="assets/exb.ico">
+	<link href="./jimu-theme//base/assets/fonts/avenir/fonts.css" rel="preload" as="script">
+	<style>
+		html {
+			font-size: 62.5%;
+		}
+
+		body {
+			font-family: "Avenir Next", sans-serif;
+		}
+
+		@media (min-width:700px) {
+			.unsupported-browser-message {
+				padding: 0 1.6rem;
+			}
+		}
+
+		@media (min-width:960px) {
+			.unsupported-browser-message {
+				padding: 0 1.6rem;
+			}
+		}
+
+		.unsupported-browser-message {
+			padding: 0 1.6rem;
+			max-width: 800px;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		.full-page-message {
+			text-align: center;
+			margin: 18rem auto 28rem;
+		}
+
+		.full-page-message-title {
+			color: #002625;
+			font-weight: 400;
+			margin: auto;
+			font-size: 4rem;
+			line-height: 4.8rem;
+		}
+
+		.full-page-message-details {
+			color: #3d6665;
+			font-weight: 400;
+			margin: 2.4rem auto 0;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
+
+		.logos-list {
+			text-align: center;
+			display: block;
+			margin-top: 4.8rem;
+		}
+
+		.logo {
+			display: inline-block;
+			margin: 0 2rem;
+		}
+
+		.logo img {
+			width: 6.4rem;
+			height: auto;
+		}
+
+		@media (min-width:700px) {
+			.logo {
+				margin: 0 4rem;
+			}
+
+			.logo img {
+				width: 8rem;
+			}
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div id="app">
+		<div class="unsupported-browser-message">
+			<div class="full-page-message">
+				<h1 class="full-page-message-title" id="message-title"></h1>
+				<p class="full-page-message-details" id="message-sub-title"></p>
+				<ul class=" logos-list">
+					<li class=" logo"><a href="https://www.google.com/chrome/"><img alt="Chrome"
+								src="./browser-icons/chrome.png"></a></li>
+					<li class=" logo"><a href="https://www.mozilla.org/firefox/"><img alt="Firefox"
+								src="./browser-icons/firefox.png"></a></li>
+					<li class=" logo"><a href="https://www.apple.com/safari/"><img alt="Safari"
+								src="./browser-icons/safari.png"></a></li>
+					<li class=" logo"><a href="https://www.microsoft.com/edge"><img alt="Edge" src="./browser-icons/edge.png"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		const strings = {
+			'ar':{
+				title: 'متصفح غير مدعوم',
+				contentForOnline: 'أنت تستخدم متصفحًا غير مدعوم من [ArcGIS Experience Builder]. يُرجى استخدام أحدث إصدارات <chrome-link>Google Chrome</chrome-link> أو <firefox-link>Mozilla Firefox</firefox-link> أو <safari-link>Apple Safari</safari-link> أو <edge-link>Microsoft Edge</edge-link>. قدم ملاحظاتك من خلال <feedback-link>GeoNet، مجتمع Esri</feedback-link>.',
+				contentForEnterprise: 'أنت تستخدم متصفحًا غير مدعوم من [ArcGIS Experience Builder]. يُرجى استخدام أحدث إصدارات <chrome-link>Google Chrome</chrome-link> أو <firefox-link>Mozilla Firefox</firefox-link> أو <safari-link>Apple Safari</safari-link> أو <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'bg':{
+				title: 'Неподдържан браузър',
+				contentForOnline: 'Използвате браузър, който не се поддържа от [ArcGIS Experience Builder]. Моля, използвайте последната версия на <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, или <edge-link>Microsoft Edge</edge-link>. Напишете ни Вашия отзив през <feedback-link>GeoNet, Esri Community</feedback-link>.',
+				contentForEnterprise: 'Използвате браузър, който не се поддържа [ArcGIS Experience Builder]. Моля, използвайте последната версия на <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, или <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'bs':{
+				title: 'Nepodržani preglednik',
+				contentForOnline: 'Koristite preglednik koji ne podržava [ArcGIS Experience Builder]. Koristite najnoviju verziju preglednika <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>. Pošaljite svoje povratne informacije kroz <feedback-link>GeoNet, Esrijevu zajednicu</feedback-link>.',
+				contentForEnterprise: 'Koristite preglednik koji nije podržan [ArcGIS Experience Builder]. Koristite najnoviju verziju preglednika <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'ca':{
+				title: 'Navegador no compatible',
+				contentForOnline: 'Esteu fent servir un navegador que no és compatible amb l\'[ArcGIS Experience Builder]. Utilitzeu la versió més recent del <chrome-link>Google Chrome</chrome-link>, el <firefox-link>Mozilla Firefox</firefox-link>, l\'<safari-link>Apple Safari</safari-link> o el <edge-link>Microsoft Edge</edge-link>. Proporcioneu comentaris a través del <feedback-link>GeoNet, la comunitat d\'Esri</feedback-link>.',
+				contentForEnterprise: 'Esteu fent servir un navegador que no és compatible amb l\'[ArcGIS Experience Builder]. Utilitzeu la versió més recent del <chrome-link>Google Chrome</chrome-link>, el <firefox-link>Mozilla Firefox</firefox-link>, l\'<safari-link>Apple Safari</safari-link> o el <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'cs':{
+				title: 'Nepodporovaný prohlížeč',
+				contentForOnline: 'Používáte prohlížeč, který [ArcGIS Experience Builder] nepodporuje. Použijte nejnovější verzi prohlížeče <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> nebo <edge-link>Microsoft Edge</edge-link>. Dejte nám zpětnou vazbu prostřednictvím <feedback-link>GeoNet, komunity Esri</feedback-link>.',
+				contentForEnterprise: 'Používáte prohlížeč, který nepodporuje [ArcGIS Experience Builder]. Použijte nejnovější verzi prohlížeče <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> nebo <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'da':{
+				title: 'Ikke-understøttet browser',
+				contentForOnline: 'Du bruger en browser, der ikke understøttes af [ArcGIS Experience Builder]. Benyt den seneste version af <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>. Dend din feedback via <feedback-link>GeoNet, Esri-fællesskabet</feedback-link>.',
+				contentForEnterprise: 'Du bruger en browser, der ikke understøttes [ArcGIS Experience Builder]. Benyt den seneste version af <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'de':{
+				title: 'Nicht unterstützter Browser',
+				contentForOnline: 'Sie verwenden einen Browser, der nicht von [ArcGIS Experience Builder] unterstützt wird. Verwenden Sie die neueste Version von <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> oder <edge-link>Microsoft Edge</edge-link>. Teilen Sie uns Ihr Feedback über die <feedback-link>Esri Community auf GeoNet</feedback-link> mit.',
+				contentForEnterprise: 'Sie verwenden einen Browser, der nicht von [ArcGIS Experience Builder] unterstützt wird. Verwenden Sie die neueste Version von <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> oder <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'el':{
+				title: 'Μη υποστηριζόμενο πρόγραμμα περιήγησης',
+				contentForOnline: 'Χρησιμοποιείτε ένα πρόγραμμα περιήγησης που δεν υποστηρίζεται από το [ArcGIS Experience Builder]. Χρησιμοποιήστε την πιο πρόσφατη έκδοση του <chrome-link>Google Chrome</chrome-link>, του <firefox-link>Mozilla Firefox</firefox-link>, του <safari-link>Apple Safari</safari-link>, ή του <edge-link>Microsoft Edge</edge-link>. Πείτε μας τα σχόλιά σας μέσω του <feedback-link>GeoNet, της κοινότητας της Esri</feedback-link>.',
+				contentForEnterprise: 'Χρησιμοποιείτε ένα πρόγραμμα περιήγησης που δεν υποστηρίζεται από το [ArcGIS Experience Builder]. Χρησιμοποιήστε την πιο πρόσφατη έκδοση του <chrome-link>Google Chrome</chrome-link>, του <firefox-link>Mozilla Firefox</firefox-link>, του <safari-link>Apple Safari</safari-link>, ή του <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'en':{
+				title: 'Unsupported browser',
+				contentForOnline: 'You are using a browser that is not supported by [ArcGIS Experience Builder]. Please use the latest version of <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, or <edge-link>Microsoft Edge</edge-link>. Provide your feedback through <feedback-link>GeoNet, the Esri Community</feedback-link>.',
+				contentForEnterprise: 'You are using a browser that is not supported [ArcGIS Experience Builder]. Please use the latest version of <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, or <edge-link>Microsoft Edge</edge-link>.',
+			},
+			'es':{
+				title: 'Navegador no compatible',
+				contentForOnline: 'Está utilizando un navegador que no es compatible con [ArcGIS Experience Builder]. Utilice la versión más reciente de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> o <edge-link>Microsoft Edge</edge-link>. Háganos llegar su opinión a través de <feedback-link>GeoNet, la Comunidad de Esri</feedback-link>.',
+				contentForEnterprise: 'Está utilizando un navegador que no es compatible con [ArcGIS Experience Builder]. Utilice la versión más reciente de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> o <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'et':{
+				title: 'Mittetoetatud brauser',
+				contentForOnline: 'Kasutate brauserit, mida [ArcGIS Experience Builder] ei toeta. Kasutage <chrome-link>Google Chrome\'i</chrome-link>, <firefox-link>Mozilla Firefoxi</firefox-link>, <safari-link>Apple Safari</safari-link> või <edge-link>Microsoft Edge\'i</edge-link> uusimat versiooni. Andke meile tagasisidet <feedback-link>Esri kogukonna GeoNet</feedback-link> kaudu.',
+				contentForEnterprise: 'Kasutate brauserit, mida [ArcGIS Experience Builder] ei toeta. Kasutage <chrome-link>Google Chrome\'i</chrome-link>, <firefox-link>Mozilla Firefoxi</firefox-link>, <safari-link>Apple Safari</safari-link> või <edge-link>Microsoft Edge\'i</edge-link> uusimat versiooni.'
+			},
+			'fi':{
+				title: 'Selainta ei tueta',
+				contentForOnline: 'Käytät selainta, jota [ArcGIS Experience Builder] ei tue. Käytä <chrome-link>Google Chromen</chrome-link>, <firefox-link>Mozilla Firefoxin</firefox-link>, <safari-link>Apple Safarin</safari-link> tai <edge-link>Microsoft Edgen</edge-link> viimeisintä versiota. Anna palautteesi <feedback-link>Esrin GeoNet-yhteisön, Esri Communityn </feedback-link> kautta.',
+				contentForEnterprise: 'Käytät selainta, jota [ArcGIS Experience Builder] ei tue. Käytä <chrome-link>Google Chromen</chrome-link>, <firefox-link>Mozilla Firefoxin</firefox-link>, <safari-link>Apple Safarin</safari-link> tai <edge-link>Microsoft Edgen</edge-link> viimeisintä versiota.'
+			},
+			'fr':{
+				title: 'Navigateur non pris en charge',
+				contentForOnline: 'Vous utilisez un navigateur qui n’est pas pris en charge par [ArcGIS Experience Builder]. Utilisez la dernière version de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ou <edge-link>Microsoft Edge</edge-link>. Envoyez vos commentaires via <feedback-link>GeoNet, la communauté Esri</feedback-link>.',
+				contentForEnterprise: 'Vous utilisez un navigateur qui n’est pas pris en charge par [ArcGIS Experience Builder]. Utilisez la dernière version de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ou <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'he':{
+				title: 'דפדפן לא נתמך',
+				contentForOnline: 'אתה משתמש בדפדפן שאינו נתמך על ידי [ArcGIS Experience Builder]. השתמש בגרסה העדכנית ביותר של <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> או <edge-link>Microsoft Edge</edge-link>. הוסף משוב דרך <feedback-link>GeoNet, קהילת Esri</feedback-link>.',
+				contentForEnterprise: 'אתה משתמש בדפדפן שאינו נתמך על ידי [ArcGIS Experience Builder]. השתמש בגרסה העדכנית ביותר של <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> או <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'hr':{
+				title: 'Nepodržani preglednik',
+				contentForOnline: 'Koristite preglednik koji ne podržava [ArcGIS Experience Builder]. Koristite najnoviju verziju preglednika <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>. Pošaljite svoje povratne informacije kroz <feedback-link>GeoNet, Esrijevu zajednicu</feedback-link>.',
+				contentForEnterprise: 'Koristite preglednik koji nije podržan [ArcGIS Experience Builder]. Koristite najnoviju verziju preglednika <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'hu':{
+				title: 'Nem támogatott böngésző',
+				contentForOnline: 'Az [ArcGIS Experience Builder] által nem támogatott böngészőt használ. Kérjük, használja a <chrome-link>Google Chrome</chrome-link>, a <firefox-link>Mozilla Firefox</firefox-link>, az <safari-link>Apple Safari</safari-link> vagy a <edge-link>Microsoft Edge</edge-link> legújabb verzióját. Küldje el a visszajelzését a <feedback-link>GeoNeten, az Esri közösségén</feedback-link> keresztül.',
+				contentForEnterprise: 'Az [ArcGIS Experience Builder] által nem támogatott böngészőt használ. Kérjük, használja a <chrome-link>Google Chrome</chrome-link>, a <firefox-link>Mozilla Firefox</firefox-link>, az <safari-link>Apple Safari</safari-link> vagy a <edge-link>Microsoft Edge</edge-link> legújabb verzióját.'
+			},
+			'id':{
+				title: 'Browser tidak didukung',
+				contentForOnline: 'Anda menggunakan browser yang tidak didukung oleh [ArcGIS Experience Builder]. Harap gunakan versi terbaru <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, atau <edge-link>Microsoft Edge</edge-link>. Sampaikan umpan balik Anda melalui <feedback-link>GeoNet, Esri Community</feedback-link>.',
+				contentForEnterprise: 'Anda menggunakan browser yang tidak mendukung [ArcGIS Experience Builder]. Harap gunakan versi terbaru <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, atau <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'it':{
+				title: 'Browser non supportato',
+				contentForOnline: 'Si sta utilizzando un browser non supportato da [ArcGIS Experience Builder]. Usare la versione più recente di <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> o <edge-link>Microsoft Edge</edge-link>. Fornire un feedback tramite <feedback-link>GeoNet, la community Esri</feedback-link>.',
+				contentForEnterprise: 'Si sta utilizzando un browser non supportato da [ArcGIS Experience Builder]. Usare la versione più recente di <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> o <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'ja':{
+				title: 'サポートされていないブラウザー',
+				contentForOnline: 'ArcGIS Experience Builder でサポートされていないブラウザーを使用しています。 最新バージョンの <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link>、または <edge-link>Microsoft Edge</edge-link> を使用してください。 <feedback-link>Esri コミュニティの GeoNet</feedback-link> からフィードバックをお寄せください。',
+				contentForEnterprise: 'ArcGIS Experience Builder でサポートされていないブラウザーを使用しています。 最新バージョンの <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link>、または <edge-link>Microsoft Edge</edge-link> を使用してください。'
+			},
+			'ko':{
+				title: '지원되지 않는 브라우저',
+				contentForOnline: '[ArcGIS Experience Builder]에서 지원되지 않는 브라우저를 사용하고 있습니다. 최신 버전의 <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, <edge-link>Microsoft Edge</edge-link>를 사용하세요. <feedback-link>GeoNet(Esri 커뮤니티)</feedback-link>을 통해 피드백을 제공하세요.',
+				contentForEnterprise: '[ArcGIS Experience Builder]에서 지원되지 않는 브라우저를 사용하고 있습니다. 최신 버전의 <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, <edge-link>Microsoft Edge</edge-link>를 사용하세요.'
+			},
+			'lt':{
+				title: 'Nepalaikoma naršyklė',
+				contentForOnline: 'Jūsų naudojamos naršyklės nepalaiko [ArcGIS Experience Builder]. Naudokite naujausią <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> arba <edge-link>Microsoft Edge</edge-link> versiją. Pateikite atsiliepimą <feedback-link>GeoNet, Esri bendruomenėje</feedback-link>.',
+				contentForEnterprise: 'Jūsų naudojamos naršyklės nepalaiko [ArcGIS Experience Builder]. Naudokite naujausią <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> arba <edge-link>Microsoft Edge</edge-link> versiją.'
+			},
+			'lv':{
+				title: 'Neatbalstīts pārlūks',
+				contentForOnline: 'Jūs izmantojat pārlūku, ko neatbalsta [ArcGIS Experience Builder]. Lūdzu, izmantojiet jaunāko <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> vai <edge-link>Microsoft Edge</edge-link> versiju. Sniedziet savas atsauksmes, izmantojot <feedback-link>GeoNet, Esri kopienu</feedback-link>.',
+				contentForEnterprise: 'Jūs izmantojat pārlūku, ko neatbalsta [ArcGIS Experience Builder]. Lūdzu, izmantojiet jaunāko <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> vai <edge-link>Microsoft Edge</edge-link> versiju.'
+			},
+			'nb':{
+				title: 'Nettleseren støttes ikke',
+				contentForOnline: 'Du bruker en netteleser som ikke støttes av [ArcGIS Experience Builder]. Bruk den nyeste versjonen av <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>. Gi tilbakemelding via <feedback-link>GeoNet, Esri Community</feedback-link>.',
+				contentForEnterprise: 'Du bruker en nettleser som ikke støttes [ArcGIS Experience Builder]. Bruk den nyeste versjonen av <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'nl':{
+				title: 'Niet-ondersteunde browser',
+				contentForOnline: 'U gebruikt een browser die niet wordt ondersteund door [ArcGIS Experience Builder]. Gebruik de nieuwste versie van <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> of <edge-link>Microsoft Edge</edge-link>. Geef uw feedback via <feedback-link>GeoNet, de Esri Community</feedback-link>.',
+				contentForEnterprise: 'U gebruikt een browser die niet wordt ondersteund door [ArcGIS Experience Builder]. Gebruik de nieuwste versie van <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> of <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'pl':{
+				title: 'Nieobsługiwana przeglądarka',
+				contentForOnline: 'Używasz przeglądarki, która nie jest obsługiwana przez aplikację [ArcGIS Experience Builder]. Używaj najnowszych wersji przeglądarek <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> lub <edge-link>Microsoft Edge</edge-link>. Opublikuj swoją opinię w <feedback-link>GeoNet, społeczności Esri</feedback-link>.',
+				contentForEnterprise: 'Używasz przeglądarki, która nie jest obsługiwana przez aplikację [ArcGIS Experience Builder]. Używaj najnowszych wersji przeglądarek <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> lub <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'pt-br':{
+				title: 'Navegador sem suporte',
+				contentForOnline: 'Você está usando um navegador que não é suportado pelo [ArcGIS Experience Builder]. Use a versão mais recente do <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ou <edge-link>Microsoft Edge</edge-link>. Forneça seu comentário pela <feedback-link>GeoNet, a Comunidade da Esri </feedback-link>.',
+				contentForEnterprise: 'Você está usando um navegador que não é suportado [ArcGIS Experience Builder]. Use a versão mais recente do <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ou <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'pt-pt':{
+				title: 'Navegador não suportado',
+				contentForOnline: 'Está a utilizar um navegador que não é suportado pelo [ArcGIS Experience Builder]. Use as versões mais recentes do <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ou <edge-link>Microsoft Edge</edge-link>. Forneça o seu feedback através de <feedback-link>GeoNet, a Comunidade da Esri</feedback-link>.',
+				contentForEnterprise: 'Está a utilizar um navegador que não é suportado [ArcGIS Experience Builder]. Use as versões mais recentes do <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ou <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'ro':{
+				title: 'Browser neacceptat',
+				contentForOnline: 'Utilizați un browser care nu este acceptat de [ArcGIS Experience Builder]. Utilizați ultimele versiuni de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> sau <edge-link>Microsoft Edge</edge-link>. Oferiți feedback prin <feedback-link>GeoNet, Comunitatea Esri</feedback-link>.',
+				contentForEnterprise: 'Utilizați un browser care nu este acceptat [ArcGIS Experience Builder]. Utilizați ultimele versiuni de <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> sau <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'ru':{
+				title: 'Не поддерживаемый браузер',
+				contentForOnline: 'Вы используете браузер, который не поддерживается [ArcGIS Experience Builder]. Пожалуйста, используйте последние версии <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> или <edge-link>Microsoft Edge</edge-link>. Предоставьте обратную связь с помощью <feedback-link>GeoNet, Esri Community</feedback-link>.',
+				contentForEnterprise: 'Вы используете браузер, который не поддерживается [ArcGIS Experience Builder]. Пожалуйста, используйте последние версии <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> или <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'sk':{
+				title: 'Nepodporovaný prehliadač',
+				contentForOnline: 'Používate prehliadač, ktorý nie je podporovaný [ArcGIS Experience Builder]. Použite poslednú verziu prehliadačov <chrome-link>Google Chrome</chrome-link>,<firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> alebo <edge-link>Microsoft Edge</edge-link>. Poskytnite vašu spätnú väzbu cez <feedback-link>GeoNet, Esri komunitu</feedback-link>.',
+				contentForEnterprise: 'Používate prehliadač, ktorý nie je podporovaný [ArcGIS Experience Builder]. Použite poslednú verziu prehliadačov <chrome-link>Google Chrome</chrome-link>,<firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> alebo <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'sl':{
+				title: 'Nepodprt brskalnik',
+				contentForOnline: 'Uporabljate brskalnik, ki ga [graditelj spletnih aplikacij ArcGIS] ne podpira. Prosimo, uporabite najnovejšo različico za <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ali <edge-link>Microsoft Edge</edge-link>. Posredujte povratne informacije prek <feedback-link>GeoNet, skupnosti podjetja Esri</feedback-link>.',
+				contentForEnterprise: 'Uporabljate brskalnik, ki ni podprt [graditelj spletnih aplikacij ArcGIS]. Prosimo, uporabite najnovejšo različico za <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> ali <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'sr':{
+				title: 'Nepodržani pregledač',
+				contentForOnline: 'Koristite pregledač koji ne podržava [ArcGIS Experience Builder]. Upotrebite najnoviju verziju <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>. Obezbedite povratne informacije preko <feedback-link>GeoNet-a, zajednice kompanije Esri</feedback-link>.',
+				contentForEnterprise: 'Koristite pregledač koji nije podržan [ArcGIS Experience Builder]. Upotrebite najnoviju verziju <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, ili <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'sv':{
+				title: 'Webbläsaren stöds inte',
+				contentForOnline: 'Du använder en webbläsare som inte stöds av [ArcGIS Experience Builder]. Använd den senaste versionen av <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>. Lämna din återkoppling via <feedback-link>GeoNet, Esris community</feedback-link>.',
+				contentForEnterprise: 'Du använder en webbläsare som inte stöds [ArcGIS Experience Builder]. Använd den senaste versionen av <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> eller <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'th':{
+				title: 'เบราว์เซอร์ที่ไม่รองรับ',
+				contentForOnline: 'คุณกำลังใช้เบราว์เซอร์ที่ [ArcGIS Experience Builder] ไม่รองรับ โปรดใช้ <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> หรือ <edge-link>Microsoft Edge</edge-link> เวอร์ชันล่าสุด เขียนคำติชมของคุณผ่าน <feedback-link>GeoNet ชุมชน Esri</feedback-link>',
+				contentForEnterprise: 'คุณกำลังใช้เบราว์เซอร์ที่ [ArcGIS Experience Builder] ไม่รองรับ โปรดใช้ <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> หรือ <edge-link>Microsoft Edge</edge-link> เวอร์ชันล่าสุด'
+			},
+			'uk':{
+				title: 'Браузер не підтримується',
+				contentForOnline: 'Ви використовуєте браузер, який не підтримується [ArcGIS Experience Builder]. Користуйтеся останніми версіями <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> або <edge-link>Microsoft Edge</edge-link>. Відправте нам свій відгук через <feedback-link>GeoNet, спільнота Esri Community</feedback-link>.',
+				contentForEnterprise: 'Ви використовуєте браузер, який не підтримується [ArcGIS Experience Builder]. Користуйтеся останніми версіями <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> або <edge-link>Microsoft Edge</edge-link>.'
+			},
+			'tr':{
+				title: 'Desteklenmeyen tarayıcı',
+				contentForOnline: '[ArcGIS Experience Builder] tarafından desteklenmeyen bir tarayıcı kullanıyorsunuz. Lütfen <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> veya <edge-link>Microsoft Edge</edge-link>\'in en son versiyonlarını kullanın. Geri bildirimlerinizi <feedback-link>Esri Topluluğu GeoNet</feedback-link> üzerinden iletin.',
+				contentForEnterprise: 'Desteklenmeyen bir tarayıcı kullanıyorsunuz [ArcGIS Experience Builder]. Lütfen <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link> veya <edge-link>Microsoft Edge</edge-link>\'in en son versiyonlarını kullanın.'
+			},
+			'vi':{
+				title: 'Trình duyệt không được hỗ trợ',
+				contentForOnline: 'Bạn đang sử dụng một trình duyệt không được hỗ trợ bởi [ArcGIS Experience Builder]. Vui lòng sử dụng phiên bản <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, hoặc <edge-link>Microsoft Edge</edge-link> mới nhất. Cung cấp ý kiến phản hồi của bạn qua <feedback-link>GeoNet, Cộng đồng Esri</feedback-link>.',
+				contentForEnterprise: 'Bạn đang sử dụng một trình duyệt không được hỗ trợ [ArcGIS Experience Builder]. Vui lòng sử dụng phiên bản <chrome-link>Google Chrome</chrome-link>, <firefox-link>Mozilla Firefox</firefox-link>, <safari-link>Apple Safari</safari-link>, hoặc <edge-link>Microsoft Edge</edge-link> mới nhất.'
+			},
+			'zh-cn':{
+				title: '不支持的浏览器',
+				contentForOnline: '您正在使用 [ArcGIS Experience Builder] 不支持的浏览器。 请使用最新版本的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。 请通过 <feedback-link>Esri 社区 GeoNet</feedback-link> 提供您的反馈。',
+				contentForEnterprise: '您正在使用 [ArcGIS Experience Builder] 不支持的浏览器。 请使用最新版本的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。',
+			},
+			'zh-hk':{
+				title: '不支援的瀏覽器',
+				contentForOnline: '您正在使用 [ArcGIS Experience Builder] 不支援的瀏覽器。 請使用最新版的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。 請透過 <feedback-link>Esri 社群 (即 GeoNet)</feedback-link> 提供您的回饋意見。',
+				contentForEnterprise: '您正在使用不支援 [ArcGIS Experience Builder] 的瀏覽器。 請使用最新版的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。',
+			},
+			'zh-tw':{
+				title: '不支援的瀏覽器',
+				contentForOnline: '您正在使用 [ArcGIS Experience Builder] 不支援的瀏覽器。 請使用最新版的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。 請透過 <feedback-link>Esri 社群 (即 GeoNet)</feedback-link> 提供您的回饋意見。',
+				contentForEnterprise: '您正在使用不支援 [ArcGIS Experience Builder] 的瀏覽器。 請使用最新版的 <chrome-link>Google Chrome</chrome-link>、<firefox-link>Mozilla Firefox</firefox-link>、<safari-link>Apple Safari</safari-link> 或 <edge-link>Microsoft Edge</edge-link>。',
+			}
+		}
+		var locale = getBrowserLanguage().toLowerCase();
+
+		var localString = strings[locale] || strings[locale.split('-')[0]] || strings.en;
+
+		document.getElementById('message-title').innerHTML = localString.title;
+		document.getElementById('message-sub-title').innerHTML = localString.contentForOnline
+			.replace(/\<chrome\-link\>(.+)\<\/chrome\-link\>/, '<a class="full-page-message-link" href="https://www.google.com/chrome/">$1</a>')
+			.replace(/\<firefox\-link\>(.+)\<\/firefox\-link\>/, '<a class="full-page-message-link" href="https://www.mozilla.org/firefox/">$1</a>')
+			.replace(/\<safari\-link\>(.+)\<\/safari\-link\>/, '<a class="full-page-message-link" href="https://www.apple.com/safari/">$1</a>')
+			.replace(/\<edge\-link\>(.+)\<\/edge\-link\>/, '<a class="full-page-message-link" href="https://www.microsoft.com/edge/">$1</a>')
+			.replace(/\<feedback\-link\>(.+)\<\/feedback\-link\>/, '<a class="full-page-message-link" href="https://community.esri.com/community/gis/web-gis/arcgisonline">$1</a>');
+
+		function getBrowserLanguage() {
+			var navigator = window.navigator;
+			var browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'];
+			var i;
+			var language;
+
+			// support for HTML 5.1 "navigator.languages"
+			if (Array.isArray(navigator.languages) && navigator.languages.length > 0) {
+				language = navigator.languages[0];
+				if (language && language.length) {
+					return language;
+				}
+			}
+
+			// support for other well known properties in browsers
+			for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+				language = navigator[browserLanguagePropertyKeys[i]];
+				if (language && language.length) {
+					return language;
+				}
+			}
+
+			return;
+		}
+	</script>
+</body>
+
+</html>

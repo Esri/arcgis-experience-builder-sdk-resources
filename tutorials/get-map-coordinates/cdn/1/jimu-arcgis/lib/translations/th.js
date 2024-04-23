@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"ระบบไม่รองรับประเภทชั้นข้อมูลนี้"})}}}));
