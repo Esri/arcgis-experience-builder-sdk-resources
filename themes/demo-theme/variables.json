@@ -1,6 +1,5 @@
 {
 	"darkTheme": false,
-	"coloration": "default",
 	"colors": {
 		"white": "#fff",
 		"black": "#000",
@@ -164,7 +163,6 @@
 			"bg": "#fcf8e3"
 		}
 	},
-	"spacer": "1rem",
 	"sizes": {
 		"0": 0,
 		"1": "0.25rem",
@@ -172,14 +170,6 @@
 		"3": "1rem",
 		"4": "1.25rem",
 		"5": "1.5rem"
-	},
-	"gutters": {
-		"0": 0,
-		"1": "0.0625rem",
-		"2": "0.125rem",
-		"3": "0.25rem",
-		"4": "0.5rem",
-		"5": "0.625rem"
 	},
 	"border": {
 		"color": "#d5d5d5",
@@ -189,9 +179,7 @@
 		"none": "0",
 		"sm": "0",
 		"default": "0.125rem",
-		"lg": "0.25rem",
-		"circle": "50%",
-		"pill": "50rem"
+		"lg": "0.25rem"
 	},
 	"boxShadows": {
 		"none": "none",
@@ -215,14 +203,6 @@
 				"color": "#d5d5d5"
 			},
 			"shadow": "0 0 10px 1px rgba(0,0,0,0.2)"
-		},
-		"3": {
-			"bg": "#f0f0f0",
-			"border": {
-				"width": "1px",
-				"color": "#c5c5c5"
-			},
-			"shadow": "0 0 6px 0 rgba(0,0,0,0.15)"
 		}
 	},
 	"body": {
@@ -493,10 +473,6 @@
 					"shadow": "0 0 0 1px #076fe5"
 				}
 			},
-			"spacer": {
-				"y": "0.625rem",
-				"x": "1.25rem"
-			},
 			"headerBg": "#fff",
 			"divider": {
 				"color": "#e3e3e3",
@@ -523,7 +499,6 @@
 			},
 			"minWidth": "10rem",
 			"paddingY": "0.25rem",
-			"spacer": "4px",
 			"bg": "#fff",
 			"border": {
 				"width": "1px",
@@ -1304,222 +1279,6 @@
 							}
 						}
 					}
-				}
-			}
-		}
-	},
-	"arcgis": {
-		"boxShadow": "0 1px 2px 0 rgba(0,0,0,0.20)",
-		"components": {
-			"button": {
-				"variants": {
-					"default": {
-						"default": {
-							"color": "#363636",
-							"bg": "#f0f0f0"
-						},
-						"hover": {
-							"color": "#076fe5",
-							"bg": "#f0f0f0"
-						},
-						"active": {
-							"color": "#fff",
-							"bg": "#076fe5"
-						},
-						"disabled": {
-							"color": "#8b8b8b",
-							"bg": "#f0f0f0"
-						}
-					},
-					"secondary": {
-						"default": {
-							"color": "#076fe5",
-							"bg": "transparent",
-							"border": {
-								"width": "1px",
-								"color": "#076fe5"
-							}
-						},
-						"hover": {
-							"color": "#fff",
-							"bg": "#076fe5",
-							"border": {
-								"color": "#076fe5"
-							}
-						},
-						"active": {
-							"color": "#fff",
-							"bg": "#076fe5",
-							"border": {
-								"color": "#076fe5"
-							}
-						},
-						"disabled": {
-							"color": "#8b8b8b",
-							"bg": "#e3e3e3",
-							"border": {
-								"color": "#c5c5c5"
-							}
-						}
-					}
-				}
-			},
-			"input": {
-				"bg": "#fff",
-				"color": "#000",
-				"border": {
-					"color": "#c5c5c5",
-					"width": "1px"
-				},
-				"placeHolderColor": "#8b8b8b",
-				"focus": {
-					"borderColor": "#076fe5",
-					"boxShadow": null
-				}
-			},
-			"menu": {
-				"bg": "#f0f0f0",
-				"border": {
-					"color": "#c5c5c5",
-					"width": "1px"
-				},
-				"borderRadius": "0.125rem",
-				"item": {
-					"default": {
-						"color": "#050505",
-						"bg": "#f0f0f0",
-						"border": {
-							"width": 0
-						}
-					},
-					"hover": {
-						"bg": "#d5d5d5"
-					},
-					"active": {
-						"bg": "#d5d5d5"
-					}
-				}
-			},
-			"panel": {
-				"color": "#363636",
-				"bg": "#f0f0f0"
-			},
-			"table": {
-				"root": {
-					"color": "#050505"
-				}
-			},
-			"updatingIndicator": {
-				"bg": "transparent",
-				"progress": "#076fe5"
-			}
-		},
-		"widgets": {
-			"layerlist": {
-				"root": {
-					"bg": "#f0f0f0",
-					"color": "#181818"
-				},
-				"item": {
-					"default": {
-						"bg": "#f0f0f0",
-						"border": {
-							"color": "#b6b6b6"
-						}
-					},
-					"disabled": {
-						"color": "#8b8b8b"
-					}
-				},
-				"actionsList": {
-					"root": {
-						"bg": "#e3e3e3",
-						"color": "#050505"
-					},
-					"item": {
-						"default": {
-							"color": "#363636"
-						},
-						"hover": {
-							"color": "#076fe5",
-							"bg": "transparent"
-						},
-						"active": {
-							"color": "#f0f0f0",
-							"bg": "#076fe5"
-						}
-					},
-					"separator": {
-						"color": "#d5d5d5",
-						"width": "2px"
-					}
-				},
-				"icon": {
-					"default": {
-						"color": "#363636"
-					},
-					"hover": {
-						"color": "#076fe5",
-						"bg": "transparent"
-					},
-					"active": {
-						"color": "#f0f0f0",
-						"bg": "#076fe5"
-					}
-				}
-			},
-			"legend": {
-				"variants": {
-					"default": {
-						"root": {
-							"color": "#181818"
-						}
-					},
-					"card": {
-						"root": {
-							"color": "#181818",
-							"bg": "#f0f0f0"
-						},
-						"carousel": {
-							"bg": "#d5d5d5"
-						},
-						"caption": {
-							"bg": "#d5d5d5"
-						}
-					}
-				}
-			},
-			"basemapGallery": {
-				"root": {
-					"color": "#181818",
-					"bg": "#f0f0f0"
-				},
-				"item": {
-					"hover": {
-						"bg": "#d5d5d5",
-						"border": {
-							"color": "#d5d5d5"
-						}
-					},
-					"active": {
-						"bg": "#e6f2ff",
-						"border": {
-							"color": "#076fe5"
-						}
-					},
-					"focus": {
-						"bg": "#d5d5d5",
-						"border": {
-							"color": "#d5d5d5"
-						}
-					}
-				}
-			},
-			"measure": {
-				"measurement": {
-					"bg": "#e3e3e3",
-					"valueColor": "#000",
-					"disabledColor": "#989898"
 				}
 			}
 		}
