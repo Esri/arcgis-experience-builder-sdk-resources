@@ -14,6 +14,6 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 In `setting.tsx`, select a data source using `DataSourceSelector` and select some fields using `FieldSelector`.
 
-In `widget.tsx`, select a query type, either `LOAD` or `QUERY`. After adding fields in the settings, the results of both of the query types will be updated. However, if fields are remove, only the results of `QUERY` will be updated, as `LOAD` will store the results, it is unnecessary to send a new request to remove fields. Having more fields does no harm.
+In `widget.tsx`, select a query type, either `LOAD` or `QUERY`. After adding fields in the settings, the results of both of the query types will be updated. However, if fields are removed, only the results of `QUERY` will be updated, as `LOAD` will store the results, it is unnecessary to send a new request to remove fields. Having more fields does no harm.
 
 Please note, in the `widget.tsx`, for `LOAD`, we use the `DataSourceComponent` and set the prop `query` to `{ where: '1=1' }`, without setting the `outFields`, as the data source will calculate the fields from `widgetJson.useDataSources` automatically. However, for `QUERY`, we set the `outFields` to `props.useDataSources[0].fields?.asMutable()`.

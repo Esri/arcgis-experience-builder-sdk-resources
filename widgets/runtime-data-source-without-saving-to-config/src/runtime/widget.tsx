@@ -55,7 +55,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
         {
           isLoading
             ? 'Loading ...'
-            : (errMsg || getRecords(DATA_SOURCE_ID).map((r, i) => <div key={i} className='px-2 py-3'>{`${Object.values(r.getData()).reduce((res, d) => res.length ? res + ' / ' + d : res + d, '')}`}</div>))
+            : (errMsg || getRecords(DATA_SOURCE_ID).map((r, i) => <div key={i} className='px-2 py-3'>{`${r.getId()} / ${Object.values(r.getData()).slice(3, 6).reduce((res, d) => res.length ? res + ' / ' + d : res + d, '')}`}</div>))
         }
       </div>
     </div>
