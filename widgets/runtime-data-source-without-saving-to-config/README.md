@@ -1,6 +1,6 @@
 # Runtime data source without saving to config
 
-A runtime data source that is not saved to the app config. It is designed to create a data source dynamically based on the provided service URL. It is a simplified version of the 'add data' widget.
+The sample demonstrates how to generate a runtime data source that is not saved to the app config. It is designed to create a data source dynamically based on the provided service URL. It is a simplified version of the 'add data' widget.
 
 ## How to use the sample
 
@@ -10,6 +10,6 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
 No settings are needed.
 
-In `widget.tsx`, once input a feature layer URL, will fetch the layer definition and then create a data source instance. See the `createDataSource`.
+In `widget.tsx`, once we input a feature layer URL, the widget will fetch the layer definition and then create a data source instance. See the `createDataSource`.
 
 Please note this widget only generates a runtime data source. If you want to use data actions like 'add data' widget, please use `<DataActionList widgetId={widgetId} dataSets={[{ dataSource: ds, records: [], name: ds.getLabel() }]} />`.
