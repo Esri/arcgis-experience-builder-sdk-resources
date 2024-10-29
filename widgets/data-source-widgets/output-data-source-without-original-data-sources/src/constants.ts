@@ -1,4 +1,5 @@
-import { type DataSourceSchema, EsriFieldType, JimuFieldType } from 'jimu-core'
+import { type DataSourceSchema, EsriFieldType, Immutable, JimuFieldType } from 'jimu-core'
+import { type IMConfig } from './config'
 
 export const SCHEMA: DataSourceSchema = {
   label: 'number',
@@ -27,3 +28,8 @@ export const SCHEMA: DataSourceSchema = {
     }
   }
 }
+
+export const DEFAULT_CONFIG: IMConfig = Immutable({
+  defaultOwner: 'facebook',
+  defaultRepo: 'react'
+})

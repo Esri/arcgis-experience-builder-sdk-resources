@@ -1,7 +1,8 @@
 import { type ImmutableObject } from 'jimu-core'
 
 export interface Config {
-  // exampleConfigProperty: string
+  defaultRepo: string
+  defaultOwner: string
 }
 
 export type IMConfig = ImmutableObject<Config>

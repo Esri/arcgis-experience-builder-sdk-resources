@@ -3,14 +3,12 @@ import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDa
 import { type IMConfig } from '../config'
 import { Button, Link, TextInput } from 'jimu-ui'
 import { useEffect } from 'react'
-import { SCHEMA } from '../constants'
+import { DEFAULT_CONFIG, SCHEMA } from '../constants'
 
 const { useState } = React
 
 const Widget = (props: AllWidgetProps<IMConfig>) => {
   const [token, setToken] = useState<string>(null)
-  const [owner, setOwner] = useState<string>('facebook')
-  const [repo, setRepo] = useState<string>('react')
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [errMsg, setErrMsg] = useState<string>(null)
 
@@ -40,7 +38,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
     ds.setStatus(DataSourceStatus.NotReady)
     ds.setCountStatus(DataSourceStatus.NotReady)
 
-    getAllRepoIssues(token, owner, repo)
+    getAllRepoIssues(token, props.config.defaultOwner, props.config.defaultRepo)
       .then(issues => {
         // Set data to the output data source.
         ds.setSourceRecords(issues.map(d => ds.buildRecord({ attributes: d })))
@@ -57,7 +55,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
       .finally(() => {
         setIsLoading(false)
       })
-  }, [token, owner, repo, isLoading, props.outputDataSources])
+  }, [token, props.config.defaultOwner, props.config.defaultRepo, isLoading, props.outputDataSources])
 
   const getRecords = (dsId: string): FeatureDataRecord[] => {
     return (DataSourceManager.getInstance().getDataSource(dsId)?.getSourceRecords() || []) as FeatureDataRecord[]
@@ -75,15 +73,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
               <TextInput type='password' className='w-100 pr-2' onAcceptValue={setToken} defaultValue={token} />
               <br />
 
-              <div>Owner: </div>
-              <TextInput className='w-100 pr-2' onAcceptValue={setOwner} defaultValue={owner} />
-              <br />
-
-              <div>Repo: </div>
-              <TextInput className='w-100 pr-2' onAcceptValue={setRepo} defaultValue={repo} />
-              <br />
-
-              <Button onClick={() => { setIsLoading(true) }} disabled={isLoading}>Search</Button>
+              <Button onClick={() => { setIsLoading(true) }} disabled={isLoading || !token}>{`Search issues from ${props.config.defaultOwner}/${props.config.defaultRepo}`}</Button>
               <br />
 
               <h1 className='mt-5'>Results: </h1>
@@ -98,6 +88,10 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
       }
     </div>
   )
+}
+
+Widget.getFullConfig = (config: IMConfig) => {
+  return DEFAULT_CONFIG.merge(config, { deep: true })
 }
 
 export default Widget

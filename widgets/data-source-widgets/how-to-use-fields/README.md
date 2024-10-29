@@ -2,9 +2,7 @@
 
 The sample demonstrates how to use fields of data sources.
 
-The data source has two types of methods to query records: the load method and the query method. The load method queries records and stores them in the data source instance to share with widgets. The query method only retrieves records and returns them.
-
-For load (calling `ds.load(queryParams, options)` or using `query` prop in the `DataSourceComponent`), the data source will use all the `fields` specified in `widgetJson.useDataSources` and `outFields` provided in the query params as the final `outFields`. For query (calling `ds.query(queryParams)`), the data source will only use `outFields` provided in the query params.
+The data source has two types of methods to query records: the load method and the query method. The load method queries records and stores them in the data source instance to share with widgets. The query method only retrieves records and returns them without storing. Consequently, when loading records, the data source uses all `fields` defined in `useDataSources` within the widget JSONs as the final `outFields`. In contrast, when querying records. the data source disregards the `useDataSources`.
 
 ## How to use the sample
 

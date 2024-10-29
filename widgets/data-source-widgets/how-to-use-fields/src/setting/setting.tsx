@@ -1,10 +1,11 @@
 import { DataSourceTypes, type IMFieldSchema, Immutable, React, type UseDataSource } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
+import type { IMConfig } from '../config'
 
 const SUPPORTED_TYPES = Immutable([DataSourceTypes.FeatureLayer])
 
-const Setting = (props: AllWidgetSettingProps<any>) => {
+const Setting = (props: AllWidgetSettingProps<IMConfig>) => {
   const onDataSourceChange = (useDataSources: UseDataSource[]) => {
     // Save the selected data sources to widget json.
     props.onSettingChange({
