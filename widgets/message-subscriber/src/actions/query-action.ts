@@ -21,7 +21,7 @@ export default class QueryAction extends AbstractMessageAction {
         break
       case MessageType.DataRecordsSelectionChange:
         q = `${actionConfig.fieldName} = ` +
-          `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'`
+          `${(message as DataRecordsSelectionChangeMessage).records.length > 0 ? `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'` : ''}`
         break
     }
 
