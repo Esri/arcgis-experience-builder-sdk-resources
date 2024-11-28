@@ -56,8 +56,8 @@ export default function (props: AllWidgetProps<IMConfig>) {
           x: evt.x,
           y: evt.y
         })
-        setLatitude(point.latitude.toFixed(3))
-        setLongitude(point.longitude.toFixed(3))
+        setLatitude(point.x.toFixed(3))
+        setLongitude(point.y.toFixed(3))
         setScale(Math.round(jmv.view.scale * 1) / 1)
         setZoom(jmv.view.zoom)
         setMapViewReady(true)
