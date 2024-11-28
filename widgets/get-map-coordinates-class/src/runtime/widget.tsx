@@ -70,8 +70,8 @@ IState
           y: evt.y
         })
         this.setState({
-          latitude: point.latitude.toFixed(3),
-          longitude: point.longitude.toFixed(3),
+          latitude: point.x.toFixed(3),
+          longitude: point.y.toFixed(3),
           scale: Math.round(jmv.view.scale * 1) / 1,
           zoom: jmv.view.zoom,
           mapViewReady: true
