@@ -8,49 +8,29 @@ import { ArcgisLayerList } from 'arcgis-map-components'
 import { ArcgisLegend } from '@arcgis/map-components-react'
 
 const Widget = (props: AllWidgetProps<{ [key: string]: never }>) => {
-  const [jimuMapView, setJimuMapView] = React.useState<JimuMapView>(null)
+  const legendRef = React.useRef(null)
+  const layerListRef = React.useRef(null)
 
   if (!props.useMapWidgetIds || props.useMapWidgetIds.length === 0) {
     return <div>Please select a map widget</div>
   }
 
   const onActiveViewChange = (activeView: JimuMapView) => {
-    if (!activeView) {
-      return
-    }
-    setJimuMapView(activeView)
-  }
-
-  const onArcgisLegendReady = (event: CustomEvent) => {
-    if (!event.target) {
+    if (!activeView || !legendRef.current || !layerListRef.current) {
       return
     }
 
-    (event.target as any).view = jimuMapView.view
-  }
-
-  const onArcgisLayerListReady = (event: CustomEvent) => {
-    if (!event.target) {
-      return
-    }
-
-    (event.target as any).view = jimuMapView.view
+    legendRef.current.view = activeView.view
+    layerListRef.current.view = activeView.view
   }
 
   return (
     <div className="widget-demo jimu-widget m-2">
       <JimuMapViewComponent onActiveViewChange={onActiveViewChange} useMapWidgetId={props.useMapWidgetIds[0]}></JimuMapViewComponent>
       <p>This widget demos how to use Maps components</p>
-      {
-        !jimuMapView && <div>Map is loading...</div>
-      }
-      {
-        jimuMapView && <ArcgisLegend onArcgisLegendReady={onArcgisLegendReady}></ArcgisLegend>
-      }
+      <ArcgisLegend ref={legendRef}></ArcgisLegend>
       <hr />
-      {
-        jimuMapView && <ArcgisLayerList onArcgisLayerListReady={onArcgisLayerListReady}></ArcgisLayerList>
-      }
+      <ArcgisLayerList ref={layerListRef}></ArcgisLayerList>
     </div>
   )
 }
