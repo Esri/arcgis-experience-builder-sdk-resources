@@ -1,0 +1,8 @@
+{
+  "componentLabel": "İz",
+  "startTracking": "Konumumu izlemeyi başlat",
+  "stopTracking": "Konumumu izlemeyi durdur",
+  "permissionError": "Bir hata oluştu. Lütfen tarayıcınızdaki ve işletim sisteminizdeki konum izinlerini kontrol edin.",
+  "timeoutError": "Konumunuz alınamıyor. Yeniden deneyin.",
+  "positionUnavailable": "Konumunuz alınamıyor. Lütfen cihazınızı kontrol edin."
+}

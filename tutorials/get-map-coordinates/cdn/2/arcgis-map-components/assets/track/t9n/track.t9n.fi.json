@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Väylä",
+  "startTracking": "Aloita sijainnin jäljitys",
+  "stopTracking": "Lopeta sijainnin jäljitys",
+  "permissionError": "Tapahtui virhe. Tarkista sijainnin käyttöoikeudet selaimestasi ja käyttöjärjestelmästä.",
+  "timeoutError": "Sijaintiasi ei voi noutaa. Yritä uudelleen.",
+  "positionUnavailable": "Sijaintiasi ei voi noutaa. Tarkista laitteesi."
+}

@@ -1,1 +1,0 @@
-System.register([],(function(i){return{execute:function(){i({_widgetLabel:"Tulpdiagramm",widgetProperties:"Vidina omadused",widgetFunctions:"Vidina funktsioonid",widgetName:"vidina nimi:",widgetProps:"vidina omadused:",tips:"Veerg"})}}}));

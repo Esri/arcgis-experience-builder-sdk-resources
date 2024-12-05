@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Skanneretning",
+  "startTracking": "Start sporing av posisjonen min",
+  "stopTracking": "Stopp sporing av posisjonen min",
+  "permissionError": "Det oppstod en feil. Sjekk lokasjonstillatelsene i nettleseren og operativsystemet.",
+  "timeoutError": "Kan ikke hente lokasjonen din. Prøv på nytt.",
+  "positionUnavailable": "Kan ikke hente lokasjonen din. Sjekk enheten din."
+}

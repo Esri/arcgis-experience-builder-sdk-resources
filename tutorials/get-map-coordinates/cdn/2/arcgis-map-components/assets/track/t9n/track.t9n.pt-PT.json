@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Pista",
+  "startTracking": "Iniciar o registo da minha localização",
+  "stopTracking": "Parar o registo da minha localização",
+  "permissionError": "Ocorreu um erro. Verifique as permissões de localização no seu navegador e sistema operativo.",
+  "timeoutError": "Não foi possível obter a sua localização. Tente novamente.",
+  "positionUnavailable": "Não foi possível obter a sua localização. Verifique o seu dispositivo."
+}

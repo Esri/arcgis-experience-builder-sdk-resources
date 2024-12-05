@@ -1,0 +1,39 @@
+{
+  "label": "Versiju pārvaldība",
+  "actions": {
+    "cancelSave": "Atcelt",
+    "deleteVersion": "Dzēst",
+    "editVersion": "Versijas iestatījumi",
+    "newVersion": "Jauna versija",
+    "refreshVersions": "Atsvaidzināt sarakstu",
+    "saveVersion": "Saglabāt",
+    "searchVersions": "Meklēt pēc nosaukuma vai īpašnieka",
+    "switchToVersion": "Pārslēgt uz versiju"
+  },
+  "accessLevels": {
+    "private": "Privāts",
+    "protected": "Aizsargāts",
+    "public": "Publisks"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Nederīgs versijas nosaukums.",
+    "noAdvancedEditingUserTypeExtension": "Pieteiktajam kontam trūkst Advanced Editing lietotāja veida paplašinājuma licences.",
+    "noFeatureServiceFound": "Netika atrasts neviens elementu pakalpojums.",
+    "notValidEnterpriseVersion": "Versiju izveides API nepieciešama ArcGIS Enterprise versija 11.2 vai jaunāka.",
+    "noVersionManagementServiceFound": "Netika atrasts neviens versiju pārvaldības pakalpojums."
+  },
+  "headers": {
+    "currentVersion": "Pašreizējā versija",
+    "manageVersions": "Pārvaldīt versijas"
+  },
+  "input": {
+    "versionAccess": "Piekļūt",
+    "versionDescription": "Apraksts",
+    "versionName": "Nosaukums",
+    "versionOwner": "Īpašnieks"
+  },
+  "loadErrors": {
+    "noFeatureServices": "“Slāņos” netika atrasts neviens elementu pakalpojums.",
+    "noViewProperty": "Rekvizīts “skatīt” nav atrodams VersionManagementViewModel."
+  }
+}

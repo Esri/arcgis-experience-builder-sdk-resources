@@ -1,1 +1,0 @@
-System.register([],(function(a){return{execute:function(){a({verticalAlign:"Dikey hizala",spaceAround:"Etrafında boşluk",spaceBetween:"Arasında boşluk",spaceEvenly:"Eşit aralıkla hizala",horizontalAlign:"Yatay hizala",scrollable:"Kaydırılabilir"})}}}));

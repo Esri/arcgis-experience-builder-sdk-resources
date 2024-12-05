@@ -1,0 +1,39 @@
+{
+  "label": "バージョン管理",
+  "actions": {
+    "cancelSave": "キャンセル",
+    "deleteVersion": "削除",
+    "editVersion": "バージョン設定",
+    "newVersion": "新規バージョン",
+    "refreshVersions": "リストの更新",
+    "saveVersion": "保存",
+    "searchVersions": "名前や所有者で検索",
+    "switchToVersion": "バージョンに切り替える"
+  },
+  "accessLevels": {
+    "private": "非公開",
+    "protected": "プロテクト",
+    "public": "パブリック"
+  },
+  "executionErrors": {
+    "invalidVersionName": "バージョン名が無効です。",
+    "noAdvancedEditingUserTypeExtension": "ログインしたアカウントには、Advanced Editing ユーザー タイプ エクステンションのライセンスがありません。",
+    "noFeatureServiceFound": "FeatureService が見つかりませんでした。",
+    "notValidEnterpriseVersion": "Versioning API では、ArcGIS Enterprise バージョン 11.2 以上が必要です。",
+    "noVersionManagementServiceFound": "VersionManagementService が見つかりませんでした。"
+  },
+  "headers": {
+    "currentVersion": "現在のバージョン",
+    "manageVersions": "バージョンの管理"
+  },
+  "input": {
+    "versionAccess": "アクセス",
+    "versionDescription": "説明",
+    "versionName": "名前",
+    "versionOwner": "所有者"
+  },
+  "loadErrors": {
+    "noFeatureServices": "レイヤーに FeatureService が見つかりませんでした。",
+    "noViewProperty": "VersionManagementViewModel にプロパティ「view」がありません。"
+  }
+}

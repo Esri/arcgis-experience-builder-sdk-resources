@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Spår",
+  "startTracking": "Börja spåra min plats",
+  "stopTracking": "Sluta spåra min plats",
+  "permissionError": "Ett fel uppstod. Kontrollera platsbehörigheter för din webbläsare och ditt operativsystem.",
+  "timeoutError": "Det går inte att hämta din position. Försök igen.",
+  "positionUnavailable": "Det går inte att hämta din position. Kontrollera din enhet."
+}

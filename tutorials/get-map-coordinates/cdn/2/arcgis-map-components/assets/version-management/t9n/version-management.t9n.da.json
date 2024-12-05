@@ -1,0 +1,39 @@
+{
+  "label": "Versionsstyring",
+  "actions": {
+    "cancelSave": "Annuller",
+    "deleteVersion": "Slet",
+    "editVersion": "Versionsindstillinger",
+    "newVersion": "Ny version",
+    "refreshVersions": "Opdater liste",
+    "saveVersion": "Gem",
+    "searchVersions": "Søg efter navn eller ejer",
+    "switchToVersion": "Skift til version"
+  },
+  "accessLevels": {
+    "private": "Privat",
+    "protected": "Beskyttet",
+    "public": "Offentlig"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Ugyldigt versionsnavn.",
+    "noAdvancedEditingUserTypeExtension": "Den konto, der er logget på, mangler en licens til brugertypeudvidelsen Avanceret redigering.",
+    "noFeatureServiceFound": "Ingen FeatureService blev fundet.",
+    "notValidEnterpriseVersion": "Versionerings-API kræver ArcGIS Enterprise version 11.2 eller senere.",
+    "noVersionManagementServiceFound": "Ingen VersionManagementService blev fundet."
+  },
+  "headers": {
+    "currentVersion": "Aktuel version",
+    "manageVersions": "Administrér versioner"
+  },
+  "input": {
+    "versionAccess": "Adgang",
+    "versionDescription": "Beskrivelse",
+    "versionName": "Navn",
+    "versionOwner": "Ejer"
+  },
+  "loadErrors": {
+    "noFeatureServices": "Ingen featureServices blev fundet i 'lag'.",
+    "noViewProperty": "Egenskaben 'vis' mangler på VersionManagementViewModel."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "label": "Správa verze",
+  "actions": {
+    "cancelSave": "Storno",
+    "deleteVersion": "Smazat",
+    "editVersion": "Nastavení verze",
+    "newVersion": "Nová verze",
+    "refreshVersions": "Obnovit seznam",
+    "saveVersion": "Uložit",
+    "searchVersions": "Hledat podle názvu nebo vlastníka",
+    "switchToVersion": "Přepnout na verzi"
+  },
+  "accessLevels": {
+    "private": "Soukromé",
+    "protected": "Chráněné",
+    "public": "Veřejné"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Neplatný název verze.",
+    "noAdvancedEditingUserTypeExtension": "Přihlášenému účtu chybí licence pro rozšíření typu uživatele Advanced Editing pro pokročilé úpravy.",
+    "noFeatureServiceFound": "Nebyl nalezen žádný FeatureService.",
+    "notValidEnterpriseVersion": "Verze API vyžaduje verzi ArcGIS Enterprise 11.2 nebo vyšší.",
+    "noVersionManagementServiceFound": "Nebyla nalezena žádná VersionManagementService."
+  },
+  "headers": {
+    "currentVersion": "Aktuální verze",
+    "manageVersions": "Spravovat verze"
+  },
+  "input": {
+    "versionAccess": "Přístup",
+    "versionDescription": "Popis",
+    "versionName": "Název",
+    "versionOwner": "Vlastník"
+  },
+  "loadErrors": {
+    "noFeatureServices": "Ve vrstvách nebyly nalezeny žádné freatureServices.",
+    "noViewProperty": "Vlastnost vrstva ve VersionManagementViewModel chybí."
+  }
+}

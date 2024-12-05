@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Sledování polohy",
+  "startTracking": "Spustit sledování mé polohy",
+  "stopTracking": "Zastavit sledování mé polohy",
+  "permissionError": "Došlo k chybě. Zkontrolujte prosím oprávnění pro zjišťování polohy ve svém prohlížeči a operačním systému.",
+  "timeoutError": "Nelze načíst vaši polohu. Zkuste to prosím znovu.",
+  "positionUnavailable": "Nelze načíst vaši polohu. Zkontrolujte své zařízení."
+}

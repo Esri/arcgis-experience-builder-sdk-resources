@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Suivi",
+  "startTracking": "Commencer le suivi de ma localisation",
+  "stopTracking": "Arrêter le suivi de ma localisation",
+  "permissionError": "Une erreur s’est produite. Vérifiez les autorisations de localisation sur votre navigateur et votre système d’exploitation.",
+  "timeoutError": "Impossible de récupérer votre localisation. Réessayez.",
+  "positionUnavailable": "Impossible de récupérer votre localisation. Vérifiez votre appareil."
+}

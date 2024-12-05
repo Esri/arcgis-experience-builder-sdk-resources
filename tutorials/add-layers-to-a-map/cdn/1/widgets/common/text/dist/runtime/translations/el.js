@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Κείμενο",defaultPlaceholder:"Κάντε διπλό κλικ για να επεξεργαστείτε το κείμενο."})}}}));

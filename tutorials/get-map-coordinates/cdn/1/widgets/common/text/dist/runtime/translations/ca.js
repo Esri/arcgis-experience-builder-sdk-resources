@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Text",defaultPlaceholder:"Feu doble clic per editar el text"})}}}));

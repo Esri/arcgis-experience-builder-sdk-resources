@@ -1,0 +1,39 @@
+{
+  "label": "版本管理",
+  "actions": {
+    "cancelSave": "取消",
+    "deleteVersion": "刪除",
+    "editVersion": "版本設定",
+    "newVersion": "新版本",
+    "refreshVersions": "重新整理清單",
+    "saveVersion": "儲存",
+    "searchVersions": "依名稱或擁有者搜尋",
+    "switchToVersion": "切換到版本"
+  },
+  "accessLevels": {
+    "private": "私有",
+    "protected": "受保護的",
+    "public": "公共"
+  },
+  "executionErrors": {
+    "invalidVersionName": "版本名稱無效。",
+    "noAdvancedEditingUserTypeExtension": "登入的帳戶缺少 Advanced Editing 使用者類型延伸模組的授權。",
+    "noFeatureServiceFound": "找不到 FeatureService。",
+    "notValidEnterpriseVersion": "版本控制 API 需要 ArcGIS Enterprise 11.2 或更高版本。",
+    "noVersionManagementServiceFound": "找不到 VersionManagementService。"
+  },
+  "headers": {
+    "currentVersion": "目前版本",
+    "manageVersions": "管理版本"
+  },
+  "input": {
+    "versionAccess": "存取",
+    "versionDescription": "描述",
+    "versionName": "名稱",
+    "versionOwner": "擁有者"
+  },
+  "loadErrors": {
+    "noFeatureServices": "在 'layers' 中找不到 featureServices。",
+    "noViewProperty": "VersionManagementViewModel 上缺少屬性 'view'。"
+  }
+}

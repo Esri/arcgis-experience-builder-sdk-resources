@@ -1,0 +1,39 @@
+{
+  "label": "Управление на версия",
+  "actions": {
+    "cancelSave": "Отказ",
+    "deleteVersion": "Изтриване",
+    "editVersion": "Настройки на версия",
+    "newVersion": "Нова версия",
+    "refreshVersions": "Обновяване на списъка",
+    "saveVersion": "Запазване",
+    "searchVersions": "Търсене по име или собственик",
+    "switchToVersion": "Превключване към версия"
+  },
+  "accessLevels": {
+    "private": "Лични",
+    "protected": "Защитени",
+    "public": "Публични"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Невалидно име на версия",
+    "noAdvancedEditingUserTypeExtension": "В акаунта, в който сте влезли, липсва лиценз за разширението за потребителски тип за разширено редактиране.",
+    "noFeatureServiceFound": "Не беше намерена FeatureService (Услуга за обект).",
+    "notValidEnterpriseVersion": "API за версии изисква версия ArcGIS Enterprise 11.2 или по-нова.",
+    "noVersionManagementServiceFound": "Не е намерена VersionManagementService (Услуга за управление на версия)"
+  },
+  "headers": {
+    "currentVersion": "Текущата версия",
+    "manageVersions": "Управление на версиите"
+  },
+  "input": {
+    "versionAccess": "Достъп",
+    "versionDescription": "Описание",
+    "versionName": "Име",
+    "versionOwner": "Собственик"
+  },
+  "loadErrors": {
+    "noFeatureServices": "В „слоеве“ не бяха открити featureServices (Услуги за обект).",
+    "noViewProperty": "Свойството „изглед“ липсва на VersionManagementViewModel."
+  }
+}

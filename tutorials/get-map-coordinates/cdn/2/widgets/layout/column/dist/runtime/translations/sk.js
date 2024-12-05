@@ -1,0 +1,1 @@
+System.register([],(function(t){return{execute:function(){t({_widgetLabel:"St\u013apec",widgetProperties:"Vlastnosti widgetu",widgetFunctions:"Funkcie widgetu",widgetName:"n\xe1zov widgetu:",widgetProps:"vlastnosti widgetu:",tips:"St\u013apec"})}}}));

@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Wyr\xf3wnanie pionowe",spaceAround:"Odst\u0119p wok\xf3\u0142",spaceBetween:"Odst\u0119p mi\u0119dzy",spaceEvenly:"R\xf3wne odst\u0119py",horizontalAlign:"Wyr\xf3wnanie poziome",scrollable:"Przewijalna"})}}}));

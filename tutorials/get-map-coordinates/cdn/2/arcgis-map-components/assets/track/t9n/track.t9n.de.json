@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Track",
+  "startTracking": "Verfolgung des eigenen Standorts starten",
+  "stopTracking": "Verfolgung des eigenen Standorts beenden",
+  "permissionError": "Es ist ein Fehler aufgetreten. Überprüfen Sie die Standortberechtigungen im Browser und im Betriebssystem.",
+  "timeoutError": "Ihre Position kann nicht abgerufen werden. Versuchen Sie es erneut.",
+  "positionUnavailable": "Ihre Position kann nicht abgerufen werden. Überprüfen Sie das Gerät."
+}

@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Recorrido",
+  "startTracking": "Empezar a rastrear mi ubicación",
+  "stopTracking": "Detener el rastreo de mi ubicación",
+  "permissionError": "Se ha producido un error. Compruebe los permisos de ubicación de su navegador y su sistema operativo.",
+  "timeoutError": "No se puede recuperar su ubicación. Inténtelo de nuevo.",
+  "positionUnavailable": "No se puede recuperar su ubicación. Compruebe su dispositivo."
+}

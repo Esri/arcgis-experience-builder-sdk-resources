@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Sloupec",widgetProperties:"Vlastnosti widgetu",widgetFunctions:"Funkce widgetu",widgetName:"N\xe1zev widgetu:",widgetProps:"Vlastnosti widgetu:",tips:"Sloupec"})}}}));

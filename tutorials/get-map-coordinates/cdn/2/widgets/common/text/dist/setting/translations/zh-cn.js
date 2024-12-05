@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlignment:"\u5782\u76f4\u5bf9\u9f50"})}}}));

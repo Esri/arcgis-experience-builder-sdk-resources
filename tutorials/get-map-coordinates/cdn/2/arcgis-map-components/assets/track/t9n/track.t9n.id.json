@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Jalur",
+  "startTracking": "Mulai melacak lokasi saya",
+  "stopTracking": "Berhenti melacak lokasi saya",
+  "permissionError": "Ada kesalahan. Harap periksa izin lokasi di browser dan sistem operasi Anda.",
+  "timeoutError": "Tidak dapat mengambil lokasi Anda. Silakan coba lagi.",
+  "positionUnavailable": "Tidak dapat mengambil lokasi Anda. Harap periksa perangkat Anda."
+}

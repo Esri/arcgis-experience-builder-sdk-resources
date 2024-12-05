@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Stopa",
+  "startTracking": "Začať sledovanie môjho umiestnenia",
+  "stopTracking": "Ukončiť sledovanie môjho umiestnenia",
+  "permissionError": "Vyskytla sa chyba. Skontrolujte povolenia polohy vo vašom prehliadači a operačnom systéme.",
+  "timeoutError": "Nepodarilo sa získať vašu polohu. Skúste to prosím znova.",
+  "positionUnavailable": "Nepodarilo sa získať vašu polohu. Skontrolujte vaše zariadenie."
+}

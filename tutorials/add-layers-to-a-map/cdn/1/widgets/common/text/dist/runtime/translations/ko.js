@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"텍스트",defaultPlaceholder:"텍스트를 편집하려면 더블 클릭"})}}}));

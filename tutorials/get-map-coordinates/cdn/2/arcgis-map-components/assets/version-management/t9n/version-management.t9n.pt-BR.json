@@ -1,0 +1,39 @@
+{
+  "label": "Gerenciamento de versão",
+  "actions": {
+    "cancelSave": "Cancelar",
+    "deleteVersion": "Excluir",
+    "editVersion": "Configurações da versão",
+    "newVersion": "Nova versão",
+    "refreshVersions": "Atualizar lista",
+    "saveVersion": "Salvar",
+    "searchVersions": "Pesquise por nome ou proprietário",
+    "switchToVersion": "Trocar para versão"
+  },
+  "accessLevels": {
+    "private": "Privado",
+    "protected": "Protegido",
+    "public": "Público"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Nome de versão inválido.",
+    "noAdvancedEditingUserTypeExtension": "A conta conectada não tem uma licença para a extensão de tipo de usuário Edição Avançada.",
+    "noFeatureServiceFound": "Nenhum FeatureService encontrado.",
+    "notValidEnterpriseVersion": "A API de versionamento requer ArcGIS Enterprise versão 11.2 ou superior.",
+    "noVersionManagementServiceFound": "Nenhum VersionManagementService foi encontrado."
+  },
+  "headers": {
+    "currentVersion": "Versão atual",
+    "manageVersions": "Gerenciar versões"
+  },
+  "input": {
+    "versionAccess": "Acessar",
+    "versionDescription": "Descrição",
+    "versionName": "Nome",
+    "versionOwner": "Proprietáeio"
+  },
+  "loadErrors": {
+    "noFeatureServices": "Nenhum featureServices foi encontrado em 'camadas'.",
+    "noViewProperty": "A propriedade 'view' está ausente VersionManagementViewModel."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Sekimas",
+  "startTracking": "Pradėti sekti mano vietą",
+  "stopTracking": "Nebesekti mano vietos",
+  "permissionError": "Įvyko klaida. Patikrinkite vietos nustatymo leidimus savo naršyklėje ir operacinėje sistemoje.",
+  "timeoutError": "Jūsų padėties nustatyti nepavyko. Pabandykite dar kartą.",
+  "positionUnavailable": "Jūsų padėties nustatyti nepavyko. Patikrinkite savo įrenginį."
+}

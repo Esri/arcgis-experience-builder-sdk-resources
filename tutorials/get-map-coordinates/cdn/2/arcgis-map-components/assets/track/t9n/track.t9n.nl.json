@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Track",
+  "startTracking": "Mijn locatie bijhouden",
+  "stopTracking": "Mijn locatie niet meer bijhouden",
+  "permissionError": "Er is een fout opgetreden. Controleer de locatiemachtigingen in uw browser en besturingssysteem.",
+  "timeoutError": "Kan uw locatie niet ophalen. Probeer het opnieuw.",
+  "positionUnavailable": "Kan uw locatie niet ophalen. Controleer uw apparaat."
+}

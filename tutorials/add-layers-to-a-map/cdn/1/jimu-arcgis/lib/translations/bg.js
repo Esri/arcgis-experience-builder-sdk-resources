@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"Този тип слой не се поддържа."})}}}));

@@ -1,0 +1,8 @@
+{
+  "componentLabel": "轨迹",
+  "startTracking": "开始追踪我的位置",
+  "stopTracking": "停止追踪我的位置",
+  "permissionError": "存在一个错误。 请检查浏览器和操作系统上的位置权限。",
+  "timeoutError": "无法检索您的位置。 请重试。",
+  "positionUnavailable": "无法检索您的位置。 请检查您的设备。"
+}

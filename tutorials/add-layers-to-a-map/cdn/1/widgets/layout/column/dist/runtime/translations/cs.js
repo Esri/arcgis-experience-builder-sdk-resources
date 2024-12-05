@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Sloupec",widgetProperties:"Vlastnosti widgetu",widgetFunctions:"Funkce widgetu",widgetName:"Název widgetu:",widgetProps:"Vlastnosti widgetu:",tips:"Sloupec"})}}}));

@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({verticalAlign:"محاذاة رأسية",spaceAround:"مسافات حول",spaceBetween:"مسافات بين",spaceEvenly:"مسافات متساوية",horizontalAlign:"محاذاة أفقية",scrollable:"قابلة للتمرير"})}}}));

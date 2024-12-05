@@ -1,0 +1,39 @@
+{
+  "label": "Διαχείριση έκδοσης",
+  "actions": {
+    "cancelSave": "Ακύρωση",
+    "deleteVersion": "Διαγραφή",
+    "editVersion": "Ρυθμίσεις έκδοσης",
+    "newVersion": "Νέα έκδοση",
+    "refreshVersions": "Ανανέωση λίστας",
+    "saveVersion": "Αποθήκευση",
+    "searchVersions": "Αναζήτηση ανά όνομα ή κάτοχο",
+    "switchToVersion": "Εναλλαγή στην έκδοση"
+  },
+  "accessLevels": {
+    "private": "Ιδιωτικό",
+    "protected": "Προστατευμένο",
+    "public": "Δημόσιο περιεχόμενο"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Μη έγκυρο όνομα έκδοσης",
+    "noAdvancedEditingUserTypeExtension": "Ο συνδεδεμένος λογαριασμός δεν διαθέτει άδεια χρήσης για την επέκταση τύπου χρήστη Advanced Editing.",
+    "noFeatureServiceFound": "Δεν βρέθηκε FeatureService.",
+    "notValidEnterpriseVersion": "Το API της διαχείρισης εκδόσεων απαιτεί χρήση του ArcGIS Enterprise 11.2 ή ανώτερης έκδοσης.",
+    "noVersionManagementServiceFound": "Δεν βρέθηκε VersionManagementService."
+  },
+  "headers": {
+    "currentVersion": "Τρέχουσα έκδοση",
+    "manageVersions": "Διαχείριση εκδόσεων"
+  },
+  "input": {
+    "versionAccess": "Πρόσβαση",
+    "versionDescription": "Περιγραφή",
+    "versionName": "Όνομα",
+    "versionOwner": "Κάτοχος"
+  },
+  "loadErrors": {
+    "noFeatureServices": "Δεν βρέθηκαν featureServices στα «θεματικά επίπεδα».",
+    "noViewProperty": "Η ιδιότητα «προβολή» λείπει στο VersionManagementViewModel."
+  }
+}

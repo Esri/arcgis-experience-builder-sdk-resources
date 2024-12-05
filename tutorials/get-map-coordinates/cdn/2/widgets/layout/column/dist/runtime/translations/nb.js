@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Kolonne",widgetProperties:"Miniprogramegenskaper",widgetFunctions:"Miniprogramfunksjoner",widgetName:"Navn p\xe5 miniprogram:",widgetProps:"Miniprogramegenskaper:",tips:"S\xf8yle"})}}}));

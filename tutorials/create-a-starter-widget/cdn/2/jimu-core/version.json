@@ -1,0 +1,10 @@
+{
+  "exbVersion": "1.16.0",
+  "exbBuildNum": "532",
+  "exbBuildCommit": "d681fed150bd52df8be371068a1366f96d465e50",
+  "exbBuildBranch": "origin/release/dev1.16",
+  "exbExtensionsBuildCommit": "6cd2d3729e4b380f02ec08ab6b695e47676fb7df",
+  "exbExtensionsBuildBranch": "origin/release/dev1.16",
+  "exbBuildDate": "20241125.190909.CST",
+  "productVersion": "ArcGIS Experience Builder"
+}

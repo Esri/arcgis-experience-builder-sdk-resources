@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Percorso",
+  "startTracking": "Avvia rilevamento posizione",
+  "stopTracking": "Interrompi rilevamento posizione",
+  "permissionError": "Errore. Controllare le autorizzazioni per la posizione nel browser e nel sistema operativo.",
+  "timeoutError": "Impossibile richiamare la posizione. Riprovare.",
+  "positionUnavailable": "Impossibile richiamare la posizione. Controllare il dispositivo."
+}

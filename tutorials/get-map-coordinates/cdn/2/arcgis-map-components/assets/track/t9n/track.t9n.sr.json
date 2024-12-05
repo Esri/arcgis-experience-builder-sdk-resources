@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Putanja",
+  "startTracking": "Počni da pratiš moju lokaciju",
+  "stopTracking": "Prestani da pratiš moju lokaciju",
+  "permissionError": "Došlo je do greške. Proverite dozvole za lokaciju u vašem pretraživaču i operativnom sistemu.",
+  "timeoutError": "Nije moguće preuzeti vašu lokaciju. Pokušajte ponovo.",
+  "positionUnavailable": "Nije moguće preuzeti vašu lokaciju. Proverite svoj uređaj."
+}

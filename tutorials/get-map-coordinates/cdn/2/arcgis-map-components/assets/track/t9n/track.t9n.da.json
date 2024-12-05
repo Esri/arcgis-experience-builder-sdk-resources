@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Sporing",
+  "startTracking": "Start sporing af min position",
+  "stopTracking": "Stop sporing af min position",
+  "permissionError": "Der opstod en fejl. Kontrollér positionstilladelserne i din browser og dit operativsystem.",
+  "timeoutError": "Kunne ikke hente din position. Prøv igen.",
+  "positionUnavailable": "Kunne ikke hente din position. Kontrollér din enhed."
+}

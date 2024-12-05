@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Theo dõi",
+  "startTracking": "Bắt đầu theo dõi vị trí của tôi",
+  "stopTracking": "Dừng theo dõi vị trí của tôi",
+  "permissionError": "Đã xảy ra lỗi. Vui lòng kiểm tra quyền truy cập vị trí trên trình duyệt và hệ điều hành của bạn.",
+  "timeoutError": "Không thể truy xuất vị trí của bạn. Vui lòng thử lại.",
+  "positionUnavailable": "Không thể truy xuất vị trí của bạn. Vui lòng kiểm tra thiết bị của bạn."
+}

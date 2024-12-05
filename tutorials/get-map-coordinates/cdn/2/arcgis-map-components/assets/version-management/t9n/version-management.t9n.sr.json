@@ -1,0 +1,39 @@
+{
+  "label": "Upravljanje verzijom",
+  "actions": {
+    "cancelSave": "Otkaži",
+    "deleteVersion": "Izbriši",
+    "editVersion": "Podešavanja verzije",
+    "newVersion": "Nova verzija",
+    "refreshVersions": "Osveži listu",
+    "saveVersion": "Sačuvaj",
+    "searchVersions": "Pretraži po imenu ili vlasniku",
+    "switchToVersion": "Prebacite se na verziju"
+  },
+  "accessLevels": {
+    "private": "Privatni",
+    "protected": "Zaštićeni",
+    "public": "Javni"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Nevažeći naziv verzije.",
+    "noAdvancedEditingUserTypeExtension": "Prijavljenom nalogu nedostaje licenca za proširenje tipa korisnika Napredno uređivanje.",
+    "noFeatureServiceFound": "Nije pronađen nijedan FeatureService.",
+    "notValidEnterpriseVersion": "API za izradu verzija zahteva ArcGIS Enterprise 11.2 ili noviju verziju.",
+    "noVersionManagementServiceFound": "Nije pronađen nijedan VersionManagementService."
+  },
+  "headers": {
+    "currentVersion": "Trenutna verzija",
+    "manageVersions": "Upravljajte verzijama"
+  },
+  "input": {
+    "versionAccess": "Pristupite",
+    "versionDescription": "Opis",
+    "versionName": "Naziv",
+    "versionOwner": "Vlasnik"
+  },
+  "loadErrors": {
+    "noFeatureServices": "U „slojevima“ nije pronađen featureServices.",
+    "noViewProperty": "„Pregled“ svojstva nedostaje u VersionManagementViewModel."
+  }
+}

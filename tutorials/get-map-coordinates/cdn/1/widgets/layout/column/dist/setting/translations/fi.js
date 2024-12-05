@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({verticalAlign:"Pystytasaus",spaceAround:"Tila ympärillä",spaceBetween:"Tila välissä",spaceEvenly:"Sijoita tasavälein",horizontalAlign:"Vaakatasaus",scrollable:"Vieritettävä"})}}}));

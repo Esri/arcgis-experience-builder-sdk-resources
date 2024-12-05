@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"Aquest tipus de capa no s'admet."})}}}));

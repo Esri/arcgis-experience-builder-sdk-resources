@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Sledenje",
+  "startTracking": "Začni sledenje moje lokacije",
+  "stopTracking": "Ustavi sledenje moje lokacije",
+  "permissionError": "Prišlo je do napake. Preverite dovoljenja za lokacijo v brskalniku in operacijskem sistemu.",
+  "timeoutError": "Vaše lokacije ni mogoče pridobiti. Poskusite znova.",
+  "positionUnavailable": "Vaše lokacije ni mogoče pridobiti. Prosimo, preverite svojo napravo."
+}

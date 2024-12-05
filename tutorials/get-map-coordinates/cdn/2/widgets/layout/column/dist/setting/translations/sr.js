@@ -1,0 +1,1 @@
+System.register([],(function(o){return{execute:function(){o({verticalAlign:"Vertikalno poravnanje",spaceAround:"Prostor oko",spaceBetween:"Prostor izme\u0111u",spaceEvenly:"Podjednak prostor",horizontalAlign:"Horizontalno poravnanje",scrollable:"Mogu\u0107nost listanja"})}}}));

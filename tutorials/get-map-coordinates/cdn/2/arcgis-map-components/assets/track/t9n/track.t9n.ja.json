@@ -1,0 +1,8 @@
+{
+  "componentLabel": "追跡",
+  "startTracking": "自分の位置の追跡を開始",
+  "stopTracking": "自分の位置の追跡を停止",
+  "permissionError": "エラーが発生しました。 ブラウザーやオペレーティング システムに対する位置情報の権限を確認してください。",
+  "timeoutError": "現在地を取得できません。 もう一度お試しください。",
+  "positionUnavailable": "現在地を取得できません。 デバイスを確認してください。"
+}

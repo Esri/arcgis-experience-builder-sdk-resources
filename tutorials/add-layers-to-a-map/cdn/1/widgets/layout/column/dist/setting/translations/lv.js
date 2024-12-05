@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({verticalAlign:"Vertikāls līdzinājums",spaceAround:"Atstarpe visapkārt",spaceBetween:"Atstarpe starp",spaceEvenly:"Vienmērīgi sadalīt atstarpes",horizontalAlign:"Horizontāls līdzinājums",scrollable:"Ritināms"})}}}));

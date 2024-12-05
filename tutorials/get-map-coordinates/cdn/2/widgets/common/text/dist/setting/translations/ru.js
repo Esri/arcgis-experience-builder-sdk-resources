@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlignment:"\u0412\u044b\u0440\u043e\u0432\u043d\u044f\u0442\u044c \u043f\u043e \u0432\u0435\u0440\u0442\u0438\u043a\u0430\u043b\u0438"})}}}));

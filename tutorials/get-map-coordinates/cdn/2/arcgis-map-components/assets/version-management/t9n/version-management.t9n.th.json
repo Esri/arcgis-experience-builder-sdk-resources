@@ -1,0 +1,39 @@
+{
+  "label": "การจัดการเวอร์ชัน",
+  "actions": {
+    "cancelSave": "ยกเลิก",
+    "deleteVersion": "ลบ",
+    "editVersion": "การตั้งค่าเวอร์ชัน",
+    "newVersion": "เวอร์ชันใหม่",
+    "refreshVersions": "รีเฟรชรายการ",
+    "saveVersion": "จัดเก็บ",
+    "searchVersions": "ค้นหาตามชื่อหรือเจ้าของ",
+    "switchToVersion": "สลับเป็นเวอร์ชัน"
+  },
+  "accessLevels": {
+    "private": "ส่วนตัว",
+    "protected": "ได้รับการป้องกัน",
+    "public": "สาธารณะ"
+  },
+  "executionErrors": {
+    "invalidVersionName": "ชื่อเวอร์ชันไม่ถูกต้อง",
+    "noAdvancedEditingUserTypeExtension": "บัญชีที่เข้าสู่ระบบไว้ ไม่มีสิทธิ์การใช้งานส่วนขยายประเภทผู้ใช้ Advanced Editing",
+    "noFeatureServiceFound": "ไม่พบฟีเจอร์เซอร์วิส",
+    "notValidEnterpriseVersion": "Versioning API ต้องการ ArcGIS Enterprise เวอร์ชัน 11.2 หรือสูงกว่า",
+    "noVersionManagementServiceFound": "ไม่พบ VersionManagementService"
+  },
+  "headers": {
+    "currentVersion": "เวอร์ชันปัจจุบัน",
+    "manageVersions": "จัดการเวอร์ชัน"
+  },
+  "input": {
+    "versionAccess": "เข้าถึง",
+    "versionDescription": "รายละเอียด",
+    "versionName": "ชื่อ",
+    "versionOwner": "เจ้าของ"
+  },
+  "loadErrors": {
+    "noFeatureServices": "ไม่พบฟีเจอร์เซอร์วิสใน 'layers'",
+    "noViewProperty": "ไม่มีคุณสมบัติ 'view' ใน VersionManagementViewModel"
+  }
+}

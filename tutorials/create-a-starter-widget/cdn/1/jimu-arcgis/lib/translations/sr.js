@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"Ovaj tip sloja nije podržan."})}}}));

@@ -1,0 +1,21 @@
+{
+  "name": "starter-widget",
+  "type": "widget",
+  "version": "1.16.0",
+  "exbVersion": "1.16.0",
+  "author": "Your Name",
+  "description": "A hello world starter widget",
+  "copyright": "",
+  "license": "",
+  "properties": {
+    "hasConfig": false,
+    "hasSettingPage": false
+  },
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}

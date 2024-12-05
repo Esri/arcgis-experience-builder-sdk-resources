@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Izsekošana",
+  "startTracking": "Sākt mana novietojuma izsekošanu",
+  "stopTracking": "Pārtraukt mana novietojuma izsekošanu",
+  "permissionError": "Kļūda. Lūdzu, pārbaudiet novietojuma atļaujas pārlūkprogrammā un operētājsistēmā.",
+  "timeoutError": "Nevar izgūt jūsu novietojumu. Lūdzu, mēģiniet vēlreiz.",
+  "positionUnavailable": "Nevar izgūt jūsu novietojumu. Lūdzu, pārbaudiet savu ierīci."
+}

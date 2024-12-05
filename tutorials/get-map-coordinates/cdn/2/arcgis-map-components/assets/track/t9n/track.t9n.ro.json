@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Monitorizare",
+  "startTracking": "Începere monitorizare locaţia mea",
+  "stopTracking": "Oprire monitorizare locaţia mea",
+  "permissionError": "A existat o eroare. Verificați permisiunile de locație din browserul și sistemul dvs. de operare.",
+  "timeoutError": "Nu se poate recupera locația dvs. Încercați din nou.",
+  "positionUnavailable": "Nu se poate recupera locația dvs. Verificați-vă dispozitivul."
+}

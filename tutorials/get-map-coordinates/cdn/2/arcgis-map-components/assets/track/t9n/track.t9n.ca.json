@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Recorregut",
+  "startTracking": "Inicia el seguiment de la meva ubicació",
+  "stopTracking": "Atura el seguiment de la meva ubicació",
+  "permissionError": "S'ha produït un error. Comproveu els permisos d'ubicació del navegador i el sistema operatiu.",
+  "timeoutError": "No es pot recuperar la vostra ubicació. Torneu-ho a provar.",
+  "positionUnavailable": "No es pot recuperar la vostra ubicació. Comproveu el vostre dispositiu."
+}

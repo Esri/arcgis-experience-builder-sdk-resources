@@ -1,0 +1,17 @@
+{
+  "componentLabel": "Locate",
+  "title": "Find my location",
+  "currentLocation": "Current location",
+  "timestamp": "Timestamp",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "accuracy": "Accuracy",
+  "altitude": "Altitude",
+  "altitudeAccuracy": "Altitude accuracy",
+  "heading": "Heading",
+  "speed": "Speed",
+  "permissionError": "There was an error. Please check the location permissions on your browser and operating system.",
+  "timeoutError": "Unable to retrieve your location. Please try again.",
+  "positionUnavailable": "Unable to retrieve your location. Please check your device.",
+  "cancel": "Cancel"
+}

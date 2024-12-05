@@ -1,0 +1,13 @@
+System.register(["jimu-core","jimu-ui","jimu-layouts/layout-runtime"],(function(e,t){var o={},r={},n={};return{setters:[function(e){o.React=e.React,o.css=e.css,o.jsx=e.jsx},function(e){r.WidgetPlaceholder=e.WidgetPlaceholder},function(e){n.ColumnLayoutViewer=e.ColumnLayoutViewer}],execute:function(){e((()=>{var e={26791:e=>{e.exports='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path fill="#000" fill-rule="evenodd" d="M17 2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2zM5 1h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m2 2h6v6H7zm0 8h1v2H7zm2 0h1v1H9zm4 2h-1v1h1zm-6 1h1v1H7zm4 2h-1v1h1zm1-1h1v2h-1zm-3 2v-1H7v1zm2-6h2v1h-2z" clip-rule="evenodd"></path></svg>'},79244:e=>{"use strict";e.exports=o},41496:e=>{"use strict";e.exports=n},14321:e=>{"use strict";e.exports=r}},t={};function s(o){var r=t[o];if(void 0!==r)return r.exports;var n=t[o]={exports:{}};return e[o](n,n.exports,s),n.exports}s.d=(e,t)=>{for(var o in t)s.o(t,o)&&!s.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},s.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),s.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},s.p="";var i={};return s.p=window.jimuConfig.baseUrl,(()=>{"use strict";s.r(i),s.d(i,{__set_webpack_public_path__:()=>u,default:()=>l});var e=s(79244),t=s(14321),o=s(41496);const r="Column",n=s(26791);class l extends e.React.PureComponent{getStyle(){return e.css`
+      & > div.column-layout {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+
+        & > .trail-container {
+          height: 100%;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+      }
+    `}render(){const{layouts:s,id:i,intl:l,builderSupportModules:u}=this.props,a=window.jimuConfig.isInBuilder?u.widgetModules.ColumnLayoutBuilder:o.ColumnLayoutViewer;if(null==a)return(0,e.jsx)("div",{style:{display:"flex",justifyContent:"center",alignItems:"center"}},"No layout component!");const d=Object.keys(s)[0];return(0,e.jsx)("div",{className:"widget-column-layout w-100 h-100",css:this.getStyle(),style:{overflow:"auto"}},(0,e.jsx)(a,{layouts:s[d]},(0,e.jsx)(t.WidgetPlaceholder,{icon:n,widgetId:i,style:{border:"none",height:"100%",pointerEvents:"none",position:"absolute"},message:l.formatMessage({id:"tips",defaultMessage:r})})))}}function u(e){s.p=e}})(),i})())}}}));

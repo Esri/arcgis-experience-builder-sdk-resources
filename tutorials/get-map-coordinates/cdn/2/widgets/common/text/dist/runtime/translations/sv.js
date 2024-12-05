@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Text",defaultPlaceholder:"Dubbelklicka f\xf6r att redigera text"})}}}));

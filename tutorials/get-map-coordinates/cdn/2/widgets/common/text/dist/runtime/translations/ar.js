@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"\u0627\u0644\u0646\u0635",defaultPlaceholder:"\u0627\u0646\u0642\u0631 \u0646\u0642\u0631\u064b\u0627 \u0645\u0632\u062f\u0648\u062c\u064b\u0627 \u0644\u062a\u062d\u0631\u064a\u0631 \u0627\u0644\u0646\u0635"})}}}));

@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Text",defaultPlaceholder:"Dvojitým kliknutím zahájíte editaci textu"})}}}));

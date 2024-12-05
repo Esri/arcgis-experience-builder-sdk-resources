@@ -1,0 +1,39 @@
+{
+  "label": "Manajemen versi",
+  "actions": {
+    "cancelSave": "Batalkan",
+    "deleteVersion": "Hapus",
+    "editVersion": "Pengaturan versi",
+    "newVersion": "Versi baru",
+    "refreshVersions": "Muat ulang daftar",
+    "saveVersion": "Simpan",
+    "searchVersions": "Car berdasarkan nama atau pemilik",
+    "switchToVersion": "Beralih ke versi"
+  },
+  "accessLevels": {
+    "private": "Pribadi",
+    "protected": "Dilindungi",
+    "public": "Publik"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Nama versi tidak valid.",
+    "noAdvancedEditingUserTypeExtension": "Akun yang masuk tidak memiliki lisensi untuk ekstensi jenis pengguna Pengeditan Lanjutan.",
+    "noFeatureServiceFound": "Tidak ada FeatureService yang ditemukan.",
+    "notValidEnterpriseVersion": "Mengatur versi API memerlukan ArcGIS Enterprise versi 11.2 atau lebih tinggi.",
+    "noVersionManagementServiceFound": "VersionManagementService tidak ditemukan."
+  },
+  "headers": {
+    "currentVersion": "Versi saat ini",
+    "manageVersions": "Kelola versi"
+  },
+  "input": {
+    "versionAccess": "Akses",
+    "versionDescription": "Deskripsi",
+    "versionName": "Nama",
+    "versionOwner": "Pemilik"
+  },
+  "loadErrors": {
+    "noFeatureServices": "FeatureService tidak ditemukan dalam 'layer'.",
+    "noViewProperty": "'Tampilan' properti tidak ada di VersionManagementViewModel."
+  }
+}

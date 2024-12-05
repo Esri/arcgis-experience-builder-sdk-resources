@@ -1,0 +1,39 @@
+{
+  "label": "Quản lý phiên bản",
+  "actions": {
+    "cancelSave": "Hủy",
+    "deleteVersion": "Xóa",
+    "editVersion": "Cài đặt phiên bản",
+    "newVersion": "Phiên bản mới",
+    "refreshVersions": "Tải lại danh sách",
+    "saveVersion": "Lưu",
+    "searchVersions": "Tìm kiếm theo tên hoặc chủ sở hữu",
+    "switchToVersion": "Chuyển đổi sang phiên bản"
+  },
+  "accessLevels": {
+    "private": "Riêng tư",
+    "protected": "Được bảo vệ",
+    "public": "Công khai"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Tên phiên bản không hợp lệ.",
+    "noAdvancedEditingUserTypeExtension": "Tài khoản đã đăng nhập thiếu giấy phép cho tiện ích mở rộng loại người dùng Chỉnh sửa Nâng cao.",
+    "noFeatureServiceFound": "Không tìm thấy FeatureService.",
+    "notValidEnterpriseVersion": "Tạo phiên bản API yêu cầu ArcGIS Enterprise phiên bản 11.2 trở lên.",
+    "noVersionManagementServiceFound": "Không tìm thấy VersionManagementService."
+  },
+  "headers": {
+    "currentVersion": "Phiên bản hiện tại",
+    "manageVersions": "Quản lý phiên bản"
+  },
+  "input": {
+    "versionAccess": "Truy cập",
+    "versionDescription": "Thông tin mô tả",
+    "versionName": "Tên",
+    "versionOwner": "Chủ sở hữu"
+  },
+  "loadErrors": {
+    "noFeatureServices": "Không tìm thấy featureServices trong 'lớp'.",
+    "noViewProperty": "Thiếu thuộc tính 'xem' trên VersionManagementViewModel."
+  }
+}

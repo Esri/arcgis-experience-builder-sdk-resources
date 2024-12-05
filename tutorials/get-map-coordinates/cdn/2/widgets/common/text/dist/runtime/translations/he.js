@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"\u05d8\u05e7\u05e1\u05d8",defaultPlaceholder:"\u05dc\u05d7\u05e5 \u05e4\u05e2\u05de\u05d9\u05d9\u05dd \u05dc\u05e2\u05e8\u05d9\u05db\u05ea \u05d4\u05d8\u05e7\u05e1\u05d8"})}}}));

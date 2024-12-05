@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Text",defaultPlaceholder:"Dubbelklicka för att redigera text"})}}}));

@@ -1,0 +1,1 @@
+System.register([],(function(n){return{execute:function(){n({verticalAlign:"C\u0103n d\u1ecdc",spaceAround:"C\xe1ch xung quanh",spaceBetween:"C\xe1ch gi\u1eefa",spaceEvenly:"C\xe1ch \u0111\u1ec1u",horizontalAlign:"C\u0103n ngang",scrollable:"C\xf3 th\u1ec3 cu\u1ed9n"})}}}));

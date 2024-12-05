@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Ścieżka",
+  "startTracking": "Zacznij śledzić moją lokalizację",
+  "stopTracking": "Przestań śledzić moją lokalizację",
+  "permissionError": "Wystąpił błąd. Sprawdź uprawnienia lokalizacji w przeglądarce i systemie operacyjnym.",
+  "timeoutError": "Nie można pobrać Twojej lokalizacji. Spróbuj ponownie.",
+  "positionUnavailable": "Nie można pobrać Twojej lokalizacji. Sprawdź urządzenie."
+}

@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Caminho",
+  "startTracking": "Iniciar acompanhamento de minha posição",
+  "stopTracking": "Parar acompanhamento de minha posição",
+  "permissionError": "Ocorreu um erro. Verifique as permissões de localização no seu navegador e sistema operacional.",
+  "timeoutError": "Não foi possível recuperar sua localização. Tente novamente.",
+  "positionUnavailable": "Não foi possível recuperar sua localização. Verifique seu dispositivo."
+}

@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Track",
+  "startTracking": "Start tracking my location",
+  "stopTracking": "Stop tracking my location",
+  "permissionError": "There was an error. Please check the location permissions on your browser and operating system.",
+  "timeoutError": "Unable to retrieve your location. Please try again.",
+  "positionUnavailable": "Unable to retrieve your location. Please check your device."
+}

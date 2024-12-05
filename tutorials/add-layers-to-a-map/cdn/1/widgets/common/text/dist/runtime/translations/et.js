@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Tekst",defaultPlaceholder:"Teksti muutmiseks tehke palun topeltklõps"})}}}));

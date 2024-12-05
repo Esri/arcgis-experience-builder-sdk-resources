@@ -1,0 +1,8 @@
+{
+  "componentLabel": "Követés",
+  "startTracking": "A saját helyzetem követésének megkezdése",
+  "stopTracking": "A saját helyzetem követésének leállítása",
+  "permissionError": "Hiba történt. Kérjük, ellenőrizze a böngésző és az operációs rendszer helymeghatározási engedélyeit.",
+  "timeoutError": "Nem sikerült lekérni a helyét. Próbálja meg újra.",
+  "positionUnavailable": "Nem sikerült lekérni a helyét. Ellenőrizze az eszközét."
+}

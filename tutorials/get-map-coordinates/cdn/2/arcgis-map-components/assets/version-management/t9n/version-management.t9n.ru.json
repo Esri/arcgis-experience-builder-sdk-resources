@@ -1,0 +1,39 @@
+{
+  "label": "Управление версиями",
+  "actions": {
+    "cancelSave": "Отмена",
+    "deleteVersion": "Удалить",
+    "editVersion": "Настройки версии",
+    "newVersion": "Новая версия",
+    "refreshVersions": "Обновить список",
+    "saveVersion": "Сохранить",
+    "searchVersions": "Найти по имени или владельцу",
+    "switchToVersion": "Переключиться на версию"
+  },
+  "accessLevels": {
+    "private": "Частный",
+    "protected": "Защищенный",
+    "public": "Общедоступный"
+  },
+  "executionErrors": {
+    "invalidVersionName": "Недопустимое имя версии.",
+    "noAdvancedEditingUserTypeExtension": "У учетной записи, под которой выполнен вход, отсутствует лицензия на расширение типа пользователя Advanced Editing.",
+    "noFeatureServiceFound": "FeatureService не найден.",
+    "notValidEnterpriseVersion": "Управление версиями API требует ArcGIS Enterprise 11.2 или выше.",
+    "noVersionManagementServiceFound": "VersionManagementService не найден."
+  },
+  "headers": {
+    "currentVersion": "Текущая версия",
+    "manageVersions": "Управление версиями"
+  },
+  "input": {
+    "versionAccess": "Доступ",
+    "versionDescription": "Описание",
+    "versionName": "Имя",
+    "versionOwner": "Владелец"
+  },
+  "loadErrors": {
+    "noFeatureServices": "FeatureServices не найдены в 'layers'.",
+    "noViewProperty": "Свойство 'view' отсутствует в VersionManagementViewModel."
+  }
+}
