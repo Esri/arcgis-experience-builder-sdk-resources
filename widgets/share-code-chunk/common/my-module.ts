@@ -1,5 +1,5 @@
 import { f } from './fn'
 
-export function f1 () {
-  return `In f1. ${f()}`
+export function f1 (message: string) {
+  return `This is the module, calling a common function. ${f(message)}`
 }
