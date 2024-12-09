@@ -11,7 +11,7 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   return (
     <div className="widget-demo jimu-widget m-2">
       <div>Widget 2</div>
-      {myModule && <div>Module loaded, {myModule.f1()}</div>}
+      {myModule && <div>Module loaded.<br/>{myModule.f1('clunky widget 2')}</div>}
     </div>
   )
 }
