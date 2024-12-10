@@ -1,0 +1,17 @@
+{
+  "name": "runtime-data-source-without-saving-to-config",
+  "label": "Runtime data source without saving to config",
+  "type": "widget",
+  "version": "1.16.0",
+  "exbVersion": "1.16.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is an example of how to create a runtime data source without saving to config.",
+  "copyright": "",
+  "license": "",
+  "properties": {},
+  "translatedLocales": ["en"],
+  "defaultSize": {
+    "width": 600,
+    "height": 500
+  }
+}

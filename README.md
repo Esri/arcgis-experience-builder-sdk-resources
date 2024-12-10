@@ -1,4 +1,4 @@
-# Overview - V1.15
+# Overview - V1.16
 
 This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about [ArcGIS Experience Builder SDK](https://developers.arcgis.com/experience-builder/guide/core-concepts/).
 
@@ -25,7 +25,7 @@ Find a bug or want to request a new feature? Please let us know by submitting an
 
 
 ## Licensing
-Copyright 2023 Esri
+Copyright 2024 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

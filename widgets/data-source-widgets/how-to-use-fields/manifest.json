@@ -1,0 +1,17 @@
+{
+  "name": "how-to-use-fields",
+  "label": "How to use fields",
+  "type": "widget",
+  "version": "1.16.0",
+  "exbVersion": "1.16.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is an example of how to use fields.",
+  "copyright": "",
+  "license": "",
+  "properties": {},
+  "translatedLocales": ["en"],
+  "defaultSize": {
+    "width": 600,
+    "height": 500
+  }
+}
