@@ -1,4 +1,4 @@
-This patch fixes the issue that unable to access the data that includes subtypes when publishing it as a map image.
+This patch resolves the issue preventing access to data containing subtypes when published as a map image.
 
 Steps:
 
