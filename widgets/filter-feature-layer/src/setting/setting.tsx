@@ -18,7 +18,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { jsx, Immutable, type UseDataSource, JimuFieldType, AllDataSourceTypes } from 'jimu-core'
+import { jsx, Immutable, type UseDataSource, JimuFieldType, DataSourceTypes } from 'jimu-core'
 import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 import {
@@ -29,7 +29,7 @@ import { type IMConfig } from '../config'
 import defaultI18nMessages from './translations/default'
 
 export default function (props: AllWidgetSettingProps<IMConfig>) {
-  const supportedDsTypes = Immutable([AllDataSourceTypes.FeatureLayer])
+  const supportedDsTypes = Immutable([DataSourceTypes.FeatureLayer])
   const supportedFieldTypes = Immutable([JimuFieldType.String])
 
   // When the dataSource is chosen, save it to the settings.

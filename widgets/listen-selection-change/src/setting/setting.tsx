@@ -17,7 +17,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable, type UseDataSource, AllDataSourceTypes } from 'jimu-core'
+import { React, Immutable, type UseDataSource, DataSourceTypes } from 'jimu-core'
 import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 
@@ -38,7 +38,7 @@ export default function Setting (props: AllWidgetSettingProps<unknown>) {
 
   return <div className='widget-setting-listen-selection-change p-2'>
     <DataSourceSelector
-      types={Immutable([AllDataSourceTypes.FeatureLayer])}
+      types={Immutable([DataSourceTypes.FeatureLayer])}
       useDataSources={props.useDataSources}
       useDataSourcesEnabled={props.useDataSourcesEnabled}
       onToggleUseDataEnabled={onToggleUseDataEnabled}

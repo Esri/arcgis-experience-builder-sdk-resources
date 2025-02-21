@@ -1,4 +1,4 @@
-import { React, Immutable, type UseDataSource, AllDataSourceTypes } from 'jimu-core'
+import { React, Immutable, type UseDataSource, DataSourceTypes } from 'jimu-core'
 import { type AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 
@@ -19,7 +19,7 @@ export default function Setting (props: AllWidgetSettingProps<unknown>) {
 
   return <div className="use-feature-layer-setting p-2">
     <DataSourceSelector
-      types={Immutable([AllDataSourceTypes.FeatureLayer])}
+      types={Immutable([DataSourceTypes.FeatureLayer])}
       useDataSources={props.useDataSources}
       useDataSourcesEnabled={props.useDataSourcesEnabled}
       onToggleUseDataEnabled={onToggleUseDataEnabled}
