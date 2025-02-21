@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, DataSourceComponent, type IMUseDataSource } from 'jimu-core'
+import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, DataSourceComponent, type IMUseDataSource, type QueryParams, type FeatureLayerDataSource, type DataSource } from 'jimu-core'
 import { type IMConfig } from '../config'
 import { Select, Option } from 'jimu-ui'
 import { useEffect } from 'react'
-import { type QueryParams, type FeatureLayerDataSource, type DataSource } from 'jimu-core/data-source'
 
 const { useState } = React
 enum QueryTypes {

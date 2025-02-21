@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, type DataSource, type IMDataSourceJson, ServiceManager } from 'jimu-core'
+import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, type DataSource, type IMDataSourceJson, ServiceManager, dataSourceJsonCreator, type FeatureLayerDataSource, type FeatureLayerDataSourceConstructorOptions, dataSourceUtils } from 'jimu-core'
 import { type IMConfig } from '../config'
 import { Button, TextInput } from 'jimu-ui'
 import { useEffect } from 'react'
-import { dataSourceJsonCreator, type FeatureLayerDataSource, type FeatureLayerDataSourceConstructorOptions } from 'jimu-core/data-source'
 
 const { useState } = React
 
@@ -64,7 +63,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
 
 export default Widget
 
-async function createDataSource (dsId: string, url: string): Promise<DataSource> {
+async function createDataSource(dsId: string, url: string): Promise<DataSource> {
   const dsJson = await fetchDataSourceJson(dsId, url)
   const dsOptions: FeatureLayerDataSourceConstructorOptions = {
     id: dsId,
@@ -75,7 +74,7 @@ async function createDataSource (dsId: string, url: string): Promise<DataSource>
   return DataSourceManager.getInstance().createDataSource(dsOptions)
 }
 
-async function fetchDataSourceJson (dsId: string, url: string): Promise<IMDataSourceJson> {
+async function fetchDataSourceJson(dsId: string, url: string): Promise<IMDataSourceJson> {
   if (!url) {
     return Promise.reject('Need URL.')
   }
@@ -90,13 +89,13 @@ async function fetchDataSourceJson (dsId: string, url: string): Promise<IMDataSo
 
   const layerDefinition = await ServiceManager.getInstance().fetchServiceInfo(url).then(res => res.definition)
   // You can create data source json by a Maps SDK layer.
-  // const dsJson = dataSourceJsonCreator.createDataSourceJsonByJSAPILayer(dsId, mapsSDKLayer)
-  const dsJson = dataSourceJsonCreator.createDataSourceJsonByLayerDefinition(dsId, layerDefinition, normalizedUrl)
+  // const dsJson = dataSourceUtils.dataSourceJsonCreator.createDataSourceJsonByJSAPILayer(dsId, mapsSDKLayer)
+  const dsJson = dataSourceUtils.dataSourceJsonCreator.createDataSourceJsonByLayerDefinition(dsId, layerDefinition, normalizedUrl)
 
   return dsJson
 }
 
-function getStyle (): SerializedStyles {
+function getStyle(): SerializedStyles {
   return css`
     .query-results {
       width: 100%;
