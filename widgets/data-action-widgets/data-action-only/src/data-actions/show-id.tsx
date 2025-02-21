@@ -29,7 +29,7 @@ function MyPopper (props: PopperProps) {
   }
 
   return <Popper
-    showArrow
+    arrowOptions
     open={isOpen}
     toggle={handleToggle}
     reference={popperRef}
