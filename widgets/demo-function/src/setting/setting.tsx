@@ -18,11 +18,11 @@
   LICENSE file.
 */
 import { React, FormattedMessage } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
-import { type IMConfig } from '../config'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
+import type { IMConfig } from '../config'
 import defaultI18nMessages from './translations/default'
 
-export default function Setting(props:AllWidgetSettingProps<IMConfig>) {
+export default function Setting(props: AllWidgetSettingProps<IMConfig>) {
   const onP1Change = (evt: React.FormEvent<HTMLInputElement>) => {
     props.onSettingChange({
       id: props.id,
@@ -36,10 +36,10 @@ export default function Setting(props:AllWidgetSettingProps<IMConfig>) {
       config: props.config.set('p2', evt.currentTarget.value)
     })
   }
-  
+
   return <div className="widget-setting-demo">
-      <div><FormattedMessage id="p1" defaultMessage={defaultI18nMessages.p1}/>: <input defaultValue={props.config.p1} onChange={onP1Change}/></div>
-      <div><FormattedMessage id="p2" defaultMessage={defaultI18nMessages.p2}/>: <input defaultValue={props.config.p2} onChange={onP2Change}/></div>
-    </div>
-  
+    <div><FormattedMessage id="p1" defaultMessage={defaultI18nMessages.p1} />: <input defaultValue={props.config.p1} onChange={onP1Change} /></div>
+    <div><FormattedMessage id="p2" defaultMessage={defaultI18nMessages.p2} />: <input defaultValue={props.config.p2} onChange={onP2Change} /></div>
+  </div>
+
 }

@@ -19,13 +19,13 @@
   LICENSE file.
 */
 import { jsx, Immutable, type UseDataSource, JimuFieldType, DataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 import {
   SettingSection,
   SettingRow
 } from 'jimu-ui/advanced/setting-components'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import defaultI18nMessages from './translations/default'
 
 export default function (props: AllWidgetSettingProps<IMConfig>) {

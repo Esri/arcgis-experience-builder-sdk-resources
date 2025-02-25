@@ -18,10 +18,10 @@
   LICENSE file.
 */
 import { React, Immutable, type IMFieldSchema, type UseDataSource, DataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default function Setting (props: AllWidgetSettingProps<unknown>) {
+export default function Setting(props: AllWidgetSettingProps<unknown>) {
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     props.onSettingChange({
       id: props.id,

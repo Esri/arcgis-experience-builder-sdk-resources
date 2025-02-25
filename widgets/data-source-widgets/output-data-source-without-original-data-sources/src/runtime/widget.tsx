@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, DataSourceStatus, type SerializedStyles } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { Button, Link, TextInput } from 'jimu-ui'
 import { useEffect } from 'react'
 import { DEFAULT_CONFIG, SCHEMA } from '../constants'
@@ -67,23 +67,23 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
         !props.outputDataSources?.[0]
           ? <h1>Please set the output data source in setting</h1>
           : <div>
-              <h1>Output data source without original data sources</h1>
+            <h1>Output data source without original data sources</h1>
 
-              <Link className='p-0' target='_blank' to='https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens'>Token: </Link>
-              <TextInput type='password' className='w-100 pr-2' onAcceptValue={setToken} defaultValue={token} />
-              <br />
+            <Link className='p-0' target='_blank' to='https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens'>Token: </Link>
+            <TextInput type='password' className='w-100 pr-2' onAcceptValue={setToken} defaultValue={token} />
+            <br />
 
-              <Button onClick={() => { setIsLoading(true) }} disabled={isLoading || !token}>{`Search issues from ${props.config.defaultOwner}/${props.config.defaultRepo}`}</Button>
-              <br />
+            <Button onClick={() => { setIsLoading(true) }} disabled={isLoading || !token}>{`Search issues from ${props.config.defaultOwner}/${props.config.defaultRepo}`}</Button>
+            <br />
 
-              <h1 className='mt-5'>Results: </h1>
-              <div className='query-results'>
-                {
-                  isLoading
-                    ? 'Loading ...'
-                    : (errMsg || getRecords(props.outputDataSources?.[0]).map((r, i) => <div key={i} className='px-2 py-3'>{`${r.getFieldValue(SCHEMA.fields.number.name)} ${r.getFieldValue(SCHEMA.fields.title.name)}`}</div>))
-                }
-              </div>
+            <h1 className='mt-5'>Results: </h1>
+            <div className='query-results'>
+              {
+                isLoading
+                  ? 'Loading ...'
+                  : (errMsg || getRecords(props.outputDataSources?.[0]).map((r, i) => <div key={i} className='px-2 py-3'>{`${r.getFieldValue(SCHEMA.fields.number.name)} ${r.getFieldValue(SCHEMA.fields.title.name)}`}</div>))
+              }
+            </div>
           </div>
       }
     </div>
@@ -96,7 +96,7 @@ Widget.getFullConfig = (config: IMConfig) => {
 
 export default Widget
 
-async function getAllRepoIssues (token: string, owner: string, repo: string): Promise<Issue[]> {
+async function getAllRepoIssues(token: string, owner: string, repo: string): Promise<Issue[]> {
   const GITHUB_API_BASE_URL = 'https://api.github.com'
   const perPage = 100
   let page = 1
@@ -142,7 +142,7 @@ interface Issue {
   pull_request?: object
 }
 
-function getStyle (): SerializedStyles {
+function getStyle(): SerializedStyles {
   return css`
     .query-results {
       width: 100%;

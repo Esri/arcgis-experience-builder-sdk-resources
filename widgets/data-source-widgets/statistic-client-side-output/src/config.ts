@@ -1,4 +1,4 @@
-import { type ImmutableObject } from 'jimu-core'
+import type { ImmutableObject } from 'jimu-core'
 
 export enum StatFunctions {
   avg = 'avg',

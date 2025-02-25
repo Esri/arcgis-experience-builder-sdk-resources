@@ -65,6 +65,7 @@ export default function ({
         setLegendWidget(null)
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiWidgetContainer, jimuMapView])
 
   const onActiveViewChange = (jmv: JimuMapView) => {

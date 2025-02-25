@@ -1,8 +1,8 @@
 import { React, Immutable, type UseDataSource, DataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default function Setting (props: AllWidgetSettingProps<unknown>) {
+export default function Setting(props: AllWidgetSettingProps<unknown>) {
   const onToggleUseDataEnabled = (useDataSourcesEnabled: boolean) => {
     props.onSettingChange({
       id: props.id,

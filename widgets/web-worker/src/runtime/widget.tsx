@@ -21,6 +21,7 @@ const Widget = (props: AllWidgetProps<object>) => {
         setStatus('done')
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
