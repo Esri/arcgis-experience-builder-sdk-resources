@@ -18,7 +18,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
           max={100}
           value={sliderValue}
           step={1}
-          onCalciteSliderInput={(e) => { setSliderValue((e.target as HTMLInputElement).value as any) }} />
+          onCalciteSliderInput={(e) => { setSliderValue(e.target.value as any) }} />
         <p>The slider currently has a value of {sliderValue}</p>
       </div>
     </div>
