@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx, React, css, Immutable, DataSourceTypes, type UseDataSource, type Expression } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 import { ExpressionBuilder, ExpressionBuilderType } from 'jimu-ui/advanced/expression-builder'
 import { SettingRow, SettingSection } from 'jimu-ui/advanced/setting-components'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 const SUPPORT_DATA_SOURCE_TYPES = Immutable([DataSourceTypes.FeatureLayer])
 const SUPPORT_EXPRESSION_TYPES = Immutable([ExpressionBuilderType.Attribute, ExpressionBuilderType.Statistics, ExpressionBuilderType.Expression])

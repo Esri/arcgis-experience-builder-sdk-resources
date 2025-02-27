@@ -17,13 +17,13 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable, type UseDataSource } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { React, Immutable, type UseDataSource, DataSourceTypes } from 'jimu-core'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 
-import { DataSourceSelector, AllDataSourceTypes } from 'jimu-ui/advanced/data-source-selector'
+import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
-  supportedTypes = Immutable([AllDataSourceTypes.WebMap])
+  supportedTypes = Immutable([DataSourceTypes.WebMap])
 
   onDataSourceSelected = (useDataSources: UseDataSource[]) => {
     this.props.onSettingChange({
@@ -32,7 +32,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<u
     })
   }
 
-  render () {
+  render() {
     return <div className="sample-map-view-setting p-2">
       <DataSourceSelector
         types={this.supportedTypes}

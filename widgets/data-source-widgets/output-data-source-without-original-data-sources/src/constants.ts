@@ -1,5 +1,5 @@
 import { type DataSourceSchema, EsriFieldType, Immutable, JimuFieldType } from 'jimu-core'
-import { type IMConfig } from './config'
+import type { IMConfig } from './config'
 
 export const SCHEMA: DataSourceSchema = {
   label: 'number',

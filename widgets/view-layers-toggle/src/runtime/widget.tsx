@@ -20,7 +20,7 @@
   LICENSE file.
 */
 import { React, type AllWidgetProps, jsx } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 import defaultMessages from './translations/default'
 import FeatureLayer from 'esri/layers/FeatureLayer'
@@ -90,7 +90,7 @@ IState
               }}
             />
         )}
-        <p className="shadow-lg m-3 p-3 bg-white rounded">
+        <p className='shadow-3 m-3 p-3 bg-overlay rounded-1'>
           {defaultMessages.viewLayer}:
           <select
             onChange={(evt) => {

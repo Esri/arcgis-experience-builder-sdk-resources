@@ -70,7 +70,7 @@ const style = css`
   max-height: 800px;
   overflow: auto;
   .blue-border {
-    border: 1px solid var(--primary-500);
+    border: 1px solid var(--sys-color-primary-main);
   }
   .record-list {
     width: 100%;

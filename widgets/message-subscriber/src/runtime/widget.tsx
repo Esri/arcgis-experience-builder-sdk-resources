@@ -44,7 +44,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown>,
       <DataSourceComponent useDataSource={this.props.useDataSources[0]} query={this.state.query} widgetId={this.props.id} localId="query-result">{
         (ds: DataSource, info: IMDataSourceInfo) => {
           const isLoaded = info.status === DataSourceStatus.Loaded
-          // eslint-disable-next-line no-mixed-operators
           const fName = this.props.useDataSources[0].fields && this.props.useDataSources[0].fields[0] || 'objectid'
 
           const list = isLoaded

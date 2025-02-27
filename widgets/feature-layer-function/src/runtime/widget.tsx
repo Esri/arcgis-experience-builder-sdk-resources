@@ -17,18 +17,19 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, type IMDataSourceInfo, type DataSource, DataSourceManager, DataSourceStatus, type FeatureLayerQueryParams, type AllWidgetProps, DataSourceComponent } from 'jimu-core'
+import { React, type IMDataSourceInfo, type DataSource, DataSourceStatus, type FeatureLayerQueryParams, type AllWidgetProps, DataSourceComponent } from 'jimu-core'
 const { useState, useEffect, useRef } = React
 
 /**
  * This widget will show features from a configured feature layer
  */
-export default function Widget (props: AllWidgetProps<unknown>) {
+export default function Widget(props: AllWidgetProps<unknown>) {
   const [query, setQuery] = useState<FeatureLayerQueryParams>(null)
   const cityNameRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     queryFunc()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const isDsConfigured = () => {
@@ -79,22 +80,22 @@ export default function Widget (props: AllWidgetProps<unknown>) {
     </>
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const createOutputDs = (useDs: DataSource) => {
-    if (!props.outputDataSources) {
-      return
-    }
-    const outputDsId = props.outputDataSources[0]
-    const dsManager = DataSourceManager.getInstance()
-    if (dsManager.getDataSource(outputDsId)) {
-      if (dsManager.getDataSource(outputDsId).getDataSourceJson().originDataSources[0].dataSourceId !== useDs.id) {
-        dsManager.destroyDataSource(outputDsId)
-      }
-    }
-    dsManager.createDataSource(outputDsId).then(ods => {
-      ods.setRecords(useDs.getRecords())
-    })
-  }
+
+  // const createOutputDs = (useDs: DataSource) => {
+  //   if (!props.outputDataSources) {
+  //     return
+  //   }
+  //   const outputDsId = props.outputDataSources[0]
+  //   const dsManager = DataSourceManager.getInstance()
+  //   if (dsManager.getDataSource(outputDsId)) {
+  //     if (dsManager.getDataSource(outputDsId).getDataSourceJson().originDataSources[0].dataSourceId !== useDs.id) {
+  //       dsManager.destroyDataSource(outputDsId)
+  //     }
+  //   }
+  //   dsManager.createDataSource(outputDsId).then(ods => {
+  //     ods.setRecords(useDs.getRecords())
+  //   })
+  // }
 
   if (!isDsConfigured()) {
     return <h3>

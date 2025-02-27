@@ -3,7 +3,7 @@ import { React, jsx, type ActionSettingProps, type ImmutableObject, type IMField
 import { FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 import { SettingSection } from 'jimu-ui/advanced/setting-components'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface States {}
 
 interface Config {

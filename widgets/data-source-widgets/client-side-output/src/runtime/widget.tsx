@@ -1,7 +1,7 @@
 import { React, type AllWidgetProps, DataSourceComponent, dataSourceUtils, DataSourceManager, type FeatureLayerDataSource, DataSourceStatus } from 'jimu-core'
 import { Button } from 'jimu-ui'
 
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, unknown> {
   isDsConfigured = () => {
@@ -65,7 +65,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     })
   }
 
-  render () {
+  render() {
     if (!this.isDsConfigured()) {
       return (
         <h3>

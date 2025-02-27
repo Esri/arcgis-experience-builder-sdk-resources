@@ -17,12 +17,12 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable, type IMFieldSchema, type UseDataSource, AllDataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { React, Immutable, type IMFieldSchema, type UseDataSource, DataSourceTypes } from 'jimu-core'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
-  supportedTypes = Immutable([AllDataSourceTypes.FeatureLayer])
+  supportedTypes = Immutable([DataSourceTypes.FeatureLayer])
 
   onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     this.props.onSettingChange({
@@ -45,7 +45,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<u
     })
   }
 
-  render () {
+  render() {
     return <div className="use-feature-layer-setting p-2">
       <DataSourceSelector
         types={this.supportedTypes}

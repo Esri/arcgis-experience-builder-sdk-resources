@@ -17,11 +17,11 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable, type IMFieldSchema, type UseDataSource, AllDataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { React, Immutable, type IMFieldSchema, type UseDataSource, DataSourceTypes } from 'jimu-core'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 
-export default function Setting (props: AllWidgetSettingProps<unknown>) {
+export default function Setting(props: AllWidgetSettingProps<unknown>) {
   const onFieldChange = (allSelectedFields: IMFieldSchema[]) => {
     props.onSettingChange({
       id: props.id,
@@ -45,7 +45,7 @@ export default function Setting (props: AllWidgetSettingProps<unknown>) {
 
   return <div className="use-feature-layer-setting p-2">
     <DataSourceSelector
-      types={Immutable([AllDataSourceTypes.FeatureLayer])}
+      types={Immutable([DataSourceTypes.FeatureLayer])}
       useDataSources={props.useDataSources}
       useDataSourcesEnabled={props.useDataSourcesEnabled}
       onToggleUseDataEnabled={onToggleUseDataEnabled}

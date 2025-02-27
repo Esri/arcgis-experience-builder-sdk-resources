@@ -17,7 +17,7 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { type ImmutableObject } from 'jimu-core'
+import type { ImmutableObject } from 'jimu-core'
 
 export interface Config {
   p1: string
