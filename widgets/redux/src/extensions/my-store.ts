@@ -1,4 +1,4 @@
-import { type extensionSpec, type ImmutableObject, type IMState } from 'jimu-core'
+import type { extensionSpec, ImmutableObject, IMState } from 'jimu-core'
 
 export enum MyActionKeys {
   MyAction1 = 'MY_ACTION_1',
@@ -50,8 +50,6 @@ export default class MyReduxStoreExtension implements extensionSpec.ReduxStoreEx
           return localState.set('a', action.val)
         case MyActionKeys.MyAction2:
           return localState.set('b', action.val)
-        default:
-          return localState
       }
     }
   }

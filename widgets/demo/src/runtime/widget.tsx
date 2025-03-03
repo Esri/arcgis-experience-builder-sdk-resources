@@ -19,7 +19,7 @@
   LICENSE file.
 */
 import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx, styled } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { Tabs, Tab, Button } from 'jimu-ui'
 import defaultMessages from './translations/default'
 
@@ -28,23 +28,23 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id
   }
 
-  render () {
+  render() {
     const styleLiteral = css`
-      color: ${this.props.theme.colors.danger};
+      color: ${this.props.theme.sys.color.error.main};
       font-size: 1.25rem;
     `
 
     const styleObject = {
-      backgroundColor: this.props.theme.colors.palette.light[500],
+      backgroundColor: this.props.theme.ref.palette.neutral[500],
       padding: '1rem'
     }
 
     const StyledButton = styled.button`
       color: white;
-      background-color: ${this.props.theme.colors.primary};
+      background-color: ${this.props.theme.sys.color.primary.main};
       transition: 0.15s ease-in all;
       &:hover {
-        background-color: ${this.props.theme.colors.danger};
+        background-color: ${this.props.theme.sys.color.error.main};
       }
     `
 
@@ -89,22 +89,22 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
         <Tab id="widgetProperties" title={this.nls('widgetProperties')}>
           <div className="title font-weight-bold">NLS messages from jimu-core (OK)</div>
           <div className="content"><FormattedMessage id="ok" defaultMessage={jimuCoreDefaultMessage.ok}></FormattedMessage></div>
-          <hr/>
+          <hr />
           {/* demo how to use theme variables */}
           <div css={styleLiteral}><span css={styleObject}>Theme danger color</span></div>
-          <br/>
+          <br />
 
           <StyledButton>A styled HTML Button</StyledButton>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <StyledBSButton>A Re-styled Button Component</StyledBSButton>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <div css={rtlStyle}>right to left demo</div>
-          <br/>
-          <br/>
+          <br />
+          <br />
 
           <style>
             {styleTag}
@@ -113,10 +113,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
             Text color is from a named CSS class
           </p>
           {/* demo how to format string by call API */}
-          <div className="title font-weight-bold"><FormattedMessage id="widgetName" defaultMessage={defaultMessages.widgetName}/></div>
+          <div className="title font-weight-bold"><FormattedMessage id="widgetName" defaultMessage={defaultMessages.widgetName} /></div>
           <div className="content">{this.props.intl.formatMessage({ id: '_widgetLabel', defaultMessage: defaultMessages._widgetLabel })}</div>
 
-          <div className="title font-weight-bold"><FormattedMessage id="widgetProps" defaultMessage={defaultMessages.widgetProps}/></div>
+          <div className="title font-weight-bold"><FormattedMessage id="widgetProps" defaultMessage={defaultMessages.widgetProps} /></div>
           <div className="content">
             <table>
               <tbody>{propsTr}</tbody>

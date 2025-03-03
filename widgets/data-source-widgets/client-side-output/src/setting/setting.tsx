@@ -1,9 +1,9 @@
 import { React, Immutable, DataSourceTypes, DataSourceManager, type UseDataSource, type DataSourceJson, SqlExpressionMode, type IMSqlExpression } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { SqlExpressionBuilderPopup } from 'jimu-ui/advanced/sql-expression-builder'
 import { getJimuFieldNamesBySqlExpression } from 'jimu-ui/basic/sql-expression-runtime'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { Button } from 'jimu-ui'
 
 interface State {
@@ -13,7 +13,7 @@ interface State {
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, State> {
   supportedTypes = Immutable([DataSourceTypes.FeatureLayer])
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       isSqlBuilderOpen: false
@@ -55,7 +55,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
 
   toggleSqlBuilder = () => { this.setState({ isSqlBuilderOpen: !this.state.isSqlBuilderOpen }) }
 
-  render () {
+  render() {
     const dsId = this.props.useDataSources?.[0]?.dataSourceId
     const ds = dsId && DataSourceManager.getInstance().getDataSource(dsId)
     return (

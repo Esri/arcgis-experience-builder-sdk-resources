@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
+ 
 import { React, Immutable, type IMFieldSchema, type UseDataSource, type DataSource, DataSourceTypes } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { FieldSelector, DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
 
-interface Config {}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Config { }
 
-interface State {}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface State { }
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<Config>, State> {
   supportedTypes = Immutable([DataSourceTypes.FeatureLayer])
@@ -31,7 +33,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<C
     })
   }
 
-  render () {
+  render() {
     return <div className="use-feature-layer-setting p-2">
       <DataSourceSelector
         types={this.supportedTypes}

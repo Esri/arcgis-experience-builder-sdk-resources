@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 /**
   Licensing
 
@@ -19,10 +18,10 @@
   LICENSE file.
 */
 import { React } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { MapWidgetSelector, SettingRow, SettingSection } from 'jimu-ui/advanced/setting-components'
 
-export default class Setting extends React.PureComponent<AllWidgetSettingProps<any>, {}> {
+export default class Setting extends React.PureComponent<AllWidgetSettingProps<any>> {
   onMapSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
       id: this.props.id,

@@ -18,14 +18,14 @@
   LICENSE file.
 */
 import { type AllWidgetProps, React, type IMState, FormattedMessage } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import defaultMessage from './translations/default'
 
 interface ExtraProps {
   locale: string
 }
 
-export default function Widget (props: AllWidgetProps<IMConfig> & ExtraProps) {
+export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps) {
   return <div className="widget-demo-function jimu-widget" style={{ overflow: 'auto' }}>
     This widget demonstrates creating a functional component.
     <div>

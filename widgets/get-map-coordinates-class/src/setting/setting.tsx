@@ -19,19 +19,19 @@
   LICENSE file.
 */
 import { React, FormattedMessage, css, jsx } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import {
   MapWidgetSelector,
   SettingSection,
   SettingRow
 } from 'jimu-ui/advanced/setting-components'
 import { Switch } from 'jimu-ui'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import defaultI18nMessages from './translations/default'
 
 export default class Setting extends React.PureComponent<
-AllWidgetSettingProps<IMConfig>,
-any
+  AllWidgetSettingProps<IMConfig>,
+  any
 > {
   onShowScalePropertyChange = (evt: React.FormEvent<HTMLInputElement>) => {
     this.props.onSettingChange({
@@ -54,7 +54,7 @@ any
     })
   }
 
-  render () {
+  render() {
     const style = css`
       .widget-setting-get-map-coordinates {
         .checkbox-row {

@@ -18,7 +18,7 @@
   LICENSE file.
 */
 import { React } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import defaultMessages from './translations/default'
 import {
   MapWidgetSelector,
@@ -26,8 +26,8 @@ import {
 } from 'jimu-ui/advanced/setting-components'
 
 export default class Setting extends React.PureComponent<
-AllWidgetSettingProps<unknown>,
-any
+  AllWidgetSettingProps<unknown>,
+  any
 > {
   onMapWidgetSelected = (useMapWidgetIds: string[]) => {
     this.props.onSettingChange({
@@ -36,7 +36,7 @@ any
     })
   }
 
-  render () {
+  render() {
     return (
       <div className="widget-setting-js-api-widget">
         <SettingSection

@@ -20,7 +20,7 @@
 */
 import { React, type AllWidgetProps, jsx } from 'jimu-core'
 
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, any> {
+export default class Widget extends React.PureComponent<AllWidgetProps<object>, any> {
   componentDidMount () {
     const data = [
       {
@@ -37,6 +37,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<{}>, any>
         children: [{ label: 'child3', id: 5 }]
       }
     ]
+    // eslint-disable-next-line no-undef
     $('.widget-3rd-lib').tree({
       data: data,
       autoOpen: true,

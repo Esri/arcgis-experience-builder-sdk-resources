@@ -19,7 +19,7 @@
   LICENSE file.
 */
 import { type AllWidgetProps, jsx, type FeatureLayerDataSource, type SqlQueryParams, DataSourceManager } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { TextInput, WidgetPlaceholder } from 'jimu-ui'
 
 import defaultMessages from './translations/default'

@@ -15,12 +15,14 @@ export default class QueryAction extends AbstractMessageAction {
   onExecute (message: Message, actionConfig?: any): Promise<boolean> | boolean {
     // eslint-disable-next-line @typescript-eslint/no-base-to-string
     let q = `${actionConfig.fieldName} = '${message}'`
+    // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check
     switch (message.type) {
       case MessageType.StringSelectionChange:
         q = `${actionConfig.fieldName} = '${(message as StringSelectionChangeMessage).str}'`
         break
       case MessageType.DataRecordsSelectionChange:
         q = `${actionConfig.fieldName} = ` +
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-template-expression
           `${(message as DataRecordsSelectionChangeMessage).records.length > 0 ? `'${(message as DataRecordsSelectionChangeMessage).records[0].getFieldValue(actionConfig.fieldName)}'` : ''}`
         break
     }

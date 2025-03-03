@@ -18,7 +18,7 @@
   LICENSE file.
 */
 
-import { type ImmutableObject } from 'seamless-immutable'
+import type { ImmutableObject } from 'seamless-immutable'
 
 export interface Config {
   filterField: string

@@ -26,7 +26,7 @@ import {
   type JimuMapView
 } from 'jimu-arcgis'
 
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 import defaultMessages from './translations/default'
 

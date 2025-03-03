@@ -8,6 +8,7 @@ const Widget = (props: AllWidgetProps<object>) => {
       console.log('Module loaded:', module)
       setModule(module)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div className="widget-demo jimu-widget m-2">

@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, type DataSource, type IMDataSourceJson, ServiceManager } from 'jimu-core'
-import { type IMConfig } from '../config'
+import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, type DataSource, type IMDataSourceJson, ServiceManager, type FeatureLayerDataSource, dataSourceUtils } from 'jimu-core'
+import type { IMConfig } from '../config'
 import { Button, TextInput } from 'jimu-ui'
 import { useEffect } from 'react'
-import { dataSourceJsonCreator, type FeatureLayerDataSource, type FeatureLayerDataSourceConstructorOptions } from 'jimu-core/data-source'
+import type { FeatureLayerDataSourceConstructorOptions } from 'jimu-data-source'
 
 const { useState } = React
 
@@ -64,7 +64,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
 
 export default Widget
 
-async function createDataSource (dsId: string, url: string): Promise<DataSource> {
+async function createDataSource(dsId: string, url: string): Promise<DataSource> {
   const dsJson = await fetchDataSourceJson(dsId, url)
   const dsOptions: FeatureLayerDataSourceConstructorOptions = {
     id: dsId,
@@ -75,9 +75,9 @@ async function createDataSource (dsId: string, url: string): Promise<DataSource>
   return DataSourceManager.getInstance().createDataSource(dsOptions)
 }
 
-async function fetchDataSourceJson (dsId: string, url: string): Promise<IMDataSourceJson> {
+async function fetchDataSourceJson(dsId: string, url: string): Promise<IMDataSourceJson> {
   if (!url) {
-    return Promise.reject('Need URL.')
+    return Promise.reject(new Error('Need URL.'))
   }
 
   let normalizedUrl = url
@@ -85,18 +85,18 @@ async function fetchDataSourceJson (dsId: string, url: string): Promise<IMDataSo
   normalizedUrl = normalizedUrl.replace(/^http:/, 'https:').replace(/\/+$/, '')
 
   if (!/\d+$/.test(normalizedUrl)) {
-    return Promise.reject('The URL should end up with the layer ID.')
+    return Promise.reject(new Error('The URL should end up with the layer ID.'))
   }
 
   const layerDefinition = await ServiceManager.getInstance().fetchServiceInfo(url).then(res => res.definition)
   // You can create data source json by a Maps SDK layer.
-  // const dsJson = dataSourceJsonCreator.createDataSourceJsonByJSAPILayer(dsId, mapsSDKLayer)
-  const dsJson = dataSourceJsonCreator.createDataSourceJsonByLayerDefinition(dsId, layerDefinition, normalizedUrl)
+  // const dsJson = dataSourceUtils.dataSourceJsonCreator.createDataSourceJsonByJSAPILayer(dsId, mapsSDKLayer)
+  const dsJson = dataSourceUtils.dataSourceJsonCreator.createDataSourceJsonByLayerDefinition(dsId, layerDefinition, normalizedUrl)
 
   return dsJson
 }
 
-function getStyle (): SerializedStyles {
+function getStyle(): SerializedStyles {
   return css`
     .query-results {
       width: 100%;

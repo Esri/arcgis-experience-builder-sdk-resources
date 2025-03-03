@@ -3,14 +3,14 @@ import {
   type AllWidgetProps, DataSourceComponent, DataSourceStatus
 } from 'jimu-core'
 import { Button, Loading, LoadingType } from 'jimu-ui'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 interface State {
   isLoading: boolean
 }
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, State> {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       isLoading: false
@@ -123,7 +123,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     })
   }
 
-  render () {
+  render() {
     if (!this.isDsConfigured()) {
       return (
         <>
@@ -164,7 +164,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
           onCreateDataSourceFailed={this.onCreateDataSourceFailed}
         />
 
-        { this.state.isLoading && <Loading type={LoadingType.Secondary} />}
+        {this.state.isLoading && <Loading type={LoadingType.Secondary} />}
 
         {
           /**
@@ -172,14 +172,14 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
            * `DataSourceComponent` will create output data source instance and the child function component of `DataSourceComponent` can use the outupt data source instance to render.
            */
           this.props.outputDataSources?.[0] &&
-            <DataSourceComponent
-              useDataSource={Immutable({ dataSourceId: this.props.outputDataSources[0], mainDataSourceId: this.props.outputDataSources[0] })} queryCount
-              widgetId={this.props.id} query={{ where: '1=1' } as QueryParams} onDataSourceInfoChange={this.onOutputDataSourceInfoChange}
-            >
-              {
-                this.outputDataDataRender
-              }
-            </DataSourceComponent>
+          <DataSourceComponent
+            useDataSource={Immutable({ dataSourceId: this.props.outputDataSources[0], mainDataSourceId: this.props.outputDataSources[0] })} queryCount
+            widgetId={this.props.id} query={{ where: '1=1' } as QueryParams} onDataSourceInfoChange={this.onOutputDataSourceInfoChange}
+          >
+            {
+              this.outputDataDataRender
+            }
+          </DataSourceComponent>
         }
       </div>
     )

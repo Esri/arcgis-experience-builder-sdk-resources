@@ -4,7 +4,7 @@ import {
 } from 'jimu-core'
 import { DataSourceSelector, FieldSelector } from 'jimu-ui/advanced/data-source-selector'
 import { MultiSelect, type MultiSelectItem } from 'jimu-ui'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { StatFunctions, type IMConfig } from '../config'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, unknown> {
@@ -105,7 +105,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
     }, [outputDsJson])
   }
 
-  render () {
+  render() {
     return (
       <div className='use-feature-layer-setting p-2'>
         <DataSourceSelector
@@ -119,20 +119,20 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
 
         {
           this.props.useDataSources && this.props.useDataSources[0] &&
-            <div className='mt-3 px-2'>
-              <div className='my-2'>Please select a field.</div>
-              <FieldSelector
-                useDataSources={this.props.useDataSources}
-                onChange={this.onFieldSelected}
-                selectedFields={this.props.config.numberField ? Immutable([this.props.config.numberField]) : null}
-                types={this.numberFieldTypes}
-                useDropdown
-                isDataSourceDropDownHidden
-                isSearchInputHidden
-              />
-              <div className='my-2'>Please select a statistic function.</div>
-              <MultiSelect fluid items={this.getStatFuncItems()} values={this.getSelectedStatFuncs()} onClickItem={this.onStatFuncItemClick} />
-            </div>
+          <div className='mt-3 px-2'>
+            <div className='my-2'>Please select a field.</div>
+            <FieldSelector
+              useDataSources={this.props.useDataSources}
+              onChange={this.onFieldSelected}
+              selectedFields={this.props.config.numberField ? Immutable([this.props.config.numberField]) : null}
+              types={this.numberFieldTypes}
+              useDropdown
+              isDataSourceDropDownHidden
+              isSearchInputHidden
+            />
+            <div className='my-2'>Please select a statistic function.</div>
+            <MultiSelect fluid items={this.getStatFuncItems()} values={this.getSelectedStatFuncs()} onClickItem={this.onStatFuncItemClick} />
+          </div>
         }
       </div>
     )
