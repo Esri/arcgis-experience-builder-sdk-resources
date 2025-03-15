@@ -1,8 +1,8 @@
 {
   "name": "use-calcite-components",
   "type": "widget",
-  "version": "1.16.0",
-  "exbVersion": "1.16.0",
+  "version": "1.17.0",
+  "exbVersion": "1.17.0",
   "author": "Esri R&D Center Beijing",
   "description": "A sample component is used to show how to use Calcite components in a custom widget",
 
