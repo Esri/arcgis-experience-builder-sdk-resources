@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, DataSourceComponent, type IMUseDataSource } from 'jimu-core'
-import { type IMConfig } from '../config'
+import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, DataSourceComponent, type IMUseDataSource, type QueryParams, type FeatureLayerDataSource, type DataSource } from 'jimu-core'
+import type { IMConfig } from '../config'
 import { Select, Option } from 'jimu-ui'
 import { useEffect } from 'react'
-import { type QueryParams, type FeatureLayerDataSource, type DataSource } from 'jimu-core/data-source'
 
 const { useState } = React
 enum QueryTypes {
@@ -39,7 +38,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
           setQueryResults(res.records as FeatureDataRecord[])
         })
       )
-      .catch(() => {})
+      .catch(() => {console.error('Failed to create data source')})
   }, [queryType, props.useDataSources])
 
   const onQueryTypeChange = evt => {
@@ -89,12 +88,12 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
                * Please note, we don't set `outFields` since we have saved the selected fields to widgetJson.useDataSources in the settings.
                */
               <DataSourceComponent widgetId={props.id} useDataSource={props.useDataSources?.[0]} query={{ where: '1=1' } as QueryParams}>
-              {
-                ds =>
-                  <div className='query-results'>
-                    { renderRecords((ds.getRecords() as FeatureDataRecord[])) }
-                  </div>
-              }
+                {
+                  ds =>
+                    <div className='query-results'>
+                      {renderRecords((ds.getRecords() as FeatureDataRecord[]))}
+                    </div>
+                }
               </DataSourceComponent>
             }
             {
@@ -109,7 +108,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
 
 export default Widget
 
-function getStyle (): SerializedStyles {
+function getStyle(): SerializedStyles {
   return css`
     .query-results {
       width: 100%;
@@ -119,7 +118,7 @@ function getStyle (): SerializedStyles {
   `
 }
 
-async function createDataSource (useDataSource: IMUseDataSource): Promise<DataSource> {
+async function createDataSource(useDataSource: IMUseDataSource): Promise<DataSource> {
   if (!useDataSource) {
     return null
   }

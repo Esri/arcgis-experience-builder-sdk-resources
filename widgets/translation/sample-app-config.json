@@ -47,7 +47,7 @@
   "widgets": {
     "widget_1": {
       "uri": "widgets/common/text/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Text 1",
       "config": {
         "text": "<p>This is key1: ${key1}</p><p>This is key2: ${key2}</p>",
@@ -61,7 +61,7 @@
     },
     "widget_2": {
       "uri": "widgets/samples/translation/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Translation",
       "config": {
       },

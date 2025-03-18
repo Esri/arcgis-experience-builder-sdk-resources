@@ -12,7 +12,7 @@ Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-re
 
   ```tsx
   <DataSourceSelector onChange={onDataSourceChange} widgetId={props.id}
-    types={Immutable([AllDataSourceTypes.FeatureLayer])} useDataSources={props.useDataSources}
+    types={Immutable([DataSourceTypes.FeatureLayer])} useDataSources={props.useDataSources}
     useDataSourcesEnabled={props.useDataSourcesEnabled} onToggleUseDataEnabled={onToggleUseDataEnabled}
   />
   ```

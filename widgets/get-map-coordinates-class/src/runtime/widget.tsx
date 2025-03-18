@@ -20,7 +20,7 @@
   LICENSE file.
 */
 import { React, type AllWidgetProps, jsx } from 'jimu-core'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 
 import type Point from 'esri/geometry/Point'
@@ -36,8 +36,8 @@ interface IState {
 }
 
 export default class Widget extends React.PureComponent<
-AllWidgetProps<IMConfig>,
-IState
+  AllWidgetProps<IMConfig>,
+  IState
 > {
   state = {
     latitude: '',
@@ -80,7 +80,7 @@ IState
     }
   }
 
-  render () {
+  render() {
     const sections = []
 
     sections.push(
@@ -115,7 +115,7 @@ IState
               useMapWidgetId={this.props.useMapWidgetIds?.[0]}
               onActiveViewChange={this.activeViewChangeHandler}
             />
-        )}
+          )}
 
         {/* Only show the data once the MapView is ready */}
         <p>{this.state.mapViewReady ? allSections : defaultMessages.latLonWillBeHere}</p>

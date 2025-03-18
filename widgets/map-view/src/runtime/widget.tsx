@@ -17,13 +17,13 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, jimuHistory, DataSourceComponent, type AllWidgetProps, type IMState, type IMUrlParameters } from 'jimu-core'
+import { React, jimuHistory, DataSourceComponent, type AllWidgetProps, type IMState, type IMUrlParameters, type WebMapDataSource } from 'jimu-core'
 
 import MapView from 'esri/views/MapView'
 import type WebMap from 'esri/WebMap'
 import Extent from 'esri/geometry/Extent'
 
-import { MapViewManager, type WebMapDataSource } from 'jimu-arcgis'
+import { MapViewManager } from 'jimu-arcgis'
 
 interface ExtraProps {
   queryObject: IMUrlParameters
@@ -31,7 +31,9 @@ interface ExtraProps {
 
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown> & ExtraProps, unknown> {
   mapContainer = React.createRef<HTMLDivElement>()
+  // eslint-disable-next-line react/no-unused-class-component-methods
   mapView: MapView
+  // eslint-disable-next-line react/no-unused-class-component-methods
   webMap: WebMap
   extentWatch: __esri.WatchHandle
 
@@ -86,7 +88,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown> 
 
   mapNode = <div className="widget-map" style={{ width: '100%', height: '100%' }} ref={this.mapContainer}></div>
 
-  render () {
+  render() {
     if (!this.props.useDataSources || this.props.useDataSources.length === 0) {
       return 'Select a webmap in the settings panel'
     }

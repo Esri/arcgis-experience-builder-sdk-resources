@@ -17,13 +17,14 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, Immutable, DataSourceManager } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import { React, Immutable, DataSourceManager, DataSourceTypes } from 'jimu-core'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { MapWidgetSelector } from 'jimu-ui/advanced/setting-components'
-import { ArcGISDataSourceTypes } from 'jimu-arcgis'
 
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<unknown>, unknown> {
-  supportedTypes = Immutable([ArcGISDataSourceTypes.WebMap])
+  // eslint-disable-next-line react/no-unused-class-component-methods
+  supportedTypes = Immutable([DataSourceTypes.WebMap])
+  // eslint-disable-next-line react/no-unused-class-component-methods
   dsManager = DataSourceManager.getInstance()
 
   onMapSelected = (useMapWidgetIds: string[]) => {
@@ -33,9 +34,9 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<u
     })
   }
 
-  render () {
+  render() {
     return <div className="sample-use-map-view-setting p-2">
-      <MapWidgetSelector onSelect={this.onMapSelected} useMapWidgetIds={this.props.useMapWidgetIds}/>
+      <MapWidgetSelector onSelect={this.onMapSelected} useMapWidgetIds={this.props.useMapWidgetIds} />
     </div>
   }
 }

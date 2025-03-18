@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { React, jsx, css, type AllWidgetProps, DataSourceComponent, type FeatureLayerQueryParams, ExpressionResolverComponent, type SingleExpressionResolveResult, DataSourceManager, type DataSource, expressionUtils, type DataRecord } from 'jimu-core'
-import { type IMConfig } from '../config'
+import { jsx, css, type AllWidgetProps, DataSourceComponent, type FeatureLayerQueryParams, ExpressionResolverComponent, type SingleExpressionResolveResult, DataSourceManager, type DataSource, expressionUtils, type DataRecord } from 'jimu-core'
+import type { IMConfig } from '../config'
 
 const DEFAULT_QUERY: FeatureLayerQueryParams = { where: '1=1', outFields: ['*'] }
 
@@ -49,9 +49,9 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
         useDataSources?.[0] && expression
           ? <DataSourceComponent useDataSource={useDataSources[0]} query={DEFAULT_QUERY} widgetId={id}>{renderData}</DataSourceComponent>
           : <div>
-              <p>This widget demonstrates how to resolve expression for multiple records.</p>
-              <p>Please select a data source and an expression.</p>
-            </div>
+            <p>This widget demonstrates how to resolve expression for multiple records.</p>
+            <p>Please select a data source and an expression.</p>
+          </div>
       }
     </div>
   )

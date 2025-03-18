@@ -21,7 +21,7 @@
 */
 import { type AllWidgetProps, jsx } from 'jimu-core'
 import { useState } from 'react'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 
 import type Point from 'esri/geometry/Point'
@@ -99,7 +99,7 @@ export default function (props: AllWidgetProps<IMConfig>) {
             useMapWidgetId={props.useMapWidgetIds?.[0]}
             onActiveViewChange={activeViewChangeHandler}
           />
-      )}
+        )}
 
       {/* Only show the data once the MapView is ready */}
       <p>{mapViewReady ? allSections : defaultMessages.latLonWillBeHere}</p>

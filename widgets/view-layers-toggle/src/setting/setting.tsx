@@ -18,14 +18,14 @@
   LICENSE file.
 */
 import { React } from 'jimu-core'
-import { type AllWidgetSettingProps } from 'jimu-for-builder'
+import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import {
   MapWidgetSelector,
   SettingRow,
   SettingSection
 } from 'jimu-ui/advanced/setting-components'
 import defaultI18nMessages from './translations/default'
-import { type IMConfig } from '../config'
+import type { IMConfig } from '../config'
 
 interface IState {
   layerTextareaValue: string
@@ -40,8 +40,7 @@ IState
 
     console.log(
       'TYPEOF undefined',
-      // eslint-disable-next-line valid-typeof
-      typeof this.props.config?.layerUrls === undefined
+      typeof this.props.config?.layerUrls === "undefined"
     )
 
     this.state = {

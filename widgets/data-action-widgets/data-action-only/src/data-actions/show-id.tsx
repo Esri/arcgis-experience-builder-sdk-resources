@@ -2,11 +2,11 @@ import { React, AbstractDataAction, type DataRecordSet, type DataLevel } from 'j
 import { Popper } from 'jimu-ui'
 
 export default class ExportJson extends AbstractDataAction {
-  async isSupported (dataSets: DataRecordSet[], dataLevel: DataLevel): Promise<boolean> {
-    return true
+  isSupported (dataSets: DataRecordSet[], dataLevel: DataLevel): Promise<boolean> {
+    return Promise.resolve(true)
   }
 
-  async onExecute (dataSets: DataRecordSet[], dataLevel: DataLevel, actionConfig?: any): Promise<React.ReactElement> {
+  onExecute (dataSets: DataRecordSet[], dataLevel: DataLevel, actionConfig?: any): Promise<React.ReactElement> {
     const ids = []
     dataSets.forEach(dataSet => {
       if (!ids.includes(dataSet.dataSource.id)) {
@@ -14,7 +14,7 @@ export default class ExportJson extends AbstractDataAction {
       }
     })
 
-    return <MyPopper ids={ids} />
+    return Promise.resolve(<MyPopper ids={ids} />)
   }
 }
 
@@ -29,7 +29,7 @@ function MyPopper (props: PopperProps) {
   }
 
   return <Popper
-    showArrow
+    arrowOptions
     open={isOpen}
     toggle={handleToggle}
     reference={popperRef}
