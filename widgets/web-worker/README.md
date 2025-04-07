@@ -1,4 +1,4 @@
-# Web component
+# Web worker
 
 This sample widget demonstrates how to use Web worker in a custom Experience Builder widget.
 
