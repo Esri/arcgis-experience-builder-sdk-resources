@@ -1,4 +1,4 @@
-# Share code between widgets - shared entry
+# Share code between widgets - load shared code dynamically
 
 This sample demonstrates how to load the share code dynamically.
 
