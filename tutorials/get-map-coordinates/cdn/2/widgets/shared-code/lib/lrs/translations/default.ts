@@ -81,6 +81,7 @@ export default {
   decimalDegrees: 'Decimal degrees',
   decimeters: 'Decimeters',
   intFeet: 'Feet (International)',
+  intMiles: 'Statute miles',
   esriUnknownUnits: 'esriUnknownUnits',
 
   // intellisense text input

@@ -15,6 +15,9 @@ export default {
   collapse: 'Collapse',
   expandAll: 'Expand all',
   collapseAll: 'Collapse all',
+  toggleAll: 'Toggle all',
+  selectAll: 'Select all',
+  unSelectAll: 'Unselect all',
   space: 'Spacing',
   appearance: 'Appearance',
   textAlign: 'Text alignment',
@@ -86,6 +89,7 @@ export default {
   newGroup: 'New group',
   groupName: 'Group {num}',
   setFilters: 'Set filters',
+  turnOffAllFilters: 'Turn off all filters',
   resetAllFilters: 'Reset all filters',
   resetFilters: 'Reset filters',
   dragHandler: 'Drag handler',
@@ -93,6 +97,7 @@ export default {
   selectMapHint: 'Select a map for further configurations.',
   selectLayer: 'Select layer',
   openInNewWindow: 'Open in a new window',
+  behavior: 'Behavior',
   // chart
   guide: 'Guide',
   guides: 'Guides',
@@ -170,6 +175,10 @@ export default {
   options: 'Options',
   shape: 'Shape',
   valueFormat: 'Value format',
+  display: 'Display',
+  both: 'Both',
+  noDataMessage: 'No data message',
+  tickSpacing: 'Tick spacing',
   // menu
   submenu: 'Submenu',
   menu: 'Menu',
@@ -371,6 +380,8 @@ export default {
   allTag: '- All -',
   allDynamicTag: '- All (dynamic) -',
   outputNoValueWarning: 'This filter utilizes an output data source from another widget. In the launched app, the unique values will be dynamically generated once the corresponding actions are executed.',
+  // tree
+  emptyListWarning: 'The list appears to be empty.',
 
   linkToString: 'Link to',
 
@@ -455,6 +466,12 @@ export default {
   bullet: 'Bullets',
   link: 'Link',
   linkTo: 'Link to',
+  inLine: 'In line',
+  wrapText: 'Wrap text',
+  tobAndBottom: 'Top and bottom',
+  leftAlignedImage: 'Left aligned image',
+  rightAlignedImage: 'Right aligned image',
+  centeredImage: 'Centered image',
   characterSpacing: 'Character spacing',
   lineSpacing: 'Line spacing',
   indent: 'Indent',
@@ -537,6 +554,8 @@ export default {
 
   // proxy-setting
   subscriberContents: 'Subscriber contents',
+  unsavedChangesAndSubscriberContents: 'Unsaved changes and subscriber contents',
+  unsavedChangedRemind: 'You have unsaved changes. These will be automatically saved and published.',
   subscriberWarning: 'Certain resources used in this experience require an ArcGIS subscription. Enable public access by authoring with your subscription. Be aware that some content will consume credits.',
   requestLimit: 'Request limit',
   requestInterval: 'Interval',
@@ -619,6 +638,7 @@ export default {
   connectToData: 'Connect to data',
   setDataSource: 'Select data',
   addNewData: 'Add new data',
+  addNewMapOrScene: 'Add new map or scene',
   pleaseAddData: 'Please add data.',
   added: 'Added',
   outputs: 'Outputs',
@@ -653,7 +673,6 @@ export default {
   allMyGroupsContent: "All my groups' content",
   rootFolder: 'Root folder',
   addDataErrorInvalidSceneLayer: 'Scene layer without an associated feature layer is not supported.',
-  addDataErrorInvalidImageryLayer: 'Dynamic imagery layers without field information are currently not supported.',
   addDataErrorNotSupported: 'Data type is not supported yet.',
   addDataErrorUnsupportedMap: 'This Web Map version is not supported.',
   addDataErrorInvalidBuildingSceneLayer: 'Building Scene layer without an associated feature layer is not supported.',
@@ -667,6 +686,7 @@ export default {
   modified: 'Modified',
   title: 'Title',
   numViews: 'View numbers',
+  relevance: 'Relevance',
   esriDefault: 'Esri default',
   esriDefault3d: 'Esri default (3D)',
   organizationDefault: 'Organization default',
@@ -698,6 +718,7 @@ export default {
   updated: 'Updated',
 
   // image-selector
+  altText: 'Alt text',
   setAnImage: 'Select an image',
   localImage: 'Local',
   urlImage: 'URL',
@@ -706,7 +727,7 @@ export default {
   urlIsHereForImage: 'Type URL here',
   enterHttpsOrBase64: 'Enter HTTPS or Base64 image URL',
   uploadImageError: 'Error',
-  imageTypeError: 'You have specified an image type that is not supported. Please use one of these types: PNG, GIF, JPG, JPEG or BMP.',
+  imageTypeError: 'You have specified an image type that is not supported. Please use one of these types: PNG, GIF, JPG, JPEG, WEBP or BMP.',
   saveAsNewTemplate: 'Save as a new template',
   imageSelectorBlankStatus: 'Click the "{UploadString}" button to select an image from your device.',
   imageUploadTips: 'Choose image files to upload',
@@ -721,6 +742,7 @@ export default {
   themeSettingThemeFont: 'Theme font',
   themeSettingThemeColorsDescription: 'Change the look of your app by customizing your theme colors. When you change these colors here, they will affect where they are used',
   themeSettingThemeColorAdvanced: 'Advanced color setting',
+  focusIndicator: 'Focus indicator',
   themeSettingColorMode: 'Color mode',
 
   saveAs: 'Save as',
@@ -936,6 +958,7 @@ export default {
   draw: 'Draw',
   selectingFeaturesTip: 'Selecting features now...Click to stop the selection progress.',
   noWebMapWebSceneTip: 'The selected Map widget does not contain a web map or web scene.',
+  moreSelectionTools: 'More selection tools',
 
   // draw component
   drawToolPreview: 'Preview',
@@ -1040,6 +1063,17 @@ export default {
   unitsLabelFeetUS: 'Feet (US)',
   unitsLabelSquareInches: 'Square inches',
   unitsLabelSquareFeetUS: 'Square feet (US)',
+  // snapping
+  snapping: 'Snapping',
+  prescriptiveMode: 'Prescriptive mode',
+  flexibleMode: 'Flexible mode',
+  geometryGuides: 'Geometry guides',
+  featureToFeature: 'Feature to feature',
+  chooseDefaultSnappingLayers: 'Choose default snapping layers',
+  tipsForSnappingTooltip: 'Show numerical info while drawing.',
+  tipsForGeometryGuides: 'Show visual aids to help identify perpendicular and parallel lines when creating or updating a feature or graphic.',
+  tipsForFeatureToFeature: 'Snap vertices of a graphic or feature that is currently being drawn or reshaped to that of an existing feature\'s vertex, edge, or end point.',
+  tipsForGrid: 'Interact with a network of columns and rows used to divide the map view into equal-area squares. ',
 
   // status-bar
   fixedWindows: 'Fixed windows',
@@ -1144,9 +1178,9 @@ export default {
   lastUpdateAMinute: 'Last update: a minute ago',
   lastUpdateAFewTime: 'Last update: a few seconds ago',
 
-  applyToLargeScreen: 'Apply to large screen devices.',
-  applyToMediumScreen: 'Apply to medium screen devices.',
-  applyToSmallScreen: 'Apply to small screen devices.',
+  appliedToLargeScreen: 'These settings are applied to large screen devices.',
+  appliedToMediumScreen: 'These settings are applied to medium screen devices.',
+  appliedToSmallScreen: 'These settings are applied to small screen devices.',
 
   //pagination
   pageNumber: 'Page {pageNumber}',
@@ -1191,6 +1225,8 @@ export default {
   fileSizeTips: 'The file size exceeds the maximum limit of {maxSize}.',
 
   //Search common setting
+  allowSearchSourceSelection: 'Allow search source selection',
+  searchInCurrentMapExtent: 'Only search in current map extent',
   searchSuggestion: 'Search suggestion',
   maximumSuggestions: 'Maximum suggestions per source',
   useCurrentLocation: 'Use current location',
@@ -1329,6 +1365,7 @@ export default {
   unableDelete: 'Item could not be deleted since it is delete protected.',
   deleteError: 'There was a problem deleting this application.',
   appTitle: 'App Title',
+  saveAndPublish: 'Save and publish',
 
   //map-widget-selector
   currentWindow: 'Current window',
@@ -1408,6 +1445,7 @@ export default {
   noItemsFound: 'No items found.',
 
   reportTemplateRemind: 'Template report not configured.',
+  dynamicElementTemplateRemind: 'Dynamic elements not configured.',
   dataCount: 'Total: {total} | Selection: {selected}',
   showRecordCount: 'Show record count',
 
@@ -1452,6 +1490,7 @@ export default {
   attributeSelection: 'Attribute selection',
   interactWithMap: 'Interact with a Map widget',
   customizeLayers: 'Customize layers',
+  noAvailableLayers: 'No available layers',
 
   remindTextForReadonlyMode: 'ArcGIS Online backend system is currently running in the read-only mode.',
 
@@ -1477,6 +1516,15 @@ export default {
   largeScreenDevice: 'large screen device',
   syncPlaceholderTip: 'Select a large screen placeholder to sync',
 
+  // map-layers batch option
+  turnOnAllLayers: 'Turn on all layers',
+  turnOffAllLayers: 'Turn off all layers',
+  expandAllLayers: 'Expand all layers',
+  collapseAllLayers: 'Collapse all layers',
+  selectAllAvailableLayers: 'Select all available layers',
+  unselectAllAvailableLayers: 'Unselect all available layers',
+  batchOptions: 'Batch options',
+
   // download app
   download: 'Download',
   selectRequiredLanguage: 'Please select the required languages.',
@@ -1485,6 +1533,7 @@ export default {
   generateZipFile: 'Generating a zip file...',
   failedToLoad: 'Failed to load',
   indexNumber: 'Index number: {cdnNumber}',
+  applyBuilderClientId: 'Apply builder client ID',
   en: 'English',
   ar: 'Arabic',
   bg: 'Bulgarian',
@@ -1543,5 +1592,6 @@ export default {
   setForAllSide: 'Click to set for all side',
 
   showRuntimeLayers: 'Show runtime layers in layer lists',
-  defaultEnabled: 'Enable by default'
+  defaultEnabled: 'Enable by default',
+  a11y: 'Accessibility'
 }

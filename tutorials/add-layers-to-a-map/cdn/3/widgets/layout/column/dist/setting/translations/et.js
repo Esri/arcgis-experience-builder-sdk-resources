@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Vertikaalne joondamine",spaceAround:"Paiguta \xfcmberringi",spaceBetween:"Paiguta vahele",spaceEvenly:"Paiguta \xfchtlaselt",horizontalAlign:"Horisontaalne joondamine",scrollable:"Keritav"})}}}));

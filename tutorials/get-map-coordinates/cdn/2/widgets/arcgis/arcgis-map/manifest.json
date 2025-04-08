@@ -2,8 +2,8 @@
   "name": "arcgis-map",
   "label": "Map",
   "type": "widget",
-  "version": "1.16.0",
-  "exbVersion": "1.16.0",
+  "version": "1.17.0",
+  "exbVersion": "1.17.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is the widget used in developer guide",
   "copyright": "",
@@ -95,6 +95,12 @@
       "label": "Add to map",
       "uri": "data-actions/add-to-map",
       "icon": "runtime/assets/icons/add-to-map.svg"
+    },
+    {
+      "name": "showPopup",
+      "label": "Show pop-up",
+      "uri": "data-actions/show-popup",
+      "icon": "runtime/assets/icons/show-popup.svg"
     }
   ],
   "layouts": [

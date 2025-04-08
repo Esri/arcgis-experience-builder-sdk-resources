@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Sz\xf6veg",defaultPlaceholder:"Kattintson dupl\xe1n a sz\xf6veg szerkeszt\xe9s\xe9hez"})}}}));

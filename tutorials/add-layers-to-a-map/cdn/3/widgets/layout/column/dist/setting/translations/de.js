@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Vertikale Ausrichtung",spaceAround:"Umgebender Abstand",spaceBetween:"Abstand dazwischen",spaceEvenly:"Gleichm\xe4\xdfige Abst\xe4nde",horizontalAlign:"Horizontale Ausrichtung",scrollable:"Bildlauff\xe4hig"})}}}));

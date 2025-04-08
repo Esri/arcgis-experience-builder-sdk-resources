@@ -37,7 +37,7 @@ export default {
   moreInformation: 'more information',
   scaleRange: 'Scale range',
   scaleRangeTip: 'Set scale limits for 2D maps',
-  noScaleRangeSliderTip: 'Only web maps can be used to set scale range.',
+  wrongScaleRangeWarning: 'The selected scale range exceeds the map definition. The zoom function will be limited.',
 
   mapAction_TriggerLayer: 'Trigger data',
   mapAction_AllData: 'All data',

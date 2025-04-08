@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Wiersz",widgetProperties:"W\u0142a\u015bciwo\u015bci wid\u017cet\xf3w",widgetFunctions:"Funkcje wid\u017cetu",widgetName:"nazwa wid\u017cetu:",widgetProps:"w\u0142a\u015bciwo\u015bci wid\u017cetu:",tips:"Wiersz"})}}}));

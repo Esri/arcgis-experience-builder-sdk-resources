@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"\u5217",widgetProperties:"Widget \u5c6c\u6027",widgetFunctions:"Widget \u51fd\u6578",widgetName:"widget \u540d\u7a31:",widgetProps:"widget \u5c6c\u6027:",tips:"\u5217"})}}}));

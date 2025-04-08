@@ -198,6 +198,13 @@
         }
       }
 
+      // write exb auth info to session storage or local storage:
+      //  dev edition: always write to local storage storage. (because it may not have aopc cookie, except it's deployed under portal)
+      //  online edition:
+      //    1, sign-in from OAuth2 dialog: depends on persist checkbox
+      //    2, sign-in from old auth info: depends on old auth info
+      //    3, sign-in from aopc cookie: always write to session storage
+      //  note: after writing to session storage, when switching environments (such as from prod to devext), other new tabs my need to sign-in again
       function writeAuthInfo(session, query, hash) {
         // write Auth info to local storage.
         const {urlKey, customBaseUrl, schema} = _getPortalUrlInfo(session.portal);
@@ -218,7 +225,7 @@
           // remove exb_auth info first
           sessionStorage.removeItem('exb_auth')
           localStorage.removeItem('exb_auth')
-          if(hash.persist || query.isDevEdition === 'true' || query.isOutOfExb) {
+          if(hash.persist || query.isDevEdition === 'true' || query.isOutOfExb === 'true') {
             localStorage.setItem('exb_auth', JSON.stringify(esriAuthJson));
           } else {
             sessionStorage.setItem('exb_auth', JSON.stringify(esriAuthJson));

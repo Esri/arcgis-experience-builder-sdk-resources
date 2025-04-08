@@ -1,0 +1,1 @@
+System.register([],(function(i){return{execute:function(){i({_widgetLabel:"Stulpelis",widgetProperties:"Valdiklio savyb\u0117s",widgetFunctions:"Valdiklio funkcijos",widgetName:"valdiklio pavadinimas:",widgetProps:"valdiklio savyb\u0117s:",tips:"Stulpelis"})}}}));

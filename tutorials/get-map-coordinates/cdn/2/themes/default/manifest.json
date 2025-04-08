@@ -17,8 +17,8 @@
     "fontFamily": "Avenir Next",
     "color": "#fff"
   },
-  "version": "1.16.0",
-  "exbVersion": "1.16.0",
+  "version": "1.17.0",
+  "exbVersion": "1.17.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is the default theme. This theme is a placeholder, all info about this theme is in jimu so we never load this theme",
   "copyright": "",

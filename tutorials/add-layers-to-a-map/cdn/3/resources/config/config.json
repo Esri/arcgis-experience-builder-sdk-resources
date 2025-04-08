@@ -18,7 +18,7 @@
       "content": {
         "0": {
           "type": "WIDGET",
-          "widgetId": "widget_2",
+          "widgetId": "widget_3",
           "bbox": {
             "left": "0%",
             "right": "0%",
@@ -29,8 +29,8 @@
           },
           "setting": {
             "autoProps": {
-              "right": false,
               "left": false,
+              "right": false,
               "top": false,
               "bottom": false,
               "height": "STRETCH",
@@ -45,19 +45,19 @@
         "0"
       ]
     },
-    "layout_2": {
+    "layout_3": {
       "content": {
         "0": {
           "type": "WIDGET",
-          "widgetId": "widget_3",
+          "widgetId": "widget_4",
           "setting": {
             "autoProps": {
               "height": "STRETCH"
             }
           },
           "bbox": {
-            "left": 2,
-            "width": 10,
+            "left": 3,
+            "width": 9,
             "height": "400px"
           }
         },
@@ -69,7 +69,7 @@
           },
           "bbox": {
             "left": 0,
-            "width": 2,
+            "width": 3,
             "height": "560px"
           },
           "type": "WIDGET",
@@ -83,18 +83,18 @@
         "0"
       ]
     },
-    "layout_3": {
+    "layout_4": {
       "content": {},
       "type": "FIXED",
       "label": "Map FixedLayout"
     },
-    "layout_4": {
+    "layout_5": {
       "content": {
         "1": {
           "type": "WIDGET",
           "widgetId": "widget_7",
           "bbox": {
-            "width": "212px",
+            "width": "318px",
             "height": "40px"
           },
           "setting": {
@@ -105,9 +105,9 @@
         },
         "2": {
           "type": "WIDGET",
-          "widgetId": "widget_8",
+          "widgetId": "widget_9",
           "bbox": {
-            "width": "202px",
+            "width": "308px",
             "height": "500px"
           },
           "setting": {
@@ -125,7 +125,7 @@
       ]
     }
   },
-  "exbVersion": "1.16.0",
+  "exbVersion": "1.17.0",
   "mainSizeMode": "LARGE",
   "theme": "themes/default/",
   "forBuilderAttributes": {
@@ -133,9 +133,9 @@
   },
   "template": "1",
   "widgets": {
-    "widget_2": {
+    "widget_3": {
       "uri": "widgets/layout/row/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Row",
       "config": {
         "space": 10,
@@ -148,16 +148,16 @@
           }
         }
       },
-      "id": "widget_2",
+      "id": "widget_3",
       "layouts": {
         "DEFAULT": {
-          "LARGE": "layout_2"
+          "LARGE": "layout_3"
         }
       }
     },
-    "widget_3": {
+    "widget_4": {
       "uri": "widgets/arcgis/arcgis-map/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Map",
       "config": {
         "toolConfig": {
@@ -167,14 +167,14 @@
           "canNavigation": true
         },
         "isUseCustomMapState": false,
-        "initialMapDataSourceID": "dataSource_2",
+        "initialMapDataSourceID": "dataSource_1",
         "initialMapState": null,
         "scaleRange": null
       },
-      "id": "widget_3",
+      "id": "widget_4",
       "layouts": {
         "MapFixedLayout": {
-          "LARGE": "layout_3"
+          "LARGE": "layout_4"
         }
       },
       "dataActions": {
@@ -246,14 +246,14 @@
       },
       "useDataSources": [
         {
-          "dataSourceId": "dataSource_2",
-          "mainDataSourceId": "dataSource_2"
+          "dataSourceId": "dataSource_1",
+          "mainDataSourceId": "dataSource_1"
         }
       ]
     },
     "widget_6": {
       "uri": "widgets/layout/column/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Column",
       "config": {
         "space": 10,
@@ -271,27 +271,30 @@
       "id": "widget_6",
       "layouts": {
         "DEFAULT": {
-          "LARGE": "layout_4"
+          "LARGE": "layout_5"
         }
       }
     },
     "widget_7": {
       "uri": "widgets/common/text/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "label": "Text",
       "config": {
-        "text": "<p><span style=\"font-size: 22px;\">Add layers to a map</span></p>",
-        "placeholder": "Double click to edit text"
+        "text": "<p><span style=\"font-size: 24px;\">Add layers to a map﻿</span></p>",
+        "placeholder": "Double click to edit text",
+        "style": {
+          "wrap": true
+        }
       },
       "id": "widget_7"
     },
-    "widget_8": {
+    "widget_9": {
       "uri": "widgets/add-layers-to-a-map/",
-      "version": "1.16.0",
+      "version": "1.17.0",
       "config": {},
-      "id": "widget_8",
+      "id": "widget_9",
       "useMapWidgetIds": [
-        "widget_3"
+        "widget_4"
       ]
     }
   },
@@ -310,19 +313,19 @@
     "logo": {}
   },
   "dataSources": {
-    "dataSource_2": {
-      "id": "dataSource_2",
+    "dataSource_1": {
+      "id": "dataSource_1",
       "type": "WEB_MAP",
       "sourceLabel": "LA Parks and Trails Map Default",
       "itemId": "eb1be6543e304b4d81ed55439c412c2c",
       "portalUrl": "https://prof-services.maps.arcgis.com"
     }
   },
-  "originExbVersion": "1.16.0",
+  "originExbVersion": "1.17.0",
   "pageStructure": [
     {
       "page_0": []
     }
   ],
-  "timestamp": 1733426495794
+  "timestamp": 1744128673429
 }

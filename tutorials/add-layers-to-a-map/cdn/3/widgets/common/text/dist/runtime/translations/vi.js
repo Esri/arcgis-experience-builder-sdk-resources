@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"V\u0103n b\u1ea3n",defaultPlaceholder:"Nh\u1ea5p \u0111\xfap chu\u1ed9t \u0111\u1ec3 ch\u1ec9nh s\u1eeda v\u0103n b\u1ea3n"})}}}));

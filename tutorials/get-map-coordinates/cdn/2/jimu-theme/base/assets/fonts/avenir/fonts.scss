@@ -380,7 +380,7 @@ $calcite-fonts-display: auto !default;
 @font-face {
   font-family: "Avenir Next";
   src: url("#{$calcite-fonts-path}12f4c786-0bef-4a48-b7c0-eebaa7591688-hebrew.woff2") format("woff2");
-  font-weight: 500; /* Helvetica Hebrew doesn't have 500 so use 700 weight files */
+  font-weight: 500; /* Hebrew doesn't have 500 so use 700 weight files */
   font-style: normal;
   unicode-range: U+0590-05FF, U+FB00-FB4F;
   font-display: $calcite-fonts-display;

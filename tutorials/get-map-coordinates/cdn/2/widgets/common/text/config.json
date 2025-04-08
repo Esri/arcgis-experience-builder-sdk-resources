@@ -1,1 +1,7 @@
-{}
+{
+  "text": "<p></p>",
+  "placeholder": "Double click to edit text",
+  "style": {
+    "wrap": true
+  }
+}

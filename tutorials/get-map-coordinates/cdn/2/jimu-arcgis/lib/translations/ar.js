@@ -1,1 +1,0 @@
-System.register([],(function(e){return{execute:function(){e({layerIsNotSupported:"\u0646\u0648\u0639 \u0647\u0630\u0647 \u0627\u0644\u0637\u0628\u0642\u0629 \u063a\u064a\u0631 \u0645\u062f\u0639\u0648\u0645."})}}}));

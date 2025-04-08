@@ -92,7 +92,7 @@ export default {
   expressMessageActionContent: 'Configure message actions to communicate with other widgets.',
   // guide widget controller
   widgetControllerTitle: 'Widget controller',
-  widgetControllerContent: 'Click at the Widget controller area, managing buttons will show on the top bar. Configure Widget controller behaviors on the right side.',
+  widgetControllerContent: '<p><b>Click at the Widget controller area,</b> managing buttons will show on the top bar. Configure Widget controller behaviors on the right side.</p>',
   expressWidgetControllerAddWidgetTitle: 'Add or manage widgets in Widget controller',
   expressWidgetControllerAddWidgetContent: 'Click the Add button on the top bar to add widgets to the Widget controller. Use the Manage widget button to reorder or group widgets. To remove a widget, click on it and a Delete button will show on the top bar.',
   // title

@@ -16,7 +16,7 @@
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
-/*! pdfmake v0.2.12, @license MIT, @link http://pdfmake.org */
+/*! pdfmake v0.2.15, @license MIT, @link http://pdfmake.org */
 
 /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 

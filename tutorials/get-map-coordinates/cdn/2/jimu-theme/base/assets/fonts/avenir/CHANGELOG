@@ -74,13 +74,13 @@
 
 ### Fixed
 
-- Fixed Arabic language rendering of Helvetica Neue Arabic and removed temporary Segoe UI fix
+- Fixed Arabic language rendering and removed temporary Segoe UI fix
 
 ## v1.1.1
 
 ### Fixed
 
-- Arabic languages on Windows now use Segoe UI instead of Helvetica Neue Arabic (#5)
+- Arabic languages on Windows now use Segoe UI (#5)
 
 ## v1.1.0
 

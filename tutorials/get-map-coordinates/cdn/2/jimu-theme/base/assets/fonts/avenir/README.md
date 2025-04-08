@@ -30,7 +30,7 @@ Once you have the files in your project, simply load the CSS file:
 After the CSS is loaded, Calcite Web should render with the correct fonts. To use these fonts from your custom CSS, simply use the following font stack:
 
 ```css
-font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+font-family: "Avenir Next", "Avenir", sans-serif;
 ```
 
 The CSS gives you styles for `300` (light), `400` (regular), `500` (medium), and `700` (bold).

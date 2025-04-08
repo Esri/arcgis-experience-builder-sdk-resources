@@ -188,5 +188,7 @@ export default {
   outputView: '{dataSourceLabel} output view',
   buildingScene: 'Building Scene Layer',
   buildingGroup: 'Building Group Sublayer',
-  buildingComponent: 'Building Component Sublayer'
+  buildingComponent: 'Building Component Sublayer',
+  json: 'JSON',
+  exportItem: 'Item',
 }

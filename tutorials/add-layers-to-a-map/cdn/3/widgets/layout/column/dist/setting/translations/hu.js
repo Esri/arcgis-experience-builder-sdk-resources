@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"F\xfcgg\u0151leges igaz\xedt\xe1s",spaceAround:"K\xf6r\xfcl\xf6tti hely",spaceBetween:"K\xf6ztes hely",spaceEvenly:"Egyenletes helyoszt\xe1s",horizontalAlign:"V\xedzszintes igaz\xedt\xe1s",scrollable:"G\xf6rgethet\u0151"})}}}));

@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({_widgetLabel:"Teksts",defaultPlaceholder:"Veiciet dubultklik\u0161\u0137i, lai redi\u0123\u0113tu tekstu"})}}}));

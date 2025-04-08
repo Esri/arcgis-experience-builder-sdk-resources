@@ -1,0 +1,1 @@
+System.register([],(function(e){return{execute:function(){e({verticalAlign:"Vertik\u0101ls l\u012bdzin\u0101jums",spaceAround:"Atstarpe visapk\u0101rt",spaceBetween:"Atstarpe starp",spaceEvenly:"Vienm\u0113r\u012bgi sadal\u012bt atstarpes",horizontalAlign:"Horizont\u0101ls l\u012bdzin\u0101jums",scrollable:"Ritin\u0101ms"})}}}));

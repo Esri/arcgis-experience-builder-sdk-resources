@@ -1,11 +1,11 @@
 {
   "name": "add-layers-to-a-map",
   "type": "widget",
-  "version": "1.16.0",
+  "version": "1.17.0",
+  "exbVersion": "1.17.0",
   "dependency": [
     "jimu-arcgis"
   ],
-  "exbVersion": "1.16.0",
   "author": "Your Name",
   "description": "A hello world starter widget",
   "copyright": "",
