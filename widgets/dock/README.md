@@ -23,7 +23,7 @@
 
 ![snapshot](./snapshot.png)
 
-This is a layout widget for the Experience Builder. It allows users to create flexible layouts by adding, removing, and rearranging items.
+This is a layout widget for Experience Builder. It allows users to create flexible layouts by adding, removing, and rearranging items.
 
 The layout widget supports both runtime and builder modes, providing a consistent experience for users. The layout is a container that can hold multiple items. Layout items has similar UI/UX and has its own position and size within the layout.
 
