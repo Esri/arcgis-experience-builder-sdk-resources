@@ -1,6 +1,6 @@
 {
   "name": "dock",
-  "label": "Dock Panel",
+  "label": "Dock",
   "type": "widget",
   "widgetType": "LAYOUT",
   "version": "1.17.0",
