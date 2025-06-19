@@ -53,7 +53,7 @@ const style = css`
   }
 
   .panel-header {
-    background-color: var(--ref-palette-neutral-500);
+    background-color: var(--sys-color-divider-secondary);
     .tool-drag-handler {
       flex-grow: 1;
       flex-shrink: 1;

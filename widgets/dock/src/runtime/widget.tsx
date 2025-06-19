@@ -22,7 +22,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown>>
     const layoutName = Object.keys(layouts)[0]
 
     return (
-      <div className='widget-fixed-layout d-flex w-100 h-100'>
+      <div className='widget-dock-layout d-flex w-100 h-100'>
         <LayoutComponent
           layouts={layouts[layoutName]} isInWidget style={{
             overflow: 'auto',
