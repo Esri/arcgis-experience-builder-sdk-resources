@@ -33,11 +33,11 @@ Select a number field and some statistic functions, then save them in widget con
   isSearchInputHidden
 />
 <div className='my-2'>Please select a statistic function.</div>
-<MultiSelect fluid
-  items={this.getStatFuncItems()}
+<MultiSelect 
+  children={this.getStatFuncItems()}
   values={this.getSelectedStatFuncs()}
   // use this.props.onSettingChange to save statistic functions to config inside this callback
-  onClickItem={this.onStatFuncItemClick}
+  onChange={this.onStatFuncItemClick}
 />
 ```
 
@@ -48,4 +48,5 @@ In `widget.tsx`, use `DataSourceComponent` to create origin data source instance
   Update output data source
 </Button>
 ```
+
 The main difference between this widget with the [client-side-output](../client-side-output) is this widget's output data source uses a different schema with its origin data source.
