@@ -1,3 +1,5 @@
+# Create widget with layout
+
 This is a widget to show how to use the layout provided by the experience builder. It is a simple widget with a fixed layout.
 
 1. Define the layout you want to use in the `manifest.json` file. In this case, we are using a fixed layout.
