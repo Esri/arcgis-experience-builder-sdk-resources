@@ -79,7 +79,8 @@ export default function Widget (props: AllWidgetProps<unknown>) {
         sidebarVisible
       ))
     } else {
-      alert(
+       // eslint-disable-next-line no-alert
+       alert(
         defaultMessages.sidebarAlert
       )
     }
