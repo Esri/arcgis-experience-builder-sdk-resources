@@ -1,5 +1,7 @@
-# Structure of the source code
+# Dock
+This is a layout widget for Experience Builder. It allows users to create flexible layouts by adding, removing, and rearranging items.
 
+## Structure of the source code
 - src
   -runtime
     - assets
@@ -19,11 +21,9 @@
         - panel.tsx
         - item-title.tsx
 
-# Layout widget
+## Layout widget
 
 ![snapshot](./snapshot.png)
-
-This is a layout widget for Experience Builder. It allows users to create flexible layouts by adding, removing, and rearranging items.
 
 The layout widget supports both runtime and builder modes, providing a consistent experience for users. The layout is a container that can hold multiple items. Layout items has similar UI/UX and has its own position and size within the layout.
 
