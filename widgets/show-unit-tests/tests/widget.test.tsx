@@ -1,6 +1,6 @@
-import { React, getAppStore, appActions } from 'jimu-core'
+import { React, getAppStore, appActions, Immutable, type ThemeVariable } from 'jimu-core'
 import _Widget from '../src/runtime/widget'
-import { widgetRender, wrapWidget, getInitState, getDefaultAppConfig } from 'jimu-for-test'
+import { widgetRender, wrapWidget, getInitState, getDefaultAppConfig, setTheme } from 'jimu-for-test'
 import { fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
@@ -49,16 +49,16 @@ describe('test show-unit-tests widget', () => {
   })
 
   it('test theme variable', () => {
-    getAppStore().dispatch(appActions.updateStoreState(getInitState().merge(({
-      theme: {
-        colors: {
+    setTheme(Immutable({
+      ref:{
+        palette: {
           black: '#FFF'
         }
       }
-    }) as any)))
+    } as  ThemeVariable))
 
-    const renderResult = render(<Widget />)
-    expect(renderResult.queryByText('Theme variable:#FFF')).toBeInTheDocument()
+    const { queryByText } = render(<Widget />)
+    expect(queryByText('Theme variable:#FFF')).toBeInTheDocument()
   })
 
   it('test event', () => {
