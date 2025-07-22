@@ -1,0 +1,27 @@
+{
+  "name": "widget-with-layout",
+  "label": "Widget with Layout",
+  "type": "widget",
+  "widgetType": "LAYOUT",
+  "version": "1.18.0",
+  "exbVersion": "1.18.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is a widget with a fixed layout. It is used to demonstrate how to create a widget with a specific layout.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false,
+    "supportAutoSize": false
+  },
+  "layouts": [
+    {
+      "name": "DEFAULT",
+      "label": "Default",
+      "type": "FIXED"
+    }
+  ],
+  "defaultSize": {
+    "width": 400,
+    "height": 400
+  }
+}

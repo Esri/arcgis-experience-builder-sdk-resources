@@ -35,8 +35,12 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   const [widgetsArray, setWidgetsArray] = useState([] as any[])
   const [sidebarWidgetsArray, setSidebarWidgetsArray] = useState([] as any[])
   // Get the widget state - because the sidebar state may change in the runtime, via Redux's useSelector hook
-  const widgetState = useSelector((state: IMState) => {
+  const sidebarWidgetState = useSelector((state: IMState) => {
     const widgetState = state.widgetsState[sidebarWidgetId]
+    return widgetState
+  })
+  const inControllerWidgetState = useSelector((state: IMState) => {
+    const widgetState = state.widgetsRuntimeInfo[openCloseWidgetId]?.state
     return widgetState
   })
 
@@ -65,21 +69,22 @@ export default function Widget (props: AllWidgetProps<unknown>) {
   // Toggle the sidebar widget
   const handleToggleSidebar = (): void => {
     // If widget state's collapse property is true, collapse
-    if (widgetState && widgetState.collapse === true) {
+    if (sidebarWidgetState && sidebarWidgetState.collapse === true) {
       getAppStore().dispatch(appActions.widgetStatePropChange(
         sidebarWidgetId,
         'collapse',
         !sidebarVisible
       ))
     // If widget state's collapse property is false, expand
-    } else if (widgetState && widgetState.collapse === false) {
+    } else if (sidebarWidgetState && sidebarWidgetState.collapse === false) {
       getAppStore().dispatch(appActions.widgetStatePropChange(
         sidebarWidgetId,
         'collapse',
         sidebarVisible
       ))
     } else {
-      alert(
+       // eslint-disable-next-line no-alert
+       alert(
         defaultMessages.sidebarAlert
       )
     }
@@ -141,6 +146,7 @@ export default function Widget (props: AllWidgetProps<unknown>) {
                 title={defaultMessages.title}
             >
                 {defaultMessages.title}
+
             </h6>
             {sidebarWidgetsArray && sidebarWidgetsArray.length > 0 &&
                 <Row className='p-2 justify-content-between align-items-center'>
@@ -149,6 +155,7 @@ export default function Widget (props: AllWidgetProps<unknown>) {
                             title={defaultMessages.sidebarLabel}
                         >
                             {defaultMessages.sidebarLabel}
+                            [State: { sidebarWidgetState?.collapse + '' }]
                         </Label>
 
                         <Select
@@ -190,6 +197,7 @@ export default function Widget (props: AllWidgetProps<unknown>) {
                             title={defaultMessages.widgetControllerWidgetLabel}
                         >
                             {defaultMessages.widgetControllerWidgetLabel}
+                            [State: { inControllerWidgetState }]
                         </Label>
                         <Select
                             defaultValue=''
