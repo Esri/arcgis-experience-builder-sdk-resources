@@ -1994,9 +1994,9 @@ State
       }
     }
     const isHonorWebmap = curLayer.layerHonorMode === LayerHonorModeType.Webmap
-    const { tableShowColumns } = this.state
     const origUsedFields = isHonorWebmap ? popupAllFields.map(item => item.value as string) : curLayer.tableFields.map(item => item.jimuName)
-     const actionUsedFields = tableShowColumns ? tableShowColumns.map(item => item.value?.toString()) : origUsedFields
+    const runtimeFields = this.table?.columns?.toArray()?.filter(col => !col.hidden).map(col => col.name || col.fieldName)
+    const actionUsedFields = runtimeFields ? runtimeFields : origUsedFields
     return { popupAllFields, actionUsedFields }
   }
 
