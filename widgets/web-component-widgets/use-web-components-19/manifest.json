@@ -1,0 +1,20 @@
+{
+  "name": "use-web-components-19",
+  "label": "Use web components 19",
+  "type": "widget",
+  "version": "1.18.0",
+  "exbVersion": "1.18.0",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is a barebones, simple widget. It includes an example of how to use the config file, and it includes a placeholder SVG icon. It intentionally does not include the following so you can use this to start from scratch: i18n translations, a Settings panel, unit tests. See the documentation for more information on how to implement these features.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {},
+  "dependency": "jimu-arcgis",
+  "translatedLocales": [
+    "en"
+  ],
+  "defaultSize": {
+    "width": 800,
+    "height": 500
+  }
+}
