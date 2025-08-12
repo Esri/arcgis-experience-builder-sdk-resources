@@ -56,6 +56,8 @@ const handleToggleSidebar = (): void => {
 
 ### For the widget within the widget controller
 
+To get `widgetId` in the example below, you can use `props.id` within the custom widget.
+
 ```tsx
 // Load the widget class prior to executing the open/close actions
 const loadWidgetClass = (
