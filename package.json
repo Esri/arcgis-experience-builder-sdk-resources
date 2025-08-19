@@ -1,0 +1,10 @@
+{
+  "name": "arcgis-experience-builder-sdk-resources",
+  "version": "1.13",
+  "description": "arcgis-experience-builder-sdk-resources",
+  "main": "",
+  "scripts": {
+    "install-subfolders": "node npm-install-subfolders.js"
+  },
+  "author": ""
+}
