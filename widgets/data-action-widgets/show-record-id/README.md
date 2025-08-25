@@ -1,4 +1,4 @@
-# Show record id
+# Show record ID
 
 This sample demonstrates how to provide data action in a widget.
 
