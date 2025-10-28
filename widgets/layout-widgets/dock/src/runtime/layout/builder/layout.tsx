@@ -79,7 +79,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     this.canvasPane = new CanvasPane(this.canvasRef, theme)
     this.canvasPane.setColor(
       polished.rgba(
-        theme.sys.color.primary.light,
+        theme.sys.color.surface.paper,
         0.2
       )
     )

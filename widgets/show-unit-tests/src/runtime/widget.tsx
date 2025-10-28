@@ -8,8 +8,7 @@ export default function Widget(props: AllWidgetProps<IMConfig>) {
 
   const onClick = React.useCallback((evt) => {
     setCount(count + 1)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [count])
 
   const onQueryFeatures = React.useCallback((evt) => {
     loadArcGISJSAPIModule('esri/layers/FeatureLayer').then(FeatureLayer => {
