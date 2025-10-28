@@ -22,7 +22,7 @@ import { PanelLayoutItem } from './panel-item'
 import { DropArea, CanvasPane, addItemToLayout, type DropHandlers, LIMITED_BOUNDARY_CLASS_NAME } from 'jimu-layouts/layout-builder'
 import { ItemTitle } from '../common/item-title'
 
-import type { JSX } from "react";
+import type { JSX } from "react"
 
 interface State {
   activeItemId: string
@@ -269,7 +269,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
       <div
         className={mergedClasses}
         ref={el => {
-          (this.ref = el);
+          (this.ref = el)
         }}
         style={mergedStyle}
         data-layoutid={layout.id}
@@ -290,14 +290,14 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
           css={guideOverlay}
           style={guideVisibleStyle}
           ref={el => {
-            (this.canvasRef = el);
+            (this.canvasRef = el)
           }}
         />
         <div className='minimized-list' css={minimizedListStyle}>
           {this.state.minimizedList.map(itemId => this.createMinimizedItem(itemId))}
         </div>
       </div>
-    );
+    )
   }
 }
 

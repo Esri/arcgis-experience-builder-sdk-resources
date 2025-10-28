@@ -1,4 +1,4 @@
- 
+
 import { React, Immutable, type IMFieldSchema, type UseDataSource, type DataSource, DataSourceTypes } from 'jimu-core'
 import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { FieldSelector, DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'

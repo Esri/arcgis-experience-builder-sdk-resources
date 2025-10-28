@@ -15,7 +15,7 @@ import {
 import { PanelLayoutItem } from './panel-item'
 import { ItemTitle } from '../common/item-title'
 
-import type { JSX } from "react";
+import type { JSX } from "react"
 
 interface State {
   activeItemId: string
@@ -125,7 +125,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
       <div
         className={mergedClasses}
         ref={el => {
-          (this.ref = el);
+          (this.ref = el)
         }}
         style={mergedStyle}
         data-layoutid={layout.id}
@@ -135,7 +135,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
           {this.state.minimizedList.map(itemId => this.createMinimizedItem(itemId))}
         </div>
       </div>
-    );
+    )
   }
 }
 
