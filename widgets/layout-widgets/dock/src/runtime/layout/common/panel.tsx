@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import {
   React,
   jsx,

@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, type SerializedStyles, DataSourceComponent, type IMUseDataSource, type QueryParams, type FeatureLayerDataSource, type DataSource } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { Select, Option } from 'jimu-ui'
@@ -38,7 +37,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
           setQueryResults(res.records as FeatureDataRecord[])
         })
       )
-      .catch(() => {console.error('Failed to create data source')})
+      .catch(() => { console.error('Failed to create data source') })
   }, [queryType, props.useDataSources])
 
   const onQueryTypeChange = evt => {
@@ -71,7 +70,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
               {
                 Object.values(QueryTypes).map(t => {
                   return (
-                    <Option value={t} key={t} selected={t === queryType}>
+                    <Option value={t} key={t} >
                       {t}
                     </Option>
                   )

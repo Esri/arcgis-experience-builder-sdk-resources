@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { type AllWidgetProps, jsx } from 'jimu-core'
 import { Icon } from 'jimu-ui'
 import type { Config } from './config'

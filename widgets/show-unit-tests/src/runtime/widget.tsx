@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { type AllWidgetProps, jsx, React, loadArcGISJSAPIModule } from 'jimu-core'
 import type { IMConfig } from '../config'
 

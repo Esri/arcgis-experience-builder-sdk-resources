@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { React, type AllWidgetProps, jsx, css } from 'jimu-core'
 import { LayoutEntry } from 'jimu-layouts/layout-runtime'
 import { WidgetPlaceholder } from 'jimu-ui'

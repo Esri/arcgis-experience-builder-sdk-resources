@@ -18,7 +18,6 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-/** @jsx jsx */
 import { type AllWidgetProps, jsx, React } from 'jimu-core'
 import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
 import Editor from 'esri/widgets/Editor'

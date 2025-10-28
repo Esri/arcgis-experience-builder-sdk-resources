@@ -1,4 +1,3 @@
-/** @jsx jsx */
 /**
   Licensing
 
@@ -18,10 +17,11 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx, styled } from 'jimu-core'
+import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { Tabs, Tab, Button } from 'jimu-ui'
 import defaultMessages from './translations/default'
+import { styled } from 'jimu-theme'
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
   nls = (id: string) => {
