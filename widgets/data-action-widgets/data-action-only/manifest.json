@@ -2,8 +2,8 @@
   "name": "data-action-only",
   "label": "Data Action Only",
   "type": "widget",
-  "version": "1.18.0",
-  "exbVersion": "1.18.0",
+  "version": "1.19.0",
+  "exbVersion": "1.19.0",
   "author": "Esri R&D Center Beijing",
   "description": "This sample demonstrates how to create a widget that has the data action only.",
 
