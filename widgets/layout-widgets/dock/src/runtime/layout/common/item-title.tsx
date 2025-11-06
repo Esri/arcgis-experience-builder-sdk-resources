@@ -1,8 +1,8 @@
-/** @jsx jsx */
+
 import {
   React,
   ReactRedux,
-  IMState,
+  type IMState,
   jsx,
   LayoutItemType
 } from 'jimu-core'

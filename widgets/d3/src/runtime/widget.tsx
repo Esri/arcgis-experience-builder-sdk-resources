@@ -1,4 +1,3 @@
-/** @jsx jsx */
 /**
   Licensing
 
@@ -24,7 +23,7 @@ const { useEffect, useRef } = React
 
 export default function Widget () {
   // Create a React Ref - https://reactjs.org/docs/refs-and-the-dom.html
-  const mainRef = useRef<HTMLDivElement>()
+  const mainRef = useRef<HTMLDivElement>(undefined)
 
   useEffect(() => {
     if (mainRef && mainRef.current) {

@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { React, type AllWidgetProps, jsx, css } from 'jimu-core'
 import { LayoutEntry } from 'jimu-layouts/layout-runtime'
 import { WidgetPlaceholder } from 'jimu-ui'
@@ -7,7 +7,7 @@ const IconImage = require('./assets/icon.svg')
 
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown>> {
   render (): React.JSX.Element {
-    const { layouts, id, intl, builderSupportModules } = this.props
+    const { layouts, id, builderSupportModules } = this.props
     const LayoutComponent = !window.jimuConfig.isInBuilder
       ? LayoutEntry
       : builderSupportModules.widgetModules.LayoutBuilder

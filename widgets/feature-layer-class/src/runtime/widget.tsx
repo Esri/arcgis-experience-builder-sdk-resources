@@ -29,7 +29,7 @@ interface State {
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
   state = { query: null }
 
-  cityNameRef: React.RefObject<HTMLInputElement> = React.createRef()
+  cityNameRef: React.RefObject<HTMLInputElement | null> = React.createRef()
 
   componentDidMount () {
     this.query()

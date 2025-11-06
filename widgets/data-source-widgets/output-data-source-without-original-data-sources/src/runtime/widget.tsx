@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { React, jsx, css, type AllWidgetProps, DataSourceManager, type FeatureDataRecord, DataSourceStatus, type SerializedStyles } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { Button, Link, TextInput } from 'jimu-ui'
