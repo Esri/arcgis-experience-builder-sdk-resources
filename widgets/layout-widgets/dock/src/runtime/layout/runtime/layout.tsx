@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import {
   React,
   ReactRedux,
@@ -14,6 +14,8 @@ import {
 } from 'jimu-layouts/layout-runtime'
 import { PanelLayoutItem } from './panel-item'
 import { ItemTitle } from '../common/item-title'
+
+import type { JSX } from "react"
 
 interface State {
   activeItemId: string
@@ -122,7 +124,9 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     return (
       <div
         className={mergedClasses}
-        ref={el => (this.ref = el)}
+        ref={el => {
+          (this.ref = el)
+        }}
         style={mergedStyle}
         data-layoutid={layout.id}
       >

@@ -1,5 +1,5 @@
-/* eslint-disable no-prototype-builtins */
 /** @jsx jsx */
+/* eslint-disable no-prototype-builtins */
 /**
   Licensing
 
@@ -29,6 +29,7 @@ import {
 import type { IMConfig } from '../config'
 
 import defaultMessages from './translations/default'
+
 
 interface IState {
   featureServiceUrlInput: string
@@ -69,6 +70,7 @@ IState
     }
     if (this.state.featureServiceUrlInput === '') {
       // Nothing was typed into the box!
+      // eslint-disable-next-line no-alert
       alert('Please copy/paste in a FeatureService URL')
       return
     }

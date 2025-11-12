@@ -1,4 +1,4 @@
-import { React, getAppStore, appActions, Immutable, type ThemeVariable } from 'jimu-core'
+import { React, getAppStore, appActions, Immutable, type IMThemeVariables } from 'jimu-core'
 import _Widget from '../src/runtime/widget'
 import { widgetRender, wrapWidget, getInitState, getDefaultAppConfig, setTheme } from 'jimu-for-test'
 import { fireEvent } from '@testing-library/react'
@@ -55,7 +55,7 @@ describe('test show-unit-tests widget', () => {
           black: '#FFF'
         }
       }
-    } as  ThemeVariable))
+    } as IMThemeVariables))
 
     const { queryByText } = render(<Widget />)
     expect(queryByText('Theme variable:#FFF')).toBeInTheDocument()

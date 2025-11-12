@@ -1,4 +1,3 @@
-/** @jsx jsx */
 /**
   Licensing
 
@@ -18,10 +17,11 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx, styled } from 'jimu-core'
+import { React, FormattedMessage, defaultMessages as jimuCoreDefaultMessage, type AllWidgetProps, css, jsx } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { Tabs, Tab, Button } from 'jimu-ui'
 import defaultMessages from './translations/default'
+import { styled } from 'jimu-theme'
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
   nls = (id: string) => {
@@ -30,21 +30,21 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
 
   render() {
     const styleLiteral = css`
-      color: ${this.props.theme.sys.color.error.main};
+      color: ${this.props.theme.sys.color.error.light};
       font-size: 1.25rem;
     `
 
     const styleObject = {
-      backgroundColor: this.props.theme.ref.palette.neutral[500],
+      backgroundColor: this.props.theme.sys.color.surface.background,
       padding: '1rem'
     }
 
     const StyledButton = styled.button`
       color: white;
-      background-color: ${this.props.theme.sys.color.primary.main};
+      background-color: ${this.props.theme.sys.color.primary.light};
       transition: 0.15s ease-in all;
       &:hover {
-        background-color: ${this.props.theme.sys.color.error.main};
+        background-color: ${this.props.theme.sys.color.primary.dark};
       }
     `
 

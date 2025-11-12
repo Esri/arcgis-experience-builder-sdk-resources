@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { jsx, css, type AllWidgetProps, DataSourceComponent, type FeatureLayerQueryParams, ExpressionResolverComponent, type SingleExpressionResolveResult, DataSourceManager, type DataSource, expressionUtils, type DataRecord } from 'jimu-core'
 import type { IMConfig } from '../config'
 

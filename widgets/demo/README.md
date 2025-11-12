@@ -13,10 +13,10 @@ The `render` method is used to call what the widget needs to display. For exampl
   render(){
     const StyledButton = styled.button`
       color: white;
-      background-color: ${this.props.theme.colors.primary};
+      background-color: ${this.props.theme.colors.primary.light};
       transition: 0.15s ease-in all;
       &:hover {
-        background-color: ${this.props.theme.colors.danger};
+        background-color: ${this.props.theme.colors.primary.dark};
       }
     `;
 

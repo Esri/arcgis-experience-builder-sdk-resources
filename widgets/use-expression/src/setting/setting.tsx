@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { jsx, React, css, Immutable, DataSourceTypes, type UseDataSource, type Expression } from 'jimu-core'
 import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'

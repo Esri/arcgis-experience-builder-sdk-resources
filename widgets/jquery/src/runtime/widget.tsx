@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 /**
   Licensing
 
@@ -37,7 +37,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<object>, 
         children: [{ label: 'child3', id: 5 }]
       }
     ]
-    // eslint-disable-next-line no-undef
+
     $('.widget-3rd-lib').tree({
       data: data,
       autoOpen: true,

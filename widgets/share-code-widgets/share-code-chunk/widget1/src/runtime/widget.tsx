@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import { React, type AllWidgetProps, jsx } from 'jimu-core'
 
 export default function Widget (props: AllWidgetProps<unknown>) {

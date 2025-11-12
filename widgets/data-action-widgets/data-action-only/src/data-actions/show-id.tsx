@@ -6,7 +6,7 @@ export default class ExportJson extends AbstractDataAction {
     return Promise.resolve(true)
   }
 
-  onExecute (dataSets: DataRecordSet[], dataLevel: DataLevel, actionConfig?: any): Promise<React.ReactElement> {
+  onExecute (dataSets: DataRecordSet[], dataLevel: DataLevel, actionConfig?: any): Promise<React.ReactElement<any>> {
     const ids = []
     dataSets.forEach(dataSet => {
       if (!ids.includes(dataSet.dataSource.id)) {

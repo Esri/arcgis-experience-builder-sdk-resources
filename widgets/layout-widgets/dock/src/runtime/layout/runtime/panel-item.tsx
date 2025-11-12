@@ -1,4 +1,4 @@
-/** @jsx jsx */
+
 import {
   ReactRedux,
   type IMState,

@@ -21,29 +21,27 @@
 /*
 * Sample code:
 * Uncomment the following sections to add:
-* 1. global style: import the Roboto font from external url.
-* 2. Button component style override: font size change for all Button components.
+* 1. Button component style override: font color and background color change for all Button components based on variant and color.
 */
 
-// import { css, IMThemeVariables } from 'jimu-core';
+// import type { ThemeComponentStyleOptions } from 'jimu-theme'
 
-// const globalStyles = () => {
-//   return css`
-//     /* Change the "fontFamilyBase" property in variables.json to "Roboto"
-//     *  to use this font.
-//     */
-//     @import url("https://fonts.googleapis.com/css?family=Roboto");
-//   `
-// };
 
-// const buttonStyles = (props) => {
-//   const theme: IMThemeVariables = props.theme;
-//   return css`
-//     font-size: ${theme?.typography.sizes.display3};
-//   `
-// };
+// const buttonStyles: ThemeComponentStyleOptions['Button'] = {
+//   root: ({ styleState, theme }) => {
+//     // Dynamically changing Button styles based on variant and color:
+//     const styles = (styleState.variant === 'contained' && styleState.color === 'primary') ? {
+//       backgroundColor: theme.sys.color.secondary.main,
+//       color: theme.sys.color.secondary.text,
+//       '&:hover': {
+//         backgroundColor: theme.sys.color.secondary.dark,
+//         color: theme.sys.color.secondary.text
+//       }
+//     } : {}
 
-// // global styles
-// export { globalStyles as Global};
+//     return styleState.tag === 'a' ? { '&[role="button"]': styles } : styles
+//   }
+// }
+
 // // Button component styles
-// export { buttonStyles as Button};
+// export { buttonStyles as Button }
