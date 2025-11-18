@@ -1,5 +1,5 @@
 import { DataSourceComponent, type FeatureLayerDataSource, React, type AllWidgetProps, DataSourceManager, type IMDataSourceInfo, type FeatureDataRecord, type ArcGISQueryParams } from 'jimu-core'
-import 'arcgis-coding-components'
+import { ArcgisArcadeEditor } from 'arcgis-coding-components'
 
 const Widget = (props: AllWidgetProps<{ [key: string]: never }>) => {
   const ref = React.useRef(null)
@@ -40,7 +40,7 @@ const Widget = (props: AllWidgetProps<{ [key: string]: never }>) => {
   }
   return (
     <div className="jimu-widget m-2">
-      <arcgis-arcade-editor ref={ref}/>
+      <ArcgisArcadeEditor ref={ref}/>
       <DataSourceComponent
         useDataSource={useDs} query={{ outFields: ['*'] } as ArcGISQueryParams}
         widgetId={props.id}

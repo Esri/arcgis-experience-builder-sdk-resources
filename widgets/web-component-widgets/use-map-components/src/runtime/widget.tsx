@@ -1,10 +1,11 @@
 import { React, type AllWidgetProps } from 'jimu-core'
 import { type JimuMapView, JimuMapViewComponent } from 'jimu-arcgis'
 /**
- * You can import the components from `arcgis-map-components`.
- * Use it, the components will not be compiled into the widget bundle, but loaded from the `arcgis-map-components` entry.
+ * You can import the components from `@arcgis/map-components-react` or `arcgis-map-components`.
+ * Whichever way you import it, the components will not be compiled into the widget bundle, but instead loaded from the `arcgis-map-components` entry.
  */
-import 'arcgis-map-components'
+import { ArcgisLayerList } from 'arcgis-map-components'
+import { ArcgisLegend } from '@arcgis/map-components-react'
 
 const Widget = (props: AllWidgetProps<{ [key: string]: never }>) => {
   const legendRef = React.useRef(null)
@@ -27,9 +28,9 @@ const Widget = (props: AllWidgetProps<{ [key: string]: never }>) => {
     <div className="widget-demo jimu-widget m-2">
       <JimuMapViewComponent onActiveViewChange={onActiveViewChange} useMapWidgetId={props.useMapWidgetIds[0]}></JimuMapViewComponent>
       <p>This widget demos how to use Maps components</p>
-      <arcgis-legend ref={legendRef}></arcgis-legend>
+      <ArcgisLegend ref={legendRef}></ArcgisLegend>
       <hr />
-      <arcgis-layer-list ref={layerListRef}></arcgis-layer-list>
+      <ArcgisLayerList ref={layerListRef}></ArcgisLayerList>
     </div>
   )
 }
