@@ -29,4 +29,4 @@ The widget uses components from `arcgis-coding-components`, available in the Exp
 
 ## License
 
-Source code derived from this sample should preserve the Apache 2.0 license header used elsewhere in the repository [License.txt](../../../License.txt).
+Please retain the Apache 2.0 license header when using code from this sample, as specified in [License.txt](../../../License.txt).
