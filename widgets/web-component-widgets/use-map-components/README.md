@@ -1,6 +1,6 @@
 # Use Map Components
 
-This sample demonstrates how to use the `arcgis-map-components` component in a custom widget. This widget works for versions 1.15-1.18. For version 1.19, please see the [`use-web-components-19`](../use-web-components-19/) sample widget.
+This sample demonstrates how to use the [`arcgis-map-components`](https://developers.arcgis.com/javascript/latest/references/map-components/) component in a custom widget. This widget works for versions 1.15-1.18. For version 1.19, please see the [`use-web-components-19`](../use-web-components-19/) sample widget.
 
 ## Contents
 
