@@ -54,6 +54,5 @@ return (
 )
 ```
 
-
 ## License
 Source code derived from this sample should preserve the Apache 2.0 license header used elsewhere in the repository [License.txt](../../../License.txt).
