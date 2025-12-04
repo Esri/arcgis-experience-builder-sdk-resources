@@ -15,7 +15,7 @@ This sample shows how to create a Web Component and embed it in a custom ArcGIS 
 
 ## How it works
 
-The custom element is implemented in the JavaScript file `my-component.js`. It is written in plain JavaScript because Experience Builder transpiles `.ts` files to ES5, while Web Components require ES6 or newer. The file begins with an ECMAScript 2015 (ES6) class that extends `HTMLElement`, which defines the Web Component’s behavior.
+The custom element is implemented in the JavaScript file `my-component.js`. It is written in plain JavaScript because Experience Builder transpiles `.ts` files to ES6, while Web Components require ES6 or newer. The file begins with an ECMAScript 2015 (ES6) class that extends `HTMLElement`, which defines the Web Component’s behavior.
 
 ```typescript
 class MyComponent extends HTMLElement {}
