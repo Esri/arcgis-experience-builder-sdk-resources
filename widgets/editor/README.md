@@ -1,12 +1,12 @@
 # Editor widget
 
-This sample demonstrates how to include the Editor component from the ArcGIS Map Components. 
+This sample demonstrates how to include the Editor component from the Map components in ArcGIS Maps SDK for JavaScript. 
 
 ## How to use the sample
 Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
 
 ## How it works
-This sample imports the required modules to leverage the `Editor` component from the ArcGIS Map Components. The `Editor` component is dependent on a `Map` component, which must have an editable feature layer. If it recognizes it is editable, the layer can be used by the component. 
+This sample imports the required modules to leverage the `Editor` component from the Map components in ArcGIS Maps SDK for JavaScript. The `Editor` component is dependent on a `Map` component, which must have an editable feature layer. If it recognizes it is editable, the layer can be used by the component. 
 
 ```javascript
 import 'arcgis-map-components'
