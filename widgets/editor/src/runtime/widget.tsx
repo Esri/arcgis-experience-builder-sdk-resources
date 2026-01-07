@@ -1,4 +1,3 @@
-/* eslint-disable no-prototype-builtins */
 /**
   Licensing
 
@@ -18,99 +17,44 @@
   A copy of the license is available in the repository's
   LICENSE file.
 */
-import { type AllWidgetProps, jsx, React } from 'jimu-core'
+import { type AllWidgetProps, React } from 'jimu-core'
 import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
-import Editor from 'esri/widgets/Editor'
+import 'arcgis-map-components'
 
 interface State {
   jimuMapView: JimuMapView
-  currentWidget: Editor
 }
 
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
-  private readonly myRef = React.createRef<HTMLDivElement>()
 
   constructor (props) {
     super(props)
     this.state = {
       jimuMapView: null,
-      currentWidget: null
     }
   }
 
   activeViewChangeHandler = (jmv: JimuMapView) => {
-    if (this.state.jimuMapView) {
-      if (this.state.currentWidget) {
-        this.state.currentWidget.destroy()
-      }
-    }
-
-    if (jmv) {
-      this.setState({
-        jimuMapView: jmv
-      })
-
-      if (this.myRef.current) {
-        const newEditor = new Editor({
-          view: jmv.view,
-          container: this.myRef.current
-        })
-
-        this.setState({
-          currentWidget: newEditor
-        })
-      } else {
-        console.error('could not find this.myRef.current')
-      }
-    }
-  }
-
-  componentDidUpdate = evt => {
-    if (this.props.useMapWidgetIds && this.props.useMapWidgetIds.length === 0) {
-      if (this.state.currentWidget) {
-        this.state.currentWidget.destroy()
-      }
-    }
+    this.setState({
+      jimuMapView: jmv
+    })
   }
 
   render () {
-    let mvc = <p>Please select a map.</p>
-
-    const css = `
-    .esri-editor__scroller {
-        overflow-y: auto;
-        padding-top: $cap-spacing--half;
-        padding-bottom: $cap-spacing;
-      }
-      .esri-editor__content-group {
-        max-height: 1em;
-      }
-
-      `
-    if (
-      this.props.hasOwnProperty('useMapWidgetIds') &&
-      this.props.useMapWidgetIds &&
-      this.props.useMapWidgetIds[0]
-    ) {
-      mvc = (
-        <JimuMapViewComponent
-          useMapWidgetId={this.props.useMapWidgetIds?.[0]}
-          onActiveViewChange={this.activeViewChangeHandler}
-        />
-      )
-    }
-
     return (
       <div
         className="widget-js-api-editor"
         style={{ height: '100%', overflow: 'auto' }}
       >
-        <div ref={this.myRef}>
-          <style>
-            {css}
-          </style>
-        </div>
-        {mvc}
+        {this.state.jimuMapView ?
+          <arcgis-editor view={this.state.jimuMapView?.view}></arcgis-editor>
+          :
+          <p>Please select a map.</p>
+        }
+        <JimuMapViewComponent
+          useMapWidgetId={this.props.useMapWidgetIds?.[0]}
+          onActiveViewChange={this.activeViewChangeHandler}
+        />
       </div>
     )
   }
