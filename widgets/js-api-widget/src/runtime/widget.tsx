@@ -20,6 +20,7 @@
 import { React, type AllWidgetProps } from 'jimu-core'
 import type { IMConfig } from '../config'
 import { JimuMapViewComponent } from 'jimu-arcgis'
+import 'arcgis-map-components'
 
 const {useEffect, useState, useRef } = React
 

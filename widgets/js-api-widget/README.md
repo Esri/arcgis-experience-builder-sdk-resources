@@ -18,6 +18,7 @@ Then in `widget.tsx`, it imports the Experience Builder helpers and relies on th
 ```javascript
 import { React, type AllWidgetProps } from 'jimu-core'
 import { JimuMapViewComponent } from 'jimu-arcgis'
+import 'arcgis-map-components'
 ```
 
 The widget is implemented as a functional component using React hooks to manage the active map view and legend element.
