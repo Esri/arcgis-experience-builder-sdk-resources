@@ -16,15 +16,6 @@ const Widget = (props: AllWidgetProps<object>) => {
     setActiveView(activeView)
   }
 
-  const onViewsCreate = (views: { [viewId: string]: JimuMapView }) => {
-    const activeView = Object.values(views).find((view) => view?.isActive)
-    if (!activeView) {
-      return
-    }
-
-    setActiveView(activeView)
-  }
-
   if (!props.useMapWidgetIds || props.useMapWidgetIds.length === 0) {
     return (
       <div className="jimu-widget m-2">
@@ -46,7 +37,6 @@ const Widget = (props: AllWidgetProps<object>) => {
       <br/>
       <JimuMapViewComponent
         onActiveViewChange={onActiveViewChange}
-        onViewsCreate={onViewsCreate}
         useMapWidgetId={props.useMapWidgetIds[0]}
       ></JimuMapViewComponent>
       <arcgis-legend view={activeView?.view}></arcgis-legend>
