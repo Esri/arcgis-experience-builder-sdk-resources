@@ -6,14 +6,14 @@ import 'calcite-components'
 import 'arcgis-map-components'
 
 const Widget = (props: AllWidgetProps<object>) => {
-  const legendRef = React.useRef(null)
+  const [activeView, setActiveView] = React.useState<JimuMapView | null>(null)
 
   const onActiveViewChange = (activeView: JimuMapView) => {
-    if (!activeView || !legendRef.current) {
+    if (!activeView) {
       return
     }
 
-    legendRef.current.view = activeView.view
+    setActiveView(activeView)
   }
 
   if (!props.useMapWidgetIds || props.useMapWidgetIds.length === 0) {
@@ -35,8 +35,11 @@ const Widget = (props: AllWidgetProps<object>) => {
       </calcite-button>
 
       <br/>
-      <JimuMapViewComponent onActiveViewChange={onActiveViewChange} useMapWidgetId={props.useMapWidgetIds[0]}></JimuMapViewComponent>
-      <arcgis-legend ref={legendRef}></arcgis-legend>
+      <JimuMapViewComponent
+        onActiveViewChange={onActiveViewChange}
+        useMapWidgetId={props.useMapWidgetIds[0]}
+      ></JimuMapViewComponent>
+      <arcgis-legend view={activeView?.view}></arcgis-legend>
     </div>
   )
 }
