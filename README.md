@@ -13,6 +13,9 @@ cd client
 git clone git@github.com:Esri/arcgis-experience-builder-sdk-resources.git sdk-sample
 ```
 
+Some widgets depend on 3rd party NPM packages, which need to be installed before compiling. These widgets have their own ``package.json`` in their root folder. Either navigate to the particular folders and execute ``npm i`` in there or run the script ``npm run install-subfolders`` right in the repository root. This will scan through the widget folders and install all dependencies.
+
+
 ## Requirements
 
 ## Resources
