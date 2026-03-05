@@ -25,7 +25,7 @@ interface ExtraProps {
   locale: string
 }
 
-export default function Widget(props: AllWidgetProps<IMConfig> & ExtraProps) {
+export default function Widget (props: AllWidgetProps<IMConfig> & ExtraProps) {
   return <div className="widget-demo-function jimu-widget" style={{ overflow: 'auto' }}>
     This widget demonstrates creating a functional component.
     <div>

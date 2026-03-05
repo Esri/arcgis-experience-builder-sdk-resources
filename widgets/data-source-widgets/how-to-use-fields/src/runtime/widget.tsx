@@ -107,7 +107,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
 
 export default Widget
 
-function getStyle(): SerializedStyles {
+function getStyle (): SerializedStyles {
   return css`
     .query-results {
       width: 100%;
@@ -117,7 +117,7 @@ function getStyle(): SerializedStyles {
   `
 }
 
-async function createDataSource(useDataSource: IMUseDataSource): Promise<DataSource> {
+async function createDataSource (useDataSource: IMUseDataSource): Promise<DataSource> {
   if (!useDataSource) {
     return null
   }

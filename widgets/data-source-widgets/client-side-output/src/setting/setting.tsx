@@ -13,7 +13,7 @@ interface State {
 export default class Setting extends React.PureComponent<AllWidgetSettingProps<IMConfig>, State> {
   supportedTypes = Immutable([DataSourceTypes.FeatureLayer])
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       isSqlBuilderOpen: false
@@ -55,7 +55,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<I
 
   toggleSqlBuilder = () => { this.setState({ isSqlBuilderOpen: !this.state.isSqlBuilderOpen }) }
 
-  render() {
+  render () {
     const dsId = this.props.useDataSources?.[0]?.dataSourceId
     const ds = dsId && DataSourceManager.getInstance().getDataSource(dsId)
     return (

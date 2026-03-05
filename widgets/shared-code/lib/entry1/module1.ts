@@ -1,3 +1,3 @@
-export function sampleFunction1() {
+export function sampleFunction1 () {
   return 'sample function1'
 }

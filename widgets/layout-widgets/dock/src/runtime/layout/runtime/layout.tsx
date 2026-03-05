@@ -38,9 +38,9 @@ const minimizedListStyle = css`
 
 class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State> {
   static displayName = 'FloatingLayout'
-  ref: HTMLElement
+  // ref: HTMLElement
 
-  constructor (props) {
+  constructor (props: LayoutProps & StateToLayoutProps) {
     super(props)
 
     this.state = {
@@ -59,7 +59,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     this.setState({ minimizedList: [].concat(this.state.minimizedList, itemId) })
   }
 
-  handleMinimizedItemClick = (e, itemId: string) => {
+  handleMinimizedItemClick = (e: React.MouseEvent<HTMLButtonElement>, itemId: string) => {
     e.stopPropagation()
     const idx = this.state.minimizedList.indexOf(itemId)
     if (idx >= 0) {
@@ -124,13 +124,13 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     return (
       <div
         className={mergedClasses}
-        ref={el => {
-          (this.ref = el)
-        }}
+        // ref={el => {
+        //   (this.ref = el)
+        // }}
         style={mergedStyle}
         data-layoutid={layout.id}
       >
-        {(content as any).map((layoutItemId) => this.createItem(layoutItemId))}
+        {(content as any).map((layoutItemId: string) => this.createItem(layoutItemId))}
         <div className='minimized-list' css={minimizedListStyle}>
           {this.state.minimizedList.map(itemId => this.createMinimizedItem(itemId))}
         </div>

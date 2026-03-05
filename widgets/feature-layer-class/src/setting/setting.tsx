@@ -45,7 +45,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<u
     })
   }
 
-  render() {
+  render () {
     return <div className="use-feature-layer-setting p-2">
       <DataSourceSelector
         types={this.supportedTypes}
