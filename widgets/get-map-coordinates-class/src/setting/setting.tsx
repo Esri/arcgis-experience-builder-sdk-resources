@@ -54,7 +54,7 @@ export default class Setting extends React.PureComponent<
     })
   }
 
-  render() {
+  render () {
     const style = css`
       .widget-setting-get-map-coordinates {
         .checkbox-row {

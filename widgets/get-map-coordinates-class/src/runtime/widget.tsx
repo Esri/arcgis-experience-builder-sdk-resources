@@ -80,7 +80,7 @@ export default class Widget extends React.PureComponent<
     }
   }
 
-  render() {
+  render () {
     const sections = []
 
     sections.push(

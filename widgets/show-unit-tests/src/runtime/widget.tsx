@@ -2,7 +2,7 @@
 import { type AllWidgetProps, jsx, React, loadArcGISJSAPIModule } from 'jimu-core'
 import type { IMConfig } from '../config'
 
-export default function Widget(props: AllWidgetProps<IMConfig>) {
+export default function Widget (props: AllWidgetProps<IMConfig>) {
   const [count, setCount] = React.useState(0)
   const [queryCount, setQueryCount] = React.useState(null)
 

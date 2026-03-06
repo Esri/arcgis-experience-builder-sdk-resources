@@ -64,7 +64,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
   canvasRef: HTMLCanvasElement
   canvasPane: CanvasPane
 
-  constructor (props) {
+  constructor (props: LayoutProps & StateToLayoutProps) {
     super(props)
 
     this.state = {
@@ -98,6 +98,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     })
   }
 
+  // eslint-disable-next-line max-params
   handleDragOver = (
     draggingItem: LayoutItemConstructorProps,
     draggingElement: HTMLElement,
@@ -196,7 +197,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
     this.setState({ minimizedList: [].concat(this.state.minimizedList, itemId) })
   }
 
-  handleMinimizedItemClick = (e, itemId: string) => {
+  handleMinimizedItemClick = (e: React.MouseEvent<HTMLButtonElement>, itemId: string) => {
     e.stopPropagation()
     const idx = this.state.minimizedList.indexOf(itemId)
     if (idx >= 0) {
@@ -285,7 +286,7 @@ class Layout extends React.PureComponent<LayoutProps & StateToLayoutProps, State
           onToggleDragoverEffect={this.handleToggleDragoverEffect}
           isRepeat={this.props.isRepeat}
         />
-        {(content as any).map((layoutItemId) => this.createItem(layoutItemId))}
+        {(content as any).map((layoutItemId: string) => this.createItem(layoutItemId))}
         <canvas
           css={guideOverlay}
           style={guideVisibleStyle}

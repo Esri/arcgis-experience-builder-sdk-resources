@@ -24,11 +24,11 @@ import defaultMessages from './translations/default'
 import { styled } from 'jimu-theme'
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, any> {
-  nls = (id: string) => {
+  nls = (id: keyof typeof defaultMessages) => {
     return this.props.intl ? this.props.intl.formatMessage({ id: id, defaultMessage: defaultMessages[id] }) : id
   }
 
-  render() {
+  render () {
     const styleLiteral = css`
       color: ${this.props.theme.sys.color.error.light};
       font-size: 1.25rem;

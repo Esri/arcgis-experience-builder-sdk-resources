@@ -60,7 +60,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     featureLayerOutputDs.setCountStatus(DataSourceStatus.Unloaded)
   }
 
-  render() {
+  render () {
     if (!this.isDsConfigured()) {
       return (
         <h3>

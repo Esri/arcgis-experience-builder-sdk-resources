@@ -36,7 +36,7 @@ export default class Setting extends React.PureComponent<
     })
   }
 
-  render() {
+  render () {
     return (
       <div className="widget-setting-js-api-widget">
         <SettingSection

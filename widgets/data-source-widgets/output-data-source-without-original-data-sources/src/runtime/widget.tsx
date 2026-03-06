@@ -95,7 +95,7 @@ Widget.getFullConfig = (config: IMConfig) => {
 
 export default Widget
 
-async function getAllRepoIssues(token: string, owner: string, repo: string): Promise<Issue[]> {
+async function getAllRepoIssues (token: string, owner: string, repo: string): Promise<Issue[]> {
   const GITHUB_API_BASE_URL = 'https://api.github.com'
   const perPage = 100
   let page = 1
@@ -141,7 +141,7 @@ interface Issue {
   pull_request?: object
 }
 
-function getStyle(): SerializedStyles {
+function getStyle (): SerializedStyles {
   return css`
     .query-results {
       width: 100%;

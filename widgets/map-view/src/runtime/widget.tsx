@@ -88,7 +88,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown> 
 
   mapNode = <div className="widget-map" style={{ width: '100%', height: '100%' }} ref={this.mapContainer}></div>
 
-  render() {
+  render () {
     if (!this.props.useDataSources || this.props.useDataSources.length === 0) {
       return 'Select a webmap in the settings panel'
     }
