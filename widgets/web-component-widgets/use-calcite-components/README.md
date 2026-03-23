@@ -1,20 +1,32 @@
 # Use calcite components widget
 
-This sample demonstrates how to use [Calcite components](https://developers.arcgis.com/calcite-design-system/components/) in a custom widget.
+This sample demonstrates how to use [Calcite Components](https://developers.arcgis.com/calcite-design-system/components/) in a custom widget.
 
-## Reminder before use
+Note: Before you use Calcite Components, we suggest you review the components in the `jimu-ui` package. `jimu-ui` is the primary component library for the ArcGIS Experience Builder developer edition, and you may want to use that first because it will keep your custom widgets and themes consistent with the rest of the Experience Builder theme.
 
-Before you use Calcite components, we suggest you review the components in the jimu-ui package. Jimu-ui is the primary component library for the developer edition of ArcGIS Experience Builder, and you may want to use that first because it will keep your custom widgets and themes consistent with the rest of the Experience Builder theme. If you do have a requirement to use Calcite components, this example will help you.
+## Contents
 
-## How to use the sample
+- `manifest.json`: Defines widget metadata and EXB version.
+- `src/runtime/widget.tsx`: Functional runtime component that imports Calcite Components and Map components.
+- `config.json`: Defines the widget’s default values.
 
-* Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+## Prerequisites
+
+- ArcGIS Experience Builder Developer Edition version 1.12 and above. 
+- A map widget must be present in the experience for this sample to bind to its view.
+
+## Installation
+
+1. Clone the SDK resources repository (or download zip).
+2. Copy the folder `widgets/web-component-widgets/use-calcite-components` into your EXB install `client/your-extensions/widgets/`
+3. Restart (or rebuild) the EXB dev environment if required.
+4. Add the widget to an experience and select a map widget in its settings panel.
 
 ## How it works
 
-Starting at version 1.8, developer edition of Experience Builder includes a Calcite components entry (`calcite-components`) from which you can import Calcite components into your custom widget. Importing components from this instance of `calcite-components` can avoid conflicts and reduce widget size.
+Experience Builder Developer Edition includes a Calcite components entry (`calcite-components`) from which you can import Calcite components into your custom widget. Importing components from this instance of `calcite-components` can avoid conflicts and reduce widget size.
 
-Here is an example:
+Here is an example of how to import and use Calcite Components:
 
 ```js
 import { CalciteButton } from 'calcite-components'
@@ -26,4 +38,8 @@ render(){
 }
 ```
 
-This widget uses this [calcite components example](https://github.com/Esri/calcite-components-examples/tree/master/react) to demonstrate the usage.
+This widget uses the [Calcite Components example](https://github.com/Esri/calcite-components-examples/tree/master/react) to demonstrate the usage.
+
+## License
+
+Please retain the Apache 2.0 license header when using code from this sample, as specified in [License.txt](../../../License.txt).

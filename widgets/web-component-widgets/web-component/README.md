@@ -1,26 +1,38 @@
 # Web component
 
-This sample demonstrates how to write a Web component and include it in a custom Experience Builder widget.
+This sample shows how to create a Web Component and embed it in a custom ArcGIS Experience Builder widget.
 
-## How to use the sample
-Clone the [sample repo](https://github.com/esri/arcgis-experience-builder-sdk-resources) and copy this widget's folder (within `widgets`) to the `client/your-extensions/widgets` folder of your Experience Builder installation.
+## Contents
+
+- `manifest.json` — Widget metadata and Experience Builder version compatibility
+- `src/runtime/widget.tsx` — Functional runtime component; imports the Web Component, Calcite Components, and map components
+- `src/setting/setting.tsx` — Builder settings panel to select a target Map widget
+- `src/runtime/my-component.js` — Custom Web Component definition registered with window.customElements
+
+## Prerequisites
+
+- ArcGIS Experience Builder Developer Edition installed and running (version compatible with the widget’s manifest).
 
 ## How it works
 
-A [Web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is defined in `my-component.js`. This is a JavaScript file - not a TypeScript file - because Experience Builder is compiling the `.ts` files to ES5, but Web components work on >= ES6 only. The first line uses the [ECMAScript 2015 class syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) to create a new Class that extends from HTMLElement.
+The custom element is implemented in the JavaScript file `my-component.js`. It is written in plain JavaScript because Experience Builder transpiles `.ts` files to ES6, while Web Components require ES6 or newer. The file begins with an ECMAScript 2015 (ES6) class that extends `HTMLElement`, which defines the Web Component’s behavior.
 
+```typescript
+class MyComponent extends HTMLElement {}
 ```
-class MyComponent extends HTMLElement {
-  ```
 
-In the constructor, a shadow DOM is attached to the custom element using `this.attachShadow({mode: 'open'})`. Setting the `mode` to `open` means that elements of the shadow root are accessible from JavaScript outside the root.
+The component’s constructor attaches a shadow DOM with `this.attachShadow({ mode: 'open' })`. Using `open` lets external scripts access the shadow root via `element.shadowRoot`.
 
-Finally, register the Class using `window.customElements.define('my-component', MyComponent)`. This allows the custom component to be used by name (`my-component` in this case) on the page.
+Register the element with `window.customElements.define('my-component', MyComponent)`. After registration, you can use `<my-component></my-component>` in your markup.
 
-In `widget.tsx`, to use the custom component that was defined above, simply import it (`import './my-component'`) and then use it in the JSX in either the `render` function (if using Class-style widgets) or in the return value if using functional component style. In this case, we are using the functional component style by exporting a function instead of a Class:
+In `widget.tsx`, import the Web Component with `import './my-component'`. Then include `<my-component />` in the JSX of your functional widget’s return value (or in a class widget’s `render` method).
 
-```
-export default function Widget(props: AllWidgetProps<{}>){
+```typescript
+export default function Widget(props: AllWidgetProps<{}>) {}
 ```
 
 More information on functional components can be found [here](https://reactjs.org/docs/components-and-props.html#function-and-class-components).
+
+## License
+
+Please retain the Apache 2.0 license header when using code from this sample, as specified in [License.txt](../../../License.txt).

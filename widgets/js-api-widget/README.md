@@ -13,58 +13,53 @@ In `manifest.json`, the dependencies are loaded using the `dependency` property.
 "dependency": "jimu-arcgis",
 ```
 
-Then in `widget.tsx`, it imports the required modules to leverage the `Legend` widget and `LegendViewModel` from the ArcGIS API for JavaScript.  
+Then in `widget.tsx`, it imports the Experience Builder helpers and relies on the ArcGIS Maps SDK for JavaScript web component for the legend.
 
 ```javascript
-import Legend from "esri/widgets/Legend";
-import LegendVM from "esri/widgets/Legend/LegendViewModel";
+import { React, type AllWidgetProps } from 'jimu-core'
+import { JimuMapViewComponent } from 'jimu-arcgis'
+import 'arcgis-map-components'
 ```
 
-Create an interface `State` to define the specifications for the `layerInfo` property.
+The widget is implemented as a functional component using React hooks to manage the active map view and legend element.
 
 ```javascript
-interface State{
-  layerInfo: any
-}
+const { useEffect, useState, useRef } = React
 ```
 
-Extend the `React.PureComponent` class and use the `AllWidgetProps` type and implement the `State` interface. The `legendWidget` property is used for the `Legend` widget so it can be referenced throughout the widget.
+The `JimuMapViewComponent` reports the current view. A `useEffect` hook watches for view changes and recreates the `<arcgis-legend>` web component so it always targets the active view.
 
 ```javascript
-export default class Widget extends React.PureComponent<AllWidgetProps<{}>, State>{
-  apiWidgetContainer: React.RefObject<HTMLDivElement>;
-  legendWidget: Legend;
+const containerRef = useRef<HTMLDivElement>(null)
+const [activeView, setActiveView] = useState(null)
+const legendRef = useRef<HTMLArcgisLegendElement>(null)
 
-// the class constructor assigns the initial this.state and this.apiWidgetContainer to get references to the DOM nodes.
-  constructor(props){
-    super(props);
-    this.state = { layerInfo: null }
-    this.apiWidgetContainer = React.createRef();
+useEffect(() => {
+  if (legendRef.current) {
+    // Cleanup any existing legend element before creating a new one.
+    legendRef.current.destroy()
+    if (containerRef.current?.contains(legendRef.current)) {
+      containerRef.current.removeChild(legendRef.current)
+    }
+    legendRef.current = null
   }
-}
+
+  if (!containerRef.current || !activeView) {
+    return
+  }
+
+  const legend = document.createElement('arcgis-legend')
+  legend.view = activeView.view
+  containerRef.current.append(legend)
+  legendRef.current = legend
+}, [activeView])
 ```
 
-The `onActiveViewChange` method gets called when the map view changes, and creates the `Legend` widget and passes the properties into the `new Legend` constructor. It also creates the `Legend` view model and updates the UI by calling `setState`.
+The view is provided by the map widget through `JimuMapViewComponent`:
 
 ```javascript
-onActiveViewChange = (jimuMapView: JimuMapView) => {
-  if (!(jimuMapView && jimuMapView.view)) {
-    return;
-  }
-
-  if (!this.legendWidget && this.apiWidgetContainer.current) {
-    this.legendWidget = new Legend({
-      view: jimuMapView.view,
-      container: this.apiWidgetContainer.current
-    });
-
-    const vm = new LegendVM({
-      view: jimuMapView.view,
-    });
-
-    this.setState({
-      layerInfo: vm.activeLayerInfos.getItemAt(0)
-    });
-  }
-}
+<JimuMapViewComponent
+  useMapWidgetId={useMapWidgetIds?.[0]}
+  onActiveViewChange={(view) => { setActiveView(view) }}
+/>
 ```
