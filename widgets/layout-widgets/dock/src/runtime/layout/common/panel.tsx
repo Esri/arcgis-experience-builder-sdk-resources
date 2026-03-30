@@ -16,6 +16,7 @@ import type { LayoutItemProps } from 'jimu-layouts/layout-runtime'
 import { DownOutlined } from 'jimu-icons/outlined/directional/down'
 import { bindResizeHandler, bindDragHandler, ShapeL, LIMITED_BOUNDARY_CLASS_NAME } from 'jimu-layouts/layout-builder'
 import { ItemTitle } from './item-title'
+import type { Interactable } from '@interactjs/types/index'
 
 enum Modes {
   Normal,
@@ -139,7 +140,7 @@ export function Panel (props: LayoutItemProps & OwnProps) {
   }, [])
 
   hooks.useEffectOnce(() => {
-    let interactable
+    let interactable: Interactable
     moduleLoader.loadModule('jimu-core/dnd').then((dndModule) => {
       const interact = dndModule.interact
       const parentRestrict = interact.modifiers.restrictRect({
@@ -193,7 +194,7 @@ export function Panel (props: LayoutItemProps & OwnProps) {
     }
   })
 
-  const toggleCollapsed = React.useCallback((e) => {
+  const toggleCollapsed = React.useCallback((e: { stopPropagation: () => void }) => {
     e.stopPropagation()
     setCollapsed(!collapsed)
   }, [collapsed])
@@ -202,12 +203,12 @@ export function Panel (props: LayoutItemProps & OwnProps) {
     setMode(mode === Modes.Normal ? Modes.Maximum : Modes.Normal)
   }, [mode])
 
-  const minimize = React.useCallback((e) => {
+  const minimize = React.useCallback((e: { stopPropagation: () => void }) => {
     e.stopPropagation()
     onMinimized(layoutItemId)
   }, [onMinimized, layoutItemId])
 
-  const handleItemClick = React.useCallback((e) => {
+  const handleItemClick = React.useCallback((e: { stopPropagation: () => void }) => {
     e.stopPropagation()
     onActive(layoutItemId)
   }, [onActive, layoutItemId])

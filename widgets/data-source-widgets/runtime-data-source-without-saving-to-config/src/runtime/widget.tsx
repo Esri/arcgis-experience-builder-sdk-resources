@@ -63,7 +63,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
 
 export default Widget
 
-async function createDataSource(dsId: string, url: string): Promise<DataSource> {
+async function createDataSource (dsId: string, url: string): Promise<DataSource> {
   const dsJson = await fetchDataSourceJson(dsId, url)
   const dsOptions: FeatureLayerDataSourceConstructorOptions = {
     id: dsId,
@@ -74,7 +74,7 @@ async function createDataSource(dsId: string, url: string): Promise<DataSource> 
   return DataSourceManager.getInstance().createDataSource(dsOptions)
 }
 
-async function fetchDataSourceJson(dsId: string, url: string): Promise<IMDataSourceJson> {
+async function fetchDataSourceJson (dsId: string, url: string): Promise<IMDataSourceJson> {
   if (!url) {
     return Promise.reject(new Error('Need URL.'))
   }
@@ -95,7 +95,7 @@ async function fetchDataSourceJson(dsId: string, url: string): Promise<IMDataSou
   return dsJson
 }
 
-function getStyle(): SerializedStyles {
+function getStyle (): SerializedStyles {
   return css`
     .query-results {
       width: 100%;

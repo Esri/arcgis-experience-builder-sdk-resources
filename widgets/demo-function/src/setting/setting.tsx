@@ -22,7 +22,7 @@ import type { AllWidgetSettingProps } from 'jimu-for-builder'
 import type { IMConfig } from '../config'
 import defaultI18nMessages from './translations/default'
 
-export default function Setting(props: AllWidgetSettingProps<IMConfig>) {
+export default function Setting (props: AllWidgetSettingProps<IMConfig>) {
   const onP1Change = (evt: React.FormEvent<HTMLInputElement>) => {
     props.onSettingChange({
       id: props.id,

@@ -34,7 +34,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<u
     })
   }
 
-  render() {
+  render () {
     return <div className="sample-use-map-view-setting p-2">
       <MapWidgetSelector onSelect={this.onMapSelected} useMapWidgetIds={this.props.useMapWidgetIds} />
     </div>

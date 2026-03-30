@@ -10,7 +10,7 @@ interface State {
 }
 
 export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>, State> {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       isLoading: false
@@ -123,7 +123,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<IMConfig>
     })
   }
 
-  render() {
+  render () {
     if (!this.isDsConfigured()) {
       return (
         <>
