@@ -1,5 +1,6 @@
-import { React, type AllWidgetProps } from 'jimu-core'
+import { React, type AllWidgetProps, } from 'jimu-core'
 import type { IMConfig } from '../config'
+import 'calcite-components'
 
 const Widget = (props: AllWidgetProps<IMConfig>) => {
   const text = props.config.text
