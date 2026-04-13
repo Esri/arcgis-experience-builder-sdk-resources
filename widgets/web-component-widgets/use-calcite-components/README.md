@@ -12,7 +12,7 @@ Note: Before you use Calcite Components, we suggest you review the components in
 
 ## Prerequisites
 
-- ArcGIS Experience Builder Developer Edition version 1.12 and above. 
+- ArcGIS Experience Builder Developer Edition version 1.12 and above.
 - A map widget must be present in the experience for this sample to bind to its view.
 
 ## Installation
@@ -29,7 +29,7 @@ Experience Builder Developer Edition includes a Calcite components entry (`calci
 Here is an example of how to import and use Calcite Components:
 
 ```js
-
+import 'calcite-components'
 ...
 
 render(){
