@@ -29,12 +29,11 @@ Experience Builder Developer Edition includes a Calcite components entry (`calci
 Here is an example of how to import and use Calcite Components:
 
 ```js
-import { CalciteButton } from 'calcite-components'
 
 ...
 
 render(){
-  return <CalciteButton>My Button</CalciteButton>
+  return <calcite-button>My Button</calcite-button>
 }
 ```
 
