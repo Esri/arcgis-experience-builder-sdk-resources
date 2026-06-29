@@ -50,7 +50,7 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
   }, [activeView])
   return (
     <div className="widget-demo jimu-widget m-2">
-      <JimuMapViewComponent useMapWidgetId={useMapWidgetIds?.[0]} onActiveViewChange={(view) => {setActiveView(view)}}></JimuMapViewComponent>
+      <JimuMapViewComponent useMapWidgetId={useMapWidgetIds?.[0]} onActiveViewChange={(view) => { setActiveView(view) }}></JimuMapViewComponent>
       <div className='container' ref={containerRef}></div>
     </div>
   )
