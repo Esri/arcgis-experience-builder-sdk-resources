@@ -23,23 +23,20 @@ This sample demonstrates how to use the [`arcgis-map-components`](https://develo
 ## How it works
 
 At a high level, the widget:
-- Imports components from `arcgis-map-components`
+- Imports `arcgis-map-components` to register the map component custom elements
 - Binds to a selected Map widget via `JimuMapViewComponent` and listens for the active view.
-- Hold refs to the `<ArcgisLayerList>` and `<ArcgisLegend>` components so it can assign the `MapView` when available.
-- Assign the Experience Builder `MapView` to each component’s `view` property, which enables them to render against the same map.
-
-Note: You can import from either `arcgis-map-components` (web components) or `@arcgis/map-components-react` (React wrappers). Both resolve to the shared entry so the code isn’t bundled multiple times.
+- Hold refs to the `<arcgis-layer-list>` and `<arcgis-legend>` components so it can assign the JimuMapView map component when available.
+- Assign `jimuMapView.mapComponent` to each component's `referenceElement` property, which enables them to render against the same map.
 
 ## Key snippet
 
 ```typescript
-import { ArcgisLayerList } from 'arcgis-map-components'
-import { ArcgisLegend } from '@arcgis/map-components-react'
+import 'arcgis-map-components'
 
 ...
 
-const legendRef = React.useRef(null)
-const layerListRef = React.useRef(null)
+const legendRef = React.useRef<HTMLArcgisLegendElement>(null)
+const layerListRef = React.useRef<HTMLArcgisLayerListElement>(null)
 
 ...
 
@@ -47,9 +44,9 @@ return (
   <div className="widget-demo jimu-widget m-2">
     <JimuMapViewComponent onActiveViewChange={onActiveViewChange} useMapWidgetId={props.useMapWidgetIds[0]}></JimuMapViewComponent>
     <p>This widget demos how to use Maps components</p>
-    <ArcgisLegend ref={legendRef}></ArcgisLegend>
+    <arcgis-legend ref={legendRef}></arcgis-legend>
     <hr />
-    <ArcgisLayerList ref={layerListRef}></ArcgisLayerList>
+    <arcgis-layer-list ref={layerListRef}></arcgis-layer-list>
   </div>
 )
 ```
