@@ -2,14 +2,16 @@
   "name": "output-data-source-without-original-data-sources",
   "label": "Output data source without original data sources",
   "type": "widget",
-  "version": "1.20.0",
-  "exbVersion": "1.20.0",
+  "version": "1.21.0",
+  "exbVersion": "1.21.0",
   "author": "Esri R&D Center Beijing",
   "description": "This is an example of how to create an output data source without original data sources.",
   "copyright": "",
   "license": "",
   "properties": {},
-  "translatedLocales": ["en"],
+  "translatedLocales": [
+    "en"
+  ],
   "defaultSize": {
     "width": 600,
     "height": 500

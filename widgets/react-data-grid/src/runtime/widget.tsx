@@ -19,22 +19,29 @@
   LICENSE file.
 */
 import { React, type AllWidgetProps, jsx } from 'jimu-core'
-import * as ReactDataGrid from 'react-data-grid'
+import { DataGrid, type Column } from 'react-data-grid'
+import 'react-data-grid/lib/styles.css'
+
+interface Row {
+  id: number
+  title: string
+  count: number
+}
 
 export default class Widget extends React.PureComponent<AllWidgetProps<any>, any> {
-  private readonly columns = [
+  private readonly columns: ReadonlyArray<Column<Row>> = [
     { key: 'id', name: 'ID' },
     { key: 'title', name: 'Title' },
     { key: 'count', name: 'Count' }
   ]
 
-  private readonly rows = [
+  private readonly rows: readonly Row[] = [
     { id: 0, title: 'row1', count: 20 },
     { id: 1, title: 'row1', count: 40 },
     { id: 2, title: 'row1', count: 60 }
   ]
 
-  constructor (props) {
+  constructor (props: AllWidgetProps<any>) {
     super(props)
     this.state = {}
   }
@@ -44,11 +51,10 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, any
       <div className="widget-d3 jimu-widget p-2">
         <p>React Data Grid sample</p>
         <p>
-          <ReactDataGrid
+          <DataGrid
             columns={this.columns}
-            rowGetter={(i) => this.rows[i]}
-            rowsCount={3}
-            minHeight={150}
+            rows={this.rows}
+            style={{ height: 150 }}
           />
         </p>
       </div>

@@ -17,11 +17,11 @@ Then in `widget.tsx`, it imports the Experience Builder helpers and relies on th
 
 ```javascript
 import { React, type AllWidgetProps } from 'jimu-core'
-import { JimuMapViewComponent } from 'jimu-arcgis'
+import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
 import 'arcgis-map-components'
 ```
 
-The widget is implemented as a functional component using React hooks to manage the active map view and legend element.
+The widget is implemented as a functional component using React hooks to manage the active JimuMapView and legend element.
 
 ```javascript
 const { useEffect, useState, useRef } = React
@@ -31,7 +31,7 @@ The `JimuMapViewComponent` reports the current view. A `useEffect` hook watches 
 
 ```javascript
 const containerRef = useRef<HTMLDivElement>(null)
-const [activeView, setActiveView] = useState(null)
+const [activeView, setActiveView] = useState<JimuMapView>(null)
 const legendRef = useRef<HTMLArcgisLegendElement>(null)
 
 useEffect(() => {
@@ -49,7 +49,7 @@ useEffect(() => {
   }
 
   const legend = document.createElement('arcgis-legend')
-  legend.view = activeView.view
+  legend.referenceElement = activeView.mapComponent
   containerRef.current.append(legend)
   legendRef.current = legend
 }, [activeView])
