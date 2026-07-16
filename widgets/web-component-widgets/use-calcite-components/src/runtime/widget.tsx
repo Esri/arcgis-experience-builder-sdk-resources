@@ -1,4 +1,4 @@
-import { React, type AllWidgetProps } from 'jimu-core'
+import { React, type AllWidgetProps, } from 'jimu-core'
 import type { IMConfig } from '../config'
 import 'calcite-components'
 
