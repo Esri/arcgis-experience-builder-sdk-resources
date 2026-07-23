@@ -1,6 +1,6 @@
 # Use Map Components (React 19 + Web Components)
 
-This sample demonstrates wrapper-free integration of Calcite Components and ArcGIS JavaScript for Maps SDK Map components inside ArcGIS Experience Builder 1.19 (React 19 baseline). It shows how to obtain an active `MapView` via `JimuMapViewComponent` and attach it to an []`<arcgis-legend>`](https://developers.arcgis.com/javascript/latest/references/map-components/arcgis-legend/) component.
+This sample demonstrates wrapper-free integration of Calcite Components and ArcGIS JavaScript for Maps SDK Map components inside ArcGIS Experience Builder 1.19 (React 19 baseline). It shows how to obtain an active `JimuMapView` via `JimuMapViewComponent` and attach its map component to an [`<arcgis-legend>`](https://developers.arcgis.com/javascript/latest/references/map-components/components/arcgis-legend/) component.
 
 ## Contents
 
@@ -29,8 +29,8 @@ import 'arcgis-map-components'
 
 register custom elements before React renders. The component then:
 1. Uses `JimuMapViewComponent` with `onActiveViewChange` to receive a `JimuMapView`.
-2. Stores a ref to `<arcgis-legend>` via `useRef`.
-3. Assigns the underlying `MapView` (`activeView.view`) to `legendRef.current.view` once available.
+2. Reads `activeView.mapComponent` from the active `JimuMapView`.
+3. Assigns the map component to the legend's `referenceElement` property once available.
 4. Renders a `<calcite-button>` (demonstrating direct Calcite usage) and the `<arcgis-legend>` element.
 
 ## License

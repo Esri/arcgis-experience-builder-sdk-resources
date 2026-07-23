@@ -27,7 +27,7 @@ interface State {
 
 export default class Widget extends React.PureComponent<AllWidgetProps<unknown>, State> {
 
-  constructor (props) {
+  constructor (props: AllWidgetProps<unknown>) {
     super(props)
     this.state = {
       jimuMapView: null,
@@ -47,7 +47,7 @@ export default class Widget extends React.PureComponent<AllWidgetProps<unknown>,
         style={{ height: '100%', overflow: 'auto' }}
       >
         {this.state.jimuMapView ?
-          <arcgis-editor view={this.state.jimuMapView?.view}></arcgis-editor>
+          <arcgis-editor referenceElement={this.state.jimuMapView.mapComponent}></arcgis-editor>
           :
           <p>Please select a map.</p>
         }

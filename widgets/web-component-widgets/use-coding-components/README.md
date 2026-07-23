@@ -25,7 +25,7 @@ The widget uses components from `arcgis-coding-components`, available in the Exp
 
 - Data source wiring: Renders a `DataSourceComponent` pointed at the selected map's feature layer.
 - Feature selection: In `onDataSourceInfoChange`, grabs the first record from the data source and stores its `feature` in local state.
-- Arcade Editor setup: References `ArcgisArcadeEditor` via `ref` and, once a `feature` is available, assigns a custom `profile` (bundles: `core`, `dataAccess`, `geometry`, `portal`) including `$feature` resolved to the underlying `FeatureLayer`.
+- Arcade Editor setup: Loads the coding components with `useArcgisArcadeEditor`, references `arcgis-arcade-editor` via `ref` and, once a `feature` is available, assigns a custom `profile` (bundles: `core`, `data-access`, `geometry`, `portal-access`) including `$feature` resolved to the underlying `FeatureLayer`.
 
 ## License
 

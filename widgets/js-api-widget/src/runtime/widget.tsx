@@ -19,7 +19,7 @@
 */
 import { React, type AllWidgetProps } from 'jimu-core'
 import type { IMConfig } from '../config'
-import { JimuMapViewComponent } from 'jimu-arcgis'
+import { JimuMapViewComponent, type JimuMapView } from 'jimu-arcgis'
 import 'arcgis-map-components'
 
 const {useEffect, useState, useRef } = React
@@ -27,7 +27,7 @@ const {useEffect, useState, useRef } = React
 const Widget = (props: AllWidgetProps<IMConfig>) => {
   const {useMapWidgetIds} = props
   const containerRef = useRef<HTMLDivElement>(null)
-  const [activeView, setActiveView] = useState(null)
+  const [activeView, setActiveView] = useState<JimuMapView>(null)
   const legendRef = useRef<HTMLArcgisLegendElement>(null)
   useEffect(() => {
     if (legendRef.current) {
@@ -44,13 +44,13 @@ const Widget = (props: AllWidgetProps<IMConfig>) => {
     }
 
     const legend = document.createElement('arcgis-legend')
-    legend.view = activeView.view
+    legend.referenceElement = activeView.mapComponent
     containerRef.current.append(legend)
     legendRef.current = legend
   }, [activeView])
   return (
     <div className="widget-demo jimu-widget m-2">
-      <JimuMapViewComponent useMapWidgetId={useMapWidgetIds?.[0]} onActiveViewChange={(view) => {setActiveView(view)}}></JimuMapViewComponent>
+      <JimuMapViewComponent useMapWidgetId={useMapWidgetIds?.[0]} onActiveViewChange={(view) => { setActiveView(view) }}></JimuMapViewComponent>
       <div className='container' ref={containerRef}></div>
     </div>
   )

@@ -13,7 +13,7 @@ import 'arcgis-map-components'
 
   render () {
     return this.state.jimuMapView ?
-      <arcgis-editor view={this.state.jimuMapView?.view}></arcgis-editor>
+      <arcgis-editor referenceElement={this.state.jimuMapView.mapComponent}></arcgis-editor>
       :
       <p>Please select a map.</p>
   }
@@ -40,7 +40,7 @@ export default class Widget extends React.Component<AllWidgetProps<{}>, State> {
   }
 ```
 
-The `activeViewChangeHandler` function handles the Map's active view change so `arcgis-editor` can respond to Map change or view change. If no Map is selected, it result in a `null` and the `arcgis-editor` won't render.
+The `activeViewChangeHandler` function handles the Map's active view change so `arcgis-editor` can respond to Map change or view change. The component uses `jimuMapView.mapComponent` as its `referenceElement`. If no Map is selected, it result in a `null` and the `arcgis-editor` won't render.
 
 ```javascript
   activeViewChangeHandler = (jmv: JimuMapView) => {

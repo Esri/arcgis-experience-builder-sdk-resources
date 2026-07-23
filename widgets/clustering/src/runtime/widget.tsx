@@ -89,7 +89,6 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, Sta
       const layerViewId = jimuLayerViewIds
 
       if (layerViewId === undefined) {
-        jmv = null
         return
       }
 
@@ -114,23 +113,19 @@ export default class Widget extends React.PureComponent<AllWidgetProps<any>, Sta
 
   render () {
     const mapContent = <JimuMapViewComponent useMapWidgetId={this.props.useMapWidgetIds?.[0]} onActiveViewChange={this.activeViewChangeHandler} />
-    let clusterContent = null
-    if (this.state.errorTip || !(this.props.useMapWidgetIds && this.props.useMapWidgetIds.length > 0)) {
-      clusterContent = this.renderWidgetPlaceholder()
-    } else {
-      clusterContent =
-        <Label
-          style={{ cursor: 'pointer' }} >
-          <Checkbox
-            checked={this.state.clusterStatus} onChange={(e) => {
-              this.onCheckBoxChange({
-                target: {
-                  value: e.target.checked
-                }
-              })
-            }}
-          /> Cluster points </Label>
-    }
+    const clusterContent = this.state.errorTip || !(this.props.useMapWidgetIds && this.props.useMapWidgetIds.length > 0)
+      ? this.renderWidgetPlaceholder()
+      : <Label
+        style={{ cursor: 'pointer' }} >
+        <Checkbox
+          checked={this.state.clusterStatus} onChange={(e) => {
+            this.onCheckBoxChange({
+              target: {
+                value: e.target.checked
+              }
+            })
+          }}
+        /> Cluster points </Label>
     return <div style={{ height: '100%' }} className="cluster-map">
       {clusterContent}
       <div>{mapContent}</div>

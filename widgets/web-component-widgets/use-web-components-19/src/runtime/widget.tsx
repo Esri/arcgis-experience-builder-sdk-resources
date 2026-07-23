@@ -39,7 +39,7 @@ const Widget = (props: AllWidgetProps<object>) => {
         onActiveViewChange={onActiveViewChange}
         useMapWidgetId={props.useMapWidgetIds[0]}
       ></JimuMapViewComponent>
-      <arcgis-legend view={activeView?.view}></arcgis-legend>
+      <arcgis-legend referenceElement={activeView?.mapComponent}></arcgis-legend>
     </div>
   )
 }

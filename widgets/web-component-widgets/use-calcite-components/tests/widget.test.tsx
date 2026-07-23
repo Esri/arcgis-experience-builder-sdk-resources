@@ -2,11 +2,7 @@ import { React } from 'jimu-core'
 import _Widget from '../src/runtime/widget'
 import { widgetRender, wrapWidget } from 'jimu-for-test'
 
-jest.mock('@esri/calcite-components-react', () => ({
-  CalciteButton: (props) => <button {...props}/>,
-  CalciteIcon: (props) => <span {...props}/>,
-  CalciteSlider: (props) => <input type='range' {...props}/>
-}))
+jest.mock('calcite-components', () => ({}))
 
 const render = widgetRender()
 describe('test widget', () => {
