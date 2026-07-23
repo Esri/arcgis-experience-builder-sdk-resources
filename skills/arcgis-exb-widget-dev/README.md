@@ -7,20 +7,17 @@ Developer playbook for operating coding agents with the `arcgis-exb-widget-dev` 
 Use this skill when you want an agent to implement widget-level work such as:
 
 - Creating a new Experience Builder widget
-- Modifying runtime or setting behavior of an existing widget
-- Integrating data sources, map/layer views, message actions, or data actions
-- Updating `manifest.json`, `config.json`, `src/config.ts`, translations, or tests
-- Handling accessibility, theme tokens, and builder/runtime boundaries
+- Modifying an existing widget
 
 ## Quick Start
 
 ### Install
 
 To use this skill, copy the `arcgis-exb-widget-dev` skill folder, and paste it under the correct path for your IDE / CLI agent:
-VS Code: `${root}/.github/skills/`
-Codex: `${root}/.agents/skills/`
-Claude Code: `${root}/.claude/skills/`
-Cursor: `${root}/.cursor/skills/`
+- VS Code: `${root}/.github/skills/`
+- Codex: `${root}/.agents/skills/`
+- Claude Code: `${root}/.claude/skills/`
+- Cursor: `${root}/.cursor/skills/`
 
 ### Invoke Skill
 
