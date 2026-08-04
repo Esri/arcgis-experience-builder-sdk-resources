@@ -556,7 +556,10 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<a
     if ( ACLUtils.notDef( this.props.config.langCode ) ) {
       changeArr.push( { name: 'langCode', value: 'en-us' } )
     }
-    if ( ACLUtils.notDef( this.props.config.cachedInfographicSettingsLastSelection ) ) {
+    if ( !this.enableCachedInfographics ) {
+      changeArr.push( { name: 'presetCachedInfographicObject', value: null } )
+      changeArr.push( { name: 'cachedInfographicSettingsLastSelection', value: null } )
+    } else if ( ACLUtils.notDef( this.props.config.cachedInfographicSettingsLastSelection ) ) {
       changeArr.push( { name: 'cachedInfographicSettingsLastSelection', value: null } )
     }
     if ( ACLUtils.notDef( this.props.config.igBackgroundColor ) ) {
@@ -1580,7 +1583,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<a
 
     // console.log( "SETTING - cached infographics enabled = ", this.enableCachedInfographics )
     if ( !this.enableCachedInfographics ) {
-      this.onClearCache()
+      this.onClearCache( false )
     }
 
     window.addEventListener( 'ba-app-state-ready', () => {
@@ -3021,7 +3024,7 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<a
     }
   }
 
-  onClearCache () {
+  onClearCache ( updateConfig: boolean = true ) {
     BaAppState.logTemp( 'onClickClearCache' )
     const widgetId = this.props.id
     const appResourceManager = AppResourceManager.getInstance()
@@ -3032,23 +3035,27 @@ export default class Setting extends React.PureComponent<AllWidgetSettingProps<a
     // Remove the item resource for the cached infographic
     appResourceManager.removeWidgetResource( widgetId, this._cachedInfographicItemResourceName )
 
-    // Clear both persisted values together so one stale config snapshot cannot overwrite the other.
-    this.onMultiplePropertyChange( [
-      { name: 'presetCachedInfographicObject', value: null },
-      { name: 'cachedInfographicSettingsLastSelection', value: null }
-    ] )
+    if ( updateConfig ) {
+      // Clear both persisted values together so one stale config snapshot cannot overwrite the other.
+      this.onMultiplePropertyChange( [
+        { name: 'presetCachedInfographicObject', value: null },
+        { name: 'cachedInfographicSettingsLastSelection', value: null }
+      ] )
+    }
 
     // Clear the cached settings signature to allow new cache creation with current settings
     // console.log( 'SETTINGS clearing cache and signature, was:', this.cachedInfographicSettingsSelection )
 
     this.cachedInfographicSettingsSelection = null
-    this.waitForConfigPropChange( 'presetCachedInfographicObject', null, 3000 )
-      .then( () => {
-        // console.log( 'onClearCache confirmed config.presetCachedInfographicObject is null' )
-      } )
-      .catch( ( err ) => {
-        console.warn( 'onClearCache did not observe config update in time', err )
-      } )
+    if ( updateConfig ) {
+      this.waitForConfigPropChange( 'presetCachedInfographicObject', null, 3000 )
+        .then( () => {
+          // console.log( 'onClearCache confirmed config.presetCachedInfographicObject is null' )
+        } )
+        .catch( ( err ) => {
+          console.warn( 'onClearCache did not observe config update in time', err )
+        } )
+    }
     // console.log( "onClearCache setting status to: undefined" )
 
     this.updateState( 'cachedInfographicStatus', CachedInfographicStatusEnum.CacheCleared )
