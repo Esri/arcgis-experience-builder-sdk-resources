@@ -29,3 +29,21 @@ To support i18n, create a `translations` folder within the `shared-code` folder,
 ```typescript
 import { sampleFunction } from 'widgets/shared-code/entry1'
 ```
+
+## Path resolution of ``shared-code``
+
+By default, the ``paths.widgets`` array in your ``tsconfig.json`` only contains a reference to ``"./your-extensions/widgets/*"``. To enable the TS compiler to find your shared code when importing it in your widget and business code, enhance the array with the folder names of the repositories with ``/widgets/`` postfix:
+
+```
+"paths": {
+  [...]
+  "widgets/*": [
+    "./your-extensions/widgets/*",
+    "./<your_repository>/widgets/*"
+  ]
+}
+```
+
+## Using shared code in multiple web-extension-repos
+
+To ensure that no entries are overwritten, the central ``ts`` file with the collected exports should be named individually. For example, instead of ``entry1.ts``, you would be using ``entry_<project_name>.ts`` in your repository.
