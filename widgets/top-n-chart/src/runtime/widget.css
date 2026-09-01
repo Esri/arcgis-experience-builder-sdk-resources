@@ -1,0 +1,320 @@
+.topn-chart-widget {
+  container-type: inline-size;
+  container-name: topn-chart;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.topn-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.topn-chart-container--compact {
+  gap: 4px;
+  padding: 4px;
+}
+
+.topn-chart-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topn-chart-header-spacer {
+  flex: 1 1 auto;
+}
+
+.topn-chart-header-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.topn-chart-search {
+  width: 100%;
+}
+
+.topn-chart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid var(--ref-palette-neutral-500, #d0d0d0);
+}
+
+/* Equal-weight outer columns keep the centred sort control from shifting between modes. */
+.topn-chart-footer-scope {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.topn-chart-footer-topn {
+  width: 64px;
+  min-width: 64px;
+}
+
+.topn-chart-footer-sort {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topn-chart-showall-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 0;
+  gap: 6px;
+  margin: 0;
+}
+
+.topn-chart-banner {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--ref-palette-warning-200, #fff3cd);
+  color: var(--ref-palette-warning-900, #664d03);
+}
+
+.topn-chart-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.topn-chart-bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: flex-start;
+}
+
+.topn-chart-container:not(.topn-chart-container--compact) .topn-chart-bar-list {
+  justify-content: space-between;
+}
+
+.topn-chart-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  min-width: 0;
+}
+
+.topn-chart-bar-row--with-indicator {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.topn-chart-bar-row-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.topn-chart-bar-outer-line,
+.topn-chart-bar-main-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.topn-chart-bar-outer-line {
+  justify-content: space-between;
+}
+
+.topn-chart-bar-row--selectable {
+  cursor: pointer;
+}
+
+.topn-chart-bar-row--selectable:focus-visible {
+  outline: 2px solid var(--ref-palette-blue-600, #1a73e8);
+  outline-offset: 2px;
+}
+
+.topn-chart-bar-row--selected {
+  background: var(--ref-palette-blue-100, #e8f0fe);
+}
+
+.topn-chart-bar-row--others {
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.topn-chart-bar-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+/* Inline labels share one fixed column so every track starts at the same x. */
+.topn-chart-bar-main-line > .topn-chart-bar-label {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.topn-chart-bar-track {
+  position: relative;
+  flex: 1 1 auto;
+  /* Fixed default; per-widget Bar Styling only exposes fill/outline for primary and Others, not the track. */
+  background: #e0e0e0;
+  overflow: hidden;
+}
+
+.topn-chart-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.topn-chart-bar-value {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  flex: 0 1 auto;
+  min-width: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topn-chart-bar-value-inside {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4px;
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.topn-chart-select-indicator {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--ref-palette-neutral-500, #9e9e9e);
+  box-sizing: border-box;
+}
+
+.topn-chart-select-indicator--radio {
+  border-radius: 50%;
+}
+
+.topn-chart-select-indicator--radio.topn-chart-select-indicator--selected {
+  border-color: var(--ref-palette-blue-600, #1a73e8);
+  background: radial-gradient(var(--ref-palette-blue-600, #1a73e8) 45%, transparent 50%);
+}
+
+.topn-chart-select-indicator--checkbox {
+  border-radius: 3px;
+}
+
+.topn-chart-select-indicator--checkbox.topn-chart-select-indicator--selected {
+  border-color: var(--ref-palette-blue-600, #1a73e8);
+  background: var(--ref-palette-blue-600, #1a73e8);
+}
+
+.topn-chart-select-indicator--toggle {
+  width: 24px;
+  border-radius: 999px;
+  position: relative;
+}
+
+.topn-chart-select-indicator--toggle::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ref-palette-neutral-500, #9e9e9e);
+  transition: left 0.15s ease;
+}
+
+.topn-chart-select-indicator--toggle.topn-chart-select-indicator--selected {
+  border-color: var(--ref-palette-blue-600, #1a73e8);
+}
+
+.topn-chart-select-indicator--toggle.topn-chart-select-indicator--selected::after {
+  left: 11px;
+  background: var(--ref-palette-blue-600, #1a73e8);
+}
+
+.topn-chart-selection-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.topn-chart-data-actions {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+
+/* Responsive rules target descendants of the container; a container cannot query itself. */
+@container topn-chart (max-width: 279px) {
+  .topn-chart-container {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .topn-chart-header-title {
+    font-size: 0.85rem;
+  }
+
+  .topn-chart-footer {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .topn-chart-bar-main-line > .topn-chart-bar-label {
+    flex: 0 0 40%;
+  }
+}
+
+@container topn-chart (min-width: 700px) {
+  .topn-chart-header-title {
+    font-size: 1.1rem;
+  }
+
+  .topn-chart-container--wide-mode .topn-chart-bar-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  }
+}
+
