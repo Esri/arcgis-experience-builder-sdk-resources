@@ -36,10 +36,10 @@ Find a bug or want to request a feature? [Open an issue](https://github.com/Esri
 
 ## Contributions
 
-Contributions are welcome. Before submitting a pull request, open an issue to discuss substantial changes. Keep pull requests focused, include documentation for new samples or patches, and verify the change with the applicable ArcGIS Experience Builder version.
-
+Contributions are welcome. Keep pull requests focused, include documentation for new samples or patches, and verify the change with the applicable ArcGIS Experience Builder version.
 
 ## Licensing
+
 Copyright 2025 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
