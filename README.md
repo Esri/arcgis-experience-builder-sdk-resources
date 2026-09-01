@@ -6,6 +6,7 @@ This repository provides widget and theme samples for ArcGIS Experience Builder.
 
 * [Widget samples](widgets), including data sources, map and layer workflows, layouts, state management, and external library integrations
 * [Theme samples](themes)
+* [Widget development skill](skills/arcgis-exb-widget-dev)
 * [Version-specific patches](patches) for supported ArcGIS Experience Builder releases
 
 ## Getting started
