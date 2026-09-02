@@ -36,7 +36,7 @@ Find a bug or want to request a feature? [Open an issue](https://github.com/Esri
 
 ## Contributions
 
-Contributions are welcome. Keep pull requests focused, include documentation for new samples or patches, and verify the change with the applicable ArcGIS Experience Builder version.
+If you developed a custom widget, consider sharing it with the [Experience Builder custom widgets group](https://community.esri.com/en/group/73-experience-builder-custom-widgets) on [Esri Community](https://community.esri.com/). It's a great way to showcase your work, connect with other developers, and help the community learn from real-world examples.
 
 ## Licensing
 
