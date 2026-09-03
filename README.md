@@ -1,30 +1,45 @@
-# Overview - V1.21
+# ArcGIS Experience Builder SDK Resources - V1.21
 
-This repository provides samples for widgets and themes built with ArcGIS Experience Builder. Learn more about [ArcGIS Experience Builder SDK](https://developers.arcgis.com/experience-builder/guide/core-concepts/).
+This repository provides widget and theme samples for ArcGIS Experience Builder. For an introduction to the SDK, see the [ArcGIS Experience Builder core concepts](https://developers.arcgis.com/experience-builder/guide/core-concepts/).
 
-## Features
-- [Theme samples](themes)
-- [Widget samples](widgets)
+## What's included
 
-## Instructions
-Clone the repo into the `client/sdk-sample` folder
+* [Widget samples](widgets), including data sources, map and layer workflows, layouts, state management, and external library integrations
+* [Theme samples](themes)
+* [Widget development skill](skills/arcgis-exb-widget-dev)
+* [Version-specific patches](patches) for supported ArcGIS Experience Builder releases
+
+## Getting started
+
+Clone this repository into the `client/sdk-sample` folder of your local ArcGIS Experience Builder Developer Edition installation:
+
 ```sh
 cd client
 git clone git@github.com:Esri/arcgis-experience-builder-sdk-resources.git sdk-sample
 ```
 
-## Requirements
+Browse the [widget samples](widgets) and [theme samples](themes) to select an implementation. Follow the ArcGIS Experience Builder [developer guide](https://developers.arcgis.com/experience-builder/) to run your local development environment.
 
-## Resources
+## Version-specific patches
+
+The [patches](patches) directory contains instructions and files for specific ArcGIS Experience Builder releases. Select the directory matching your Developer Edition version and follow its README before applying a patch.
+
+## Documentation
+
 * [ArcGIS Experience Builder Developer Guide](https://developers.arcgis.com/experience-builder/)
 * [Widget Development](https://developers.arcgis.com/experience-builder/guide/getting-started-widget/)
 * [Theme Development](https://developers.arcgis.com/experience-builder/guide/theme-development/)
 
 ## Issues
-Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
+Find a bug or want to request a feature? [Open an issue](https://github.com/Esri/arcgis-experience-builder-sdk-resources/issues/new) and include the ArcGIS Experience Builder version, affected sample, and steps to reproduce the problem.
+
+## Contributions
+
+If you developed a custom widget, consider sharing it with the [Experience Builder custom widgets group](https://community.esri.com/en/group/73-experience-builder-custom-widgets) on [Esri Community](https://community.esri.com/). It's a great way to showcase your work, connect with other developers, and help the community learn from real-world examples.
 
 ## Licensing
+
 Copyright 2025 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
