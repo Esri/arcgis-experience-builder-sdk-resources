@@ -1,0 +1,236 @@
+.topn-chart-setting {
+  display: flex;
+  flex-direction: column;
+}
+
+.topn-chart-setting-datasource {
+  padding: 8px;
+}
+
+.topn-chart-help-text {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  padding: 0 8px 6px;
+  margin-top: -4px;
+}
+
+.topn-chart-full-width {
+  width: 100%;
+}
+
+.topn-chart-compact-numeric {
+  width: 72px;
+}
+
+.topn-chart-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.topn-chart-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.topn-chart-row--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.topn-chart-sections {
+  border-top: 1px solid var(--ref-palette-neutral-700, rgba(255, 255, 255, 0.12));
+}
+
+.topn-chart-section {
+  border-bottom: 1px solid var(--ref-palette-neutral-700, rgba(255, 255, 255, 0.12));
+}
+
+.topn-chart-section:last-child {
+  border-bottom: none;
+}
+
+.topn-chart-section-label {
+  display: inline-block;
+  padding: 20px 0 20px 8px;
+}
+
+.topn-chart-section-content {
+  padding: 0 8px;
+}
+
+.topn-chart-label-with-tip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topn-chart-info-icon {
+  cursor: help;
+  opacity: 0.75;
+  font-size: 0.85rem;
+}
+
+.bar-styling-side-panel {
+  padding: 12px;
+}
+
+.topn-chart-group-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 8px 4px;
+  opacity: 0.85;
+}
+
+.title-format-side-panel {
+  padding: 12px;
+}
+
+.topn-chart-range-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.topn-chart-range-op {
+  flex: 0 0 auto;
+  width: 14px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.topn-chart-range-numeric {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.topn-chart-range-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topn-chart-reset-row {
+  padding: 10px 8px 4px;
+}
+
+.topn-chart-inline-pair {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.topn-chart-inline-pair-grow {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.topn-chart-color-trigger {
+  display: flex;
+  align-items: center;
+}
+
+.topn-chart-font-color-icon {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.topn-chart-align-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 16px;
+}
+
+.topn-chart-align-bar {
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.topn-chart-align-icon--left .topn-chart-align-bar {
+  align-self: flex-start;
+}
+
+.topn-chart-align-icon--center .topn-chart-align-bar {
+  align-self: center;
+}
+
+.topn-chart-align-icon--right .topn-chart-align-bar {
+  align-self: flex-end;
+}
+
+.topn-chart-align-icon--justify .topn-chart-align-bar {
+  align-self: stretch;
+}
+
+.topn-chart-align-icon:not(.topn-chart-align-icon--justify) .topn-chart-align-bar:nth-of-type(1) {
+  width: 100%;
+}
+
+.topn-chart-align-icon:not(.topn-chart-align-icon--justify) .topn-chart-align-bar:nth-of-type(2) {
+  width: 65%;
+}
+
+.topn-chart-align-icon:not(.topn-chart-align-icon--justify) .topn-chart-align-bar:nth-of-type(3) {
+  width: 85%;
+}
+
+.topn-chart-character-effect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 0 8px 10px;
+}
+
+.topn-chart-character-effect-swatch {
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid var(--ref-palette-neutral-600, rgba(255, 255, 255, 0.2));
+  background: var(--ref-palette-neutral-800, #2b2b2b);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.topn-chart-character-effect-swatch--selected {
+  border-color: var(--ref-palette-blue-600, #1a73e8);
+  outline: 2px solid var(--ref-palette-blue-600, #1a73e8);
+  outline-offset: -2px;
+}
+
+.topn-chart-character-effect-swatch--shadow {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.topn-chart-character-effect-swatch--outline {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+
+.topn-chart-character-effect-swatch--glow {
+  text-shadow: 0 0 6px #1a73e8, 0 0 10px #1a73e8;
+}
+
+.topn-chart-character-effect-swatch--gradient {
+  background: linear-gradient(90deg, #1a73e8, #9e1ae8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.topn-chart-character-effect-swatch--emboss {
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.6);
+}

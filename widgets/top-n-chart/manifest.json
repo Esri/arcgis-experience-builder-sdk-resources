@@ -1,0 +1,26 @@
+{
+  "name": "top-n-chart",
+  "label": "Top-N Chart",
+  "type": "widget",
+  "version": "1.0.0",
+  "exbVersion": "1.20.0",
+  "author": "Transportation Team; Ian McIntosh",
+  "description": "Displays Top-N grouped categorical statistics as responsive horizontal bars, with synthetic Others, search, focus selection, and Data Actions.",
+  "properties": {
+    "hasSettingPage": true,
+    "canConsumeDataAction": true
+  },
+  "publishMessages": ["DATA_RECORDS_SELECTION_CHANGE"],
+  "messageActions": [
+    {
+      "name": "filterByExtent",
+      "label": "Filter by map extent",
+      "uri": "message-actions/filter-by-extent-action"
+    }
+  ],
+  "translatedLocales": ["en"],
+  "defaultSize": {
+    "width": 600,
+    "height": 400
+  }
+}

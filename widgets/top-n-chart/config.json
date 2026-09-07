@@ -1,0 +1,23 @@
+{
+  "categoryField": "",
+  "valueField": "",
+  "aggregationType": "COUNT",
+  "sortDirection": "DESC",
+  "topN": 5,
+  "showOthers": true,
+  "othersLabel": "Others",
+  "includeNullCategory": true,
+  "nullCategoryLabel": "(No Value)",
+  "retentionLimit": 50,
+  "showAllEnabled": true,
+  "searchEnabled": true,
+  "searchMode": "SERVER",
+  "selectionEnabled": true,
+  "selectionStyle": "CHECKBOX",
+  "headerTitle": "",
+  "headerVisible": true,
+  "valueDisplay": "VALUE_PERCENT",
+  "abbreviateValues": false,
+  "verticalSpacing": "AUTO_DISTRIBUTE",
+  "multiColumnWideMode": false
+}
