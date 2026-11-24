@@ -98,11 +98,10 @@ Pair with `FieldSelector` to let users pick fields; persisting them into `useDat
 - Update config through builder action/helper patterns; do not mutate config objects in place.
 - Persist only serializable config values (IDs, options, flags, query params), never runtime instances or handles.
 - When changing config schema, preserve backward compatibility and add migration-safe defaults.
+- Treat `src/config.ts` as the shared contract for setting, runtime, and Config AI Actions.
+- When adding or changing a config item in the setting surface, update the shared config type and the runtime behavior that consumes it.
+- If the config item is intended to be AI-configurable, also update the corresponding Config AI Action schema and handler; see [Config AI Actions](./config-ai-actions.md) for action-specific schema and conversion rules.
 
 ## i18n and Strings
 
 - Setting labels and messages must use translation keys and default strings from `src/setting/translations/default.ts`.
-
-## Testing
-
-- Test setting callbacks that update config, validation branches, and default-value initialization.

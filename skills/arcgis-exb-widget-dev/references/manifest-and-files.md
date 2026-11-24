@@ -23,6 +23,10 @@ Important fields:
 | `messageActions` | Message actions provided by widget. |
 | `dataActions` | Data actions provided by widget. |
 | `excludeDataActions` | Data actions hidden from setting/runtime. |
+| `aiActions` | Optional runtime AI action module and action declarations. |
+| `configAIActions` | Optional configuration AI action module and action declarations. |
+| `aiRenderer` | Optional non-interactive AI output renderer. Declares `uri` and `description`; its schema module implements `AIRenderer`. |
+| `humanInput` | Optional interactive HITL UI. Declares `uri` and `description`; its schema module implements `HumanInput`. |
 | `translatedLocales` | Locales shipped by widget. Must be complete and aligned with delivered translation files; missing locales may not enter translation workflow. |
 | `dependency`, `settingDependency` | Runtime/setting dependency declarations; accepts string or string array. `jimu-arcgis` loads map SDK support. |
 | `defaultSize` | Initial widget size. |
@@ -91,6 +95,7 @@ Important `properties`:
 - Use `JimuMapViewComponent`/`JimuLayerViewComponent` for map/layer view lifecycle where appropriate.
 - Keep SDK resources in refs/state with cleanup on unmount.
 - Render clear empty, loading, error, no-data, and configured states.
+- For `humanInput` mode, accept the framework-provided `onResume` callback through `HumanInputComponentProps`, handle missing callbacks safely, and prevent accidental duplicate resume calls.
 
 ## `src/setting/setting.tsx`
 

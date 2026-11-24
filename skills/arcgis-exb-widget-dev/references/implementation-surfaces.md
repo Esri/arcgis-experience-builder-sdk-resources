@@ -17,6 +17,9 @@ This reference has been split into focused files.
 - Assets and static resources: [assets.md](./implementation-surface/assets.md)
 - URL parameters: [url-parameters.md](./implementation-surface/url-parameters.md)
 - Accessibility: [accessibility.md](./implementation-surface/accessibility.md)
+- AI Actions: [ai-actions.md](./implementation-surface/ai-actions.md)
+- Config AI Actions: [config-ai-actions.md](./implementation-surface/config-ai-actions.md)
+- AI renderers and HumanInputs: [human-inputs.md](./implementation-surface/human-inputs.md)
 
 Use this file as the entry point and open only the surface files that match the current task.
 

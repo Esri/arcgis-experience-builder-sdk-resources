@@ -16,7 +16,7 @@ Choose one entrance, then follow the same shared flow below.
    - `src/runtime/widget.tsx`
    - `src/setting/setting.tsx` when configurable
    - `src/runtime/translations/default.ts` and `src/setting/translations/default.ts` as needed
-   - `tests/**` when behavior is testable
+   - `tests/**` when a meaningful behavior, public contract, or credible regression risk warrants an automated test
 
 ### Entrance B: Existing Widget Modification
 
@@ -50,7 +50,7 @@ Before implementation in this source repo:
 
 | Tier | Typical scope | Required files |
 |---|---|---|
-| Tier 1 | Runtime-only behavior/UI | `src/runtime/**` (+ tests) |
+| Tier 1 | Runtime-only behavior/UI | `src/runtime/**` |
 | Tier 2 | Configurable behavior | Tier 1 + `src/config.ts`, `config.json`, `src/setting/**`, translations |
 | Tier 3 | Capability/integration changes | Tier 2 + `manifest.json`, README, action contracts, message contracts, data source contracts, and map contracts |
 
@@ -60,7 +60,7 @@ Use the smallest tier that satisfies the requirement. Escalate only when necessa
 
 1. Run focused validation for touched logic first.
 2. Run integration checks for changed contracts (manifest/config/action/message/data source) when contracts are affected.
-3. After implementation, if the workspace is **Source Code Repository**, run required client checks from `client/`:
+3. If the user authorizes the applicable checks and the workspace is **Source Code Repository**, run client checks from `client/`:
    - `npm run tscheck:extensions`
    - `npm run check-translation` (translation folder/locales and framework key conflict check)
 4. If the workspace is **Developer Edition**, skip the source-repo-only checks above.

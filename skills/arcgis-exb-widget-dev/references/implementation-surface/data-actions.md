@@ -15,6 +15,15 @@
 - Keep action config schema backward-compatible when persisted; add migration-safe defaults when fields evolve.
 - Keep execution idempotent where possible to reduce duplicate side effects from repeated invocations.
 
+## Saved Settings and AI Configuration
+
+- Settings belong to the consuming widget's `dataActions`, keyed by action name, not to the providing widget's main `config`.
+- Named-action settings use `dataActions[actionName].config`; provider entries use `dataActions[actionName].actions[providerWidgetId]`. Preserve both when changing a single setting.
+- Named actions and provider entries are enabled by default when `enabled` is absent. Preserve explicit false values.
+- For AI configuration, declare a `CONFIG_DATA_ACTION` in the provider's `configAIActions`, separate from `manifest.dataActions` runtime execution. Follow [Config AI Actions](./config-ai-actions.md) for schema, consumer/provider IDs, registration, and validation.
+
+## Runtime Examples
+
 ```ts
 import { AbstractDataAction, type DataRecordSet } from 'jimu-core'
 

@@ -1,6 +1,6 @@
 ---
 name: arcgis-exb-widget-dev
-description: 'Use when: creating, modifying, debugging, or testing ArcGIS Experience Builder widgets; covers runtime/setting surfaces, manifest/config/contracts, widget-list registration, translations, accessibility, map view / data source/ message action / data action / extension points, jimu-ui/jimu-for-builder/jimu-for-test, ArcGIS JS SDK and Calcite. For Developer Edition widget work, finish by running `npm run tscheck` from `client/` to validate `your-extensions`.'
+description: 'Use when: creating, modifying, debugging, or testing ArcGIS Experience Builder widgets; covers runtime/setting surfaces, manifest/config/contracts, widget-list registration, translations, accessibility, map view / data source/ message action / data action / IA Action / config AI action / AI renderer / HumanInput / extension points, jimu-ui/jimu-for-builder/jimu-for-test, ArcGIS JS SDK and Calcite. For Developer Edition widget work, when the user explicitly authorizes validation, run the relevant requested client checks, including `npm run tscheck` when applicable to validate `your-extensions`.'
 argument-hint: 'widget goal, existing widget path, or new widget name'
 ---
 
@@ -76,7 +76,7 @@ Path and registration rules:
 - **Developer Edition**
 	- Widget path: typically `client/your-extensions/widgets`
 	- If using a custom extension repo (not `your-extensions`), ensure the repo root has a `manifest.json` with type `exb-web-extension-repo`, and include that repo folder in `client/tsconfig.json` `include`
-	- After finishing widget development in Developer Edition, run `npm run tscheck` from `client/` to validate `your-extensions`
+	- When the user explicitly authorizes validation in Developer Edition, run `npm run tscheck` from `client/` if relevant to validate `your-extensions`
 
 If target identity is still unclear for existing widget modification, ask for widget name or feature context first, not directory placement.
 
@@ -112,6 +112,9 @@ Use [implementation surfaces reference](./references/implementation-surfaces.md)
 - URL parameter driven behavior
 - translations
 - accessibility
+- AI Actions
+- AI renderers and HumanInputs
+- Data actions
 
 Use [widget skeleton reference](./assets/widget-skeleton.md) only as a starting shape. Adapt to nearby widgets and current framework APIs.
 
@@ -125,11 +128,13 @@ Use [widget skeleton reference](./assets/widget-skeleton.md) only as a starting 
 
 - `manifest.json` is mandatory for every widget. Missing manifest means the folder is not a valid widget package for build/discovery.
 - Treat `manifest.json` as a capability contract. Use manifest fields to express widget capabilities, actions, dependencies, default size, licensing, URL params, layouts, and translated locales instead of hiding those decisions in runtime code.
+- Keep AI output rendering and human input separate: use `aiRenderer`/`AIRenderer` for non-interactive agent output and `humanInput`/`HumanInput` for HITL UI that resumes execution through `onResume`.
 - Runtime must be resilient to missing optional configuration, unavailable data sources, unloaded map views, and builder/runtime mode differences.
 - New widgets must use React functional components (FC) for runtime and setting surfaces; use class components only when modifying existing legacy widgets.
 - Runtime code must not import `jimu-for-builder`; keep builder-only APIs in setting, builder support modules, or builder widgets.
 - Prefer runtime UI from `jimu-ui` or `jimu-ui/basic/*` or `jimu-ui/advanced/*`; use Calcite or ArcGIS web components when the scenario requires them.
 - Setting UI must save selected data sources (and selected fields when used) through Experience Builder setting patterns and expose only valid combinations of options.
+- Data action config AI handlers must distinguish the providing widget ID from the consuming `param.widgetId`, preserve unrelated actions and provider settings, and treat missing `enabled` as true. Keep named-action enablement separate from action-specific config.
 - For framework-managed selections (for example `useDataSources`, `useMapWidgetIds`), write them through top-level `onSettingChange` payload fields instead of `config.set(...)`.
 - Keep translation keys widget-scoped and non-generic (for example with a widget prefix) to reduce conflict risk with framework/shared keys.
 - Keep runtime and setting config types aligned in `src/config.ts`.
@@ -138,7 +143,7 @@ Use [widget skeleton reference](./assets/widget-skeleton.md) only as a starting 
 - Prefer ExB wrappers and `jimu-ui` design system components first; use Calcite or ArcGIS Maps SDK web components when the scenario requires them.
 - In Source Code Repository, place new widgets under `arcgis`/`common` by default, or under an existing product family when requirements clearly belong there. Do not add product widgets under `samples`.
 - In Developer Edition, place widgets using the official Developer Edition extension layout from the guide (typically under `client/your-extensions/widgets`).
-- Restart the client webpack dev server after installing a new module, adding/removing/renaming widget files/folders, or editing a widget `manifest.json`.
+- Restart the client webpack dev server after installing a new module or changing webpack/build configuration. Webpack watch mode refreshes widget code, manifest changes, and widget file or folder additions, removals, and renames dynamically.
 - For inline editing scenarios, declare the related manifest capabilities/extensions (for example `supportInlineEditing`, `hasEmbeddedLayout`, context tool extensions), and keep builder-only code in builder-support modules.
 - If widget config schema changes and backward compatibility cannot be safely preserved by runtime/setting fallback logic (for existing saved apps), implement upgrades through `version-manager.ts` (using `WidgetVersionManager`) and assign `Widget.versionManager`.
 
@@ -146,12 +151,14 @@ Use [widget skeleton reference](./assets/widget-skeleton.md) only as a starting 
 
 - Widget files are complete and internally consistent.
 - `manifest.json` exists and declares all required capabilities and dependencies.
+- Widget AI renderers and HumanInputs use their distinct manifest fields, base contracts, and managers; HITL components call `onResume` with a `resultDescription`.
+- Data action config AI handlers are declared as `CONFIG_DATA_ACTION`, exported from the manifest's `configAIActions.uri` module, and update the consuming widget's saved data action settings using the existing setting schema.
 - Runtime and setting UI handle configured and unconfigured states, including reading selected data sources from `props.useDataSources` when data source integration is required.
 - In Source Code Repository, new widgets are registered in the widget list source when category/order control is required (otherwise they fall back to Custom group/default ordering).
 - When user-visible strings or translation folders change, translations cover those strings, `manifest.translatedLocales` stays complete, and any new translation folder is listed in `translation-manifest.txt`.
 - Translation key names avoid generic collisions with framework/shared keys (for example by using widget-prefixed keys).
-- In Source Code Repository, post-development checks are run from `client/`: `npm run tscheck:extensions` and `npm run check-translation`.
-- In Developer Edition, `npm run tscheck` is part of the finish-of-work validation for `your-extensions` widget development.
-- If config schema changed and compatibility cannot be guaranteed by fallback/default handling, VersionManager-based migration behavior via `version-manager.ts` is implemented and validated.
+- In Source Code Repository, when the user explicitly authorizes validation, run relevant requested checks from `client/`, including `npm run tscheck:extensions` and `npm run check-translation` when applicable.
+- In Developer Edition, when the user explicitly authorizes validation, run `npm run tscheck` if relevant to `your-extensions` widget development.
+- If config schema changed and compatibility cannot be guaranteed by fallback/default handling, implement VersionManager-based migration behavior via `version-manager.ts`; validate it with focused tests when the user authorizes unit-test validation.
 - A11y labels, keyboard behavior, focus, status text, and contrast are addressed.
-- Tests or existing validation commands pass for the touched area, including data source selection/query/filter behavior when data contracts are changed.
+- When validation is authorized, relevant tests or existing validation commands pass for the touched area.

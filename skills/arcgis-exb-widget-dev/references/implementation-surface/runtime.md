@@ -54,6 +54,26 @@ import 'arcgis-map-components'
 - Validate data shape before runtime execution (records, messages, URL params, and config-derived options).
 - Render explicit empty/loading/error/no-data states instead of silent failures.
 
+## Widget Lazy Loading
+
+- Based on its own requirements, a widget can use `PageVisibilityContext.Consumer`, `ViewportVisibilityContext.Consumer`, or `ViewVisibilityContext.Consumer` to support lazy loading.
+- When the widget is not ready, do not return `null`. Render a real DOM placeholder, such as an empty `<div>`, instead.
+- Apply this rule to any widget that uses these visibility contexts to support lazy loading.
+
+```tsx
+// Correct: preserve a DOM element while resources are loading.
+if (!isReady) {
+  return <div />
+}
+```
+
+```tsx
+// Incorrect while widget resources are loading: removes the widget's DOM surface.
+if (!isReady) {
+  return null
+}
+```
+
 ## Placeholder and Empty State
 
 - Use `WidgetPlaceholder` (and nearby ExB patterns) for unconfigured or unavailable widget states.
@@ -80,8 +100,3 @@ if (!isConfigured) {
 - Read persisted config from `src/config.ts` contracts; do not mutate config in place.
 - Do not persist runtime instances (view objects, handles, promises, DOM nodes) to config/state.
 - All user-visible strings must use translation keys and default strings from `src/runtime/translations/default.ts`.
-
-## Testing
-
-- Cover runtime state transitions and side-effect guards.
-- Test configured and unconfigured paths.

@@ -26,9 +26,3 @@
 
 - Use for builder-time operations such as beforeSave hooks, beforePublish hooks, or extracting translation keys from config content.
 - Return deterministic results based on current `appConfig`; avoid network I/O.
-
-## Testing Guidance
-
-- Unit-test operation classes directly with mocked `appConfig` and manager APIs.
-- For `widgetWillRemove`-like hooks, assert idempotence and no throw behavior.
-- For translation-key operations, assert key path stability and coverage for nested config collections.
