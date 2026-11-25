@@ -134,7 +134,7 @@ Use [widget skeleton reference](./assets/widget-skeleton.md) only as a starting 
 - Runtime code must not import `jimu-for-builder`; keep builder-only APIs in setting, builder support modules, or builder widgets.
 - Prefer runtime UI from `jimu-ui` or `jimu-ui/basic/*` or `jimu-ui/advanced/*`; use Calcite or ArcGIS web components when the scenario requires them.
 - Setting UI must save selected data sources (and selected fields when used) through Experience Builder setting patterns and expose only valid combinations of options.
-- Data action config AI handlers must distinguish the providing widget ID from the consuming `param.widgetId`, preserve unrelated actions and provider settings, and treat missing `enabled` as true. Keep named-action enablement separate from action-specific config.
+- Data action config AI handlers must distinguish the providing widget ID from the consuming `param.consumerWidgetId`, preserve unrelated actions and provider settings, and treat missing `enabled` as true. Keep named-action enablement separate from action-specific config.
 - For framework-managed selections (for example `useDataSources`, `useMapWidgetIds`), write them through top-level `onSettingChange` payload fields instead of `config.set(...)`.
 - Keep translation keys widget-scoped and non-generic (for example with a widget prefix) to reduce conflict risk with framework/shared keys.
 - Keep runtime and setting config types aligned in `src/config.ts`.

@@ -41,7 +41,7 @@ Add the handler to the providing widget's existing `configAIActions.actions` lis
   "name": "configShowOnMapDataAction",
   "label": "Show on map",
   "type": "CONFIG_DATA_ACTION",
-  "description": "Configure showOnMap on the consuming widget identified by the widgetId input: custom or layer-defined symbols and operational-layer settings."
+  "description": "Configure showOnMap on the consuming widget identified by the consumerWidgetId input: custom or layer-defined symbols and operational-layer settings."
 }
 ```
 
@@ -58,11 +58,6 @@ Add the handler to the providing widget's existing `configAIActions.actions` lis
 - Use `getAppConfigAction().editWidgetDataActionConfig()` to edit the data action config.
 - Missing `enabled` means true at both the named-action and provider-entry levels. Do not enable a disabled action as a side effect of editing config. Initialize missing config with the data action's existing setting defaults, not invented defaults.
 - Use the existing `NodeInterrupt` / human-input contract if settings require interactive input; the widget agent resumes the pending handler and remaining calls.
-
-
-### Existing Example and Checks
-
-- See the Map widget's [Show on map handler](../../../../../client/extensions/widgets/arcgis/arcgis-map/src/setting/ai-actions/data-action-config-ai-action.ts) and its re-export in [config-ai-actions.ts](../../../../../client/extensions/widgets/arcgis/arcgis-map/src/setting/ai-actions/config-ai-actions.ts).
 
 ## Action context
 In the action handler file, you can define an optional `getContext` function to provide context information for the config AI actions.

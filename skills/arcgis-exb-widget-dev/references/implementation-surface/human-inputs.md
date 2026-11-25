@@ -61,7 +61,7 @@ Every resume payload must include a concise `resultDescription` plus the structu
 An AI action that needs user input constructs a `UiInterrupt` whose render descriptor matches the HumanInput schema, then throws a `NodeInterrupt`:
 
 ```typescript
-import { NodeInterrupt } from '@langchain/langgraph/web'
+import { NodeInterrupt } from 'jimu-ai'
 import type { UiInterrupt } from 'jimu-core'
 
 const interrupt: UiInterrupt = {

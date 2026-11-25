@@ -4,7 +4,7 @@
 
 `manifest.json` is required for every widget. Without it, the widget is not considered a valid widget package by build/discovery flows.
 
-Use `client/jimu-core/lib/types/manifest.ts` as the source of truth. Search the current repo for nearby examples before adding fields.
+Use `client/jimu-core/lib/types/manifest.ts` in the source repository or `client/jimu-core/lib/types/manifest.d.ts` in Developer Edition as the source of truth. Search the current repo for nearby examples before adding fields.
 For a copy-ready minimal manifest shape, use the skeleton in `../assets/widget-skeleton.md`.
 
 Important fields:
