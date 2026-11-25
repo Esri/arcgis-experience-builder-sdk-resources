@@ -99,6 +99,6 @@ Usually, the agent will generate an `icon.svg` for the widget. You can modify th
 
 ### Testing
 
-The agent will generate unit tests for the widget. You can run the tests to ensure the widget works as expected.
+Add unit tests only for meaningful behavior, public contracts, or credible regression risks.  You can run the tests to ensure the widget works as expected.
 
-You can also set up the development environment and test the widget's settings and runtime behavior in Experience Builder. If it's a newly created widget, or the manifest is changed, you need to restart webpack in client folder to pick up the change.
+You can also set up the development environment and test the widget's settings and runtime behavior in Experience Builder. Code, manifest, and widget file or folder changes are loaded dynamically, so webpack does not need to be restarted for them to take effect.

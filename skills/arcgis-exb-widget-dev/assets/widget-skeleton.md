@@ -20,8 +20,9 @@ my-widget/
       translations/
         default.ts
       setting.tsx
-  tests/
 ```
+
+Add a `tests/` directory only when a test would protect meaningful behavior, a public contract, or a credible regression risk.
 
 ## `src/config.ts`
 
@@ -123,7 +124,7 @@ export default {
 
 ## `manifest.json`
 
-Set `exbVersion` to the current framework version from `client/package.json` (`exb-client.version`).
+Replace `{currentExbVersion}` with the current framework version from `client/package.json` (`exb-client.version`) when creating a widget.
 Keep this as a minimal sample. In real widgets, expand `translatedLocales` to all shipped locale files.
 
 ```json
