@@ -1,4 +1,4 @@
-# ArcGIS Experience Builder SDK Resources - V1.21
+# ArcGIS Experience Builder SDK Resources - V1.22
 
 This repository provides widget and theme samples for ArcGIS Experience Builder. For an introduction to the SDK, see the [ArcGIS Experience Builder core concepts](https://developers.arcgis.com/experience-builder/guide/core-concepts/).
 
