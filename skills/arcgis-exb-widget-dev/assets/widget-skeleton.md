@@ -132,7 +132,7 @@ Keep this as a minimal sample. In real widgets, expand `translatedLocales` to al
   "name": "my-widget",
   "label": "My widget",
   "version": "1.0.0",
-  "exbVersion": "{currentExbVersion}",
+  "exbVersion": "1.22.0",
   "author": "",
   "description": "Describe what the widget does.",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
